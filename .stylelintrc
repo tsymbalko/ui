@@ -278,7 +278,7 @@
         "comment-no-empty": [true, {
             "message": "Пустой коммент убрать нужно"
         }],
-        "indentation": [4, {
+        "indentation": [2, {
             "message": "Использовать четыре пробела для отступов"
         }],
         "max-empty-lines": [3, {
