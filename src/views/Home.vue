@@ -1,15 +1,16 @@
 <template>
   <div class="home" id="test">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam consequatur debi
-      tis facere fuga hic id laborum minus nam neque non optio praesentium qui repellat sed soluta
-      totam, velit voluptas?
-    </p>
+    123
+    <Test />
   </div>
 </template>
 
 <script>
+import { Test } from 'atoms'
 export default {
-  name: 'home'
+  name: 'home',
+  components: {
+    Test
+  }
 }
 </script>
