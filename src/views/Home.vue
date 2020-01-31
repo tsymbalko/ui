@@ -7,6 +7,7 @@
 
 <script>
 import { Test } from 'atoms'
+
 export default {
   name: 'home',
   components: {

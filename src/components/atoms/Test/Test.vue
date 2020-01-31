@@ -1,9 +1,9 @@
 <template>
   <div>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-    cupiditate dignissimos fuga, id sed velit vero voluptatibus! Aliquid
-    aspernatur assumenda, cum cupiditate dolor magni minima nostrum
-    reprehenderit vel. Aperiam, cumque.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis
+    eaque minima quas! Aliquam, aliquid blanditiis dicta dignissimos dolorem
+    impedit ipsa necessitatibus, neque numquam odit possimus recusandae
+    temporibus voluptas voluptatibus?
   </div>
 </template>
 
