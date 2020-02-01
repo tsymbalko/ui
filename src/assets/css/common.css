@@ -1,0 +1,57 @@
+:root {
+  --base-text: #000000;
+  --base-background: #ffffff;
+  --base-focus:
+    0 2px 8px 3px rgba(0, 0, 0, .3),
+    inset 0 1px 0 hsla(0, 0%, 100%, .1);
+  --base-font: Work Sans, sans-serif;
+}
+
+@font-face {
+  font-family: Work Sans;
+  font-display: swap;
+  font-weight: 400;
+  src: url(../fonts/worksans-regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: Work Sans;
+  font-display: swap;
+  font-weight: 600;
+  src: url(../fonts/worksans-bold.woff2) format('woff2');
+}
+
+html {
+  color-scheme: light dark;
+  font-family: Work Sans, sans-serif;
+  font-size: 16px;
+  color: var(--base-text);
+  background: var(--base-background);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  line-height: 1.7;
+  overscroll-behavior-y: none;
+}
+
+:focus {
+  outline: none;
+  box-shadow: var(--base-focus);
+  transition: box-shadow .2s;
+}
+
+button {
+  display: inline-block;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 0;
+}

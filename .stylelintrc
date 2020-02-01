@@ -86,7 +86,8 @@
             "message": "Свойств значение буквами строчными указывать следует"
         }],
         "property-no-unknown": [true, {
-            "message": "Такого свойства нет"
+            "message": "Такого свойства нет",
+            "ignoreProperties": ["color-scheme"]
         }],
         "declaration-bang-space-after": ["never", {
             "message": "После знака восклицательного пробел убрать следует"
