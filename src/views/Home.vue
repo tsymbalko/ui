@@ -1,17 +1,14 @@
 <template>
-  <div class="home" id="test">
-    123
-    <Test />
+  <div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aliquam aliquid
+    corporis distinctio doloribus ducimus explicabo ipsa laboriosam molestias
+    nemo, optio perferendis tenetur veniam. Laudantium modi perspiciatis quas
+    sunt totam.
   </div>
 </template>
 
 <script>
-import { Test } from 'atoms'
-
 export default {
-  name: 'home',
-  components: {
-    Test
-  }
+  name: 'home'
 }
 </script>
