@@ -1,14 +1,15 @@
 .navigation {
+  --indent: 2px;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   z-index: 2;
+  padding: var(--indent);
   display: flex;
   flex-direction: column;
   width: var(--navigation-width);
   background-color: var(--base-background);
-  border-right: 1px solid var(--base-border);
 
   &_home {
     height: 58px;
@@ -20,10 +21,6 @@
     line-height: 1;
     color: var(--brand-color);
     margin-bottom: 42px;
-
-    &:focus {
-      box-shadow: inset var(--base-focus);
-    }
 
     &:hover {
       background-color: var(--base-hover);
@@ -44,6 +41,10 @@
     height: 58px;
     line-height: 58px;
     text-align: center;
+    border-radius: 4px;
+    top: var(--indent);
+    right: var(--indent);
+    left: var(--indent);
 
     &:not(:focus) {
       right: 100%;
@@ -51,13 +52,9 @@
     }
 
     &:focus {
-      top: 0;
-      right: 0;
-      left: 0;
+
       color: var(--secondary);
       background: var(--base-background);
-      border-radius: 4px;
-      box-shadow: inset var(--base-focus);
     }
   }
 
@@ -65,10 +62,15 @@
     display: flex;
     flex-direction: column;
     flex: 1 1;
-    margin-bottom: 58px;
+    margin-bottom: 24px;
   }
 
   &_item {
+    margin-bottom: var(--indent);
+
+    &__separator {
+      margin-top: auto;
+    }
   }
 
   &_link {
@@ -82,10 +84,6 @@
 
     &:hover {
       background-color: var(--base-hover);
-    }
-
-    &:focus {
-      box-shadow: inset var(--base-focus);
     }
 
     &:before {

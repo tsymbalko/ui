@@ -7,12 +7,21 @@
   --base-focus: 0 0 0 2px var(--secondary);
   --base-font: Work Sans, sans-serif;
   --navigation-width: 74px;
-  --header-height: 56px;
+  --header-height: 58px;
   --brand-color: #ff790e;
   --secondary: #3796f6;
   --dark-blue: #364e65;
   --base-green: #5bceae;
   --base-hover: rgba(55, 150, 246, .1);
+}
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    --base-background: #181d23;
+    --base-background-layout: #485465;
+    --base-text: #fff;
+  }
 }
 
 @font-face {
@@ -82,14 +91,9 @@ a:not([class]) {
   color: var(--secondary);
   text-decoration: none;
   border-radius: 2px;
-  background-repeat: no-repeat;
-  background-position: center bottom 5%;
-  background-origin: initial;
-  background-size: 100% 1px;
 }
 
 a:not([class]):hover {
-  background-image: linear-gradient(currentColor, currentColor);
   background-color: var(--base-hover);
   box-shadow: 0 0 0 2px var(--base-hover);
 }
