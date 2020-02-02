@@ -5,7 +5,8 @@
       class="color-picker_label"
       :style="{ 'background-color': value }"
       tabindex="0"
-      @keypress.enter="$refs.inputColor.click()"
+      @keypress.enter="inputHandler"
+      @keypress.space="inputHandler"
     >
       <input
         ref="inputColor"
@@ -39,6 +40,9 @@ export default {
   methods: {
     changeColor(event) {
       this.$emit('change', event.target.value)
+    },
+    inputHandler() {
+      this.$refs.inputColor.click()
     }
   }
 }
