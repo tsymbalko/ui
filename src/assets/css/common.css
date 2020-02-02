@@ -1,30 +1,46 @@
 :root {
   --base-text: #000000;
   --base-background: #ffffff;
+  --base-background-layout: #f7fafc;
   --base-accent: #f5a623;
-  --base-focus: 0 0 0 2px var(--base-accent);
+  --base-border: #eff2f5;
+  --base-focus: 0 0 0 2px var(--secondary);
   --base-font: Work Sans, sans-serif;
-  --navigation-width: 320px;
+  --navigation-width: 74px;
+  --header-height: 56px;
+  --brand-color: #ff790e;
+  --secondary: #3796f6;
+  --dark-blue: #364e65;
+  --base-green: #5bceae;
+  --base-hover: rgba(55, 150, 246, .1);
 }
 
 @font-face {
-  font-family: Work Sans;
+  font-family: Muli;
   font-display: swap;
+  src: url(../fonts/Muli-Regular.woff2) format('woff2');
   font-weight: 400;
-  src: url(../fonts/worksans-regular.woff2) format('woff2');
 }
 
 @font-face {
-  font-family: Work Sans;
+  font-family: Muli;
   font-display: swap;
+  src: url(../fonts/Muli-Medium.woff2) format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Muli;
+  font-display: swap;
+  src: url(../fonts/Muli-Bold.woff2) format('woff2');
   font-weight: 600;
-  src: url(../fonts/worksans-bold.woff2) format('woff2');
 }
 
 html {
+  box-sizing: border-box;
   color-scheme: light dark;
-  font-family: Work Sans, sans-serif;
-  font-size: 18px;
+  font-family: Muli, sans-serif;
+  font-size: 14px;
   color: var(--base-text);
   background: var(--base-background);
 }
@@ -32,18 +48,59 @@ html {
 * {
   padding: 0;
   margin: 0;
+  box-sizing: inherit;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   line-height: 1.7;
   overscroll-behavior-y: none;
+  background-color: var(--base-background-layout);
 }
 
 :focus {
   outline: none;
+  background-color: var(--base-hover);
   box-shadow: var(--base-focus);
-  transition: box-shadow .2s;
+}
+
+@media (min-width: 941px) {
+
+  a[href]:active,
+  button:active {
+    transition: none;
+    transform: translateY(1px);
+  }
+}
+
+a:not([class]) {
+  color: var(--secondary);
+  text-decoration: none;
+  border-radius: 2px;
+  background-repeat: no-repeat;
+  background-position: center bottom 5%;
+  background-origin: initial;
+  background-size: 100% 1px;
+}
+
+a:not([class]):hover {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-color: var(--base-hover);
+  box-shadow: 0 0 0 2px var(--base-hover);
+}
+
+a:not([class]):focus {
+  background-color: var(--base-hover);
+}
+
+a[class] {
+  color: inherit;
+  text-decoration: none;
 }
 
 button {
@@ -53,5 +110,5 @@ button {
   cursor: pointer;
   background: none;
   border: none;
-  border-radius: 0;
+  border-radius: 2px;
 }

@@ -3,9 +3,6 @@
     <template #navigation>
       <Navigation />
     </template>
-    <template #header>
-      <Header />
-    </template>
     <router-view />
     <template #footer>
       <Footer />
@@ -14,13 +11,12 @@
 </template>
 
 <script>
-import { Navigation, Header, Footer } from 'organisms'
+import { Navigation, Footer } from 'organisms'
 import { BaseTemplate } from 'templates'
 export default {
   components: {
     BaseTemplate,
     Navigation,
-    Header,
     Footer
   }
 }
