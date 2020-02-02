@@ -1,7 +1,22 @@
 <template>
-  <label class="color-picker" :style="{ 'background-color': value }">
-    <input type="color" :value="value" @change="changeColor" hidden />
-  </label>
+  <div class="color-picker">
+    <p class="color-picker_value">{{ value }}</p>
+    <label
+      class="color-picker_label"
+      :style="{ 'background-color': value }"
+      tabindex="0"
+      @keypress.enter="$refs.inputColor.click()"
+    >
+      <input
+        ref="inputColor"
+        class="color-picker_input"
+        type="color"
+        :value="value"
+        @change="changeColor"
+        hidden
+      />
+    </label>
+  </div>
 </template>
 
 <script>
@@ -29,6 +44,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 @import 'color.scss';
 </style>
