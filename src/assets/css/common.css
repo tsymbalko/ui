@@ -1,5 +1,8 @@
-:root {
-  --base-text: #000000;
+:root,
+:root[data-theme='light'] {
+  --base-black: #1f1f1f;
+  --base-text: var(--base-black);
+  --base-title: var(--base-text);
   --base-background: #ffffff;
   --base-background-layout: #f7fafc;
   --base-accent: #f5a623;
@@ -18,10 +21,18 @@
 @media (prefers-color-scheme: dark) {
 
   :root {
+    --base-text: #bbb;
+    --base-title: #fff;
     --base-background: #181d23;
     --base-background-layout: #485465;
-    --base-text: #fff;
   }
+}
+
+:root[data-theme='dark'] {
+  --base-text: #bbb;
+  --base-title: #fff;
+  --base-background: #181d23;
+  --base-background-layout: #485465;
 }
 
 @font-face {
@@ -74,8 +85,13 @@ body {
 
 :focus {
   outline: none;
-  background-color: var(--base-hover);
+
+  /*background-color: var(--base-hover);*/
   box-shadow: var(--base-focus);
+}
+
+.title {
+  color: var(--base-title);
 }
 
 @media (min-width: 941px) {
