@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    UI Kit for <a href="https://vuejs.org/" target="_blank">Vue.js</a>
+    UIKit <a href="https://vuejs.org/" target="_blank">Vue.js</a>
   </footer>
 </template>
 

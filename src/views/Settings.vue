@@ -9,7 +9,7 @@
       >
         On {{ isLightTheme ? 'dark' : 'light' }} theme:
       </p>
-      <ASwitch v-model="checked" @change="toggleAppTheme" />
+      <ASwitch v-model="checked" @change="toggleTheme" />
     </div>
     <div>
       <p
@@ -18,7 +18,7 @@
       >
         Change brand color:
       </p>
-      <Color v-model="brandColor" @change="changeBrandColor" />
+      <Color v-model="accentColor" @change="setAccentColor" />
     </div>
   </div>
 </template>
@@ -34,35 +34,37 @@ export default {
   data() {
     return {
       isLightTheme: window.matchMedia('(prefers-color-scheme: light)').matches,
-      checked: false,
-      brandColor: getComputedStyle(document.documentElement)
-        .getPropertyValue('--secondary')
-        .trim()
+      accentColor: getComputedStyle(document.documentElement)
+        .getPropertyValue('--accent-color')
+        .trim(),
+      checked: false
     }
   },
   mounted() {
-    window
-      .matchMedia('(prefers-color-scheme: light)')
-      .addListener(({ matches }) => {
-        this.isLightTheme = matches
-        this.checked = false
-        delete document.documentElement.dataset.theme
-      })
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: light)')
+    mediaQuery.addListener(this.setTheme)
   },
   methods: {
-    toggleAppTheme(value) {
-      const theme = this.isLightTheme ? 'dark' : 'light'
+    toggleTheme(value) {
       this.checked = value
-      if (value) {
-        document.documentElement.dataset.theme = theme
-      } else {
-        delete document.documentElement.dataset.theme
-      }
+      const theme = this.isLightTheme ? 'dark' : 'light'
+      value
+        ? (document.documentElement.dataset.theme = theme)
+        : delete document.documentElement.dataset.theme
     },
-    changeBrandColor(value) {
-      this.brandColor = value
-      document.documentElement.style.setProperty('--secondary', value)
+    setAccentColor(value) {
+      this.accentColor = value
+      document.documentElement.style.setProperty('--accent-color', value)
+    },
+    setTheme(event) {
+      this.isLightTheme = event.matches
+      this.checked = false
+      delete document.documentElement.dataset.theme
     }
+  },
+  beforeDestroy() {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: light)')
+    mediaQuery.removeListener(this.setTheme)
   }
 }
 </script>

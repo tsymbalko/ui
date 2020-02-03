@@ -1,0 +1,76 @@
+.button {
+  padding: 6px 12px;
+  height: 42px;
+  border-radius: 4px;
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  white-space: nowrap;
+  color: var(--base-button);
+  border: 2px solid var(--light-blue);
+
+  &__primary {
+    background: var(--accent-color);
+  }
+
+  &__error {
+    background-color: var(--red);
+  }
+
+  &__success {
+    background-color: var(--green);
+  }
+
+  &__warning {
+    background-color: var(--orange);
+  }
+
+  &__circle,
+  &__round {
+    min-width: 42px;
+    border-radius: 21px;
+  }
+
+  &__circle {
+    padding: 2px;
+  }
+
+  &:not([disabled]):hover {
+    opacity: .8;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--disabled);
+  }
+
+  &_text {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 2;
+    letter-spacing: .1em;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 6px;
+
+    .button__circle & {
+      position: absolute !important;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap;
+    }
+  }
+
+  &_icon {
+    width: 24px;
+    height: 24px;
+    box-sizing: initial;
+    flex: 0 0 auto;
+    fill: currentColor;
+    padding: 0 6px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

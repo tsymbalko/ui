@@ -3,19 +3,24 @@
   --base-black: #1f1f1f;
   --base-text: var(--base-black);
   --base-title: var(--base-text);
+  --accent-color: var(--blue);
+  --base-light-accent: #379dff;
   --base-background: #ffffff;
-  --base-background-layout: #f7fafc;
-  --base-accent: #f5a623;
   --base-border: #eff2f5;
-  --base-focus: 0 0 0 2px var(--secondary);
-  --base-font: Work Sans, sans-serif;
-  --navigation-width: 74px;
-  --header-height: 58px;
-  --brand-color: #ff790e;
-  --secondary: #3796f6;
+  --disabled: #ccc;
+  --base-focus: 0 0 0 2px var(--blue);
+  --base-hover: rgba(55, 150, 246, .2);
+  --orange: #ff790e;
+  --red: #ec547a;
+  --blue: rgba(55, 158, 255, .84);
+  --grey: #90a8be;
+  --green: #5bceae;
   --dark-blue: #364e65;
-  --base-green: #5bceae;
-  --base-hover: rgba(55, 150, 246, .1);
+  --light-blue: #f7fafc;
+  --navigation-width: 86px;
+  --header-height: 86px;
+  --base-font: Muli, sans-serif;
+  --base-button: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,7 +29,7 @@
     --base-text: #bbb;
     --base-title: #fff;
     --base-background: #181d23;
-    --base-background-layout: #485465;
+    --light-blue: #485465;
   }
 }
 
@@ -32,7 +37,14 @@
   --base-text: #bbb;
   --base-title: #fff;
   --base-background: #181d23;
-  --base-background-layout: #485465;
+  --light-blue: #485465;
+}
+
+@font-face {
+  font-family: Muli;
+  font-display: swap;
+  src: url(../fonts/Muli-Light.woff2) format('woff2');
+  font-weight: 300;
 }
 
 @font-face {
@@ -63,6 +75,7 @@ html {
   font-size: 14px;
   color: var(--base-text);
   background: var(--base-background);
+  font-weight: 400;
 }
 
 * {
@@ -80,13 +93,11 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   line-height: 1.7;
   overscroll-behavior-y: none;
-  background-color: var(--base-background-layout);
+  background-color: var(--light-blue);
 }
 
 :focus {
   outline: none;
-
-  /*background-color: var(--base-hover);*/
   box-shadow: var(--base-focus);
 }
 
@@ -97,14 +108,14 @@ body {
 @media (min-width: 941px) {
 
   a[href]:active,
-  button:active {
+  button:not([disabled]):active {
     transition: none;
     transform: translateY(1px);
   }
 }
 
 a:not([class]) {
-  color: var(--secondary);
+  color: var(--blue);
   text-decoration: none;
   border-radius: 2px;
 }
@@ -131,4 +142,13 @@ button {
   background: none;
   border: none;
   border-radius: 2px;
+}
+
+.visually_hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
 }

@@ -4,8 +4,8 @@
     <a class="navigation_home" href="/">
       <Icon
         class="navigation_logotype"
-        width="28"
-        height="28"
+        width="40"
+        height="40"
         name="vue-alternate"
       />
     </a>
@@ -17,7 +17,7 @@
           active-class="navigation_link__active"
           title="Dashboard"
         >
-          <Icon class="navigation_icon" width="18" height="18" name="apps" />
+          <Icon class="navigation_icon" width="24" height="24" name="apps" />
         </router-link>
       </li>
       <li class="navigation_item">
@@ -27,7 +27,7 @@
           active-class="navigation_link__active"
           title="About"
         >
-          <Icon class="navigation_icon" width="18" height="18" name="code" />
+          <Icon class="navigation_icon" width="24" height="24" name="code" />
         </router-link>
       </li>
       <li class="navigation_item navigation_item__separator">
@@ -37,7 +37,7 @@
           active-class="navigation_link__active"
           title="settings"
         >
-          <Icon class="navigation_icon" width="18" height="18" name="cog" />
+          <Icon class="navigation_icon" width="24" height="24" name="cog" />
         </router-link>
       </li>
     </ul>

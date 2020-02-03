@@ -17,7 +17,7 @@ export default {
   props: {
     name: {
       type: String,
-      default: 'placeholder'
+      default: 'archive-alt'
     },
     width: {
       type: [String, Number],

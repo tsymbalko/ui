@@ -1,5 +1,6 @@
 .navigation {
   --indent: 2px;
+  --item-height: 70px;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,22 +11,18 @@
   flex-direction: column;
   width: var(--navigation-width);
   background-color: var(--base-background);
-  //box-shadow: 0 0 10px 0 rgba(0, 0, 0, .07);
-  box-shadow:
-    0 3px 1px -2px rgba(0, 0, 0, .2),
-    0 2px 2px 0 rgba(0, 0, 0, .14),
-    0 1px 5px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .07);
 
   &_home {
-    height: 58px;
+    height: var(--item-height);
     padding: 8px;
     text-decoration: none;
     display: flex;
     align-items: center;
     border-radius: 4px;
     line-height: 1;
-    color: var(--brand-color);
-    margin-bottom: 42px;
+    color: var(--orange);
+    margin-bottom: var(--item-height);
 
     &:hover {
       background-color: var(--base-hover);
@@ -37,14 +34,14 @@
     margin: 0 auto;
 
     .navigation_home & {
-      fill: var(--base-green);
+      fill: var(--green);
     }
   }
 
   &_skip {
     position: absolute;
-    height: 58px;
-    line-height: 58px;
+    height: var(--item-height);
+    line-height: var(--item-height);
     text-align: center;
     border-radius: 4px;
     top: var(--indent);
@@ -57,8 +54,7 @@
     }
 
     &:focus {
-
-      color: var(--secondary);
+      color: var(--accent-color);
       background: var(--base-background);
     }
   }
@@ -79,7 +75,7 @@
   }
 
   &_link {
-    height: 58px;
+    height: var(--item-height);
     padding: 8px;
     text-decoration: none;
     display: flex;
@@ -94,18 +90,18 @@
     &:before {
       content: '';
       position: absolute;
-      top: 12px;
-      bottom: 12px;
+      top: 16px;
+      bottom: 16px;
       left: 0;
       border-radius: 0 3px 3px 0;
       width: 3px;
-      background-color: var(--secondary);
+      background-color: var(--accent-color);
       transform: scale(0);
       transition: transform .2s;
     }
 
     &__active {
-      background-color: var(--base-background-layout);
+      background-color: var(--light-blue);
 
       &:before {
         transform: scale(1);
@@ -121,7 +117,7 @@
     .navigation_link:hover &,
     .navigation_link:focus &,
     .navigation_link__active & {
-      fill: var(--secondary);
+      fill: var(--accent-color);
     }
   }
 }
