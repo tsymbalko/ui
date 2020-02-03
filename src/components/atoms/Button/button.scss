@@ -1,13 +1,17 @@
 .button {
+  flex: 0 0 auto;
   padding: 6px 12px;
   height: 42px;
   border-radius: 4px;
   display: inline-flex;
   vertical-align: middle;
   align-items: center;
+  justify-content: center;
   white-space: nowrap;
-  color: var(--base-button);
+  color: var(--base-title);
   border: 2px solid var(--light-blue);
+  transition: color .2s;
+  position: relative;
 
   &__primary {
     background: var(--accent-color);
@@ -25,14 +29,20 @@
     background-color: var(--orange);
   }
 
+  &__loading {
+    cursor: progress;
+    color: transparent;
+  }
+
   &__circle,
   &__round {
     min-width: 42px;
     border-radius: 21px;
   }
 
+  &__square,
   &__circle {
-    padding: 2px;
+    padding: 0;
   }
 
   &:not([disabled]):hover {
@@ -49,10 +59,10 @@
     font-size: 13px;
     line-height: 2;
     letter-spacing: .1em;
-    margin-right: auto;
-    margin-left: auto;
     padding: 0 6px;
+    position: relative;
 
+    .button__square &,
     .button__circle & {
       position: absolute !important;
       height: 1px;
@@ -70,7 +80,16 @@
     flex: 0 0 auto;
     fill: currentColor;
     padding: 0 6px;
-    margin-right: auto;
-    margin-left: auto;
+  }
+
+  &_spinner {
+    color: var(--base-title);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 28px;
+    margin-top: -14px;
+    margin-left: -14px;
   }
 }

@@ -3,7 +3,8 @@
     class="button"
     :class="{
       [`button__${type}`]: type,
-      [`button__${shape}`]: shape
+      [`button__${shape}`]: shape,
+      button__loading: loading
     }"
     :disabled="disabled"
   >
@@ -11,6 +12,7 @@
       <slot />
     </span>
     <Icon v-if="icon" :name="icon" class="button_icon" />
+    <Icon name="spinner" class="button_spinner" />
   </button>
 </template>
 
@@ -26,15 +28,19 @@ export default {
       type: String,
       default: ''
     },
+    loading: {
+      type: Boolean,
+      default: true
+    },
     type: {
       type: String,
       validator: value =>
-        ['warning', 'error', 'success', 'primary'].includes(value),
-      default: 'primary'
+        ['warning', 'error', 'success', 'primary', ''].includes(value),
+      default: ''
     },
     shape: {
       type: String,
-      validator: value => ['circle', 'round', ''].includes(value),
+      validator: value => ['circle', 'round', 'square', ''].includes(value),
       default: ''
     },
     disabled: {

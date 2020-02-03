@@ -8,7 +8,7 @@
   --base-background: #ffffff;
   --base-border: #eff2f5;
   --disabled: #ccc;
-  --base-focus: 0 0 0 2px var(--blue);
+  --base-focus: 0 0 0 2px #7ab7ff;
   --base-hover: rgba(55, 150, 246, .2);
   --orange: #ff790e;
   --red: #ec547a;
@@ -20,7 +20,6 @@
   --navigation-width: 86px;
   --header-height: 86px;
   --base-font: Muli, sans-serif;
-  --base-button: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
