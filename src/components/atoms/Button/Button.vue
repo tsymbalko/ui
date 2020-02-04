@@ -11,8 +11,13 @@
     <span class="button_text">
       <slot />
     </span>
-    <Icon v-if="icon" :name="icon" class="button_icon" />
-    <Icon name="spinner" class="button_spinner" />
+    <Icon
+      v-if="icon"
+      :name="icon"
+      class="button_icon"
+      :class="{ [`icon__${iconPosition}`]: iconPosition }"
+    />
+    <Icon v-if="loading" name="spinner" class="button_spinner" />
   </button>
 </template>
 
@@ -30,7 +35,12 @@ export default {
     },
     loading: {
       type: Boolean,
-      default: true
+      default: false
+    },
+    iconPosition: {
+      type: String,
+      validator: value => ['left', 'right', ''].includes(value),
+      default: 'right'
     },
     type: {
       type: String,

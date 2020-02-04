@@ -62,6 +62,65 @@
       >
     </div>
     <div class="buttons-example">
+      <Button :loading="loading">Add members</Button>
+      <Button :loading="loading" icon="archive-alt">Add members</Button>
+      <Button :loading="loading" icon="archive-alt" shape="square"
+        >Add members</Button
+      >
+      <Button :loading="loading" icon="archive-alt" shape="round"
+        >Add members</Button
+      >
+      <Button :loading="loading" icon="archive-alt" shape="circle"
+        >Add members</Button
+      >
+    </div>
+    <div class="buttons-example">
+      <Button :loading="loading" type="primary">Add members</Button>
+      <Button :loading="loading" type="primary" icon="archive-alt"
+        >Add members</Button
+      >
+      <Button
+        :loading="loading"
+        type="primary"
+        icon="archive-alt"
+        shape="square"
+        >Add members</Button
+      >
+      <Button :loading="loading" type="primary" icon="archive-alt" shape="round"
+        >Add members</Button
+      >
+      <Button
+        :loading="loading"
+        type="primary"
+        icon="archive-alt"
+        shape="circle"
+        >Add members</Button
+      >
+    </div>
+    <div class="buttons-example">
+      <Button :loading="loading" type="warning">Add members</Button>
+      <Button :loading="loading" icon="archive-alt" type="warning"
+        >Add members</Button
+      >
+      <Button
+        :loading="loading"
+        icon="archive-alt"
+        type="warning"
+        shape="square"
+        >Add members</Button
+      >
+      <Button :loading="loading" icon="archive-alt" type="warning" shape="round"
+        >Add members</Button
+      >
+      <Button
+        :loading="loading"
+        icon="archive-alt"
+        type="warning"
+        shape="circle"
+        >Add members</Button
+      >
+    </div>
+    <div class="buttons-example">
       <Button type="success" disabled>Add members</Button>
       <Button icon="archive-alt" type="success" disabled>Add members</Button>
       <Button icon="archive-alt" type="success" disabled shape="square"
@@ -83,6 +142,16 @@ export default {
   name: 'home',
   components: {
     Button
+  },
+  data() {
+    return {
+      loading: false
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.loading = true
+    }, 2000)
   }
 }
 </script>

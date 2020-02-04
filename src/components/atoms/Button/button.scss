@@ -80,10 +80,13 @@
     flex: 0 0 auto;
     fill: currentColor;
     padding: 0 6px;
+
+    &__left {
+      order: -1;
+    }
   }
 
   &_spinner {
-    color: var(--base-title);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -91,5 +94,26 @@
     height: 28px;
     margin-top: -14px;
     margin-left: -14px;
+    animation: dashSpinner 1.5s ease-in-out infinite;
+    stroke: var(--base-title);
+    stroke-linecap: round;
+  }
+}
+
+@keyframes dashSpinner {
+
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
   }
 }
