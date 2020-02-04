@@ -12,11 +12,11 @@
       <Tag icon="archive-alt" color="#5bceae">183%</Tag>
     </div>
     <div class="example-spinner">
-      <Tag closable icon="archive-alt">183%</Tag>
-      <Tag closable icon="archive-alt" color="#3796f6">Text</Tag>
-      <Tag closable icon="archive-alt" color="#ff790e">Text Value</Tag>
-      <Tag closable icon="archive-alt" color="#ec547a">183%</Tag>
-      <Tag closable icon="archive-alt" color="#5bceae">183%</Tag>
+      <Tag closable icon="cog">183%</Tag>
+      <Tag closable icon="cog" color="#3796f6">Text</Tag>
+      <Tag closable icon="cog" color="#ff790e">Text Value</Tag>
+      <Tag closable icon="cog" color="#ec547a">183%</Tag>
+      <Tag closable icon="cog" color="#5bceae">183%</Tag>
     </div>
     <div class="example-spinner">
       <div class="buttons-example">
@@ -41,9 +41,7 @@
         >Add members</Button
       >
       <Button type="primary" icon="archive-alt">Add members</Button>
-      <Button type="primary" icon="archive-alt" shape="square"
-        >Add members</Button
-      >
+      <Button type="primary" icon="cog" shape="square">Add members</Button>
       <Button type="primary" icon="archive-alt" shape="round"
         >Add members</Button
       >
@@ -57,9 +55,7 @@
         >Add members</Button
       >
       <Button icon="archive-alt" type="warning">Add members</Button>
-      <Button icon="archive-alt" type="warning" shape="square"
-        >Add members</Button
-      >
+      <Button icon="cog" type="warning" shape="square">Add members</Button>
       <Button icon="archive-alt" type="warning" shape="round"
         >Add members</Button
       >
@@ -73,9 +69,7 @@
         >Add members</Button
       >
       <Button icon="archive-alt" type="error">Add members</Button>
-      <Button icon="archive-alt" type="error" shape="square"
-        >Add members</Button
-      >
+      <Button icon="cog" type="error" shape="square">Add members</Button>
       <Button icon="archive-alt" type="error" shape="round">Add members</Button>
       <Button icon="archive-alt" type="error" shape="circle"
         >Add members</Button
@@ -87,9 +81,7 @@
         >Add members</Button
       >
       <Button icon="archive-alt" type="success">Add members</Button>
-      <Button icon="archive-alt" type="success" shape="square"
-        >Add members</Button
-      >
+      <Button icon="cog" type="success" shape="square">Add members</Button>
       <Button icon="archive-alt" type="success" shape="round"
         >Add members</Button
       >
@@ -103,7 +95,7 @@
         >Add members</Button
       >
       <Button icon="archive-alt" type="success" disabled>Add members</Button>
-      <Button icon="archive-alt" type="success" disabled shape="square"
+      <Button icon="cog" type="success" disabled shape="square"
         >Add members</Button
       >
       <Button icon="archive-alt" type="success" disabled shape="round"
@@ -117,7 +109,7 @@
       <Button>Add members</Button>
       <Button icon="archive-alt">Add members</Button>
       <Button icon="archive-alt" icon-position="left">Add members</Button>
-      <Button icon="archive-alt" shape="square">Add members</Button>
+      <Button icon="cog" shape="square">Add members</Button>
       <Button icon="ellipsis-v" shape="square">Add members</Button>
       <Button icon="archive-alt" shape="round">Add members</Button>
       <Button icon="archive-alt" shape="circle">Add members</Button>

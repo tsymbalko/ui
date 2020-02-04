@@ -35,12 +35,12 @@
 
   &__circle,
   &__round {
-    min-width: 42px;
     border-radius: 21px;
   }
 
   &__square,
   &__circle {
+    min-width: 42px;
     padding: 0;
   }
 
