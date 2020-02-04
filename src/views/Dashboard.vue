@@ -4,6 +4,23 @@
     <div style="margin-bottom: 20px;">
       Buttons has 4 states (warning, success, error, warning)
     </div>
+    <div class="example-spinner">
+      <div class="buttons-example">
+        <Spinner type="plane" />
+        <Spinner type="bounce" />
+        <Spinner type="pulse" />
+      </div>
+      <div class="buttons-example">
+        <Spinner type="plane" color="#ff790e" />
+        <Spinner type="bounce" color="#ff790e" />
+        <Spinner type="pulse" color="#ff790e" />
+      </div>
+      <div class="buttons-example">
+        <Spinner type="plane" color="#ec547a" />
+        <Spinner type="bounce" color="#ec547a" />
+        <Spinner type="pulse" color="#ec547a" />
+      </div>
+    </div>
     <div class="buttons-example">
       <Button type="primary">Add members</Button>
       <Button type="primary" icon="archive-alt" icon-position="left"
@@ -91,20 +108,6 @@
       <Button icon="archive-alt" shape="circle">Add members</Button>
     </div>
     <div class="buttons-example">
-      <Button :loading="loading">Add members</Button>
-      <Button :loading="loading" icon="archive-alt">Add members</Button>
-      <Button :loading="loading" icon="archive-alt">Add members</Button>
-      <Button :loading="loading" icon="archive-alt" shape="square"
-        >Add members</Button
-      >
-      <Button :loading="loading" icon="archive-alt" shape="round"
-        >Add members</Button
-      >
-      <Button :loading="loading" icon="archive-alt" shape="circle"
-        >Add members</Button
-      >
-    </div>
-    <div class="buttons-example">
       <Button :loading="loading" type="primary">Add members</Button>
       <Button :loading="loading" type="primary" icon="archive-alt"
         >Add members</Button
@@ -154,11 +157,12 @@
 </template>
 
 <script>
-import { Button } from 'atoms'
+import { Button, Spinner } from 'atoms'
 export default {
   name: 'home',
   components: {
-    Button
+    Button,
+    Spinner
   },
   data() {
     return {
@@ -174,6 +178,14 @@ export default {
 </script>
 
 <style lang="scss">
+.example-spinner {
+  display: flex;
+
+  & > div {
+    margin-right: 20px;
+  }
+}
+
 .buttons-example {
   display: flex;
   align-items: center;
