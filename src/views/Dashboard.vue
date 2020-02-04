@@ -5,6 +5,13 @@
       Buttons has 4 states (warning, success, error, warning)
     </div>
     <div class="example-spinner">
+      <Tag icon="archive-alt">183%</Tag>
+      <Tag icon="archive-alt" color="#3796f6">Text</Tag>
+      <Tag icon="archive-alt" color="#ff790e">Text Value</Tag>
+      <Tag icon="archive-alt" color="#ec547a">183%</Tag>
+      <Tag icon="archive-alt" color="#5bceae">183%</Tag>
+    </div>
+    <div class="example-spinner">
       <div class="buttons-example">
         <Spinner type="plane" />
         <Spinner type="bounce" />
@@ -157,12 +164,13 @@
 </template>
 
 <script>
-import { Button, Spinner } from 'atoms'
+import { Button, Spinner, Tag } from 'atoms'
 export default {
   name: 'home',
   components: {
     Button,
-    Spinner
+    Spinner,
+    Tag
   },
   data() {
     return {
@@ -180,6 +188,7 @@ export default {
 <style lang="scss">
 .example-spinner {
   display: flex;
+  margin-bottom: 20px;
 
   & > div {
     margin-right: 20px;
@@ -192,7 +201,15 @@ export default {
   margin-bottom: 34px;
 
   & > button {
-    margin-right: 20px;
+    margin-right: 14px;
+  }
+
+  & > .spinner {
+    margin-right: 10px;
+  }
+
+  & > .tag {
+    margin-right: 10px;
   }
 }
 </style>

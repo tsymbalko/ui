@@ -1,0 +1,23 @@
+.tag {
+  display: flex;
+  align-items: center;
+  color: var(--color);
+
+  &_icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+  }
+
+  &_text {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: var(--color);
+    color: var(--base-title);
+    line-height: 1;
+    white-space: nowrap;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}

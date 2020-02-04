@@ -29,7 +29,7 @@ export default {
     },
     fill: {
       type: String,
-      default: 'currenColor'
+      default: 'currentColor'
     }
   }
 }
