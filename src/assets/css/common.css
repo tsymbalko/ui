@@ -7,6 +7,7 @@
   --base-light-accent: #379dff;
   --base-background: #ffffff;
   --base-border: #eff2f5;
+  --base-scroll: #aaa;
   --disabled: #ccc;
   --base-focus: 0 0 0 2px #7ab7ff;
   --base-hover: rgba(55, 150, 246, .2);
@@ -78,9 +79,14 @@ html {
 }
 
 * {
+  /*reset*/
   padding: 0;
   margin: 0;
   box-sizing: inherit;
+
+  /*scrollbar firefox*/
+  scrollbar-color: var(--base-scroll) transparent;
+  scrollbar-width: thin;
 }
 
 *:before,
@@ -150,4 +156,21 @@ button {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
+}
+
+/*custom scroll only web-kit browsers*/
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--base-scroll);
+  border-radius: 4px;
 }

@@ -15,7 +15,7 @@
       v-if="icon"
       :name="icon"
       class="button_icon"
-      :class="{ [`icon__${iconPosition}`]: iconPosition }"
+      :class="{ [`button_icon__${iconPosition}`]: iconPosition }"
     />
     <Icon v-if="loading" name="spinner" class="button_spinner" />
   </button>
