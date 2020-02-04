@@ -9,7 +9,8 @@
   --base-border: #eff2f5;
   --base-scroll: #aaa;
   --disabled: #ccc;
-  --base-focus: 0 0 0 2px #7ab7ff;
+  --focus: #7ab7ff;
+  --base-focus: 0 0 0 2px var(--focus);
   --base-hover: rgba(55, 150, 246, .2);
   --orange: #ff790e;
   --red: #ec547a;

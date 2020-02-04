@@ -12,6 +12,13 @@
       <Tag icon="archive-alt" color="#5bceae">183%</Tag>
     </div>
     <div class="example-spinner">
+      <Tag closable icon="archive-alt">183%</Tag>
+      <Tag closable icon="archive-alt" color="#3796f6">Text</Tag>
+      <Tag closable icon="archive-alt" color="#ff790e">Text Value</Tag>
+      <Tag closable icon="archive-alt" color="#ec547a">183%</Tag>
+      <Tag closable icon="archive-alt" color="#5bceae">183%</Tag>
+    </div>
+    <div class="example-spinner">
       <div class="buttons-example">
         <Spinner type="plane" />
         <Spinner type="bounce" />
@@ -111,6 +118,7 @@
       <Button icon="archive-alt">Add members</Button>
       <Button icon="archive-alt" icon-position="left">Add members</Button>
       <Button icon="archive-alt" shape="square">Add members</Button>
+      <Button icon="ellipsis-v" shape="square">Add members</Button>
       <Button icon="archive-alt" shape="round">Add members</Button>
       <Button icon="archive-alt" shape="circle">Add members</Button>
     </div>

@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { Icon } from 'atoms'
+import Icon from '../Icon/Icon'
 export default {
   name: 'Button',
   components: {

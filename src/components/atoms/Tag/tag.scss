@@ -11,13 +11,40 @@
 
   &_text {
     display: inline-block;
-    padding: 4px 8px;
+    padding: 0 12px;
     background-color: var(--color);
     color: var(--base-title);
-    line-height: 1;
-    white-space: nowrap;
     border-radius: 12px;
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 24px;
     font-weight: 600;
+    white-space: nowrap;
+    position: relative;
+
+    &:focus-within {
+      box-shadow: var(--base-focus);
+    }
+
+    .tag_closable & {
+      padding-right: 28px;
+    }
+  }
+
+  &_close {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    border-radius: 50%;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+
+    &:hover {
+      color: var(--grey);
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
   }
 }
