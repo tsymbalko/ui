@@ -9,7 +9,7 @@
       >
         On {{ isLightTheme ? 'dark' : 'light' }} theme:
       </p>
-      <ASwitch v-model="checked" @change="toggleTheme" />
+      <VSwitch v-model="checked" @change="toggleTheme" />
     </div>
     <div>
       <p
@@ -24,11 +24,11 @@
 </template>
 
 <script>
-import { ASwitch, Color } from 'atoms'
+import { VSwitch, Color } from 'atoms'
 export default {
   name: 'settings',
   components: {
-    ASwitch,
+    VSwitch,
     Color
   },
   data() {

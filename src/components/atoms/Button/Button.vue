@@ -1,30 +1,35 @@
 <template>
   <button
-    class="button"
-    :class="{
-      [`button__${type}`]: type,
-      [`button__${shape}`]: shape,
-      button__loading: loading
-    }"
+    :class="[
+      'vc-button',
+      {
+        [`vc-button__${shape}`]: shape,
+        [`vc-button__${type}`]: type,
+        'vc-button__loading': loading
+      }
+    ]"
+    :type="htmlType"
     :disabled="disabled"
   >
-    <span class="button_text">
+    <span class="vc-button_text">
       <slot />
     </span>
     <Icon
       v-if="icon"
       :name="icon"
-      class="button_icon"
-      :class="{ [`button_icon__${iconPosition}`]: iconPosition }"
+      :class="[
+        'vc-button_icon',
+        { [`vc-button_icon__${iconPosition}`]: iconPosition }
+      ]"
     />
-    <Icon v-if="loading" name="spinner" class="button_spinner" />
+    <Icon v-if="loading" class="vc-button_spinner" name="spinner" />
   </button>
 </template>
 
 <script>
 import Icon from '../Icon/Icon'
 export default {
-  name: 'Button',
+  name: 'VCButton',
   components: {
     Icon
   },
@@ -47,6 +52,11 @@ export default {
       validator: value =>
         ['warning', 'error', 'success', 'primary', ''].includes(value),
       default: ''
+    },
+    htmlType: {
+      type: String,
+      validator: value => ['button', 'reset', 'submit'].includes(value),
+      default: 'button'
     },
     shape: {
       type: String,

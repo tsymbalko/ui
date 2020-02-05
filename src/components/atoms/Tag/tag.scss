@@ -1,4 +1,4 @@
-.tag {
+.vc-tag {
   display: flex;
   align-items: center;
   color: var(--color);
@@ -25,7 +25,7 @@
       box-shadow: var(--base-focus);
     }
 
-    .tag_closable & {
+    .vc-tag_closable & {
       padding-right: 28px;
     }
   }

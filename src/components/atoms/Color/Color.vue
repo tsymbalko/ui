@@ -1,8 +1,8 @@
 <template>
-  <div class="color-picker">
-    <p class="color-picker_value">{{ value }}</p>
+  <div class="vc-color-picker">
+    <p class="vc-color-picker_value">{{ value }}</p>
     <label
-      class="color-picker_label"
+      class="vc-color-picker_label"
       :style="{ 'background-color': value }"
       tabindex="0"
       @keypress.enter="inputHandler"
@@ -10,7 +10,7 @@
     >
       <input
         ref="inputColor"
-        class="color-picker_input"
+        class="vc-color-picker_input"
         type="color"
         :value="value"
         @change="changeColor"
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'Color',
+  name: 'VCColor',
   model: {
     prop: 'value',
     event: 'change'

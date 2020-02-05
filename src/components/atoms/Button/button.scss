@@ -1,4 +1,4 @@
-.button {
+.vc-button {
   flex: 0 0 auto;
   padding: 6px 12px;
   height: 42px;
@@ -61,8 +61,8 @@
     padding: 0 6px;
     position: relative;
 
-    .button__square &,
-    .button__circle & {
+    .vc-button__square &,
+    .vc-button__circle & {
       position: absolute !important;
       height: 1px;
       width: 1px;

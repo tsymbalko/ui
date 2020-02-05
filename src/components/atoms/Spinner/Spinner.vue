@@ -1,19 +1,18 @@
 <template>
   <div
     :style="{ color: color }"
-    class="spinner"
-    :class="{ [`spinner__${type}`]: type }"
+    :class="['vc-spinner', { [`vc-spinner__${type}`]: type }]"
   >
     <template v-if="type === 'bounce'">
-      <div class="spinner_dot" />
-      <div class="spinner_dot" />
+      <div class="vc-spinner_dot" />
+      <div class="vc-spinner_dot" />
     </template>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Spinner',
+  name: 'VCSpinner',
   props: {
     color: {
       type: String,

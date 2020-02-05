@@ -1,17 +1,17 @@
 <template>
   <button
     ref="switch"
-    class="switch"
-    :class="{ switch__checked: checked, switch__disabled: disabled }"
+    class="vc-switch"
+    :class="{ 'vc-switch__checked': checked, 'vc-switch__disabled': disabled }"
     :disabled="disabled"
     role="switch"
     @click="changeChecked"
-  ></button>
+  />
 </template>
 
 <script>
 export default {
-  name: 'CSwitch',
+  name: 'VCSwitch',
   model: {
     prop: 'checked',
     event: 'change'

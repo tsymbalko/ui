@@ -1,8 +1,7 @@
 <template>
   <svg
+    class="vc-icon"
     viewBox="0 0 24 24"
-    class="icon"
-    xmlns="http://www.w3.org/2000/svg"
     :width="width"
     :height="height"
     :fill="fill"
@@ -13,7 +12,7 @@
 
 <script>
 export default {
-  name: 'Icon',
+  name: 'VCIcon',
   props: {
     name: {
       type: String,
@@ -34,7 +33,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-@import 'icon';
-</style>

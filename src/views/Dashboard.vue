@@ -1,9 +1,12 @@
 <template>
   <div>
     <h1 class="title">Buttons</h1>
-    <div style="margin-bottom: 20px;">
-      Buttons has 4 states (warning, success, error, warning)
-    </div>
+    <p style="margin-bottom: 20px;">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem eaque
+      inventore ipsum maxime omnis quasi quos. Consequatur ex fuga incidunt
+      libero necessitatibus odio, quia sapiente sequi soluta suscipit voluptate
+      voluptatibus.
+    </p>
     <div class="section-example">
       <Tag>183%</Tag>
       <Tag color="#3796f6">Text</Tag>
@@ -198,15 +201,19 @@ export default {
   align-items: center;
   margin-bottom: 34px;
 
-  & > button {
+  & > .section-example {
+    margin-bottom: 0;
+  }
+
+  & > .vc-button {
     margin-right: 16px;
   }
 
-  & > .spinner {
+  & > .vc-spinner {
     margin-right: 16px;
   }
 
-  & > .tag {
+  & > .vc-tag {
     margin-right: 10px;
   }
 }

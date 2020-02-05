@@ -1,8 +1,8 @@
 import Icon from './Icon/Icon'
-import ASwitch from './Switch/ASwitch'
+import VSwitch from './VSwitch/VSwitch'
 import Color from './Color/Color'
 import Button from './Button/Button'
 import Spinner from './Spinner/Spinner'
 import Tag from './Tag/Tag'
 
-export { Icon, ASwitch, Color, Button, Spinner, Tag }
+export { Icon, VSwitch, Color, Button, Spinner, Tag }
