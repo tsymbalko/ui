@@ -4,5 +4,6 @@ import Color from './Color/Color'
 import Button from './Button/Button'
 import Spinner from './Spinner/Spinner'
 import Tag from './Tag/Tag'
+import Progress from './Propgress/Progress'
 
-export { Icon, VSwitch, Color, Button, Spinner, Tag }
+export { Icon, VSwitch, Color, Button, Spinner, Tag, Progress }

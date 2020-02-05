@@ -9,24 +9,42 @@
     </p>
     <div class="section-example">
       <Tag>183%</Tag>
-      <Tag color="#3796f6">Text</Tag>
-      <Tag color="#ff790e">Text Value</Tag>
-      <Tag color="#ec547a">183%</Tag>
-      <Tag color="#5bceae">183%</Tag>
+      <Tag>Text value</Tag>
+      <Tag closable>183%</Tag>
+      <Tag icon="archive-alt" closable>183%</Tag>
     </div>
     <div class="section-example">
-      <Tag icon="archive-alt">183%</Tag>
-      <Tag icon="archive-alt" color="#3796f6">Text</Tag>
-      <Tag icon="archive-alt" color="#ff790e">Text Value</Tag>
-      <Tag icon="archive-alt" color="#ec547a">183%</Tag>
-      <Tag icon="archive-alt" color="#5bceae">183%</Tag>
+      <Tag type="primary">183%</Tag>
+      <Tag type="primary">Text value</Tag>
+      <Tag type="primary" closable>183%</Tag>
+      <Tag type="primary" icon="archive-alt" closable>183%</Tag>
     </div>
     <div class="section-example">
-      <Tag closable icon="cog">183%</Tag>
-      <Tag closable icon="cog" color="#3796f6">Text</Tag>
-      <Tag closable icon="cog" color="#ff790e">Text Value</Tag>
-      <Tag closable icon="cog" color="#ec547a">183%</Tag>
-      <Tag closable icon="cog" color="#5bceae">183%</Tag>
+      <Tag type="warning">183%</Tag>
+      <Tag type="warning">Text value</Tag>
+      <Tag type="warning" closable>183%</Tag>
+      <Tag type="warning" icon="archive-alt" closable>183%</Tag>
+    </div>
+    <div class="section-example">
+      <Tag type="error">183%</Tag>
+      <Tag type="error">Text value</Tag>
+      <Tag type="error" closable>183%</Tag>
+      <Tag type="error" icon="archive-alt" closable>183%</Tag>
+    </div>
+    <div class="section-example">
+      <Tag type="success">183%</Tag>
+      <Tag type="success">Text value</Tag>
+      <Tag type="success" closable>183%</Tag>
+      <Tag type="success" icon="archive-alt" closable>183%</Tag>
+    </div>
+    <div class="section-example">
+      <Tag color="#0070D2" shape="rectangle" closable icon="cog">183%</Tag>
+      <Tag color="#C23934" shape="rectangle" closable icon="cog">Text</Tag>
+      <Tag color="#FFB75D" shape="rectangle" closable icon="cog"
+        >Text Value</Tag
+      >
+      <Tag color="#50CC7A" shape="rectangle" closable icon="cog">183%</Tag>
+      <Tag color="#597BAE" shape="rectangle" closable icon="cog">183%</Tag>
     </div>
     <div class="section-example">
       <div class="section-example">
@@ -44,6 +62,14 @@
         <Spinner type="bounce" color="#ec547a" />
         <Spinner type="pulse" color="#ec547a" />
       </div>
+    </div>
+    <div class="section-example">
+      <Button icon="archive-alt">Add members</Button>
+      <Button icon="archive-alt" icon-position="left">Add members</Button>
+      <Button icon="cog" shape="square">Add members</Button>
+      <Button icon="ellipsis-v" shape="square">Add members</Button>
+      <Button icon="archive-alt" shape="round">Add members</Button>
+      <Button icon="archive-alt" shape="circle">Add members</Button>
     </div>
     <div class="section-example">
       <Button type="primary">Add members</Button>
@@ -116,16 +142,40 @@
       >
     </div>
     <div class="section-example">
-      <Button>Add members</Button>
-      <Button icon="archive-alt">Add members</Button>
-      <Button icon="archive-alt" icon-position="left">Add members</Button>
-      <Button icon="cog" shape="square">Add members</Button>
-      <Button icon="ellipsis-v" shape="square">Add members</Button>
-      <Button icon="archive-alt" shape="round">Add members</Button>
-      <Button icon="archive-alt" shape="circle">Add members</Button>
+      <Button color="linear-gradient(#e66465, #9198e5)">Add members</Button>
+      <Button color="linear-gradient(#e66465, #9198e5)" icon="archive-alt"
+        >Add members</Button
+      >
+      <Button color="#597BAE" icon="archive-alt" icon-position="left"
+        >Add members</Button
+      >
+      <Button color="#597BAE" icon="cog" shape="square">Add members</Button>
+      <Button
+        color="linear-gradient(#e66465, #9198e5)"
+        icon="ellipsis-v"
+        shape="square"
+        >Add members</Button
+      >
+      <Button
+        color="linear-gradient(#e66465, #9198e5)"
+        icon="archive-alt"
+        shape="round"
+        >Add members</Button
+      >
+      <Button
+        color="linear-gradient(#e66465, #9198e5)"
+        icon="archive-alt"
+        shape="circle"
+        >Add members</Button
+      >
     </div>
     <div class="section-example">
-      <Button :loading="loading" type="primary">Add members</Button>
+      <Button
+        color="linear-gradient(#e66465, #9198e5)"
+        :loading="loading"
+        type="primary"
+        >Add members</Button
+      >
       <Button :loading="loading" type="primary" icon="archive-alt"
         >Add members</Button
       >

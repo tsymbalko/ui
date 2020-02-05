@@ -1,6 +1,11 @@
 <template>
   <div
-    :class="['vc-tag', { 'vc-tag_closable': closable }]"
+    :class="[
+      'vc-tag',
+      { 'vc-tag__closable': closable },
+      { [`vc-tag__${type}`]: type },
+      { [`vc-tag__${shape}`]: shape }
+    ]"
     :style="{ '--color': color }"
   >
     <CIcon v-if="icon" :name="icon" class="vc-tag_icon" />
@@ -37,6 +42,17 @@ export default {
     color: {
       type: String,
       default: ''
+    },
+    shape: {
+      type: String,
+      validator: value => ['round', 'rectangle'].includes(value),
+      default: 'round'
+    },
+    type: {
+      type: String,
+      validator: value =>
+        ['warning', 'error', 'success', 'primary', 'ghost'].includes(value),
+      default: 'ghost'
     }
   }
 }

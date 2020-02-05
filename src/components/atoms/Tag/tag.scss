@@ -3,6 +3,22 @@
   align-items: center;
   color: var(--color);
 
+  &__primary {
+    --color: var(--accent-color);
+  }
+
+  &__error {
+    --color: var(--red);
+  }
+
+  &__success {
+    --color: var(--green);
+  }
+
+  &__warning {
+    --color: var(--orange);
+  }
+
   &_icon {
     width: 24px;
     height: 24px;
@@ -14,7 +30,6 @@
     padding: 0 12px;
     background-color: var(--color);
     color: var(--base-title);
-    border-radius: 12px;
     font-size: 14px;
     line-height: 24px;
     font-weight: 600;
@@ -25,8 +40,16 @@
       box-shadow: var(--base-focus);
     }
 
-    .vc-tag_closable & {
+    .vc-tag__closable & {
       padding-right: 28px;
+    }
+
+    .vc-tag__round & {
+      border-radius: 12px;
+    }
+
+    .vc-tag__rectangle & {
+      border-radius: 4px;
     }
   }
 

@@ -2,7 +2,6 @@
   flex: 0 0 auto;
   padding: 6px 12px;
   height: 42px;
-  border-radius: 4px;
   display: inline-flex;
   vertical-align: middle;
   align-items: center;
@@ -11,6 +10,7 @@
   color: var(--base-title);
   transition: color .2s;
   position: relative;
+  background: var(--color);
 
   &__primary {
     background: var(--accent-color);
@@ -42,6 +42,10 @@
   &__circle {
     min-width: 42px;
     padding: 0;
+  }
+
+  &__rectangle {
+    border-radius: 4px;
   }
 
   &:not([disabled]):hover {

@@ -1,5 +1,6 @@
 <template>
   <button
+    :type="htmlType"
     :class="[
       'vc-button',
       {
@@ -8,7 +9,7 @@
         'vc-button__loading': loading
       }
     ]"
-    :type="htmlType"
+    :style="{ '--color': color }"
     :disabled="disabled"
   >
     <span class="vc-button_text">
@@ -38,6 +39,10 @@ export default {
       type: String,
       default: ''
     },
+    color: {
+      type: String,
+      default: ''
+    },
     loading: {
       type: Boolean,
       default: false
@@ -50,8 +55,8 @@ export default {
     type: {
       type: String,
       validator: value =>
-        ['warning', 'error', 'success', 'primary', ''].includes(value),
-      default: ''
+        ['warning', 'error', 'success', 'primary', 'ghost'].includes(value),
+      default: 'ghost'
     },
     htmlType: {
       type: String,
@@ -60,8 +65,9 @@ export default {
     },
     shape: {
       type: String,
-      validator: value => ['circle', 'round', 'square', ''].includes(value),
-      default: ''
+      validator: value =>
+        ['circle', 'round', 'square', 'rectangle'].includes(value),
+      default: 'rectangle'
     },
     disabled: {
       type: Boolean,
