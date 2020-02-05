@@ -4,6 +4,6 @@ import Color from './Color/Color'
 import Button from './Button/Button'
 import Spinner from './Spinner/Spinner'
 import Tag from './Tag/Tag'
-import Progress from './Propgress/Progress'
+import ProgressLine from 'atoms/PropgressLine/ProgressLine'
 
-export { Icon, VSwitch, Color, Button, Spinner, Tag, Progress }
+export { Icon, VSwitch, Color, Button, Spinner, Tag, ProgressLine }

@@ -1,7 +1,7 @@
 .vc-button {
   flex: 0 0 auto;
   padding: 6px 12px;
-  height: 42px;
+  height: var(--size);
   display: inline-flex;
   vertical-align: middle;
   align-items: center;
@@ -10,7 +10,7 @@
   color: var(--base-title);
   transition: color .2s;
   position: relative;
-  background: var(--color);
+  background: var(--background);
 
   &__primary {
     background: var(--accent-color);
@@ -35,12 +35,12 @@
 
   &__circle,
   &__round {
-    border-radius: 21px;
+    border-radius: var(--size);
   }
 
   &__square,
   &__circle {
-    min-width: 42px;
+    min-width: var(--size);
     padding: 0;
   }
 
@@ -80,7 +80,6 @@
     width: 24px;
     height: 24px;
     box-sizing: initial;
-    flex: 0 0 auto;
     fill: currentColor;
     padding: 0 6px;
 

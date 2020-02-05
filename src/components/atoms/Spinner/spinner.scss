@@ -1,7 +1,7 @@
 .vc-spinner {
   color: var(--accent-color);
-  width: 40px;
-  height: 40px;
+  width: var(--size);
+  height: var(--size);
   position: relative;
 
   &__plane {

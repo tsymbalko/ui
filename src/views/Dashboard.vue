@@ -53,14 +53,14 @@
         <Spinner type="pulse" />
       </div>
       <div class="section-example">
-        <Spinner type="plane" color="#ff790e" />
-        <Spinner type="bounce" color="#ff790e" />
-        <Spinner type="pulse" color="#ff790e" />
+        <Spinner :size="30" type="plane" color="#ff790e" />
+        <Spinner :size="30" type="bounce" color="#ff790e" />
+        <Spinner :size="30" type="pulse" color="#ff790e" />
       </div>
       <div class="section-example">
-        <Spinner type="plane" color="#ec547a" />
-        <Spinner type="bounce" color="#ec547a" />
-        <Spinner type="pulse" color="#ec547a" />
+        <Spinner :size="20" type="plane" color="#ec547a" />
+        <Spinner :size="20" type="bounce" color="#ec547a" />
+        <Spinner :size="20" type="pulse" color="#ec547a" />
       </div>
     </div>
     <div class="section-example">
@@ -126,44 +126,65 @@
       >
     </div>
     <div class="section-example">
-      <Button type="success" disabled>Add members</Button>
-      <Button icon="archive-alt" type="success" icon-position="left" disabled
+      <Button :size="50" type="success" disabled>Add members</Button>
+      <Button
+        :size="50"
+        icon="archive-alt"
+        type="success"
+        icon-position="left"
+        disabled
         >Add members</Button
       >
-      <Button icon="archive-alt" type="success" disabled>Add members</Button>
-      <Button icon="cog" type="success" disabled shape="square"
+      <Button :size="50" icon="archive-alt" type="success" disabled
         >Add members</Button
       >
-      <Button icon="archive-alt" type="success" disabled shape="round"
+      <Button :size="50" icon="cog" type="success" disabled shape="square"
         >Add members</Button
       >
-      <Button icon="archive-alt" type="success" disabled shape="circle"
+      <Button
+        :size="50"
+        icon="archive-alt"
+        type="success"
+        disabled
+        shape="round"
+        >Add members</Button
+      >
+      <Button
+        :size="50"
+        icon="archive-alt"
+        type="success"
+        disabled
+        shape="circle"
         >Add members</Button
       >
     </div>
     <div class="section-example">
-      <Button color="linear-gradient(#e66465, #9198e5)">Add members</Button>
-      <Button color="linear-gradient(#e66465, #9198e5)" icon="archive-alt"
+      <Button background="linear-gradient(#e66465, #9198e5)"
         >Add members</Button
       >
-      <Button color="#597BAE" icon="archive-alt" icon-position="left"
+      <Button background="linear-gradient(#e66465, #9198e5)" icon="archive-alt"
         >Add members</Button
       >
-      <Button color="#597BAE" icon="cog" shape="square">Add members</Button>
+      <Button background="#597BAE" icon="archive-alt" icon-position="left"
+        >Add members</Button
+      >
+      <Button background="#597BAE" icon="cog" shape="square"
+        >Add members</Button
+      >
       <Button
-        color="linear-gradient(#e66465, #9198e5)"
+        background="linear-gradient(#e66465, #9198e5)"
         icon="ellipsis-v"
         shape="square"
         >Add members</Button
       >
       <Button
-        color="linear-gradient(#e66465, #9198e5)"
+        background="linear-gradient(#e66465, #9198e5)"
         icon="archive-alt"
         shape="round"
         >Add members</Button
       >
       <Button
-        color="linear-gradient(#e66465, #9198e5)"
+        background="linear-gradient(#e66465, #9198e5)"
         icon="archive-alt"
         shape="circle"
         >Add members</Button
@@ -171,7 +192,7 @@
     </div>
     <div class="section-example">
       <Button
-        color="linear-gradient(#e66465, #9198e5)"
+        background="linear-gradient(#e66465, #9198e5)"
         :loading="loading"
         type="primary"
         >Add members</Button
@@ -220,27 +241,126 @@
         >Add members</Button
       >
     </div>
+    <div class="section-example">
+      <div class="ProgressLine-example">
+        <div class="ProgressLine-example">
+          <ProgressLine type="primary" />
+        </div>
+        <div class="ProgressLine-example">
+          <ProgressLine
+            type="error"
+            :percent="ProgressLine"
+            :show-info="false"
+          />
+        </div>
+        <div class="ProgressLine-example">
+          <ProgressLine type="success" :percent="50" />
+        </div>
+        <div class="ProgressLine-example">
+          <ProgressLine type="warning" :percent="ProgressLine" />
+        </div>
+        <div class="ProgressLine-example">
+          <ProgressLine type="primary" :percent="50" legend="Total: 200" />
+        </div>
+        <div class="ProgressLine-example">
+          <ProgressLine
+            type="error"
+            :percent="ProgressLine"
+            legend="Total: 200"
+          />
+        </div>
+        <div class="ProgressLine-example">
+          <ProgressLine type="success" :percent="50" icon="cog" />
+        </div>
+        <div class="ProgressLine-example">
+          <ProgressLine
+            type="warning"
+            :percent="ProgressLine"
+            legend="Total: 200"
+            icon="cog"
+            :stroke="4"
+          />
+        </div>
+
+        <div class="ProgressLine-example">
+          <ProgressLine
+            color="#9198e5"
+            :percent="50"
+            legend="Total: 200"
+            icon="cog"
+            :stroke="4"
+          />
+        </div>
+        <div class="ProgressLine-example">
+          <ProgressLine type="error" shape="rectangle" icon="cog" :stroke="8" />
+        </div>
+        <div class="ProgressLine-example">
+          <ProgressLine
+            type="warning"
+            shape="rectangle"
+            :percent="31.1"
+            icon="cog"
+            :stroke="8"
+          />
+        </div>
+        <div class="ProgressLine-example">
+          <ProgressLine
+            type="success"
+            shape="round"
+            :percent="ProgressLine"
+            legend="Total: 200"
+            icon="cog"
+            :stroke="8"
+          />
+        </div>
+        <div class="ProgressLine-example">
+          <ProgressLine
+            type="success"
+            shape="round"
+            :percent="40"
+            legend="Total: 200"
+            icon="cog"
+            :stroke="10"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import { Button, Spinner, Tag } from 'atoms'
+import { Button, Spinner, Tag, ProgressLine } from 'atoms'
 export default {
   name: 'home',
   components: {
     Button,
     Spinner,
-    Tag
+    Tag,
+    ProgressLine
   },
   data() {
     return {
-      loading: false
+      loading: false,
+      ProgressLine: 10
     }
   },
   mounted() {
     setTimeout(() => {
       this.loading = true
+      this.ProgressLine = 22.4
     }, 2000)
+    setTimeout(() => {
+      this.loading = true
+      this.ProgressLine = 79.8
+    }, 6000)
+    setTimeout(() => {
+      this.loading = true
+      this.ProgressLine = 0
+    }, 10000)
+    setTimeout(() => {
+      this.loading = true
+      this.ProgressLine = 100
+    }, 12000)
   }
 }
 </script>
@@ -265,6 +385,16 @@ export default {
 
   & > .vc-tag {
     margin-right: 10px;
+  }
+}
+
+.ProgressLine-example {
+  width: 50%;
+  flex-basis: 50%;
+  margin-bottom: 10px;
+
+  & > .ProgressLine-example {
+    width: 100%;
   }
 }
 </style>

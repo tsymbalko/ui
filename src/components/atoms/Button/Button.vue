@@ -9,7 +9,7 @@
         'vc-button__loading': loading
       }
     ]"
-    :style="{ '--color': color }"
+    :style="{ '--background': background, '--size': `${size}px` }"
     :disabled="disabled"
   >
     <span class="vc-button_text">
@@ -39,9 +39,13 @@ export default {
       type: String,
       default: ''
     },
-    color: {
+    background: {
       type: String,
       default: ''
+    },
+    size: {
+      type: Number,
+      default: 42
     },
     loading: {
       type: Boolean,

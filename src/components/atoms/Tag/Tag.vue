@@ -8,7 +8,13 @@
     ]"
     :style="{ '--color': color }"
   >
-    <CIcon v-if="icon" :name="icon" class="vc-tag_icon" />
+    <CIcon
+      v-if="icon"
+      :name="icon"
+      width="24"
+      height="24"
+      class="vc-tag_icon"
+    />
     <span class="vc-tag_text">
       <slot />
       <button

@@ -1,6 +1,6 @@
 <template>
   <div
-    :style="{ color: color }"
+    :style="{ color: color, '--size': `${size}px` }"
     :class="['vc-spinner', { [`vc-spinner__${type}`]: type }]"
   >
     <template v-if="type === 'bounce'">
@@ -17,6 +17,10 @@ export default {
     color: {
       type: String,
       default: ''
+    },
+    size: {
+      type: Number,
+      default: 40
     },
     type: {
       type: String,
