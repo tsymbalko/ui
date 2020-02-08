@@ -22,6 +22,14 @@
   --navigation-width: 86px;
   --header-height: 86px;
   --base-font: Muli, sans-serif;
+  --base-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  :root {
+    --disabled-animation: none;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

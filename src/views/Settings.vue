@@ -14,6 +14,16 @@
     <div>
       <p
         style="margin-right: 40px;
+        margin-bottom: 20px;
+        display: inline-block;"
+      >
+        Disable radius ?
+      </p>
+      <VSwitch v-model="radius" @change="disabledRadius" />
+    </div>
+    <div>
+      <p
+        style="margin-right: 40px;
         display: inline-block;"
       >
         Change brand color:
@@ -37,7 +47,8 @@ export default {
       accentColor: getComputedStyle(document.documentElement)
         .getPropertyValue('--accent-color')
         .trim(),
-      checked: false
+      checked: false,
+      radius: false
     }
   },
   mounted() {
@@ -52,6 +63,13 @@ export default {
         ? (document.documentElement.dataset.theme = theme)
         : delete document.documentElement.dataset.theme
     },
+
+    disabledRadius(value) {
+      this.radius = value
+      const radius = value ? '0px' : '4px'
+      document.documentElement.style.setProperty('--base-radius', radius)
+    },
+
     setAccentColor(value) {
       this.accentColor = value
       document.documentElement.style.setProperty('--accent-color', value)

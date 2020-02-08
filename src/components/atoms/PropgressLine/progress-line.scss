@@ -29,7 +29,7 @@
     height: var(--stroke);
 
     &__rectangle {
-      border-radius: 2px;
+      border-radius: var(--base-radius);
     }
 
     &__round {
@@ -58,8 +58,9 @@
       background: #fff;
       opacity: 0;
       animation:
-        ant-progress-active 2.4s cubic-bezier(.23, 1, .32, 1)
-        infinite;
+        var(
+          --disabled-animation, progress-active 2.4s cubic-bezier(.23, 1, .32, 1) infinite
+        );
     }
   }
 
@@ -71,7 +72,6 @@
     transition: width .6s cubic-bezier(.08, .82, .17, 1) 0s;
     width: var(--width);
   }
-
 
   &_legend {
     line-height: 24px;
@@ -92,7 +92,7 @@
   }
 }
 
-@keyframes ant-progress-active {
+@keyframes progress-active {
 
   0% {
     width: 0;

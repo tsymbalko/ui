@@ -36,6 +36,7 @@ export default {
   components: {
     Icon
   },
+  //TODO сделать прогресс бар на массив
   props: {
     percent: {
       type: Number,

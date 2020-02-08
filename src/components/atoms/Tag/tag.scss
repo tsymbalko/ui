@@ -47,7 +47,7 @@
     }
 
     .vc-tag__rectangle & {
-      border-radius: 4px;
+      border-radius: var(--base-radius);
     }
   }
 

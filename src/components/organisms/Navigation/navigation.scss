@@ -19,7 +19,7 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    border-radius: 4px;
+    border-radius: var(--base-radius);
     line-height: 1;
     color: var(--orange);
     margin-bottom: var(--item-height);
@@ -43,7 +43,7 @@
     height: var(--item-height);
     line-height: var(--item-height);
     text-align: center;
-    border-radius: 4px;
+    border-radius: var(--base-radius);
     top: var(--indent);
     right: var(--indent);
     left: var(--indent);
@@ -81,7 +81,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    border-radius: 4px;
+    border-radius: var(--base-radius);
 
     &:hover {
       background-color: var(--base-hover);
@@ -93,7 +93,7 @@
       top: 16px;
       bottom: 16px;
       left: 0;
-      border-radius: 0 3px 3px 0;
+      border-radius: 0 var(--base-radius) var(--base-radius) 0;
       width: 3px;
       background-color: var(--accent-color);
       transform: scale(0);
