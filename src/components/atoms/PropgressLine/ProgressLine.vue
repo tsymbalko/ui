@@ -16,15 +16,18 @@
     >
       <div class="vc-progress-line_bar" />
     </div>
-    <div class="vc-progress-line_info" v-if="icon || legend">
-      <Icon
-        v-if="icon"
-        class="vc-progress-line_icon"
-        :name="icon"
-        width="24"
-        height="24"
-      />
-      <span v-if="legend" class="vc-progress-line_legend">{{ legend }}</span>
+    <div class="vc-progress-line_info" v-if="icon || desc || legend">
+      <div class="vc-progress-line_legend">
+        <Icon
+          v-if="icon"
+          class="vc-progress-line_icon"
+          :name="icon"
+          width="24"
+          height="24"
+        />
+        {{ legend }}
+      </div>
+      <span v-if="legend" class="vc-progress-line_desc">{{ desc }}</span>
     </div>
   </div>
 </template>
@@ -43,6 +46,10 @@ export default {
       default: 0
     },
     icon: {
+      type: String,
+      default: ''
+    },
+    desc: {
       type: String,
       default: ''
     },

@@ -1,6 +1,6 @@
 const path = require('path')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
-var PrettierPlugin = require('prettier-webpack-plugin')
+const PrettierPlugin = require('prettier-webpack-plugin')
 module.exports = {
   css: {
     requireModuleExtension: false,

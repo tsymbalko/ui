@@ -275,13 +275,13 @@
           <ProgressLine type="warning" :percent="ProgressLine" />
         </div>
         <div class="progress-list_item">
-          <ProgressLine type="primary" :percent="50" legend="Total: 200" />
+          <ProgressLine type="primary" :percent="50" desc="Total: 200" />
         </div>
         <div class="progress-list_item">
           <ProgressLine
             type="error"
             :percent="ProgressLine"
-            legend="Total: 200"
+            desc="Total: 200"
           />
         </div>
         <div class="progress-list_item">
@@ -291,7 +291,7 @@
           <ProgressLine
             type="warning"
             :percent="ProgressLine"
-            legend="Total: 200"
+            desc="Total: 200"
             icon="cog"
             :stroke="4"
           />
@@ -301,7 +301,7 @@
           <ProgressLine
             color="#9198e5"
             :percent="50"
-            legend="Total: 200"
+            desc="Total: 200"
             icon="cog"
             :stroke="4"
           />
@@ -323,7 +323,8 @@
             type="success"
             shape="round"
             :percent="ProgressLine"
-            legend="Total: 200"
+            desc="Total: 200"
+            legend="Food"
             icon="cog"
             :stroke="8"
           />
@@ -333,7 +334,8 @@
             type="success"
             shape="round"
             :percent="40"
-            legend="Total: 200"
+            desc="Total: 200"
+            legend="Food"
             icon="cog"
             :stroke="10"
           />
