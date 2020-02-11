@@ -1,5 +1,7 @@
 .vc-switch {
+  appearance: none;
   min-width: 44px;
+  display: inline-block;
   vertical-align: middle;
   height: 22px;
   border-radius: 11px;
@@ -20,17 +22,13 @@
     transition: all .36s cubic-bezier(.78, .14, .15, .86);
   }
 
-  &:not([disabled]):active {
-    transform: none;
-  }
-
   &:disabled {
     cursor: not-allowed;
     opacity: .4;
   }
 
-  &__checked {
-    background-color: var(--green);
+  &:checked {
+    background-color: var(--accent-color);
 
     &:after {
       left: 100%;

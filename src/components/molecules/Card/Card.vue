@@ -1,10 +1,6 @@
 <template>
   <div
-    :class="[
-      'vc-card',
-      { [`vc-card__${type}`]: type },
-      { [`vc-card__${shape}`]: shape }
-    ]"
+    :class="['vc-card', { [`vc-card__${type}`]: type }]"
     :style="{ '--border-color': borderColor }"
   >
     <slot />
@@ -23,11 +19,6 @@ export default {
     borderColor: {
       type: String,
       default: undefined
-    },
-    shape: {
-      type: String,
-      validator: value => ['round', 'rectangle'].includes(value),
-      default: 'round'
     }
   }
 }

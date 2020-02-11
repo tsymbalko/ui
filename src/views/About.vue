@@ -7,11 +7,11 @@
       hic nulla numquam perspiciatis placeat qui ratione reiciendis tempore
       veniam vero voluptate.
     </p>
-    <Button :loading="loading" type="warning">Add members</Button>
-    <Button :loading="loading" icon="archive-alt" type="warning">
+    <Button type="warning">Add members</Button>
+    <Button icon="archive-alt" type="warning">
       Add members
     </Button>
-    <Button :loading="loading" icon="archive-alt" type="warning" shape="square">
+    <Button icon="archive-alt" type="warning" shape="square">
       Add members
     </Button>
   </div>

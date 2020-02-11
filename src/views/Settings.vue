@@ -9,7 +9,7 @@
       >
         On {{ isLightTheme ? 'dark' : 'light' }} theme:
       </p>
-      <VSwitch v-model="checked" @change="toggleTheme" />
+      <CheckboxSwitch v-model="checked" @change="toggleTheme" />
     </div>
     <div>
       <p
@@ -19,7 +19,7 @@
       >
         Disable radius ?
       </p>
-      <VSwitch v-model="radius" @change="disabledRadius" />
+      <CheckboxSwitch v-model="radius" @change="disabledRadius" />
     </div>
     <div>
       <p
@@ -30,16 +30,39 @@
       </p>
       <Color v-model="accentColor" @change="setAccentColor" />
     </div>
+    <div>
+      <CheckboxSwitch v-model="radius" @change="disabledRadius" disabled />
+    </div>
+    <div>
+      <CheckboxSwitch v-model="test" @change="disabledRadius" />
+    </div>
+    <div>
+      <Checkbox />
+    </div>
+    <div>
+      <Checkbox disabled />
+    </div>
+    <div>
+      <Radio name="test" id="1" />
+    </div>
+    <div>
+      <Radio name="test" id="2" checked />
+    </div>
+    <div>
+      <Radio name="test" disabled />
+    </div>
   </div>
 </template>
 
 <script>
-import { VSwitch, Color } from 'atoms'
+import { CheckboxSwitch, Color, Checkbox, Radio } from 'atoms'
 export default {
   name: 'settings',
   components: {
-    VSwitch,
-    Color
+    CheckboxSwitch,
+    Checkbox,
+    Color,
+    Radio
   },
   data() {
     return {
@@ -48,7 +71,8 @@ export default {
         .getPropertyValue('--accent-color')
         .trim(),
       checked: false,
-      radius: false
+      radius: false,
+      test: true
     }
   },
   mounted() {
@@ -67,7 +91,7 @@ export default {
     disabledRadius(value) {
       this.radius = value
       const radius = value ? '0px' : '4px'
-      document.documentElement.style.setProperty('--base-radius', radius)
+      document.documentElement.style.setProperty('--border-radius', radius)
     },
 
     setAccentColor(value) {

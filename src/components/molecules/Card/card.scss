@@ -4,14 +4,7 @@
   background-color: var(--base-background);
   position: relative;
   min-height: 60px;
-
-  &__round {
-    border-radius: var(--base-radius);
-  }
-
-  &__rectangle {
-    border-right: 0;
-  }
+  border-radius: var(--border-radius);
 
   &:before {
     content: '';

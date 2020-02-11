@@ -1,17 +1,17 @@
 <template>
-  <button
-    ref="switch"
-    class="vc-switch"
-    :class="{ 'vc-switch__checked': checked, 'vc-switch__disabled': disabled }"
+  <input
+    type="checkbox"
+    class="vc-checkbox"
     :disabled="disabled"
+    :checked="checked"
     role="switch"
-    @click="changeChecked"
+    @change="$emit('change', $event.target.checked)"
   />
 </template>
 
 <script>
 export default {
-  name: 'VCSwitch',
+  name: 'Checkbox',
   model: {
     prop: 'checked',
     event: 'change'
@@ -25,15 +25,10 @@ export default {
       type: Boolean,
       default: false
     }
-  },
-  methods: {
-    changeChecked() {
-      this.$emit('change', !this.checked)
-    }
   }
 }
 </script>
 
 <style lang="scss">
-@import 'switch';
+@import 'checkbox';
 </style>

@@ -22,7 +22,7 @@
   --navigation-width: 86px;
   --header-height: 86px;
   --base-font: Muli, sans-serif;
-  --base-radius: 4px;
+  --border-radius: 4px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -39,6 +39,7 @@
     --base-title: #fff;
     --base-background: #181d23;
     --light-blue: #485465;
+    --base-border: #181d23;
   }
 }
 
@@ -47,6 +48,7 @@
   --base-title: #fff;
   --base-background: #181d23;
   --light-blue: #485465;
+  --base-border: #181d23;
 }
 
 @font-face {
@@ -155,7 +157,6 @@ button {
   cursor: pointer;
   background: none;
   border: none;
-  border-radius: 2px;
 }
 
 .visually_hidden {
