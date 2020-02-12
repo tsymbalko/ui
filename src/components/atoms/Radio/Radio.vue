@@ -3,9 +3,10 @@
     type="radio"
     class="vc-radio"
     :disabled="disabled"
-    :checked="checked"
+    :checked="selected === value"
+    :value="value"
     role="switch"
-    @change="$emit('change', $event.target.checked)"
+    @change="$emit('change', value)"
   />
 </template>
 
@@ -13,17 +14,27 @@
 export default {
   name: 'Radio',
   model: {
-    prop: 'checked',
+    prop: 'selected',
     event: 'change'
   },
   props: {
-    checked: {
-      type: Boolean,
-      default: false
+    label: {
+      type: String,
+      default: ''
     },
     disabled: {
       type: Boolean,
       default: false
+    },
+    selected: {
+      validator: v =>
+        typeof v === 'string' || v === null || typeof v === 'number',
+      default: null
+    },
+    value: {
+      validator: v =>
+        typeof v === 'string' || v === null || typeof v === 'number',
+      required: true
     }
   }
 }

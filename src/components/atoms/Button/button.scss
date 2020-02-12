@@ -9,8 +9,12 @@
   transition: color .2s;
   position: relative;
   height: var(--size);
-  color: var(--base-title);
+  color: #fff;
   background: var(--background);
+
+  &__ghost {
+    color: var(--invers);
+  }
 
   &__primary {
     background-color: var(--accent-color);
@@ -98,7 +102,7 @@
     margin-top: -14px;
     margin-left: -14px;
     animation: dashSpinner 1.5s ease-in-out infinite;
-    stroke: var(--base-title);
+    stroke: #fff;
     stroke-linecap: round;
   }
 }

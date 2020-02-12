@@ -3,7 +3,7 @@
     :class="[
       'vc-tag',
       { 'vc-tag__closable': closable },
-      { [`vc-tag__${type}`]: type },
+      { [`vc-tag__${type}`]: type && !color },
       { [`vc-tag__${shape}`]: shape }
     ]"
     :style="{ '--color': color }"

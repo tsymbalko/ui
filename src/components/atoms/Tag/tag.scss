@@ -3,6 +3,10 @@
   align-items: center;
   color: var(--color);
 
+  &__ghost {
+    color: var(--invers);
+  }
+
   &__primary {
     --color: var(--accent-color);
   }
@@ -27,7 +31,7 @@
     display: inline-block;
     padding: 0 12px;
     background-color: var(--color);
-    color: var(--base-title);
+    color: #fff;
     font-size: 14px;
     line-height: 24px;
     font-weight: 600;
@@ -36,6 +40,10 @@
 
     &:focus-within {
       box-shadow: var(--base-focus);
+    }
+
+    .vc-tag__ghost & {
+      color: var(--invers);
     }
 
     .vc-tag__closable & {

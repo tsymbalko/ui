@@ -9,7 +9,7 @@
       >
         On {{ isLightTheme ? 'dark' : 'light' }} theme:
       </p>
-      <CheckboxSwitch v-model="checked" @change="toggleTheme" />
+      <Checkbox type="switch" v-model="checked" @change="toggleTheme" />
     </div>
     <div>
       <p
@@ -19,7 +19,7 @@
       >
         Disable radius ?
       </p>
-      <CheckboxSwitch v-model="radius" @change="disabledRadius" />
+      <Checkbox type="switch" v-model="radius" @change="disabledRadius" />
     </div>
     <div>
       <p
@@ -30,36 +30,27 @@
       </p>
       <Color v-model="accentColor" @change="setAccentColor" />
     </div>
-    <div>
-      <CheckboxSwitch v-model="radius" @change="disabledRadius" disabled />
+    <div style="margin-bottom: 14px;">
+      <Checkbox v-model="checked" type="switch" />
+      <Checkbox v-model="test" value="test1" @change="log" />
+      <Checkbox v-model="test" value="test2" />
+      <Checkbox v-model="test" value="2" />
+      {{ test }}
     </div>
-    <div>
-      <CheckboxSwitch v-model="test" @change="disabledRadius" />
+    <div style="margin-bottom: 14px;">
+      <Radio name="test" id="1" value="test1" selected="test1" />
     </div>
-    <div>
-      <Checkbox />
-    </div>
-    <div>
-      <Checkbox disabled />
-    </div>
-    <div>
-      <Radio name="test" id="1" />
-    </div>
-    <div>
-      <Radio name="test" id="2" checked />
-    </div>
-    <div>
-      <Radio name="test" disabled />
+    <div style="margin-bottom: 14px;">
+      <Radio name="test" id="2" value="test2" />
     </div>
   </div>
 </template>
 
 <script>
-import { CheckboxSwitch, Color, Checkbox, Radio } from 'atoms'
+import { Color, Checkbox, Radio } from 'atoms'
 export default {
   name: 'settings',
   components: {
-    CheckboxSwitch,
     Checkbox,
     Color,
     Radio
@@ -72,7 +63,7 @@ export default {
         .trim(),
       checked: false,
       radius: false,
-      test: true
+      test: ['1', '2']
     }
   },
   mounted() {
@@ -102,6 +93,10 @@ export default {
       this.isLightTheme = event.matches
       this.checked = false
       delete document.documentElement.dataset.theme
+    },
+    log() {
+      //eslint-disable-next-line
+      console.log(123)
     }
   },
   beforeDestroy() {

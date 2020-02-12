@@ -5,7 +5,7 @@
       'vc-button',
       {
         [`vc-button__${shape}`]: shape,
-        [`vc-button__${type}`]: type,
+        [`vc-button__${type}`]: type && !background,
         'vc-button__loading': loading
       }
     ]"
@@ -53,7 +53,7 @@ export default {
     },
     iconPosition: {
       type: String,
-      validator: value => ['left', 'right', ''].includes(value),
+      validator: value => ['left', 'right'].includes(value),
       default: 'right'
     },
     type: {

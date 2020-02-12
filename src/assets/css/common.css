@@ -23,6 +23,7 @@
   --header-height: 86px;
   --base-font: Muli, sans-serif;
   --border-radius: 4px;
+  --invers: #000;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -40,6 +41,7 @@
     --base-background: #181d23;
     --light-blue: #485465;
     --base-border: #181d23;
+    --invers: #fff;
   }
 }
 
@@ -49,6 +51,7 @@
   --base-background: #181d23;
   --light-blue: #485465;
   --base-border: #181d23;
+  --invers: #fff;
 }
 
 @font-face {
