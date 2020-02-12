@@ -1,13 +1,19 @@
 <template>
-  <input
-    type="radio"
-    class="vc-radio"
-    :disabled="disabled"
-    :checked="selected === value"
-    :value="value"
-    role="switch"
-    @change="$emit('change', value)"
-  />
+  <label class="vc-radio">
+    <input
+      type="radio"
+      :name="name"
+      class="vc-radio_input"
+      :disabled="disabled"
+      :checked="selected === value"
+      :value="value"
+      role="switch"
+      @change="$emit('change', value)"
+    />
+    <span v-if="label" class="vc-radio_label">
+      {{ label }}
+    </span>
+  </label>
 </template>
 
 <script>
@@ -25,6 +31,10 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    },
+    name: {
+      type: String,
+      default: 'inputRadioName'
     },
     selected: {
       validator: v =>

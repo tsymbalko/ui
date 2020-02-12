@@ -1,13 +1,18 @@
 <template>
-  <input
-    type="checkbox"
-    class="vc-checkbox"
-    :class="`vc-checkbox__${type}`"
-    :value="value"
-    :disabled="disabled"
-    :checked="shouldBeChecked"
-    @change="updateInput"
-  />
+  <label class="vc-checkbox">
+    <input
+      type="checkbox"
+      class="vc-checkbox_input"
+      :class="`vc-checkbox_input__${type}`"
+      :value="value"
+      :disabled="disabled"
+      :checked="shouldBeChecked"
+      @change="updateInput"
+    />
+    <span v-if="label" class="vc-checkbox_label">
+      {{ label }}
+    </span>
+  </label>
 </template>
 
 <script>
@@ -37,6 +42,10 @@ export default {
         typeof value === 'string' ||
         typeof value === 'boolean',
       default: ''
+    },
+    label: {
+      type: String,
+      default: ''
     }
   },
 
@@ -51,15 +60,9 @@ export default {
     updateInput(event) {
       const checked = event.target.checked
       if (Array.isArray(this.selected)) {
-        if (this.single) {
-          this.$emit('change', [this.value])
-          return
-        }
-
         const selected = checked
           ? [...this.selected, this.value]
           : this.selected.filter(value => value !== this.value)
-
         this.$emit('change', selected)
       } else {
         this.$emit('change', checked)

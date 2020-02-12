@@ -1,48 +1,49 @@
 <template>
   <div>
     <h1 class="title">Настройки приложения</h1>
-    <div>
-      <p
-        style="margin-right: 40px;
-        margin-bottom: 20px;
-        display: inline-block;"
-      >
-        On {{ isLightTheme ? 'dark' : 'light' }} theme:
-      </p>
-      <Checkbox type="switch" v-model="checked" @change="toggleTheme" />
-    </div>
-    <div>
-      <p
-        style="margin-right: 40px;
-        margin-bottom: 20px;
-        display: inline-block;"
-      >
-        Disable radius ?
-      </p>
-      <Checkbox type="switch" v-model="radius" @change="disabledRadius" />
-    </div>
-    <div>
-      <p
-        style="margin-right: 40px;
-        display: inline-block;"
-      >
+    <ul class="example-list">
+      <li>
+        <Checkbox
+          type="switch"
+          v-model="checked"
+          @change="toggleTheme"
+          :label="`On ${isLightTheme ? 'dark' : 'light'} theme`"
+        />
+      </li>
+      <li>
+        <Checkbox
+          type="switch"
+          v-model="radius"
+          @change="disabledRadius"
+          label="Disable radius ?"
+        />
+      </li>
+      <li>
+        <Color v-model="accentColor" @change="setAccentColor" />
         Change brand color:
-      </p>
-      <Color v-model="accentColor" @change="setAccentColor" />
-    </div>
-    <div style="margin-bottom: 14px;">
-      <Checkbox v-model="checked" type="switch" />
-      <Checkbox v-model="test" value="test1" @change="log" />
-      <Checkbox v-model="test" value="test2" />
-      <Checkbox v-model="test" value="2" />
-      {{ test }}
-    </div>
-    <div style="margin-bottom: 14px;">
-      <Radio name="test" id="1" value="test1" selected="test1" />
-    </div>
-    <div style="margin-bottom: 14px;">
-      <Radio name="test" id="2" value="test2" />
-    </div>
+      </li>
+      <li>
+        <Checkbox
+          v-model="test"
+          value="checkbox1"
+          label="Checkbox"
+          @change="log"
+        />
+      </li>
+      <li>
+        <Checkbox v-model="test" value="checkbox2" label="Checkbox" />
+      </li>
+      <li>
+        <Checkbox v-model="test" value="checkbox3" label="Checkbox" />
+      </li>
+      <li>Selected checkbox {{ test }}</li>
+      <li>
+        <Radio v-model="test2" label="Radio 1" name="name" value="1" />
+      </li>
+      <li>
+        <Radio v-model="test2" label="Radio 2" name="name" value="2" />
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -63,7 +64,8 @@ export default {
         .trim(),
       checked: false,
       radius: false,
-      test: ['1', '2']
+      test: ['checkbox1', 'checkbox2'],
+      test2: '1'
     }
   },
   mounted() {
@@ -105,3 +107,13 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.example-list {
+  list-style: none;
+
+  li {
+    margin-bottom: 20px;
+  }
+}
+</style>

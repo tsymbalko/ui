@@ -1,65 +1,74 @@
 .vc-checkbox {
-  appearance: none;
-  position: relative;
-  background-color: rgba(0, 0, 0, .25);
-  transition: background-color .2s cubic-bezier(.78, .14, .15, .86);
+  display: inline-flex;
+  align-items: center;
 
-  &:after {
-    content: '';
-    position: absolute;
-    pointer-events: none;
-    transition: all .2s cubic-bezier(.78, .14, .15, .86);
-  }
-
-  &__checkbox {
-    width: 22px;
-    height: 22px;
-    border-radius: var(--border-radius);
+  &_input {
+    appearance: none;
+    position: relative;
+    background-color: rgba(0, 0, 0, .25);
+    transition: background-color .2s cubic-bezier(.78, .14, .15, .86);
 
     &:after {
-      width: 8px;
-      height: 12px;
-      border: 2px solid #fff;
-      border-top: 0;
-      border-left: 0;
-      left: 7px;
-      top: 3px;
-      opacity: 0;
-      transform: rotate(40deg);
+      content: '';
+      position: absolute;
+      pointer-events: none;
+      transition: all .2s cubic-bezier(.78, .14, .15, .86);
     }
 
-    &:checked:after {
-      opacity: 1;
+    &__checkbox {
+      width: 22px;
+      height: 22px;
+      border-radius: var(--border-radius);
+
+      &:after {
+        width: 8px;
+        height: 12px;
+        border: 2px solid #fff;
+        border-top: 0;
+        border-left: 0;
+        left: 7px;
+        top: 3px;
+        opacity: 0;
+        transform: rotate(40deg);
+      }
+
+      &:checked:after {
+        opacity: 1;
+      }
+    }
+
+    &__switch {
+      min-width: 44px;
+      height: 22px;
+      border-radius: 11px;
+
+      &:after {
+        top: 2px;
+        left: 2px;
+        width: 18px;
+        height: 18px;
+        background-color: #fff;
+        border-radius: 18px;
+      }
+
+      &:checked:after {
+        left: 100%;
+        margin-left: -2px;
+        transform: translateX(-100%);
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: .4;
+    }
+
+    &:checked {
+      background-color: var(--accent-color);
     }
   }
 
-  &__switch {
-    min-width: 44px;
-    height: 22px;
-    border-radius: 11px;
-
-    &:after {
-      top: 2px;
-      left: 2px;
-      width: 18px;
-      height: 18px;
-      background-color: #fff;
-      border-radius: 18px;
-    }
-
-    &:checked:after {
-      left: 100%;
-      margin-left: -2px;
-      transform: translateX(-100%);
-    }
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-    opacity: .4;
-  }
-
-  &:checked {
-    background-color: var(--accent-color);
+  &_label {
+    margin-left: 8px;
   }
 }
