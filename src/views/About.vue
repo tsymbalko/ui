@@ -7,21 +7,23 @@
       hic nulla numquam perspiciatis placeat qui ratione reiciendis tempore
       veniam vero voluptate.
     </p>
-    <Button type="warning">Add members</Button>
-    <Button icon="archive-alt" type="warning">
-      Add members
-    </Button>
-    <Button icon="archive-alt" type="warning" shape="square">
-      Add members
-    </Button>
+    <div>
+      <Rating label="Label" :quantity="4" name="name1" />
+    </div>
+    <div>
+      <Rating label="Label" :quantity="10" name="name2" />
+    </div>
+    <div>
+      <Rating label="Label" :quantity="6" name="name3" />
+    </div>
   </div>
 </template>
 
 <script>
-import { Button } from 'atoms'
+import { Rating } from 'molecules'
 export default {
   components: {
-    Button
+    Rating
   }
 }
 </script>
