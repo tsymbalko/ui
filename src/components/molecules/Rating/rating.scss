@@ -1,0 +1,33 @@
+.vc-rating {
+  position: relative;
+  border: none;
+
+  &_item {
+    display: inline-block;
+    vertical-align: middle;
+
+    &:nth-child(2) {
+      background-color: #ec547a;
+    }
+  }
+
+  &_input {
+
+    &:checked,
+    &:hover {
+      background-color: #ec547a;
+    }
+
+    &:checked + .vc-rating_icon {
+      fill: var(--orange);
+    }
+  }
+
+  &_icon {
+    transition: .2s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
