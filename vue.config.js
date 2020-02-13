@@ -34,15 +34,10 @@ module.exports = {
         lintDirtyModulesOnly: true
       }),
       new PrettierPlugin({
-        printWidth: 80,
-        tabWidth: 2,
-        useTabs: false,
-        semi: false,
-        bracketSpacing: true,
         encoding: 'utf-8',
-        proseWrap: 'never',
-        singleQuote: true,
-        extensions: ['.js', '.vue']
+        extensions: ['.js', '.vue'],
+        fix: true,
+        configFile: '.prettierrc',
       })
     ]
   }
