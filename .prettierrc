@@ -4,8 +4,6 @@
   "useTabs": false,
   "semi": false,
   "bracketSpacing": true,
-  "encoding": "utf-8",
   "proseWrap": "never",
-  "singleQuote": true,
-  "extensions": [".js", ".vue"]
+  "singleQuote": true
 }
