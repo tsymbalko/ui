@@ -29,12 +29,19 @@
 
 <script>
 import Icon from '../Icon/Icon'
+/**
+ * The only true button.
+ * @displayName Button
+ */
 export default {
   name: 'VCButton',
   components: {
     Icon
   },
   props: {
+    /**
+     * A test for default function Object
+     */
     icon: {
       type: String,
       default: ''

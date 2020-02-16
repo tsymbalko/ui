@@ -37,7 +37,7 @@ module.exports = {
         encoding: 'utf-8',
         extensions: ['.js', '.vue'],
         fix: true,
-        configFile: '.prettierrc',
+        configFile: '.prettierrc'
       })
     ]
   }
