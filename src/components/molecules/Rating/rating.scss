@@ -14,10 +14,10 @@
     padding: 2px;
     vertical-align: middle;
     line-height: 1;
-    color: var(--disabled);
     border-radius: 100%;
     cursor: pointer;
     position: relative;
+    color: var(--disabled);
 
     &:focus-within {
       filter: drop-shadow(0 0 3px var(--focus));
@@ -34,17 +34,16 @@
   }
 
   &_checkbox {
-
     appearance: none;
     width: 1px;
     height: 1px;
     opacity: 0;
-    background-color: var(--focus);
     border-radius: 50%;
     position: absolute;
     bottom: -2px;
     left: 14px;
     margin-left: -1px;
+    background-color: var(--focus);
 
     &:focus {
       opacity: 1;
