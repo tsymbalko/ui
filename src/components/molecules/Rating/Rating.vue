@@ -29,6 +29,7 @@
 <script>
 import { Icon } from 'atoms'
 export default {
+  name: 'Rating',
   model: {
     prop: 'value',
     event: 'change'
@@ -43,7 +44,7 @@ export default {
     },
     checked: {
       type: String,
-      default: null
+      default: '1'
     },
     disabled: {
       type: Boolean,

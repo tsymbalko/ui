@@ -11,7 +11,10 @@
       <Rating label="Label" :quantity="4" checked="2" name="name1" />
     </div>
     <div>
-      <h1>Количество: {{ value }}</h1>
+      <Rating label="Label" name="name10" icon="star-mono" />
+    </div>
+    <div>
+      <h1>Количество: + {{ value }}</h1>
       <div>
         <Rating
           label="Label"
