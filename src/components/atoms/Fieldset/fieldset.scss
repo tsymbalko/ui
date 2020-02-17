@@ -1,0 +1,21 @@
+.vc-fieldset {
+  border: 1px solid var(--disabled);
+  border-radius: var(--border-radius);
+  position: relative;
+  padding: 2px 16px 16px;
+  min-height: 80px;
+
+  &_legend {
+    padding: 0 12px;
+    line-height: 2;
+    color: var(--base-title);
+    margin-left: 12px;
+  }
+
+  &_button {
+    position: absolute;
+    top: 22px;
+    right: 8px;
+    color: #ec547a;
+  }
+}

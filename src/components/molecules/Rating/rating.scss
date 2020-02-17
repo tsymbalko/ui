@@ -1,32 +1,59 @@
 .vc-rating {
-  position: relative;
   border: none;
+  padding-bottom: 6px;
+
+  &_legend {
+    padding: 0 4px;
+    color: var(--base-title);
+  }
 
   &_item {
     display: inline-block;
+    width: 28px;
+    height: 28px;
+    padding: 2px;
     vertical-align: middle;
+    line-height: 1;
+    color: var(--disabled);
+    border-radius: 100%;
+    cursor: pointer;
+    position: relative;
 
-    &:nth-child(2) {
-      background-color: #ec547a;
+    &:focus-within {
+      filter: drop-shadow(0 0 3px var(--focus));
+    }
+
+    &__selected {
+      color: var(--active-color);
+    }
+
+    &__disabled {
+      cursor: not-allowed;
+      opacity: .4;
     }
   }
 
-  &_input {
+  &_checkbox {
+    appearance: none;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    background-color: var(--focus);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -2px;
+    left: 14px;
+    margin-left: -1px;
 
-    &:checked,
-    &:hover {
-      background-color: #ec547a;
-    }
-
-    &:checked + .vc-rating_icon {
-      fill: var(--orange);
+    &:focus {
+      opacity: 1;
     }
   }
 
   &_icon {
-    transition: .2s;
+    transition: transform .2s ease-out;
 
-    &:hover {
+    .vc-rating_item:not(.vc-rating_item__disabled):hover & {
       transform: scale(1.2);
     }
   }

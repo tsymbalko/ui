@@ -6,5 +6,16 @@ import Spinner from './Spinner/Spinner'
 import Radio from './Radio/Radio'
 import Tag from './Tag/Tag'
 import ProgressLine from './PropgressLine/ProgressLine'
+import Fieldset from './Fieldset/Fieldset'
 
-export { Icon, Checkbox, Color, Button, Spinner, Tag, ProgressLine, Radio }
+export {
+  Icon,
+  Checkbox,
+  Color,
+  Button,
+  Spinner,
+  Tag,
+  ProgressLine,
+  Fieldset,
+  Radio
+}

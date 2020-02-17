@@ -1,18 +1,27 @@
 <template>
-  <fieldset class="vc-rating">
-    <legend>{{ label }}</legend>
+  <fieldset class="vc-rating" :style="{ '--active-color': color }">
+    <legend class="vc-rating_legend">Rating</legend>
     <label
-      v-for="(item, index) in quantity"
       class="vc-rating_item"
-      :key="index"
+      v-for="rating in quantity"
+      :class="{
+        'vc-rating_item__selected': value >= rating && value != null,
+        'vc-rating_item__disabled': disabled
+      }"
+      @click="setRating(rating)"
+      @mouseover="overRating(rating)"
+      @mouseout="outRating"
+      :key="rating"
     >
       <input
+        class="vc-rating_checkbox"
         type="radio"
-        class="vc-rating_input"
-        :checked="index === 0"
+        :value="rating"
         :name="name"
+        :disabled="disabled"
+        v-model="value"
       />
-      <Icon class="vc-rating_icon" name="star" />
+      <Icon :name="icon" class="vc-rating_icon" />
     </label>
   </fieldset>
 </template>
@@ -20,22 +29,67 @@
 <script>
 import { Icon } from 'atoms'
 export default {
-  name: 'Rating',
+  model: {
+    prop: 'value',
+    event: 'change'
+  },
   components: {
     Icon
   },
   props: {
     name: {
       type: String,
-      default: 'rating'
+      default: 'radio-button-group'
+    },
+    checked: {
+      type: String,
+      default: null
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    required: {
+      type: Boolean,
+      default: false
+    },
+    icon: {
+      type: String,
+      default: 'star'
     },
     quantity: {
       type: Number,
       default: 5
     },
-    label: {
+    color: {
       type: String,
-      default: ''
+      default: '#FF790E'
+    }
+  },
+  data() {
+    return {
+      value: this.checked,
+      temp_value: null
+    }
+  },
+  methods: {
+    overRating(value) {
+      if (!this.disabled) {
+        this.temp_value = this.value
+        this.value = value
+      }
+    },
+    outRating() {
+      if (!this.disabled) {
+        this.value = this.temp_value
+      }
+    },
+    setRating(value) {
+      if (!this.disabled) {
+        this.temp_value = value
+        this.value = value
+        this.$emit('change', value)
+      }
     }
   }
 }
