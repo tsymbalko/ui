@@ -18,4 +18,9 @@
     right: 8px;
     color: #ec547a;
   }
+
+  &_description {
+    font-weight: 600;
+    color: var(--base-text);
+  }
 }

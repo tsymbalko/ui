@@ -47,24 +47,20 @@
         disabled
       />
     </div>
-    <Fieldset legend="fre" />
-    <Fieldset legend="Legend"
-      >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet autem
-      consectetur consequuntur debitis doloremque facere facilis laudantium
-      neque nisi. Ab aut commodi exercitationem modi possimus ratione sint, unde
-      vel voluptatem!</Fieldset
-    >
-    <Fieldset legend="Legend" />
+    <Fieldset legend="Legend">
+      <Empty></Empty>
+    </Fieldset>
   </div>
 </template>
 
 <script>
-import { Rating } from 'molecules'
+import { Rating, Empty } from 'molecules'
 import { Fieldset } from 'atoms'
 export default {
   components: {
     Rating,
-    Fieldset
+    Fieldset,
+    Empty
   },
   data() {
     return {

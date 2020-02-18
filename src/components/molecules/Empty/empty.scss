@@ -1,0 +1,40 @@
+.vc-empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &_image {
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &_icon {
+    fill: var(--grey);
+  }
+
+  &_indicator {
+    fill: var(--red);
+    animation-name: blink;
+    animation-timing-function: linear;
+    animation-duration: .3s;
+    animation-iteration-count: infinite;
+  }
+
+  &_description {
+    color: var(--base-text);
+    padding: 4px 0;
+  }
+}
+
+@keyframes blink {
+
+  50% {
+    opacity: 0;
+  }
+}
