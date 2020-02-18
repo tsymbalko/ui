@@ -50,17 +50,47 @@
     <Fieldset legend="Legend">
       <Empty></Empty>
     </Fieldset>
+    <Block :size="8" :amount="20" />
+
+    <PFrame>
+      <VerticalLine />
+    </PFrame>
+    <PLine />
+
+    <PCircle :size="60" />
+    <Rectangle :height="20" />
+    <div
+      style="width: 100px;
+      height: 100px;"
+    >
+      <Square />
+    </div>
   </div>
 </template>
 
 <script>
 import { Rating, Empty } from 'molecules'
 import { Fieldset } from 'atoms'
+import Block from '@/components/placeholders/Block'
+import PCircle from '@/components/placeholders/Circle'
+import PFrame from '@/components/placeholders/Frame'
+import PLine from '@/components/placeholders/Line'
+import VerticalLine from '@/components/placeholders/VerticalLine'
+import Rectangle from '@/components/placeholders/Rectangle'
+import Square from '@/components/placeholders/Square'
+
 export default {
   components: {
     Rating,
     Fieldset,
-    Empty
+    Empty,
+    Block,
+    PCircle,
+    PFrame,
+    PLine,
+    VerticalLine,
+    Rectangle,
+    Square
   },
   data() {
     return {

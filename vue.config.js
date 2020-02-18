@@ -16,6 +16,7 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
+        helpers: path.resolve('./src/helpers'),
         components: path.resolve('./src/components'),
         atoms: path.resolve('./src/components/atoms'),
         molecules: path.resolve('./src/components/molecules'),
