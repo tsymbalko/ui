@@ -4,7 +4,8 @@
       display: 'flex',
       flexWrap: 'wrap',
       justifyContent: justify,
-      width: '100%'
+      width: '100%',
+      opacity: '.3'
     }"
   >
     <div
@@ -30,11 +31,12 @@
 
 <script>
 import random from '@/helpers/random'
+
 export default {
   props: {
     background: {
       type: String,
-      default: 'rgba(0, 0, 0, 0.3)'
+      default: 'var(--invers, lightgrey)'
     },
     size: {
       type: Number,

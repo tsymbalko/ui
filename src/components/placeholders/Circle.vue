@@ -4,7 +4,8 @@
       background,
       borderRadius: '100%',
       height: `${size}px`,
-      width: `${size}px`
+      width: `${size}px`,
+      opacity: '.3'
     }"
   />
 </template>
@@ -18,7 +19,7 @@ export default {
     },
     background: {
       type: String,
-      default: 'rgba(0, 0, 0, .3)'
+      default: 'var(--invers, lightgrey)'
     }
   }
 }

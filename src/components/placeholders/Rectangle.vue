@@ -1,10 +1,12 @@
 <template>
   <div
     :style="{
-      backgroundColor: 'rgba(0, 0, 0, .3)',
+      backgroundColor: 'var(--invers, lightgrey)',
+      opacity: '.3',
+      padding: '16px',
       borderRadius: '2px',
       height: `${height}px`,
-      width: '100%'
+      width: `${width}%`
     }"
   />
 </template>
@@ -15,6 +17,10 @@ export default {
     height: {
       type: Number,
       default: 8
+    },
+    width: {
+      type: Number,
+      default: 100
     }
   }
 }

@@ -2,6 +2,7 @@
   <div
     :style="{
       background: background,
+      opacity: '.3',
       height: '1px',
       width: '100%'
     }"
@@ -13,7 +14,7 @@ export default {
   props: {
     background: {
       type: String,
-      default: 'rgba(0, 0, 0, 0.3)'
+      default: 'var(--invers, lightgrey)'
     }
   }
 }

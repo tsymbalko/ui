@@ -6,7 +6,7 @@
   --accent-color: var(--blue);
   --base-light-accent: #379dff;
   --base-background: #ffffff;
-  --base-border: #eff2f5;
+  --base-border: #aaa;
   --base-scroll: #aaa;
   --disabled: #ccc;
   --focus: #7ab7ff;
@@ -63,7 +63,7 @@ tbody tr:hover {
     --base-title: #fff;
     --base-background: #181d23;
     --light-blue: #485465;
-    --base-border: #181d23;
+    --base-border: var(--light-blue);
     --invers: #fff;
   }
 }
@@ -73,7 +73,7 @@ tbody tr:hover {
   --base-title: #fff;
   --base-background: #181d23;
   --light-blue: #485465;
-  --base-border: #181d23;
+  --base-border: var(--light-blue);
   --invers: #fff;
 }
 

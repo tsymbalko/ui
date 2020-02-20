@@ -1,10 +1,11 @@
 <template>
   <div
     :style="{
-      background: 'rgba(0, 0, 0, 0.3)',
+      background: 'var(--invers, lightgrey)',
+      opacity: '.3',
       borderRadius: '4px',
-      height: '100%',
-      width: '100%'
+      height: `${size}px`,
+      width: `${size}px`
     }"
   />
 </template>

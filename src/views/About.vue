@@ -47,35 +47,44 @@
         disabled
       />
     </div>
-    <Fieldset legend="Legend">
-      <Empty></Empty>
-    </Fieldset>
-    <Block :size="8" :amount="20" />
+
+    <Card>
+      <Fieldset legend="Legend">
+        <Empty></Empty>
+      </Fieldset>
+    </Card>
+    <Card>
+      <PCircle :size="60" />
+      <br />
+      <Block :size="8" :amount="20" />
+    </Card>
 
     <PFrame>
-      <VerticalLine />
-    </PFrame>
-    <PLine />
+      <Rectangle :width="70" :height="20" />
+      <br />
 
-    <PCircle :size="60" />
-    <Rectangle :height="20" />
-    <div
-      style="width: 100px;
-      height: 100px;"
-    >
-      <Square />
-    </div>
+      <br />
+      <PLine />
+      <br />
+      <div>
+        <Square :size="100" />
+        <Block :size="8" :amount="20" />
+      </div>
+    </PFrame>
+
+    <Block :size="8" :amount="20" />
+    <br />
+    <Block :size="8" :amount="20" />
   </div>
 </template>
 
 <script>
-import { Rating, Empty } from 'molecules'
+import { Rating, Empty, Card } from 'molecules'
 import { Fieldset } from 'atoms'
 import Block from '@/components/placeholders/Block'
 import PCircle from '@/components/placeholders/Circle'
 import PFrame from '@/components/placeholders/Frame'
 import PLine from '@/components/placeholders/Line'
-import VerticalLine from '@/components/placeholders/VerticalLine'
 import Rectangle from '@/components/placeholders/Rectangle'
 import Square from '@/components/placeholders/Square'
 
@@ -88,9 +97,9 @@ export default {
     PCircle,
     PFrame,
     PLine,
-    VerticalLine,
     Rectangle,
-    Square
+    Square,
+    Card
   },
   data() {
     return {
