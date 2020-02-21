@@ -52,6 +52,7 @@
 
   &_icon {
     transition: transform .2s ease-out;
+    pointer-events: none;
 
     .vc-rating_item:not(.vc-rating_item__disabled):hover & {
       transform: scale(1.2);

@@ -54,51 +54,73 @@
       </Fieldset>
     </Card>
     <Card>
-      <PCircle :size="60" />
-      <br />
-      <Block :size="8" :amount="20" />
+      <SkeletonFigure shape="circle" />
+      <SkeletonBlock :size="8" :amount="20" />
     </Card>
 
-    <PFrame>
-      <Rectangle :width="70" :height="20" />
+    <SkeletonFrame>
+      <SkeletonFigure />
       <br />
-
-      <br />
-      <PLine />
+      <SkeletonLine />
       <br />
       <div>
-        <Square :size="100" />
-        <Block :size="8" :amount="20" />
+        <SkeletonFigure />
+        <br />
+        <SkeletonBlock :size="8" :amount="20" />
       </div>
-    </PFrame>
+    </SkeletonFrame>
+    <SkeletonFrame>
+      <SkeletonRow>
+        <SkeletonBlock :size="8" :amount="20" />
+        <SkeletonBlock :size="8" :amount="20" />
+      </SkeletonRow>
+      <br />
+      <SkeletonRow>
+        <SkeletonFigure size="80px" shape="circle" />
+        <SkeletonBlock :size="8" :amount="15" />
+      </SkeletonRow>
+      <SkeletonBlock :size="8" :amount="16" />
+    </SkeletonFrame>
+    <div>
+      <SkeletonFigure size="80px" />
+      <br />
+      <SkeletonLine />
+      <br />
 
-    <Block :size="8" :amount="20" />
-    <br />
-    <Block :size="8" :amount="20" />
+      <br />
+    </div>
+    <SkeletonRow align="center">
+      <SkeletonFigure shape="circle" />
+      <SkeletonLine :size="['90%', '40px']" />
+    </SkeletonRow>
+    <SkeletonRow align="center">
+      <SkeletonLine :size="['90%', '40px']" />
+      <SkeletonBlock :size="8" :amount="16" />
+    </SkeletonRow>
   </div>
 </template>
 
 <script>
 import { Rating, Empty, Card } from 'molecules'
 import { Fieldset } from 'atoms'
-import Block from '@/components/placeholders/Block'
-import PCircle from '@/components/placeholders/Circle'
-import PFrame from '@/components/placeholders/Frame'
-import PLine from '@/components/placeholders/Line'
-import Rectangle from '@/components/placeholders/Rectangle'
-import Square from '@/components/placeholders/Square'
+import {
+  SkeletonRow,
+  SkeletonBlock,
+  SkeletonLine,
+  SkeletonFrame,
+  SkeletonFigure
+} from 'skeletons'
 
 export default {
   components: {
+    SkeletonRow,
+    SkeletonBlock,
+    SkeletonLine,
+    SkeletonFrame,
+    SkeletonFigure,
     Rating,
     Fieldset,
     Empty,
-    Block,
-    PCircle,
-    PFrame,
-    PLine,
-    Rectangle,
-    Square,
     Card
   },
   data() {

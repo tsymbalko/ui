@@ -16,14 +16,15 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
+        assets: path.resolve('./src/assets'),
         helpers: path.resolve('./src/helpers'),
         components: path.resolve('./src/components'),
         atoms: path.resolve('./src/components/atoms'),
+        pages: path.resolve('./src/components/pages'),
         molecules: path.resolve('./src/components/molecules'),
         organisms: path.resolve('./src/components/organisms'),
-        pages: path.resolve('./src/components/pages'),
-        templates: path.resolve('./src/components/templates'),
-        assets: path.resolve('./src/assets')
+        skeletons: path.resolve('./src/components/skeletons'),
+        templates: path.resolve('./src/components/templates')
       }
     },
     plugins: [

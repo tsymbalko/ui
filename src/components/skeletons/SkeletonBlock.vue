@@ -5,7 +5,8 @@
       flexWrap: 'wrap',
       justifyContent: justify,
       width: '100%',
-      opacity: '.3'
+      opacity: '.3',
+      flex: '1 1 auto'
     }"
   >
     <div
@@ -14,18 +15,12 @@
       :style="{
         marginBottom: '8px',
         marginRight: '8px',
-        width: `${random(1, 5) * 10}%`
+        width: `${random(1, 5) * 10}%`,
+        background: background,
+        borderRadius: '9999px',
+        height: `${size}px`
       }"
-    >
-      <div
-        :style="{
-          background: background,
-          borderRadius: '9999px',
-          height: `${size}px`,
-          width: '100%'
-        }"
-      />
-    </div>
+    />
   </div>
 </template>
 
