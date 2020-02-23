@@ -76,7 +76,6 @@ export default {
     visible() {
       if (this.visible) {
         this.toLockLayout()
-        this.focusedCloseButton()
         window.addEventListener('keyup', this.handleEscapeKey)
       } else {
         this.unlockLayout()
@@ -90,13 +89,15 @@ export default {
         e.preventDefault()
       }
     },
-    focusedCloseButton() {
-      //eslint-disable-next-line
-      console.log(this.$refs.modalClose)
-      this.$nextTick(function() {
-        this.$refs.modalClose.$el.focus()
-      })
-    },
+    // focusedCloseButton() {
+    //   //eslint-disable-next-line
+    //   console.log(this.$refs.modalClose)
+    //   //eslint-disable-next-line
+    //   console.log('focus')
+    //   this.$nextTick(function() {
+    //     this.$refs.modalClose.$el.focus()
+    //   })
+    // },
     closeModal() {
       this.$emit('close', false)
     }
