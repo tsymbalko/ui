@@ -54,70 +54,85 @@
       </Fieldset>
     </Card>
     <Card>
-      <SkeletonFigure shape="circle" />
-      <SkeletonBlock :size="8" :amount="20" />
+      <SFigure shape="circle" />
+      <SBlock :size="8" :amount="20" />
     </Card>
 
-    <SkeletonFrame>
-      <SkeletonFigure />
+    <SFrame>
+      <SRow>
+        <SFigure />
+        <SBlock :size="8" :amount="20" />
+      </SRow>
+    </SFrame>
+    <br />
+    <SFrame>
+      <SLine :size="['60%', '40px']" />
+      <SRow>
+        <SBlock :size="8" :amount="20" />
+        <SBlock :size="8" :amount="20" />
+      </SRow>
       <br />
-      <SkeletonLine />
-      <br />
-      <div>
-        <SkeletonFigure />
-        <br />
-        <SkeletonBlock :size="8" :amount="20" />
-      </div>
-    </SkeletonFrame>
-    <SkeletonFrame>
-      <SkeletonRow>
-        <SkeletonBlock :size="8" :amount="20" />
-        <SkeletonBlock :size="8" :amount="20" />
-      </SkeletonRow>
-      <br />
-      <SkeletonRow>
-        <SkeletonFigure size="80px" shape="circle" />
-        <SkeletonBlock :size="8" :amount="15" />
-      </SkeletonRow>
-      <SkeletonBlock :size="8" :amount="16" />
-    </SkeletonFrame>
-    <div>
-      <SkeletonFigure size="80px" />
-      <br />
-      <SkeletonLine />
-      <br />
-
-      <br />
-    </div>
-    <SkeletonRow align="center">
-      <SkeletonFigure shape="circle" />
-      <SkeletonLine :size="['90%', '40px']" />
-    </SkeletonRow>
-    <SkeletonRow align="center">
-      <SkeletonLine :size="['90%', '40px']" />
-      <SkeletonBlock :size="8" :amount="16" />
-    </SkeletonRow>
+      <SRow>
+        <SFigure size="80px" shape="circle" />
+        <SBlock :size="8" :amount="15" />
+      </SRow>
+      <SBlock :size="8" :amount="16" />
+    </SFrame>
+    <br />
+    <SFrame>
+      <SRow>
+        <SFigure size="80px" />
+        <SBlock :size="8" :amount="15" />
+      </SRow>
+      <SLine />
+      <SBlock :size="8" :amount="20" />
+    </SFrame>
+    <br />
+    <SFrame>
+      <SRow align="center">
+        <SFigure shape="circle" />
+        <SLine :size="['90%', '40px']" />
+      </SRow>
+      <SRow align="center">
+        <SBlock :size="8" :amount="16" />
+        <div style="width: 60%;">
+          <SLine :size="['90%', '40px']" />
+          <SLine :size="['90%', '40px']" />
+        </div>
+      </SRow>
+    </SFrame>
+    <br />
+    <SFrame>
+      <SRow align="center">
+        <SFigure shape="circle" />
+        <div style="width: 90%;">
+          <SLine :size="['auto', '20px']" />
+          <SLine :size="['auto', '20px']" />
+        </div>
+      </SRow>
+      <SRow align="center">
+        <SBlock :size="8" :amount="32" />
+        <div style="width: 60%;">
+          <SLine :size="['90%', '220px']" />
+        </div>
+      </SRow>
+      <SBlock :size="8" :amount="16" />
+    </SFrame>
   </div>
 </template>
 
 <script>
 import { Rating, Empty, Card } from 'molecules'
 import { Fieldset } from 'atoms'
-import {
-  SkeletonRow,
-  SkeletonBlock,
-  SkeletonLine,
-  SkeletonFrame,
-  SkeletonFigure
-} from 'skeletons'
+import { SRow, SBlock, SLine, SFrame, SFigure } from 'skeletons'
 
 export default {
   components: {
-    SkeletonRow,
-    SkeletonBlock,
-    SkeletonLine,
-    SkeletonFrame,
-    SkeletonFigure,
+    SRow,
+    SBlock,
+    SLine,
+    SFrame,
+    SFigure,
     Rating,
     Fieldset,
     Empty,

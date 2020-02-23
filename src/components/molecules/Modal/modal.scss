@@ -1,0 +1,143 @@
+.modals-open {
+  overflow: hidden;
+}
+
+.vu-modal {
+
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: opacity .4s ease;
+  }
+
+  &__mask {
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+
+    &--disabled {
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  &__cmp {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    background: var(--base-background);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+    margin: 30px auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 650px;
+
+    &--is-center {
+      margin: auto;
+      top: 50%;
+    }
+
+    &--is-scroll {
+      max-height: 90%;
+    }
+
+    &--is-scroll-fullscreen {
+      max-height: 100%;
+    }
+
+    &--is-fullscreen {
+      width: 100%;
+      min-height: 100%;
+      margin: 0 0;
+    }
+
+    &--is-bottom {
+      bottom: 0;
+    }
+
+    &--is-top {
+      top: 0;
+    }
+
+    &--is-right {
+      right: 0;
+      margin-right: 30px;
+    }
+
+    &--is-left {
+      left: 0;
+      margin-left: 30px;
+    }
+
+    &--xl {
+      width: 1024px;
+    }
+
+    &--lg {
+      width: 850px;
+    }
+
+    &--md {
+      width: 650px;
+    }
+
+    &--sm {
+      width: 550px;
+    }
+
+    &--xs {
+      width: 350px;
+    }
+
+    &--p50 {
+      width: 50%;
+    }
+
+    &--p70 {
+      width: 70%;
+    }
+
+    &--p90 {
+      width: 90%;
+    }
+
+    &-body {
+      padding: 16px;
+      color: var(--base-text);
+    }
+
+    &-header {
+      padding: 16px;
+      display: flex;
+      align-items: center;
+
+      &-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--base-title);
+      }
+    }
+
+    &-footer {
+      padding: 16px;
+      text-align: right;
+
+      .vc-button + .vc-button {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &__close-btn {
+    margin-left: auto;
+  }
+}

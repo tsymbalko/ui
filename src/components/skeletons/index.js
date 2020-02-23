@@ -1,13 +1,7 @@
-import SkeletonBlock from './SkeletonBlock'
-import SkeletonFrame from './SkeletonFrame'
-import SkeletonLine from './SkeletonLine'
-import SkeletonRow from './SkeletonRow'
-import SkeletonFigure from './SkeletonFigure'
+import SBlock from './SkeletonBlock'
+import SFrame from './SkeletonFrame'
+import SLine from './SkeletonLine'
+import SRow from './SkeletonRow'
+import SFigure from './SkeletonFigure'
 
-export {
-  SkeletonBlock,
-  SkeletonFrame,
-  SkeletonLine,
-  SkeletonRow,
-  SkeletonFigure
-}
+export { SBlock, SFrame, SLine, SRow, SFigure }

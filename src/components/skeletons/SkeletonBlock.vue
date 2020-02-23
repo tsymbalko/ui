@@ -6,7 +6,8 @@
       justifyContent: justify,
       width: '100%',
       opacity: '.3',
-      flex: '1 1 auto'
+      flex: '1 1 auto',
+      padding: '8px 8px 0 8px'
     }"
   >
     <div
@@ -28,6 +29,7 @@
 import random from '@/helpers/random'
 
 export default {
+  name: 'SBlock',
   props: {
     background: {
       type: String,
