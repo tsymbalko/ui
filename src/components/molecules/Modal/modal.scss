@@ -1,22 +1,15 @@
-.modals-open {
-  overflow: hidden;
-}
+.vc-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: opacity .4s ease;
 
-.vu-modal {
-
-  &__wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 5000;
-    overflow-x: hidden;
-    overflow-y: auto;
-    transition: opacity .4s ease;
-  }
-
-  &__mask {
+  &_mask {
     backdrop-filter: blur(4px);
     background-color: rgba(0, 0, 0, .5);
     position: absolute;
@@ -24,12 +17,13 @@
     height: 100%;
     overflow-y: scroll;
 
-    &--disabled {
+    &__disabled {
       background-color: rgba(0, 0, 0, 0);
+      backdrop-filter: none;
     }
   }
 
-  &__cmp {
+  &_content {
     display: flex;
     flex-direction: column;
     border-radius: var(--border-radius);
@@ -41,99 +35,99 @@
     transform: translateX(-50%);
     width: 650px;
 
-    &--is-center {
+    &__is-center {
       margin: auto;
       top: 50%;
     }
 
-    &--is-scroll {
+    &__is-scroll {
       max-height: 90%;
     }
 
-    &--is-scroll-fullscreen {
+    &__is-scroll-fullscreen {
       max-height: 100%;
     }
 
-    &--is-fullscreen {
+    &__is-fullscreen {
       width: 100%;
       min-height: 100%;
       margin: 0 0;
     }
 
-    &--is-bottom {
+    &__is-bottom {
       bottom: 0;
     }
 
-    &--is-top {
+    &__is-top {
       top: 0;
     }
 
-    &--is-right {
+    &__is-right {
       right: 0;
       margin-right: 30px;
     }
 
-    &--is-left {
+    &__is-left {
       left: 0;
       margin-left: 30px;
     }
 
-    &--xl {
+    &__xl {
       width: 1024px;
     }
 
-    &--lg {
+    &__lg {
       width: 850px;
     }
 
-    &--md {
+    &__md {
       width: 650px;
     }
 
-    &--sm {
+    &__sm {
       width: 550px;
     }
 
-    &--xs {
+    &__xs {
       width: 350px;
     }
 
-    &--p50 {
+    &__p50 {
       width: 50%;
     }
 
-    &--p70 {
+    &__p70 {
       width: 70%;
     }
 
-    &--p90 {
+    &__p90 {
       width: 90%;
     }
+  }
 
-    &-body {
-      padding: 16px;
-      color: var(--base-text);
-    }
+  &_body {
+    padding: 16px;
+    color: var(--base-text);
+  }
 
-    &-header {
-      padding: 16px;
-      display: flex;
-      align-items: center;
+  &_header {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+  }
 
-      &-title {
-        font-size: 16px;
-        font-weight: 600;
-        color: var(--base-title);
-      }
-    }
+  &-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--base-title);
+  }
 
-    &-footer {
-      padding: 16px;
-      text-align: right;
+  &_footer {
+    padding: 16px;
+    text-align: right;
 
-      .vc-button + .vc-button {
-        margin-left: 10px;
-      }
+    .vc-button + .vc-button {
+      margin-left: 10px;
     }
   }
 

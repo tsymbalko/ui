@@ -1,19 +1,19 @@
 <template>
-  <div v-if="visible" class="vu-modal__wrapper">
-    <div class="vu-modal__mask">
+  <div v-if="visible" class="vc-modal">
+    <div class="vc-modal_mask">
       <div
         tabindex="-1"
-        class="vu-modal__cmp vu-modal__cmp--md"
+        class="vc-modal_content vc-modal_content--md"
         role="dialog"
         v-click-outside="close"
         style="transform: translate(-50%, 0);"
       >
         <Trap>
-          <div class="vu-modal__cmp-header">
-            <h2 class="vu-modal__cmp-header-title">Simple title</h2>
+          <div class="vc-modal_header">
+            <h2 class="vc-modal_title">Simple title</h2>
             <Button
               ref="modalClose"
-              class="vu-modal__close-btn"
+              class="vc-modal__close-btn"
               icon="multiply"
               shape="square"
               type="ghost"
@@ -21,7 +21,7 @@
               @click="$emit('close', false)"
             />
           </div>
-          <div class="vu-modal__cmp-body">
+          <div class="vc-modal_body">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum in
             obcaecati optio pariatur perferendis porro quasi quisquam soluta
             vero, vitae voluptas voluptate. Accusantium dolor dolorem, molestias
@@ -35,7 +35,7 @@
             necessitatibus nisi odit possimus ratione similique voluptas
             voluptatem.
           </div>
-          <div class="vu-modal__cmp-footer">
+          <div class="vc-modal_footer">
             <Button type="bordered" @click="$emit('close', false)">
               Cancel
             </Button>
@@ -50,9 +50,10 @@
 </template>
 
 <script>
-import { Button } from 'atoms'
 import Trap from 'vue-focus-lock'
 import vClickOutside from 'v-click-outside'
+import { Button } from 'atoms'
+import { LayoutLock } from 'mixins'
 
 export default {
   components: {
@@ -62,6 +63,7 @@ export default {
   directives: {
     clickOutside: vClickOutside.directive
   },
+  mixins: [LayoutLock],
   props: {
     visible: {
       type: Boolean,
@@ -71,15 +73,16 @@ export default {
   watch: {
     visible() {
       if (this.visible) {
+        this.toLockLayout()
         this.focusedCloseButton()
         window.addEventListener('keyup', this.handleEscapeKey)
+      } else {
+        this.unlockLayout()
       }
     }
   },
   methods: {
     handleEscapeKey(e) {
-      //eslint-disable-next-line
-      console.log(e)
       if (e.code === 'Escape') {
         this.$emit('close', false)
         e.preventDefault()
@@ -90,8 +93,6 @@ export default {
       console.log(this.$refs.modalClose)
       this.$nextTick(function() {
         this.$refs.modalClose.$el.focus()
-        //eslint-disable-next-line
-        console.log(this.$refs.modalClose.$el)
       })
     },
     close() {
@@ -99,8 +100,6 @@ export default {
     }
   },
   beforeDestroy() {
-    //eslint-disable-next-line
-    console.log('destroy')
     window.removeEventListener('keyup', this.handleEscapeKey)
   }
 }
