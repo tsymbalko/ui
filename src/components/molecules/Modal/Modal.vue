@@ -89,15 +89,6 @@ export default {
         e.preventDefault()
       }
     },
-    // focusedCloseButton() {
-    //   //eslint-disable-next-line
-    //   console.log(this.$refs.modalClose)
-    //   //eslint-disable-next-line
-    //   console.log('focus')
-    //   this.$nextTick(function() {
-    //     this.$refs.modalClose.$el.focus()
-    //   })
-    // },
     closeModal() {
       this.$emit('close', false)
     }
