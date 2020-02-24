@@ -70,15 +70,13 @@
         <Button icon="archive-alt" shape="circle">Add members</Button>
       </div>
       <div class="section-example">
-        <Button type="primary">Add members</Button>
+        <Button type="primary">Members</Button>
         <Button type="primary" icon="archive-alt" icon-position="left"
-          >Add members</Button
+          >Members</Button
         >
-        <Button type="primary" icon="archive-alt">Add members</Button>
-        <Button type="primary" icon="cog" shape="square">Add members</Button>
-        <Button type="primary" icon="archive-alt" shape="round"
-          >Add members</Button
-        >
+        <Button type="primary" icon="archive-alt">Members</Button>
+        <Button type="primary" icon="cog" shape="square">Members</Button>
+        <Button type="primary" icon="archive-alt" shape="round">Members</Button>
         <Button type="primary" icon="archive-alt" shape="circle"
           >Add members</Button
         >
