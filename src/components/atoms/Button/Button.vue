@@ -53,7 +53,7 @@ export default {
     },
     size: {
       type: Number,
-      default: 42
+      default: 44
     },
     loading: {
       type: Boolean,
