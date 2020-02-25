@@ -1,10 +1,10 @@
 <template>
-  <transition name="vc-modal__animation">
+  <transition :name="`vc-modal_animation__${animation}`">
     <div
       v-if="visible"
       :class="[
         'vc-modal',
-        { 'vc-modal__mask': mask },
+        { 'vc-modal__mask': mask && !fullscreen },
         { 'vc-modal__center': center },
         { 'vc-modal__fullscreen': fullscreen }
       ]"
@@ -80,6 +80,11 @@ export default {
       type: Boolean,
       default: true
     },
+    animation: {
+      type: String,
+      validate: value => ['fade-left', 'scale'].includes(value),
+      default: 'scale'
+    },
     center: {
       type: Boolean,
       default: false
@@ -90,7 +95,7 @@ export default {
     },
     fullscreen: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
   watch: {
