@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  name: 'SRow',
   props: {
     align: {
       type: String,

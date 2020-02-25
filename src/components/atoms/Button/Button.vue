@@ -11,6 +11,7 @@
     ]"
     :style="{ '--background': background, '--size': `${size}px` }"
     :disabled="disabled"
+    @click="$emit('click')"
   >
     <span class="vc-button_text">
       <slot />
@@ -66,7 +67,14 @@ export default {
     type: {
       type: String,
       validator: value =>
-        ['warning', 'error', 'success', 'primary', 'ghost'].includes(value),
+        [
+          'warning',
+          'error',
+          'success',
+          'primary',
+          'ghost',
+          'bordered'
+        ].includes(value),
       default: 'ghost'
     },
     htmlType: {

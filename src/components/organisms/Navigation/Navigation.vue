@@ -30,6 +30,21 @@
           <Icon class="navigation_icon" width="24" height="24" name="code" />
         </router-link>
       </li>
+      <li class="navigation_item">
+        <router-link
+          to="/test"
+          class="navigation_link"
+          active-class="navigation_link__active"
+          title="Test"
+        >
+          <Icon
+            class="navigation_icon"
+            width="24"
+            height="24"
+            name="archive-alt"
+          />
+        </router-link>
+      </li>
       <li class="navigation_item navigation_item__separator">
         <router-link
           to="/setting"

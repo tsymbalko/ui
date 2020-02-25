@@ -2,7 +2,15 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--light-blue);
   padding-left: var(--navigation-width);
+
+  &__locked {
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding-right: 4px;
+  }
 
   &_main {
     flex: 1 1;

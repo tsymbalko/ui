@@ -1,0 +1,150 @@
+.vc-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5000;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &__animation {
+
+    &-enter-active,
+    &-leave-active {
+      transition: transform .25s ease, opacity .25s ease;
+    }
+
+    &-enter,
+    &-leave-to {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+  }
+
+  &_mask {
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+
+    &__disabled {
+      background-color: rgba(0, 0, 0, 0);
+      backdrop-filter: none;
+    }
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    background: var(--base-background);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+    margin: 30px auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 650px;
+
+    &__is-center {
+      margin: auto;
+      top: 50%;
+    }
+
+    &__is-scroll {
+      max-height: 90%;
+    }
+
+    &__is-scroll-fullscreen {
+      max-height: 100%;
+    }
+
+    &__is-fullscreen {
+      width: 100%;
+      min-height: 100%;
+      margin: 0 0;
+    }
+
+    &__is-bottom {
+      bottom: 0;
+    }
+
+    &__is-top {
+      top: 0;
+    }
+
+    &__is-right {
+      right: 0;
+      margin-right: 30px;
+    }
+
+    &__is-left {
+      left: 0;
+      margin-left: 30px;
+    }
+
+    &__xl {
+      width: 1024px;
+    }
+
+    &__lg {
+      width: 850px;
+    }
+
+    &__md {
+      width: 650px;
+    }
+
+    &__sm {
+      width: 550px;
+    }
+
+    &__xs {
+      width: 350px;
+    }
+
+    &__p50 {
+      width: 50%;
+    }
+
+    &__p70 {
+      width: 70%;
+    }
+
+    &__p90 {
+      width: 90%;
+    }
+  }
+
+  &_body {
+    padding: 16px;
+    color: var(--base-text);
+  }
+
+  &_header {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  &-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--base-title);
+  }
+
+  &_footer {
+    padding: 16px;
+    text-align: right;
+
+    .vc-button + .vc-button {
+      margin-left: 10px;
+    }
+  }
+
+  &__close-btn {
+    margin-left: auto;
+  }
+}

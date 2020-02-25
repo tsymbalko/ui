@@ -3,6 +3,7 @@
     :style="{
       background: background,
       borderRadius: '4px',
+      margin: '8px',
       opacity: '.3',
       width: size[0],
       height: size[1]
@@ -12,10 +13,11 @@
 
 <script>
 export default {
+  name: 'SLine',
   props: {
     size: {
       type: Array,
-      default: () => ['100%', '1px']
+      default: () => ['auto', '1px']
     },
     background: {
       type: String,

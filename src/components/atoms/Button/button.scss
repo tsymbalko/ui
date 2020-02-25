@@ -33,6 +33,11 @@
     background-color: var(--orange);
   }
 
+  &__bordered {
+    border: 2px solid currentColor;
+    color: var(--invers);
+  }
+
   &__loading {
     cursor: progress;
     color: transparent;
@@ -55,7 +60,7 @@
   }
 
   &:not([disabled]):hover {
-    opacity: .8;
+    opacity: .7;
   }
 
   &:disabled {

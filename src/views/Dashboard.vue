@@ -60,6 +60,97 @@
         </div>
       </div>
     </Card>
+    <Card
+      type="warning"
+      shape="rectangle"
+      border-color="linear-gradient(var(--orange), var(--blue))"
+    >
+      <div class="progress-list">
+        <div class="progress-list_item">
+          <ProgressLine type="primary" />
+        </div>
+        <div class="progress-list_item">
+          <ProgressLine
+            type="error"
+            :percent="ProgressLine"
+            :show-info="false"
+          />
+        </div>
+        <div class="progress-list_item">
+          <ProgressLine type="success" :percent="50" />
+        </div>
+        <div class="progress-list_item">
+          <ProgressLine type="warning" :percent="ProgressLine" />
+        </div>
+        <div class="progress-list_item">
+          <ProgressLine type="primary" :percent="50" desc="Total: 200" />
+        </div>
+        <div class="progress-list_item">
+          <ProgressLine
+            type="error"
+            :percent="ProgressLine"
+            desc="Total: 200"
+          />
+        </div>
+        <div class="progress-list_item">
+          <ProgressLine type="success" :percent="50" icon="cog" />
+        </div>
+        <div class="progress-list_item">
+          <ProgressLine
+            type="warning"
+            :percent="ProgressLine"
+            desc="Total: 200"
+            icon="cog"
+            :stroke="4"
+          />
+        </div>
+
+        <div class="progress-list_item">
+          <ProgressLine
+            color="#9198e5"
+            :percent="50"
+            desc="Total: 200"
+            icon="cog"
+            :stroke="4"
+          />
+        </div>
+        <div class="progress-list_item">
+          <ProgressLine type="error" shape="rectangle" icon="cog" :stroke="8" />
+        </div>
+        <div class="progress-list_item">
+          <ProgressLine
+            type="warning"
+            shape="rectangle"
+            :percent="31.1"
+            icon="cog"
+            :stroke="8"
+          />
+        </div>
+        <div class="progress-list_item">
+          <ProgressLine
+            type="success"
+            shape="round"
+            :percent="ProgressLine"
+            desc="Total: 200"
+            legend="Food"
+            icon="cog"
+            :stroke="8"
+          />
+        </div>
+        <div class="progress-list_item">
+          <ProgressLine
+            type="success"
+            shape="round"
+            :percent="40"
+            desc="Total: 200"
+            legend="Food"
+            icon="cog"
+            :stroke="10"
+          />
+        </div>
+      </div>
+    </Card>
+    <Card type="warning" shape="rectangle"> </Card>
     <Card type="success">
       <div class="section-example">
         <Button icon="archive-alt">Add members</Button>
@@ -250,127 +341,18 @@
         >
       </div>
     </Card>
-    <Card
-      type="warning"
-      shape="rectangle"
-      border-color="linear-gradient(var(--orange), var(--blue))"
-    >
-      <div class="progress-list">
-        <div class="progress-list_item">
-          <ProgressLine type="primary" />
-        </div>
-        <div class="progress-list_item">
-          <ProgressLine
-            type="error"
-            :percent="ProgressLine"
-            :show-info="false"
-          />
-        </div>
-        <div class="progress-list_item">
-          <ProgressLine type="success" :percent="50" />
-        </div>
-        <div class="progress-list_item">
-          <ProgressLine type="warning" :percent="ProgressLine" />
-        </div>
-        <div class="progress-list_item">
-          <ProgressLine type="primary" :percent="50" desc="Total: 200" />
-        </div>
-        <div class="progress-list_item">
-          <ProgressLine
-            type="error"
-            :percent="ProgressLine"
-            desc="Total: 200"
-          />
-        </div>
-        <div class="progress-list_item">
-          <ProgressLine type="success" :percent="50" icon="cog" />
-        </div>
-        <div class="progress-list_item">
-          <ProgressLine
-            type="warning"
-            :percent="ProgressLine"
-            desc="Total: 200"
-            icon="cog"
-            :stroke="4"
-          />
-        </div>
-
-        <div class="progress-list_item">
-          <ProgressLine
-            color="#9198e5"
-            :percent="50"
-            desc="Total: 200"
-            icon="cog"
-            :stroke="4"
-          />
-        </div>
-        <div class="progress-list_item">
-          <ProgressLine type="error" shape="rectangle" icon="cog" :stroke="8" />
-        </div>
-        <div class="progress-list_item">
-          <ProgressLine
-            type="warning"
-            shape="rectangle"
-            :percent="31.1"
-            icon="cog"
-            :stroke="8"
-          />
-        </div>
-        <div class="progress-list_item">
-          <ProgressLine
-            type="success"
-            shape="round"
-            :percent="ProgressLine"
-            desc="Total: 200"
-            legend="Food"
-            icon="cog"
-            :stroke="8"
-          />
-        </div>
-        <div class="progress-list_item">
-          <ProgressLine
-            type="success"
-            shape="round"
-            :percent="40"
-            desc="Total: 200"
-            legend="Food"
-            icon="cog"
-            :stroke="10"
-          />
-        </div>
-      </div>
-    </Card>
-    <Card type="warning" shape="rectangle">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis
-        commodi dolore dolorem eum eveniet iusto, maiores molestiae mollitia
-        natus necessitatibus porro quidem quod reprehenderit saepe suscipit
-        veritatis vitae voluptatibus?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
-        adipisci amet animi at consequuntur corporis debitis doloribus eveniet
-        excepturi fugiat inventore itaque laborum magni, necessitatibus quisquam
-        rem ut velit voluptatum?
-      </p>
-      <Button
-        background="linear-gradient(#e66465, #9198e5)"
-        icon="archive-alt"
-        shape="round"
-        >Add members</Button
-      >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, aliquid
-        animi beatae, consequatur consequuntur cupiditate enim eveniet id magnam
-        maiores minima molestias obcaecati perspiciatis qui quisquam rem
-        voluptatibus. Reiciendis, sed!
-      </p>
-    </Card>
+    <div style="padding: 20px 0;">
+      <Button type="success" @click="toggleModal">
+        Open modal
+      </Button>
+      <Modal :visible="visibleModal" @close="closeModal" />
+    </div>
   </div>
 </template>
 
 <script>
 import { Button, Spinner, Tag, ProgressLine } from 'atoms'
+import { Modal } from 'molecules'
 import { Card } from 'molecules'
 export default {
   name: 'home',
@@ -379,12 +361,14 @@ export default {
     Spinner,
     Tag,
     ProgressLine,
-    Card
+    Card,
+    Modal
   },
   data() {
     return {
       loading: false,
-      ProgressLine: 10
+      ProgressLine: 10,
+      visibleModal: false
     }
   },
   mounted() {
@@ -408,6 +392,14 @@ export default {
       this.loading = true
       this.ProgressLine = 42.2
     }, 14000)
+  },
+  methods: {
+    toggleModal() {
+      this.visibleModal = !this.visibleModal
+    },
+    closeModal(value) {
+      this.visibleModal = value
+    }
   }
 }
 </script>

@@ -1,14 +1,18 @@
 <template>
   <div
     :style="{
-      border: '1px solid rgba(0, 0, 0, 0.3)',
       borderRadius: 'var(--border-radius)',
-      padding: '16px',
-      boxShadow:
-        'rgba(0, 0, 0, 0.2) 0px 16px 24px -4px, rgba(0, 0, 0, 0.05) 0px 8px 8px -4px',
+      padding: '8px',
+      boxShadow: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
       width: '100%'
     }"
   >
     <slot />
   </div>
 </template>
+
+<script>
+export default {
+  name: 'SFrame'
+}
+</script>
