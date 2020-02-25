@@ -340,7 +340,32 @@
         </div>
       </div>
     </Card>
-    <Card type="warning" shape="rectangle"> </Card>
+    <Card type="warning" shape="rectangle">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis
+        commodi dolore dolorem eum eveniet iusto, maiores molestiae mollitia
+        natus necessitatibus porro quidem quod reprehenderit saepe suscipit
+        veritatis vitae voluptatibus?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+        adipisci amet animi at consequuntur corporis debitis doloribus eveniet
+        excepturi fugiat inventore itaque laborum magni, necessitatibus quisquam
+        rem ut velit voluptatum?
+      </p>
+      <Button
+        background="linear-gradient(#e66465, #9198e5)"
+        icon="archive-alt"
+        shape="round"
+        >Add members</Button
+      >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, aliquid
+        animi beatae, consequatur consequuntur cupiditate enim eveniet id magnam
+        maiores minima molestias obcaecati perspiciatis qui quisquam rem
+        voluptatibus. Reiciendis, sed!
+      </p>
+    </Card>
   </div>
 </template>
 
