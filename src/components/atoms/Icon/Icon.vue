@@ -5,6 +5,7 @@
     :width="width"
     :height="height"
     :fill="fill"
+    aria-hidden="true"
   >
     <use :xlink:href="`${require('assets/sprites/icons.svg')}#${name}`" />
   </svg>
