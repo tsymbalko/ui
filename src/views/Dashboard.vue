@@ -448,6 +448,6 @@ export default {
 
 .grid-presentation {
   display: grid;
-  grid-gap: 36px;
+  grid-gap: 32px;
 }
 </style>
