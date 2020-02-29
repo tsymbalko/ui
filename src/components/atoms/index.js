@@ -7,6 +7,7 @@ import Radio from './Radio/Radio'
 import Tag from './Tag/Tag'
 import ProgressLine from './PropgressLine/ProgressLine'
 import Fieldset from './Fieldset/Fieldset'
+import Range from './Range/Range'
 
 export {
   Icon,
@@ -17,5 +18,6 @@ export {
   Tag,
   ProgressLine,
   Fieldset,
-  Radio
+  Radio,
+  Range
 }
