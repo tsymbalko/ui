@@ -74,37 +74,42 @@ export default {
     }
   },
   //TODO Связать минмальное значение и значение
-  computed: {
-    trackWidth() {
-      return this.calcTrackWidth()
-    }
-  },
   watch: {
     value() {
-      this.calcTrackWidth()
+      this.currentTrackWidth = this.calcTrackWidth()
+      this.trackWidth = this.currentTrackWidth
+      this.tempTrackWidth = this.currentTrackWidth
     }
   },
   data() {
     return {
+      currentTrackWidth: this.calcTrackWidth(),
+      trackWidth: this.calcTrackWidth(),
       tempTrackWidth: 0
     }
   },
   methods: {
     calcTrackWidth() {
-      return this.value !== ''
-        ? ((this.value - this.min) * 100) / (this.max - this.min)
-        : 50
+      return ((Number(this.value) - this.min) * 100) / (this.max - this.min)
     },
     calcTempTrackWidth(event) {
       if (!this.disabled) {
-        this.tempTrackWidth = (
-          ((event.clientX - event.target.offsetLeft) * 100) /
-          event.target.offsetWidth
-        ).toFixed(2)
+        const width = Number(
+          (
+            (event.clientX - event.target.offsetLeft) /
+            (event.target.offsetWidth / 100)
+          ).toFixed(2)
+        )
+        this.tempTrackWidth = width
+        if (this.tempTrackWidth < this.currentTrackWidth) {
+          this.tempTrackWidth = this.currentTrackWidth
+          this.trackWidth = width
+        }
       }
     },
     resetTempTrackWidth() {
-      this.tempTrackWidth = 0
+      this.tempTrackWidth = this.currentTrackWidth
+      this.trackWidth = this.currentTrackWidth
     },
     setValue(event) {
       if (event.target.value >= this.max) {
