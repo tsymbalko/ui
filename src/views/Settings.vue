@@ -52,6 +52,7 @@
       <li>
         <Range v-model="test3" legend />
         <br />
+        <Range v-model="test5" :min="0" :max="1" :step="0.01" legend />
         <Range v-model="test5" :min="0" :max="1" :step="0.01" legend disabled />
         <br />
         <Range v-model="test4" label="Label:" :min="20" :step="10" legend />
