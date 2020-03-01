@@ -6,6 +6,12 @@
     justify-content: space-between;
   }
 
+  &_value {
+    font-weight: 600;
+    text-align: center;
+    color: var(--green);
+  }
+
   &_input {
     width: 100%;
     appearance: none;

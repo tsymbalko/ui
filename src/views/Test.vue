@@ -4,7 +4,7 @@
     doloribus, error eveniet explicabo iste iure modi molestias nobis porro
     quaerat quia quo repellat tempore. Dignissimos doloremque fugit nisi sed
     sint.
-    <Range v-model="test2" />
+    <Range v-model="test2" legend />
     <br />
     <Range v-model="test" :min="0" :max="1" :step="0.01" legend disabled />
     <br />

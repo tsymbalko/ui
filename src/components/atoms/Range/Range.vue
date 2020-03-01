@@ -24,7 +24,7 @@
         {{ min }}
         <sup>min</sup>
       </span>
-      <span>
+      <span class="vc-range_value">
         {{ value }}
       </span>
       <span>
