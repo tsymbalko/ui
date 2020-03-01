@@ -64,6 +64,10 @@
       opacity: .4;
     }
 
+    &:hover:not([disabled]) {
+      background-color: var(--focus);
+    }
+
     &:checked {
       background-color: var(--accent-color);
     }

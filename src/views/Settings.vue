@@ -36,6 +36,9 @@
       <li>
         <Checkbox v-model="test" value="checkbox3" label="Checkbox" />
       </li>
+      <li>
+        <Checkbox v-model="test" value="checkbox4" label="Checkbox" disabled />
+      </li>
       <li>Selected checkbox {{ test }}</li>
       <li>
         <Radio v-model="test2" label="Radio 1" name="name" value="1" />
@@ -43,18 +46,29 @@
       <li>
         <Radio v-model="test2" label="Radio 2" name="name" value="2" />
       </li>
+      <li>
+        <Radio v-model="test2" label="Radio 3" name="name" value="3" disabled />
+      </li>
+      <li>
+        <Range v-model="test3" legend />
+        <br />
+        <Range v-model="test5" :min="0" :max="1" :step="0.01" legend disabled />
+        <br />
+        <Range v-model="test4" label="Label:" :min="20" :step="10" legend />
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
-import { Color, Checkbox, Radio } from 'atoms'
+import { Color, Checkbox, Radio, Range } from 'atoms'
 export default {
   name: 'settings',
   components: {
     Checkbox,
     Color,
-    Radio
+    Radio,
+    Range
   },
   data() {
     return {
@@ -65,7 +79,10 @@ export default {
       checked: false,
       radius: false,
       test: ['checkbox1', 'checkbox2'],
-      test2: '1'
+      test2: '1',
+      test3: 34,
+      test4: 10,
+      test5: 0.02
     }
   },
   mounted() {

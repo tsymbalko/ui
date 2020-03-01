@@ -96,10 +96,12 @@ export default {
         : 50
     },
     calcTempTrackWidth(event) {
-      this.tempTrackWidth = (
-        ((event.clientX - event.target.offsetLeft) * 100) /
-        event.target.offsetWidth
-      ).toFixed(2)
+      if (!this.disabled) {
+        this.tempTrackWidth = (
+          ((event.clientX - event.target.offsetLeft) * 100) /
+          event.target.offsetWidth
+        ).toFixed(2)
+      }
     },
     resetTempTrackWidth() {
       this.tempTrackWidth = 0
