@@ -11,12 +11,12 @@
         :step="step"
         :disabled="disabled"
         :style="{
-          '--track-width': `${trackWidth}%`,
-          '--temp-track-width': `${tempTrackWidth}%`
+          '--before-value': `${widthBeforeValue}%`,
+          '--after-value': `${widthAfterValue}%`
         }"
         @input="setValue"
-        @mousemove="calcTempTrackWidth"
-        @mouseleave="resetTempTrackWidth"
+        @mousemove="setWidthValues"
+        @mouseleave="resetWidthValues"
       />
     </label>
     <div v-if="legend" class="vc-range_legend">
@@ -76,23 +76,22 @@ export default {
   //TODO Связать минмальное значение и значение
   watch: {
     value() {
-      this.currentTrackWidth = this.calcTrackWidth()
-      this.trackWidth = this.currentTrackWidth
-      this.tempTrackWidth = this.currentTrackWidth
+      this.widthValue = this.calcWidthValue()
+      this.widthBeforeValue = this.widthAfterValue = this.widthValue
     }
   },
   data() {
     return {
-      currentTrackWidth: this.calcTrackWidth(),
-      trackWidth: this.calcTrackWidth(),
-      tempTrackWidth: 0
+      widthValue: this.calcWidthValue(),
+      widthBeforeValue: this.calcWidthValue(),
+      widthAfterValue: 0
     }
   },
   methods: {
-    calcTrackWidth() {
+    calcWidthValue() {
       return ((Number(this.value) - this.min) * 100) / (this.max - this.min)
     },
-    calcTempTrackWidth(event) {
+    setWidthValues(event) {
       if (!this.disabled) {
         const width = Number(
           (
@@ -100,16 +99,17 @@ export default {
             (event.target.offsetWidth / 100)
           ).toFixed(2)
         )
-        this.tempTrackWidth = width
-        if (this.tempTrackWidth < this.currentTrackWidth) {
-          this.tempTrackWidth = this.currentTrackWidth
-          this.trackWidth = width
+
+        if (width < this.widthValue) {
+          this.widthAfterValue = this.widthValue
+          this.widthBeforeValue = width
+        } else {
+          this.widthAfterValue = width
         }
       }
     },
-    resetTempTrackWidth() {
-      this.tempTrackWidth = this.currentTrackWidth
-      this.trackWidth = this.currentTrackWidth
+    resetWidthValues() {
+      this.widthAfterValue = this.widthBeforeValue = this.widthValue
     },
     setValue(event) {
       if (event.target.value >= this.max) {

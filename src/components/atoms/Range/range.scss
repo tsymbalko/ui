@@ -35,7 +35,7 @@
       height: 8px;
       background:
         linear-gradient(
-          90deg, var(--accent-color) var(--track-width), var(--focus) 0, var(--focus) var(--temp-track-width), rgba(0, 0, 0, .25) 0
+          90deg, var(--accent-color) var(--before-value), var(--focus) 0, var(--focus) var(--after-value), rgba(0, 0, 0, .25) 0
         );
       border-radius: var(--border-radius);
     }
@@ -69,7 +69,7 @@
       border-radius: var(--border-radius);
       background:
         linear-gradient(
-          90deg, var(--accent-color) var(--track-width), var(--focus) 0, var(--focus) var(--temp-track-width), rgba(0, 0, 0, .25) 0
+          90deg, var(--accent-color) var(--before-value), var(--focus) 0, var(--focus) var(--after-value), rgba(0, 0, 0, .25) 0
         );
     }
 
