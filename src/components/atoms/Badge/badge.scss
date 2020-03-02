@@ -1,0 +1,57 @@
+.vc-badge {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+
+  &_value {
+    display: inline-block;
+    vertical-align: baseline;
+    position: absolute;
+    z-index: 10;
+    white-space: nowrap;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    transform-origin: 100% 0%;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+    padding: 0 6px;
+    min-width: 20px;
+    color: #fff;
+    box-shadow: -1px 1px 2px 0 var(--invers-light);
+
+    &__warning {
+      background-color: var(--orange);
+    }
+
+    &__error {
+      background-color: var(--red);
+    }
+
+    &__success {
+      background-color: var(--green);
+    }
+
+    &__primary {
+      background-color: var(--accent-color);
+    }
+
+    &__round {
+      border-radius: 10px;
+    }
+
+    &__rectangle {
+      border-radius: var(--border-radius);
+    }
+
+    .vc-badge__empty & {
+      position: relative;
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}

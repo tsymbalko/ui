@@ -24,6 +24,7 @@
   --base-font: Muli, sans-serif;
   --border-radius: 4px;
   --invers: #000;
+  --invers-light: #fff;
 }
 
 table {
@@ -65,6 +66,7 @@ tbody tr:hover {
     --light-blue: #485465;
     --base-border: var(--light-blue);
     --invers: #fff;
+    --invers-light: #000;
   }
 }
 

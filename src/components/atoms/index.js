@@ -8,6 +8,8 @@ import Tag from './Tag/Tag'
 import ProgressLine from './PropgressLine/ProgressLine'
 import Fieldset from './Fieldset/Fieldset'
 import Range from './Range/Range'
+import Badge from './Badge/Badge'
+import Indicator from './Indicator/Indicator'
 
 export {
   Icon,
@@ -19,5 +21,7 @@ export {
   ProgressLine,
   Fieldset,
   Radio,
-  Range
+  Range,
+  Badge,
+  Indicator
 }
