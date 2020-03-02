@@ -29,18 +29,7 @@
             />
           </div>
           <div class="vc-modal_body">
-            e consectetur consequatur culpa enim incidunt laboriosam officiis
-            recusandae sit. Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Accusantium at distinctio eaque ullam vero. Asperiores beatae,
-            excepturi fugiat hic officia reiciendis rerum sint. Dolorum eos
-            illum incidunt laboriosam nam officia. Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Aspernatur blanditiis commodi
-            corporis, ea eos ipsa minus, possimus quaerat quam quibusdam rerum,
-            sapiente sunt! Commodi enim harum, magnam qui tempora ut? Lorem
-            ipsum dolor sit amet, consectetur adipisicing elit. Animi aut
-            consectetur, consequuntur ea enim est hic incidunt labore,
-            laboriosam maiores nulla obcaecati quam quas quod sunt totam veniam!
-            Ipsa, quaerat.
+            <slot />
           </div>
           <div class="vc-modal_footer">
             <Button type="bordered" @click="closeModal">

@@ -345,7 +345,195 @@
       <Button type="success" @click="toggleModal">
         Open modal
       </Button>
-      <Modal :visible="visibleModal" @close="closeModal" />
+      <Modal center :visible="visibleModal" @close="closeModal" />
+    </div>
+    <div style="padding: 20px 0;">
+      <Button type="success" @click="visible2Modal = true">
+        Open modal
+      </Button>
+      <Modal :visible="visible2Modal" @close="visible2Modal = false">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor,
+        eveniet, sunt. Adipisci, aut autem deserunt dolore, explicabo impedit
+        iste maiores mollitia nobis odio placeat quia quidem sapiente, suscipit
+        voluptate voluptates? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut autem deserunt
+        dolore, explicabo impedit iste maiores mollitia nobis odio placeat quia
+        quidem sapiente, suscipit voluptate voluptates? Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut
+        autem deserunt dolore, explicabo impedit iste maiores mollitia nobis
+        odio placeat quia quidem sapiente, suscipit voluptate voluptates? Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Dolor, eveniet,
+        sunt. Adipisci, aut autem deserunt dolore, explicabo impedit iste
+        maiores mollitia nobis odio placeat quia quidem sapiente, suscipit
+        voluptate voluptates? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut autem deserunt
+        dolore, explicabo impedit iste maiores mollitia nobis odio placeat quia
+        quidem sapiente, suscipit voluptate voluptates? Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut
+        autem deserunt dolore, explicabo impedit iste maiores mollitia nobis
+        odio placeat quia quidem sapiente, suscipit voluptate voluptates? Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Dolor, eveniet,
+        sunt. Adipisci, aut autem deserunt dolore, explicabo impedit iste
+        maiores mollitia nobis odio placeat quia quidem sapiente, suscipit
+        voluptate voluptates? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut autem deserunt
+        dolore, explicabo impedit iste maiores mollitia nobis odio placeat quia
+        quidem sapiente, suscipit voluptate voluptates? Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut
+        autem deserunt dolore, explicabo impedit iste maiores mollitia nobis
+        odio placeat quia quidem sapiente, suscipit voluptate voluptates? Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Dolor, eveniet,
+        sunt. Adipisci, aut autem deserunt dolore, explicabo impedit iste
+        maiores mollitia nobis odio placeat quia quidem sapiente, suscipit
+        voluptate voluptates? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut autem deserunt
+        dolore, explicabo impedit iste maiores mollitia nobis odio placeat quia
+        quidem sapiente, suscipit voluptate voluptates? Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut
+        autem deserunt dolore, explicabo impedit iste maiores mollitia nobis
+        odio placeat quia quidem sapiente, suscipit voluptate voluptates? Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Dolor, eveniet,
+        sunt. Adipisci, aut autem deserunt dolore, explicabo impedit iste
+        maiores mollitia nobis odio placeat quia quidem sapiente, suscipit
+        voluptate voluptates? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut autem deserunt
+        dolore, explicabo impedit iste maiores mollitia nobis odio placeat quia
+        quidem sapiente, suscipit voluptate voluptates? Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut
+        autem deserunt dolore, explicabo impedit iste maiores mollitia nobis
+        odio placeat quia quidem sapiente, suscipit voluptate voluptates? Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Dolor, eveniet,
+        sunt. Adipisci, aut autem deserunt dolore, explicabo impedit iste
+        maiores mollitia nobis odio placeat quia quidem sapiente, suscipit
+        voluptate voluptates? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut autem deserunt
+        dolore, explicabo impedit iste maiores mollitia nobis odio placeat quia
+        quidem sapiente, suscipit voluptate voluptates? Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut
+        autem deserunt dolore, explicabo impedit iste maiores mollitia nobis
+        odio placeat quia quidem sapiente, suscipit voluptate voluptates? Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Dolor, eveniet,
+        sunt. Adipisci, aut autem deserunt dolore, explicabo impedit iste
+        maiores mollitia nobis odio placeat quia quidem sapiente, suscipit
+        voluptate voluptates? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut autem deserunt
+        dolore, explicabo impedit iste maiores mollitia nobis odio placeat quia
+        quidem sapiente, suscipit voluptate voluptates? Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut
+        autem deserunt dolore, explicabo impedit iste maiores mollitia nobis
+        odio placeat quia quidem sapiente, suscipit voluptate voluptates? Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Dolor, eveniet,
+        sunt. Adipisci, aut autem deserunt dolore, explicabo impedit iste
+        maiores mollitia nobis odio placeat quia quidem sapiente, suscipit
+        voluptate voluptates? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut autem deserunt
+        dolore, explicabo impedit iste maiores mollitia nobis odio placeat quia
+        quidem sapiente, suscipit voluptate voluptates? Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut
+        autem deserunt dolore, explicabo impedit iste maiores mollitia nobis
+        odio placeat quia quidem sapiente, suscipit voluptate voluptates? Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Dolor, eveniet,
+        sunt. Adipisci, aut autem deserunt dolore, explicabo impedit iste
+        maiores mollitia nobis odio placeat quia quidem sapiente, suscipit
+        voluptate voluptates? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut autem deserunt
+        dolore, explicabo impedit iste maiores mollitia nobis odio placeat quia
+        quidem sapiente, suscipit voluptate voluptates? Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut
+        autem deserunt dolore, explicabo impedit iste maiores mollitia nobis
+        odio placeat quia quidem sapiente, suscipit voluptate voluptates? Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Dolor, eveniet,
+        sunt. Adipisci, aut autem deserunt dolore, explicabo impedit iste
+        maiores mollitia nobis odio placeat quia quidem sapiente, suscipit
+        voluptate voluptates? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut autem deserunt
+        dolore, explicabo impedit iste maiores mollitia nobis odio placeat quia
+        quidem sapiente, suscipit voluptate voluptates? Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut
+        autem deserunt dolore, explicabo impedit iste maiores mollitia nobis
+        odio placeat quia quidem sapiente, suscipit voluptate voluptates? Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Dolor, eveniet,
+        sunt. Adipisci, aut autem deserunt dolore, explicabo impedit iste
+        maiores mollitia nobis odio placeat quia quidem sapiente, suscipit
+        voluptate voluptates? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut autem deserunt
+        dolore, explicabo impedit iste maiores mollitia nobis odio placeat quia
+        quidem sapiente, suscipit voluptate voluptates? Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut
+        autem deserunt dolore, explicabo impedit iste maiores mollitia nobis
+        odio placeat quia quidem sapiente, suscipit voluptate voluptates? Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Dolor, eveniet,
+        sunt. Adipisci, aut autem deserunt dolore, explicabo impedit iste
+        maiores mollitia nobis odio placeat quia quidem sapiente, suscipit
+        voluptate voluptates? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut autem deserunt
+        dolore, explicabo impedit iste maiores mollitia nobis odio placeat quia
+        quidem sapiente, suscipit voluptate voluptates? Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut
+        autem deserunt dolore, explicabo impedit iste maiores mollitia nobis
+        odio placeat quia quidem sapiente, suscipit voluptate voluptates? Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Dolor, eveniet,
+        sunt. Adipisci, aut autem deserunt dolore, explicabo impedit iste
+        maiores mollitia nobis odio placeat quia quidem sapiente, suscipit
+        voluptate voluptates? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut autem deserunt
+        dolore, explicabo impedit iste maiores mollitia nobis odio placeat quia
+        quidem sapiente, suscipit voluptate voluptates? Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut
+        autem deserunt dolore, explicabo impedit iste maiores mollitia nobis
+        odio placeat quia quidem sapiente, suscipit voluptate voluptates? Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Dolor, eveniet,
+        sunt. Adipisci, aut autem deserunt dolore, explicabo impedit iste
+        maiores mollitia nobis odio placeat quia quidem sapiente, suscipit
+        voluptate voluptates? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut autem deserunt
+        dolore, explicabo impedit iste maiores mollitia nobis odio placeat quia
+        quidem sapiente, suscipit voluptate voluptates? Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut
+        autem deserunt dolore, explicabo impedit iste maiores mollitia nobis
+        odio placeat quia quidem sapiente, suscipit voluptate voluptates? Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Dolor, eveniet,
+        sunt. Adipisci, aut autem deserunt dolore, explicabo impedit iste
+        maiores mollitia nobis odio placeat quia quidem sapiente, suscipit
+        voluptate voluptates? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut autem deserunt
+        dolore, explicabo impedit iste maiores mollitia nobis odio placeat quia
+        quidem sapiente, suscipit voluptate voluptates? Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut
+        autem deserunt dolore, explicabo impedit iste maiores mollitia nobis
+        odio placeat quia quidem sapiente, suscipit voluptate voluptates? Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Dolor, eveniet,
+        sunt. Adipisci, aut autem deserunt dolore, explicabo impedit iste
+        maiores mollitia nobis odio placeat quia quidem sapiente, suscipit
+        voluptate voluptates? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut autem deserunt
+        dolore, explicabo impedit iste maiores mollitia nobis odio placeat quia
+        quidem sapiente, suscipit voluptate voluptates? Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut
+        autem deserunt dolore, explicabo impedit iste maiores mollitia nobis
+        odio placeat quia quidem sapiente, suscipit voluptate voluptates? Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Dolor, eveniet,
+        sunt. Adipisci, aut autem deserunt dolore, explicabo impedit iste
+        maiores mollitia nobis odio placeat quia quidem sapiente, suscipit
+        voluptate voluptates? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut autem deserunt
+        dolore, explicabo impedit iste maiores mollitia nobis odio placeat quia
+        quidem sapiente, suscipit voluptate voluptates? Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Dolor, eveniet, sunt. Adipisci, aut
+        autem deserunt dolore, explicabo impedit iste maiores mollitia nobis
+        odio placeat quia quidem sapiente, suscipit voluptate voluptates?
+      </Modal>
+    </div>
+    <div style="padding: 20px 0;">
+      <Button type="success" @click="visibleFullModal = true">
+        Open fuulscreen modal
+      </Button>
+      <Modal
+        fullscreen
+        animation="fade-left"
+        :visible="visibleFullModal"
+        @close="visibleFullModal = false"
+      />
     </div>
   </div>
 </template>
@@ -368,7 +556,9 @@ export default {
     return {
       loading: false,
       ProgressLine: 10,
-      visibleModal: false
+      visibleModal: false,
+      visibleFullModal: false,
+      visible2Modal: false
     }
   },
   mounted() {

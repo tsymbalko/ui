@@ -8,7 +8,10 @@ export default {
     unlockLayout() {
       document.querySelector('.layout').classList.remove('layout__locked')
       document.querySelector('.layout').style.top = ''
-      window.scrollTo(0, this.topScrollCoord)
+      window.scrollTo({
+        top: this.topScrollCoord,
+        behavior: 'instant'
+      })
     }
   }
 }

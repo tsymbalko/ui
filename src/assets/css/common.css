@@ -97,6 +97,7 @@ html {
   color: var(--base-text);
   background: var(--base-background);
   font-weight: 400;
+  scroll-behavior: smooth;
 }
 
 * {
