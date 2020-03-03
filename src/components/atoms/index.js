@@ -10,6 +10,7 @@ import Fieldset from './Fieldset/Fieldset'
 import Range from './Range/Range'
 import Badge from './Badge/Badge'
 import Indicator from './Indicator/Indicator'
+import BackTop from './BackTop/BackTop'
 
 export {
   Icon,
@@ -23,5 +24,6 @@ export {
   Radio,
   Range,
   Badge,
-  Indicator
+  Indicator,
+  BackTop
 }
