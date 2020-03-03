@@ -86,54 +86,6 @@
       blanditiis commodi dolor nostrum tempore! Aliquid, ea eius. Hic inventore
       laboriosam obcaecati reiciendis sapiente! Ipsam magnam nulla odit quo
       reiciendis vero?Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Asperiores blanditiis commodi dolor nostrum tempore! Aliquid, ea eius. Hic
-      inventore laboriosam obcaecati reiciendis sapiente! Ipsam magnam nulla
-      odit quo reiciendis vero?Lorem ipsum dolor sit amet, consectetur
-      adipisicing elit. Asperiores blanditiis commodi dolor nostrum tempore!
-      Aliquid, ea eius. Hic inventore laboriosam obcaecati reiciendis sapiente!
-      Ipsam magnam nulla odit quo reiciendis vero?Lorem ipsum dolor sit amet,
-      consectetur adipisicing elit. Asperiores blanditiis commodi dolor nostrum
-      tempore! Aliquid, ea eius. Hic inventore laboriosam obcaecati reiciendis
-      sapiente! Ipsam magnam nulla odit quo reiciendis vero?Lorem ipsum dolor
-      sit amet, consectetur adipisicing elit. Asperiores blanditiis commodi
-      dolor nostrum tempore! Aliquid, ea eius. Hic inventore laboriosam
-      obcaecati reiciendis sapiente! Ipsam magnam nulla odit quo reiciendis
-      vero?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-      blanditiis commodi dolor nostrum tempore! Aliquid, ea eius. Hic inventore
-      laboriosam obcaecati reiciendis sapiente! Ipsam magnam nulla odit quo
-      reiciendis vero?Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Asperiores blanditiis commodi dolor nostrum tempore! Aliquid, ea eius. Hic
-      inventore laboriosam obcaecati reiciendis sapiente! Ipsam magnam nulla
-      odit quo reiciendis vero?Lorem ipsum dolor sit amet, consectetur
-      adipisicing elit. Asperiores blanditiis commodi dolor nostrum tempore!
-      Aliquid, ea eius. Hic inventore laboriosam obcaecati reiciendis sapiente!
-      Ipsam magnam nulla odit quo reiciendis vero?Lorem ipsum dolor sit amet,
-      consectetur adipisicing elit. Asperiores blanditiis commodi dolor nostrum
-      tempore! Aliquid, ea eius. Hic inventore laboriosam obcaecati reiciendis
-      sapiente! Ipsam magnam nulla odit quo reiciendis vero?Lorem ipsum dolor
-      sit amet, consectetur adipisicing elit. Asperiores blanditiis commodi
-      dolor nostrum tempore! Aliquid, ea eius. Hic inventore laboriosam
-      obcaecati reiciendis sapiente! Ipsam magnam nulla odit quo reiciendis
-      vero?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-      blanditiis commodi dolor nostrum tempore! Aliquid, ea eius. Hic inventore
-      laboriosam obcaecati reiciendis sapiente! Ipsam magnam nulla odit quo
-      reiciendis vero?Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Asperiores blanditiis commodi dolor nostrum tempore! Aliquid, ea eius. Hic
-      inventore laboriosam obcaecati reiciendis sapiente! Ipsam magnam nulla
-      odit quo reiciendis vero?Lorem ipsum dolor sit amet, consectetur
-      adipisicing elit. Asperiores blanditiis commodi dolor nostrum tempore!
-      Aliquid, ea eius. Hic inventore laboriosam obcaecati reiciendis sapiente!
-      Ipsam magnam nulla odit quo reiciendis vero?Lorem ipsum dolor sit amet,
-      consectetur adipisicing elit. Asperiores blanditiis commodi dolor nostrum
-      tempore! Aliquid, ea eius. Hic inventore laboriosam obcaecati reiciendis
-      sapiente! Ipsam magnam nulla odit quo reiciendis vero?Lorem ipsum dolor
-      sit amet, consectetur adipisicing elit. Asperiores blanditiis commodi
-      dolor nostrum tempore! Aliquid, ea eius. Hic inventore laboriosam
-      obcaecati reiciendis sapiente! Ipsam magnam nulla odit quo reiciendis
-      vero?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-      blanditiis commodi dolor nostrum tempore! Aliquid, ea eius. Hic inventore
-      laboriosam obcaecati reiciendis sapiente! Ipsam magnam nulla odit quo
-      reiciendis vero?
     </div>
   </Card>
 </template>
