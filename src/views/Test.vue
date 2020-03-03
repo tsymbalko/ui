@@ -1,6 +1,10 @@
 <template>
   <Card>
     <div>
+      <MenuToggle />
+    </div>
+    <br />
+    <div>
       <Badge :count="1" type="error" shape="rectangle">
         <Button type="warning" icon="ellipsis-v">
           Add members
@@ -135,14 +139,15 @@
 </template>
 
 <script>
-import { Badge, Button, Indicator } from 'atoms'
+import { Badge, Button, Indicator, MenuToggle } from 'atoms'
 import { Card } from 'molecules'
 export default {
   components: {
     Badge,
     Button,
     Indicator,
-    Card
+    Card,
+    MenuToggle
   }
 }
 </script>

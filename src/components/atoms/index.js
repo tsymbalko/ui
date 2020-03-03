@@ -11,6 +11,7 @@ import Range from './Range/Range'
 import Badge from './Badge/Badge'
 import Indicator from './Indicator/Indicator'
 import BackTop from './BackTop/BackTop'
+import MenuToggle from './MenuToggle/MenuToggle'
 
 export {
   Icon,
@@ -25,5 +26,6 @@ export {
   Range,
   Badge,
   Indicator,
-  BackTop
+  BackTop,
+  MenuToggle
 }
