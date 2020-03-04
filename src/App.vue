@@ -6,8 +6,8 @@
     <router-view />
     <template #footer>
       <Footer />
+      <BackTop />
     </template>
-    <BackTop />
   </BaseTemplate>
 </template>
 

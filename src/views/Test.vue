@@ -1,6 +1,12 @@
 <template>
   <div>
     <div>
+      <Breadcrumb :routes="routes" />
+      <Breadcrumb :routes="routes">
+        <template #separator>
+          <Icon width="12" height="12" name="user" />
+        </template>
+      </Breadcrumb>
       <Avatar :size="24" />
       <Avatar :size="32" />
       <Avatar :size="48" icon="user" />
@@ -318,7 +324,16 @@
 </template>
 
 <script>
-import { Badge, Button, Indicator, MenuToggle, Collapse, Avatar } from 'atoms'
+import {
+  Badge,
+  Button,
+  Indicator,
+  MenuToggle,
+  Collapse,
+  Avatar,
+  Breadcrumb,
+  Icon
+} from 'atoms'
 import { Card } from 'molecules'
 export default {
   components: {
@@ -328,13 +343,33 @@ export default {
     Card,
     MenuToggle,
     Collapse,
-    Avatar
+    Avatar,
+    Breadcrumb,
+    Icon
   },
   data() {
     return {
       openCollapse: false,
       openCollapse2: false,
-      openCollapse3: false
+      openCollapse3: false,
+      routes: [
+        {
+          path: '/dashboard',
+          label: 'Dashboard',
+          id: 1,
+          href: '',
+          to: '',
+          icon: 'apps'
+        },
+        {
+          path: '/test',
+          label: 'Test',
+          id: 2,
+          href: '',
+          to: '',
+          icon: 'archive-alt'
+        }
+      ]
     }
   }
 }

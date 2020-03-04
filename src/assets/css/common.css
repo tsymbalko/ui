@@ -158,7 +158,6 @@ a:not([class]):focus {
 }
 
 a[class] {
-  color: inherit;
   text-decoration: none;
 }
 

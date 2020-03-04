@@ -1,10 +1,10 @@
 <template>
   <div
+    :class="['vc-avatar', { [`vc-avatar__${shape}`]: shape }]"
     :style="{
       '--size': `${size}px`,
       'background-image': src && `url('${src}')`
     }"
-    :class="['vc-avatar', { [`vc-avatar__${shape}`]: shape }]"
   >
     <template>
       <span v-if="text && !src">

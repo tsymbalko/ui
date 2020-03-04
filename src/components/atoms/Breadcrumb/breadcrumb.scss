@@ -1,0 +1,45 @@
+.vc-breadcrumb {
+
+  &_item {
+    display: inline-block;
+  }
+
+  &_icon {
+    margin-right: 4px;
+  }
+
+  &_separator {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 1;
+    margin: 0 6px;
+    color: var(--disabled);
+  }
+
+  &_link {
+    position: relative;
+    font-size: 14px;
+    padding: 0 6px;
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: var(--border-radius);
+    color: var(--blue);
+
+    &:hover {
+      background-color: var(--base-hover);
+      box-shadow: 0 0 0 2px var(--base-hover);
+    }
+
+    &:focus {
+      background-color: var(--base-hover);
+    }
+
+    &__active,
+    &__active-exact {
+      color: var(--grey);
+      pointer-events: none;
+    }
+  }
+}

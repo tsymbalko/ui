@@ -14,6 +14,7 @@ import BackTop from './BackTop/BackTop'
 import MenuToggle from './MenuToggle/MenuToggle'
 import Collapse from './Collapse/Collapse'
 import Avatar from './Avatar/Avatar'
+import Breadcrumb from './Breadcrumb/Breadcrumb'
 
 export {
   Icon,
@@ -31,5 +32,6 @@ export {
   BackTop,
   MenuToggle,
   Collapse,
-  Avatar
+  Avatar,
+  Breadcrumb
 }
