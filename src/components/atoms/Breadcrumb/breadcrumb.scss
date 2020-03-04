@@ -1,7 +1,10 @@
 .vc-breadcrumb {
+  display: flex;
+  align-items: center;
 
   &_item {
-    display: inline-block;
+    list-style: none;
+    line-height: 1;
   }
 
   &_icon {
@@ -13,19 +16,20 @@
     vertical-align: middle;
     font-size: 12px;
     line-height: 1;
-    margin: 0 6px;
+    margin: 0 10px;
     color: var(--disabled);
   }
 
   &_link {
     position: relative;
     font-size: 14px;
-    padding: 0 6px;
+    padding: 2px 4px;
     display: inline-flex;
     vertical-align: middle;
     align-items: center;
     border-radius: var(--border-radius);
     color: var(--blue);
+    line-height: 1;
 
     &:hover {
       background-color: var(--base-hover);
