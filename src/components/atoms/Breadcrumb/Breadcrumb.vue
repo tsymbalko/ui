@@ -6,7 +6,6 @@
       :key="id"
     >
       <router-link
-        exact
         :to="path"
         active-class="vc-breadcrumb_link__active"
         exact-active-class="vc-breadcrumb_link__active-exact"

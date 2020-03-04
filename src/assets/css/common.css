@@ -1,6 +1,6 @@
 :root,
 :root[data-theme='light'] {
-  --base-black: #1f1f1f;
+  --base-black: #292929;
   --base-text: var(--base-black);
   --base-title: var(--base-text);
   --accent-color: var(--blue);
@@ -23,7 +23,7 @@
   --header-height: 86px;
   --base-font: Muli, sans-serif;
   --border-radius: 4px;
-  --invers: #212121;
+  --invers: #292929;
   --invers-light: #fff;
 }
 
@@ -66,7 +66,7 @@ tbody tr:hover {
     --light-blue: #485465;
     --base-border: #384253;
     --invers: #fff;
-    --invers-light: #212121;
+    --invers-light: #292929;
   }
 }
 

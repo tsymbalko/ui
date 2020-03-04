@@ -7,6 +7,24 @@
           <Icon width="12" height="12" name="user" />
         </template>
       </Breadcrumb>
+      <Card>
+        <Breadcrumb :routes="routes" />
+        <Breadcrumb :routes="routes">
+          <template #separator>
+            <Icon width="12" height="12" name="user" />
+          </template>
+        </Breadcrumb>
+        <Tabs :tabs="tabs" v-model="activeTab" />
+        <div class="vc-tabs_content" style="padding: 14px;">
+          <div
+            v-for="{ id, content } in tabs"
+            v-show="activeTab === id"
+            :key="id"
+          >
+            {{ content }}
+          </div>
+        </div>
+      </Card>
       <Avatar :size="24" />
       <Avatar :size="32" />
       <Avatar :size="48" icon="user" />
@@ -334,7 +352,7 @@ import {
   Breadcrumb,
   Icon
 } from 'atoms'
-import { Card } from 'molecules'
+import { Card, Tabs } from 'molecules'
 export default {
   components: {
     Badge,
@@ -345,7 +363,8 @@ export default {
     Collapse,
     Avatar,
     Breadcrumb,
-    Icon
+    Icon,
+    Tabs
   },
   data() {
     return {
@@ -368,6 +387,31 @@ export default {
           href: '',
           to: '',
           icon: 'archive-alt'
+        }
+      ],
+      activeTab: 2,
+      tabs: [
+        {
+          id: 1,
+          title: 'Pictures',
+          content: '1 Lorem ipsum dolor'
+        },
+        {
+          id: 2,
+          title: 'Music',
+          content:
+            '2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis culpa dicta distinctio eveniet fugiat incidunt omnis quas, similique tempore? Ad aperiam autem deleniti earum ipsam molestias, pariatur porro reprehenderit.'
+        },
+        {
+          id: 3,
+          title: 'Videos',
+          content: '3 Lorem ipsum dolor sit amet'
+        },
+        {
+          id: 4,
+          title: 'Documents',
+          content:
+            '4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis culpa dicta distinctio eveniet fugiat incidunt omnis quas, similique tempore? Ad aperiam autem deleniti earum ipsam molestias, pariatur porro reprehenderit.'
         }
       ]
     }
