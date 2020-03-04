@@ -1,0 +1,61 @@
+.vc-avatar {
+  width: var(--size);
+  height: var(--size);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--size) / 2);
+  text-align: center;
+  background-color: var(--dark-blue);
+  color: #fff;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  border: 2px solid var(--base-background);
+
+  &__circle {
+    border-radius: 50%;
+  }
+
+  &__square {
+    border-radius: var(--border-radius);
+  }
+
+  &_icon {
+    width: 50%;
+    height: 50%;
+  }
+
+  &_image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .vc-avatar__circle & {
+      border-radius: 50%;
+    }
+
+    .vc-avatar__square & {
+      border-radius: var(--border-radius);
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &_check {
+    border-radius: 50%;
+    width: calc(var(--size) / 3);
+    height: calc(var(--size) / 3);
+    fill: var(--green);
+    position: absolute;
+    background-color: var(--base-background);
+    z-index: 10;
+    right: -4px;
+    bottom: -4px;
+    transform-origin: 100% 0%;
+  }
+}

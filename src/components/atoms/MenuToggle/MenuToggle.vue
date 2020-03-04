@@ -2,20 +2,26 @@
   <button
     :class="[
       'menu-toggle',
-      {
-        'menu-toggle__active': active
-      }
+      { 'menu-toggle__active': active },
+      { [`vc-avatar__${shape}`]: shape }
     ]"
     @click="active = !active"
   >
     <div class="menu-toggle_box">
-      <span class="menu-toggle_line"></span>
+      <span class="menu-toggle_line" />
     </div>
   </button>
 </template>
 
 <script>
 export default {
+  props: {
+    shape: {
+      type: String,
+      validator: value => ['circle', 'square'].includes(value),
+      default: 'square'
+    }
+  },
   data() {
     return {
       active: false

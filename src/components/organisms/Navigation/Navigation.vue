@@ -9,6 +9,14 @@
         name="vue-alternate"
       />
     </a>
+    <Badge
+      class="navigation_avatar"
+      :count="101"
+      :overflow-count="99"
+      type="error"
+    >
+      <Avatar src="https://i.pravatar.cc/100" :size="48" icon="user" />
+    </Badge>
     <ul class="navigation_list">
       <li class="navigation_item">
         <router-link
@@ -60,11 +68,13 @@
 </template>
 
 <script>
-import { Icon } from 'atoms'
+import { Icon, Badge, Avatar } from 'atoms'
 export default {
   name: 'Navigation',
   components: {
-    Icon
+    Icon,
+    Badge,
+    Avatar
   }
 }
 </script>

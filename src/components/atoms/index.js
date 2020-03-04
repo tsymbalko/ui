@@ -12,6 +12,8 @@ import Badge from './Badge/Badge'
 import Indicator from './Indicator/Indicator'
 import BackTop from './BackTop/BackTop'
 import MenuToggle from './MenuToggle/MenuToggle'
+import Collapse from './Collapse/Collapse'
+import Avatar from './Avatar/Avatar'
 
 export {
   Icon,
@@ -27,5 +29,7 @@ export {
   Badge,
   Indicator,
   BackTop,
-  MenuToggle
+  MenuToggle,
+  Collapse,
+  Avatar
 }
