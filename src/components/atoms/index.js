@@ -21,6 +21,7 @@ import Empty from './Empty/Empty'
 import Modal from './Modal/Modal'
 import Tabs from './Tabs/Tabs'
 import Heading from './Heading/Heading'
+import TextLabel from './TextLabel/TextLabel'
 
 export {
   Icon,
@@ -45,5 +46,6 @@ export {
   Empty,
   Modal,
   Tabs,
-  Heading
+  Heading,
+  TextLabel
 }

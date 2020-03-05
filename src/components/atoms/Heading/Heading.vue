@@ -1,20 +1,20 @@
 <template>
-  <h3
+  <component
     :is="`h${level}`"
     :class="[
       'vc-heading',
       {
-        'vc-heading__separator': separator
+        'vc-heading__divider': divider
       },
       {
-        [`vc-heading__separator-${separator}`]: separator
+        [`vc-heading__divider-${divider}`]: divider
       }
     ]"
   >
     <span>
       <slot />
     </span>
-  </h3>
+  </component>
 </template>
 
 <script>
@@ -22,11 +22,12 @@ export default {
   props: {
     level: {
       type: String,
-      default: '3'
+      default: '1'
     },
-    separator: {
+    divider: {
       type: String,
-      validator: value => ['both', 'left', 'right', 'bottom'].includes(value),
+      validator: value =>
+        ['both', 'left', 'right', 'bottom', ''].includes(value),
       default: ''
     }
   }

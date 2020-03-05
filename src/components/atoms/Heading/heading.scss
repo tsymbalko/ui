@@ -1,7 +1,8 @@
 .vc-heading {
   color: var(--base-title);
+  font-weight: 500;
 
-  &__separator {
+  &__divider {
     display: flex;
     align-items: center;
 

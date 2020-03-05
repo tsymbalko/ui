@@ -13,6 +13,12 @@
           </Indicator>
         </Heading>
         <Heading level="3" separator="left">Heading</Heading>
+        <p>
+          Text lorem ipsum
+        </p>
+        <TextLabel>
+          Label
+        </TextLabel>
         <Heading level="4" separator="right">Heading</Heading>
         <Heading level="5" separator="both">Heading</Heading>
         <Heading level="6" separator="both">Heading</Heading>
@@ -377,7 +383,8 @@ import {
   Icon,
   Card,
   Tabs,
-  Heading
+  Heading,
+  TextLabel
 } from 'atoms'
 export default {
   components: {
@@ -391,7 +398,8 @@ export default {
     Breadcrumb,
     Icon,
     Tabs,
-    Heading
+    Heading,
+    TextLabel
   },
   data() {
     return {
