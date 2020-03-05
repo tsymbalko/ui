@@ -51,6 +51,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
+    .vc-back-top:hover & {
+      background-color: var(--blue);
+    }
+
     &:before,
     &:after {
       content: '';

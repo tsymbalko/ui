@@ -33,9 +33,7 @@
           </span>
         </p>
         <TextLabel>
-          You have
-          <Badge :count="101" :overflow-count="999" type="error" />
-          messages
+          You have messages
         </TextLabel>
       </div>
     </div>
@@ -79,21 +77,17 @@
         adipisicing elit. Dignissimos dolores ipsam necessitatibus obcaecati
         perspiciatis ratione temporibus! Beatae dolorum expedita facere modi
         necessitatibus nihil obcaecati porro praesentium quasi, quis
-        reprehenderit veniam! Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit. Blanditiis dignissimos error natus omnis quas suscipit
-        tempora voluptatem? Asperiores deserunt, eum exercitationem laboriosam
-        modi molestias quaerat quo repudiandae. Delectus libero, nobis.
+        reprehenderit veniam! Lorem ipsum dolor sit amet
       </div>
     </div>
   </Card>
 </template>
 
 <script>
-import { Heading, Indicator, TextLabel, Badge, Card, Avatar, Icon } from 'atoms'
+import { Heading, Indicator, TextLabel, Card, Avatar, Icon } from 'atoms'
 export default {
   components: {
     Heading,
-    Badge,
     Indicator,
     TextLabel,
     Card,
