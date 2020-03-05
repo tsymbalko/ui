@@ -1,7 +1,7 @@
 <template>
   <nav class="navigation">
-    <a class="navigation_skip" href="#main">Skip</a>
-    <a class="navigation_home" href="/">
+    <a class="navigation_link navigation_link__skip" href="#main">Skip</a>
+    <a class="navigation_link navigation_link__home" href="/">
       <Icon
         class="navigation_logotype"
         width="40"
@@ -9,14 +9,11 @@
         name="vue-alternate"
       />
     </a>
-    <Badge
-      class="navigation_avatar"
-      :count="101"
-      :overflow-count="99"
-      type="error"
-    >
-      <Avatar src="https://i.pravatar.cc/100" :size="48" icon="user" />
-    </Badge>
+    <a href="#" class="navigation_link navigation_link__avatar">
+      <Badge :count="101" :overflow-count="99" type="error">
+        <Avatar src="https://i.pravatar.cc/100" :size="48" icon="user" />
+      </Badge>
+    </a>
     <ul class="navigation_list">
       <li class="navigation_item">
         <router-link

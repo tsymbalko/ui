@@ -14,52 +14,6 @@
   background-color: var(--base-background);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, .07);
 
-  &_home {
-    height: var(--item-height);
-    padding: 8px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    border-radius: var(--border-radius);
-    line-height: 1;
-    color: var(--orange);
-    margin-bottom: 16px;
-
-    &:hover {
-      background-color: var(--base-hover);
-    }
-  }
-
-  &_logotype {
-    display: block;
-    margin: 0 auto;
-
-    .navigation_home & {
-      fill: var(--green);
-    }
-  }
-
-  &_skip {
-    position: absolute;
-    height: var(--item-height);
-    line-height: var(--item-height);
-    text-align: center;
-    border-radius: var(--border-radius);
-    top: var(--indent);
-    right: var(--indent);
-    left: var(--indent);
-
-    &:not(:focus) {
-      right: 100%;
-      opacity: 0;
-    }
-
-    &:focus {
-      color: var(--accent-color);
-      background: var(--base-background);
-    }
-  }
-
   &_list {
     display: flex;
     flex-direction: column;
@@ -80,9 +34,11 @@
     padding: 8px;
     text-decoration: none;
     display: flex;
+    justify-content: center;
     align-items: center;
     position: relative;
     border-radius: var(--border-radius);
+    line-height: 1;
 
     &:hover {
       background-color: var(--base-hover);
@@ -108,6 +64,39 @@
         transform: scale(1);
       }
     }
+
+    &__home {
+      margin-bottom: 8px;
+    }
+
+    &__skip {
+      position: absolute;
+      padding: 0;
+      z-index: 2;
+      top: var(--indent);
+      right: var(--indent);
+      left: var(--indent);
+
+      &:not(:focus) {
+        right: 100%;
+        opacity: 0;
+      }
+
+      &:focus {
+        color: var(--accent-color);
+        background: var(--base-background);
+      }
+    }
+
+    &__avatar {
+      height: auto;
+      padding: 12px 8px;
+      margin-bottom: 48px;
+    }
+  }
+
+  &_logotype {
+    color: var(--green);
   }
 
   &_icon {
@@ -120,11 +109,5 @@
     .navigation_link__active & {
       fill: var(--accent-color);
     }
-  }
-
-  /* mix */
-  &_avatar {
-    align-self: center;
-    margin-bottom: 52px;
   }
 }
