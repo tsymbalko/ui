@@ -2,26 +2,26 @@
   <div>
     <div>
       <Card>
-        <Heading level="1" separator="bottom">
+        <Heading level="1" divider="bottom">
           <Badge :count="99" type="success">
             Heading
           </Badge>
         </Heading>
-        <Heading level="2" separator="both">
+        <Heading level="2" divider="both">
           <Indicator type="success">
             Heading
           </Indicator>
         </Heading>
-        <Heading level="3" separator="left">Heading</Heading>
+        <Heading level="3" divider="left">Heading</Heading>
         <p>
           Text lorem ipsum
         </p>
         <TextLabel>
           Label
         </TextLabel>
-        <Heading level="4" separator="right">Heading</Heading>
-        <Heading level="5" separator="both">Heading</Heading>
-        <Heading level="6" separator="both">Heading</Heading>
+        <Heading level="4" divider="right">Heading</Heading>
+        <Heading level="5" divider="both">Heading</Heading>
+        <Heading level="6" divider="both">Heading</Heading>
         <Heading level="1">Heading</Heading>
         <Heading level="2">Heading</Heading>
         <Heading level="3">Heading</Heading>
@@ -453,7 +453,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-@import 'test';
-</style>

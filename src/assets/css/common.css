@@ -129,10 +129,6 @@ body {
   box-shadow: var(--base-focus);
 }
 
-.title {
-  color: var(--base-title);
-}
-
 @media (min-width: 941px) {
 
   a[href]:active,

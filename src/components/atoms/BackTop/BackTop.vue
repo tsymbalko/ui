@@ -1,33 +1,30 @@
 <template>
-  <button
-    ref="backTop"
-    :tabindex="active ? 0 : -1"
-    :class="[
-      'vc-back-top',
-      {
-        'vc-back-top__active': active
-      }
-    ]"
-    @click="backToTop"
-  >
-    <svg
-      class="progress-circle svg-content"
-      width="100%"
-      height="100%"
-      viewBox="-1 -1 102 102"
+  <transition name="vc-back-top__animation">
+    <button
+      v-show="active"
+      ref="backTop"
+      class="vc-back-top"
+      @click="backToTop"
     >
-      <path
-        ref="backTopCircle"
-        class="vc-back-top_circle"
-        d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-        :style="{
-          strokeDasharray: `${pathLength} ${pathLength}`,
-          strokeDashoffset: `${progress}`
-        }"
-      />
-    </svg>
-    <div class="vc-back-top_arrow" />
-  </button>
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path
+          ref="backTopCircle"
+          class="vc-back-top_circle"
+          d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+          :style="{
+            strokeDasharray: `${pathLength} ${pathLength}`,
+            strokeDashoffset: `${progress}`
+          }"
+        />
+      </svg>
+      <div class="vc-back-top_arrow" />
+    </button>
+  </transition>
 </template>
 
 <script>

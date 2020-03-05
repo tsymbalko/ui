@@ -9,9 +9,18 @@
         name="vue-alternate"
       />
     </a>
-    <router-link to="/profile" class="navigation_link navigation_link__avatar">
+    <router-link
+      to="/profile"
+      class="navigation_link navigation_link__avatar"
+      active-class="navigation_link__active"
+      title="Profile"
+    >
       <Badge :count="101" :overflow-count="99" type="error">
-        <Avatar src="https://i.pravatar.cc/100" :size="48" icon="user" />
+        <Avatar
+          :src="`${require('assets/images/avatar.png')}`"
+          :size="48"
+          icon="user"
+        />
       </Badge>
     </router-link>
     <ul class="navigation_list">

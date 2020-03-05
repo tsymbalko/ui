@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h1 class="title">Настройки приложения</h1>
+    <Heading divider="right">Settings you application</Heading>
+    <TextLabel>Настройка цветовой схемы приложения и тд и тп</TextLabel>
+    <br />
+    <br />
     <ul class="example-list">
       <li>
         <Checkbox
@@ -62,14 +65,16 @@
 </template>
 
 <script>
-import { Color, Checkbox, Radio, Range } from 'atoms'
+import { Color, Checkbox, Radio, Range, Heading, TextLabel } from 'atoms'
 export default {
   name: 'settings',
   components: {
     Checkbox,
     Color,
     Radio,
-    Range
+    Range,
+    Heading,
+    TextLabel
   },
   data() {
     return {
