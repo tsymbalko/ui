@@ -15,6 +15,7 @@
 
 <script>
 export default {
+  name: 'MenuToggle',
   props: {
     shape: {
       type: String,

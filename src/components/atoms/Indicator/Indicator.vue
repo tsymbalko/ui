@@ -4,13 +4,16 @@
       'vc-indicator',
       {
         [`vc-indicator__${type}`]: type,
-        'vc-indicator__empty': !$slots.default
+        'vc-indicator__inline': !$slots.default
       }
     ]"
   >
     <sup
       :class="[
         'vc-indicator_dot',
+        {
+          [`vc-indicator_dot__${placement}`]: placement
+        },
         {
           [`vc-indicator_dot__${animation}`]: animation
         }
@@ -26,10 +29,16 @@
 
 <script>
 export default {
+  name: 'Indicator',
   props: {
     text: {
       type: String,
       default: ''
+    },
+    placement: {
+      type: String,
+      validator: value => ['top', 'bottom'].includes(value),
+      default: 'top'
     },
     type: {
       type: String,

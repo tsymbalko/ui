@@ -25,6 +25,7 @@
 
 <script>
 export default {
+  name: 'Collapse',
   model: {
     prop: 'opened',
     event: 'change'

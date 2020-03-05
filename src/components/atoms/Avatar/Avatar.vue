@@ -19,6 +19,7 @@
 <script>
 import Icon from '../Icon/Icon'
 export default {
+  name: 'Avatar',
   components: {
     Icon
   },

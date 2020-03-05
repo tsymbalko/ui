@@ -35,7 +35,7 @@
 <script>
 import Icon from '../Icon/Icon'
 export default {
-  name: 'VCProgress',
+  name: 'ProgressLine',
   components: {
     Icon
   },

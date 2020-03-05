@@ -32,15 +32,23 @@
     vertical-align: baseline;
     position: absolute;
     z-index: 10;
-    top: 0;
     right: 0;
-    transform: translate(50%, -50%);
     transform-origin: 100% 0%;
     width: 12px;
     height: 12px;
     border-radius: 50%;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
     background-color: var(--color);
+
+    &__top {
+      top: 0;
+      transform: translate(50%, -50%);
+    }
+
+    &__bottom {
+      bottom: 0;
+      transform: translate(50%, 50%);
+    }
 
     &__pulse {
 
@@ -62,7 +70,7 @@
       animation: blink2 1.6s infinite ease-in-out;
     }
 
-    .vc-indicator__empty & {
+    .vc-indicator__inline & {
       position: relative;
       transform: none;
       box-shadow: none;

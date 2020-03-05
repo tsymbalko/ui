@@ -20,7 +20,6 @@ module.exports = {
         mixins: path.resolve('./src/components/mixins'),
         atoms: path.resolve('./src/components/atoms'),
         pages: path.resolve('./src/components/pages'),
-        molecules: path.resolve('./src/components/molecules'),
         organisms: path.resolve('./src/components/organisms'),
         skeletons: path.resolve('./src/components/skeletons'),
         templates: path.resolve('./src/components/templates')

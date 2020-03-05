@@ -9,6 +9,7 @@
 
 <script>
 export default {
+  name: 'Fieldset',
   props: {
     legend: {
       type: String,

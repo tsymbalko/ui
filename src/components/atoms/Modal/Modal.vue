@@ -52,6 +52,7 @@ import { Button } from 'atoms'
 import { LayoutLock } from 'mixins'
 
 export default {
+  name: 'modal',
   components: {
     Button,
     FocusLock

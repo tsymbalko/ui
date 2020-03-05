@@ -3,7 +3,7 @@
     :class="[
       'vc-badge',
       {
-        'vc-badge__empty': !$slots.default
+        'vc-badge__inline': !$slots.default
       }
     ]"
   >
@@ -24,6 +24,7 @@
 
 <script>
 export default {
+  name: 'Badge',
   filters: {
     overflowCount(value, overflowCount) {
       return value > overflowCount ? `${overflowCount}+` : value

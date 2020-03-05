@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'VCSpinner',
+  name: 'Spinner',
   props: {
     color: {
       type: String,

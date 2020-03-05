@@ -122,8 +122,7 @@
 </template>
 
 <script>
-import { Rating, Empty, Card } from 'molecules'
-import { Fieldset } from 'atoms'
+import { Fieldset, Rating, Empty, Card } from 'atoms'
 import { SRow, SBlock, SLine, SFrame, SFigure } from 'skeletons'
 
 export default {

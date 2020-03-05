@@ -32,7 +32,7 @@
       <Badge :count="99" type="success">
         <Avatar :size="48" icon="user" />
       </Badge>
-      <Indicator type="success" text="Text">
+      <Indicator type="success" text="Text" placement="bottom">
         <Avatar :size="48" icon="user" />
       </Indicator>
       <Badge :count="99" type="success">
@@ -350,9 +350,10 @@ import {
   Collapse,
   Avatar,
   Breadcrumb,
-  Icon
+  Icon,
+  Card,
+  Tabs
 } from 'atoms'
-import { Card, Tabs } from 'molecules'
 export default {
   components: {
     Badge,

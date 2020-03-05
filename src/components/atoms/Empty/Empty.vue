@@ -20,7 +20,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'Empty'
+}
 </script>
 
 <style lang="scss">

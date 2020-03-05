@@ -32,6 +32,7 @@
 
 <script>
 export default {
+  name: 'BackTop',
   props: {
     offset: {
       type: Number,

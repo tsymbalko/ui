@@ -539,9 +539,7 @@
 </template>
 
 <script>
-import { Button, Spinner, Tag, ProgressLine } from 'atoms'
-import { Modal } from 'molecules'
-import { Card } from 'molecules'
+import { Button, Spinner, Tag, ProgressLine, Modal, Card } from 'atoms'
 export default {
   name: 'home',
   components: {

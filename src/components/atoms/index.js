@@ -15,6 +15,11 @@ import MenuToggle from './MenuToggle/MenuToggle'
 import Collapse from './Collapse/Collapse'
 import Avatar from './Avatar/Avatar'
 import Breadcrumb from './Breadcrumb/Breadcrumb'
+import Card from './Card/Card'
+import Rating from './Rating/Rating'
+import Empty from './Empty/Empty'
+import Modal from './Modal/Modal'
+import Tabs from './Tabs/Tabs'
 
 export {
   Icon,
@@ -33,5 +38,10 @@ export {
   MenuToggle,
   Collapse,
   Avatar,
-  Breadcrumb
+  Breadcrumb,
+  Card,
+  Rating,
+  Empty,
+  Modal,
+  Tabs
 }

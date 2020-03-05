@@ -35,7 +35,7 @@ import Icon from '../Icon/Icon'
  * @displayName Button
  */
 export default {
-  name: 'VCButton',
+  name: 'Button',
   components: {
     Icon
   },

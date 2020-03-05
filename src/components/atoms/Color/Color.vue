@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'VCColor',
+  name: 'ColorPicker',
   model: {
     prop: 'value',
     event: 'change'
