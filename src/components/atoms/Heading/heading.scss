@@ -1,0 +1,55 @@
+.vc-heading {
+  color: var(--base-title);
+
+  &__separator {
+    display: flex;
+    align-items: center;
+
+    &:before,
+    &:after {
+      content: '';
+      flex: 1 1 auto;
+      height: 1px;
+      background-color: var(--base-border);
+      display: none;
+    }
+
+    &:before {
+      margin-right: 20px;
+    }
+
+    &:after {
+      margin-left: 20px;
+    }
+
+    &-both {
+
+      &:before,
+      &:after {
+        display: block;
+      }
+    }
+
+    &-right {
+
+      &:after {
+        display: block;
+      }
+    }
+
+    &-left {
+
+      &:before {
+        display: block;
+      }
+    }
+
+    &-bottom {
+      border-bottom: 1px solid var(--base-border);
+    }
+  }
+
+  &_text {
+    //padding: 0 20px;
+  }
+}

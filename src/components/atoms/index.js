@@ -20,6 +20,7 @@ import Rating from './Rating/Rating'
 import Empty from './Empty/Empty'
 import Modal from './Modal/Modal'
 import Tabs from './Tabs/Tabs'
+import Heading from './Heading/Heading'
 
 export {
   Icon,
@@ -43,5 +44,6 @@ export {
   Rating,
   Empty,
   Modal,
-  Tabs
+  Tabs,
+  Heading
 }

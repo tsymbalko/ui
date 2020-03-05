@@ -1,6 +1,30 @@
 <template>
   <div>
     <div>
+      <Card>
+        <Heading level="1" separator="bottom">
+          <Badge :count="99" type="success">
+            Heading
+          </Badge>
+        </Heading>
+        <Heading level="2" separator="both">
+          <Indicator type="success">
+            Heading
+          </Indicator>
+        </Heading>
+        <Heading level="3" separator="left">Heading</Heading>
+        <Heading level="4" separator="right">Heading</Heading>
+        <Heading level="5" separator="both">Heading</Heading>
+        <Heading level="6" separator="both">Heading</Heading>
+        <Heading level="1">Heading</Heading>
+        <Heading level="2">Heading</Heading>
+        <Heading level="3">Heading</Heading>
+        <Heading level="4">Heading</Heading>
+        <Heading level="5">Heading</Heading>
+        <Heading level="6">Heading</Heading>
+      </Card>
+    </div>
+    <div>
       <Breadcrumb :routes="routes" />
       <Breadcrumb :routes="routes">
         <template #separator>
@@ -352,7 +376,8 @@ import {
   Breadcrumb,
   Icon,
   Card,
-  Tabs
+  Tabs,
+  Heading
 } from 'atoms'
 export default {
   components: {
@@ -365,7 +390,8 @@ export default {
     Avatar,
     Breadcrumb,
     Icon,
-    Tabs
+    Tabs,
+    Heading
   },
   data() {
     return {
