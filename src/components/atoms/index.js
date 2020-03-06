@@ -22,6 +22,7 @@ import Modal from './Modal/Modal'
 import Tabs from './Tabs/Tabs'
 import Heading from './Heading/Heading'
 import TextLabel from './TextLabel/TextLabel'
+import Legend from './Legend/Legend'
 
 export {
   Icon,
@@ -47,5 +48,6 @@ export {
   Modal,
   Tabs,
   Heading,
-  TextLabel
+  TextLabel,
+  Legend
 }

@@ -1,0 +1,45 @@
+.vc-legend {
+
+  &_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 8px;
+    }
+  }
+
+  &_title {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 28px;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      flex-grow: 1;
+      flex-shrink: 1;
+      margin: 0 4px;
+      padding: 0 4px;
+      background-image: linear-gradient(to right, #d8dae0 3px, transparent 1px);
+      opacity: .4;
+      background-size: 4px 1px;
+      background-repeat: repeat-x;
+      background-position: left bottom;
+      height: 10px;
+    }
+  }
+
+  &_text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &_value {
+  }
+}

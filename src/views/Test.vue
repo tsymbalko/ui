@@ -408,19 +408,17 @@ export default {
       openCollapse3: false,
       routes: [
         {
-          path: '/dashboard',
+          to: '/dashboard',
           label: 'Dashboard',
           id: 1,
           href: '',
-          to: '',
           icon: 'apps'
         },
         {
-          path: '/test',
+          to: '/test',
           label: 'Test',
           id: 2,
           href: '',
-          to: '',
           icon: 'archive-alt'
         }
       ],

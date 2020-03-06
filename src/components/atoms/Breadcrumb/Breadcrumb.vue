@@ -2,11 +2,13 @@
   <ul class="vc-breadcrumb">
     <li
       class="vc-breadcrumb_item"
-      v-for="({ id, path, icon, label }, index) in routes"
+      v-for="({ id, to, icon, label, href }, index) in routes"
       :key="id"
     >
-      <router-link
-        :to="path"
+      <component
+        :to="to"
+        :href="href"
+        :is="to ? 'router-link' : 'a'"
         active-class="vc-breadcrumb_link__active"
         exact-active-class="vc-breadcrumb_link__active-exact"
         class="vc-breadcrumb_link"
@@ -19,7 +21,7 @@
           :name="icon"
         />
         {{ label }}
-      </router-link>
+      </component>
       <span v-if="index < routes.length - 1" class="vc-breadcrumb_separator">
         <slot name="separator">/</slot>
       </span>

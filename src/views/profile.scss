@@ -1,10 +1,10 @@
 .profile {
 
   &_header {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     display: grid;
-    grid-template-rows: 180px 40px auto;
     grid-template-columns: 20px auto 1fr;
+    grid-template-rows: 180px 40px auto;
     grid-column-gap: 20px;
 
     &-background {
@@ -32,13 +32,65 @@
     }
   }
 
+  &_title {
+    margin-bottom: 10px;
+  }
+
   &_body {
     display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr 320px;
+    grid-column-gap: 28px;
+    grid-row-gap: 14px;
+    padding-left: 40px;
+    grid-template-columns: 1fr 420px;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      'breadcrumb breadcrumb'
+      'main aside';
+
+    &-breadcrumb {
+      grid-area: breadcrumb;
+    }
+
+    &-main {
+      grid-area: main;
+    }
+
+    &-aside {
+      grid-area: aside;
+    }
+
+    &-legend {
+      margin-bottom: 28px;
+    }
   }
 
   &_icon {
     vertical-align: text-bottom;
+  }
+
+  &_social {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-size: 14px;
+
+    &-link {
+      margin-bottom: 8px;
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      margin-right: 12px;
+      border-radius: var(--border-radius);
+      color: var(--blue);
+
+      &:hover,
+      &:focus {
+        background-color: var(--base-hover);
+      }
+    }
+
+    &-icon {
+      margin-right: 8px;
+    }
   }
 }
