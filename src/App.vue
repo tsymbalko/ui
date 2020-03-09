@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import { BackTop, MenuToggle } from 'atoms'
-import { Navigation, Footer } from 'organisms'
+import { BackTop } from 'atoms'
+import { Navigation, Footer, MenuToggle } from 'organisms'
 import { BaseTemplate } from 'templates'
 import { LayoutLock } from 'mixins'
 export default {

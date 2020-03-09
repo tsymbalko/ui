@@ -93,11 +93,6 @@
           icon="user"
         />
       </Indicator>
-      <div>
-        <MenuToggle />
-        <br />
-        <MenuToggle shape="circle" />
-      </div>
       <br />
       <div>
         <Badge :count="1" type="error" shape="rectangle">
@@ -250,11 +245,6 @@
           icon="user"
         />
       </Indicator>
-      <div>
-        <MenuToggle />
-        <br />
-        <MenuToggle shape="circle" />
-      </div>
       <br />
       <div>
         <Badge :count="1" type="error" shape="rectangle">
@@ -376,7 +366,6 @@ import {
   Badge,
   Button,
   Indicator,
-  MenuToggle,
   Collapse,
   Avatar,
   Breadcrumb,
@@ -392,7 +381,6 @@ export default {
     Button,
     Indicator,
     Card,
-    MenuToggle,
     Collapse,
     Avatar,
     Breadcrumb,
