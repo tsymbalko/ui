@@ -1,12 +1,9 @@
 <template>
   <div>
     <SFrame v-if="loading">
-      <SLine :size="['auto', '260px']" />
-      <div
-        style="padding-left: 40px;
-    margin-top: -60px;"
-      >
-        <SRow align="flex-end">
+      <SLine :size="['auto', '260px']" class="profile_s-line" />
+      <div class="profile_s-box">
+        <SRow align="flex-end" class="profile_s-row">
           <SFigure size="160px" />
           <div style="flex: 1 1 auto;">
             <SLine :size="['20%', '54px']" />
@@ -17,15 +14,15 @@
         <br />
         <SLine :size="['70%', '30px']" />
         <br />
-        <SRow>
+        <SRow class="profile_s-row">
           <div style="flex: 1 1 auto;">
             <SLine :size="['90%', '20px']" />
             <br />
             <SBlock :size="8" :amount="40" />
           </div>
           <div
-            style="flex: 0 1 420px;
-        width: 420px;"
+            style="flex: 1 1 auto;
+        max-width: 420px;"
           >
             <SLine :size="['90%', '20px']" />
             <br />
