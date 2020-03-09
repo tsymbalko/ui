@@ -50,13 +50,6 @@ tbody tr:hover {
   margin: -16px !important;
 }
 
-@media (prefers-reduced-motion: reduce) {
-
-  :root {
-    --disabled-animation: none;
-  }
-}
-
 @media (prefers-color-scheme: dark) {
 
   :root {

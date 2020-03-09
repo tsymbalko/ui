@@ -66,24 +66,19 @@
         </Heading>
         <Legend :legend="personalInformation" class="profile_body-legend" />
         <div class="profile_social">
-          <a href="#" class="profile_social-link" target="_blank">
-            <Icon
-              name="envelop"
-              class="profile_social-icon"
-            />mr.bean@outlook.com
-          </a>
-          <a href="#" class="profile_social-link" target="_blank">
-            <Icon name="phone-alt" class="profile_social-icon" /> +37529 5195686
-          </a>
-          <a href="#" class="profile_social-link" target="_blank">
-            <Icon name="skype" class="profile_social-icon" /> mr-bean
-          </a>
-          <a href="#" class="profile_social-link" target="_blank">
-            <Icon name="linkedin" class="profile_social-icon" /> Mr.Bean
-          </a>
-          <a href="#" class="profile_social-link" target="_blank">
-            <Icon name="twitter" class="profile_social-icon" /> beanOfficial
-          </a>
+          <VLink
+            href="mailto:mr.bean@outlook.com"
+            target="_blank"
+            icon="envelop"
+          >
+            mr.bean@outlook.com
+          </VLink>
+          <VLink href="tel:+375295195686" target="_blank" icon="phone-alt">
+            +37529 5195686
+          </VLink>
+          <VLink href="#" target="_blank" icon="linkedin">Mr.Bean</VLink>
+          <VLink href="#" target="_blank" icon="twitter">beanOfficial</VLink>
+          <VLink href="#" target="_blank" icon="skype">Mr.Bean</VLink>
         </div>
       </div>
     </div>
@@ -99,7 +94,8 @@ import {
   Avatar,
   Icon,
   Legend,
-  Breadcrumb
+  Breadcrumb,
+  VLink
 } from 'atoms'
 export default {
   components: {
@@ -110,7 +106,8 @@ export default {
     Avatar,
     Icon,
     Legend,
-    Breadcrumb
+    Breadcrumb,
+    VLink
   },
   data() {
     return {

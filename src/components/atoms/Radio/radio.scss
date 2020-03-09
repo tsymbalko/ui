@@ -18,8 +18,9 @@
       border-radius: 50%;
       width: 10px;
       height: 10px;
-      left: 6px;
-      top: 6px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
       opacity: 0;
       transition: .2s cubic-bezier(.78, .14, .15, .86);
     }

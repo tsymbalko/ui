@@ -44,8 +44,25 @@
     <Card type="error">
       <div class="section-example">
         <div class="section-example">
-          <Spinner type="plane" />
           <Spinner type="bounce" />
+          <Spinner type="plane" />
+          <Spinner type="pulse" />
+        </div>
+        <div class="section-example">
+          <Spinner :size="30" type="plane" color="#ff790e" />
+          <Spinner :size="30" type="bounce" color="#ff790e" />
+          <Spinner :size="30" type="pulse" color="#ff790e" />
+        </div>
+        <div class="section-example">
+          <Spinner :size="20" type="plane" color="#ec547a" />
+          <Spinner :size="20" type="bounce" color="#ec547a" />
+          <Spinner :size="20" type="pulse" color="#ec547a" />
+        </div>
+      </div>
+      <div class="section-example">
+        <div class="section-example">
+          <Spinner type="bounce" />
+          <Spinner type="plane" />
           <Spinner type="pulse" />
         </div>
         <div class="section-example">
@@ -597,6 +614,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 
   & + & {
     margin-top: 12px;

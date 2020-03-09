@@ -23,6 +23,7 @@ import Tabs from './Tabs/Tabs'
 import Heading from './Heading/Heading'
 import TextLabel from './TextLabel/TextLabel'
 import Legend from './Legend/Legend'
+import VLink from './Link/Link'
 
 export {
   Icon,
@@ -49,5 +50,6 @@ export {
   Tabs,
   Heading,
   TextLabel,
-  Legend
+  Legend,
+  VLink
 }

@@ -3,13 +3,16 @@
   flex-direction: column;
   min-height: 100vh;
   background-color: var(--light-blue);
-  padding-left: var(--navigation-width);
+  padding-left: 0;
+
+  @media (min-width: 1200px) {
+    padding-left: var(--navigation-width);
+  }
 
   &__locked {
     position: fixed;
     left: 0;
     right: 0;
-    padding-right: 4px;
   }
 
   &_main {
@@ -17,6 +20,21 @@
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 37px 48px;
+    padding: 12px;
+
+    @media (min-width: 1200px) {
+      padding: 37px 48px;
+    }
+  }
+
+  &_float {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    z-index: 1004;
+
+    @media (min-width: 1200px) {
+      display: none;
+    }
   }
 }

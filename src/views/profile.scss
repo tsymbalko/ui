@@ -41,11 +41,19 @@
     grid-column-gap: 28px;
     grid-row-gap: 14px;
     padding-left: 40px;
-    grid-template-columns: 1fr 420px;
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
     grid-template-areas:
-      'breadcrumb breadcrumb'
-      'main aside';
+      'breadcrumb'
+      'main'
+      'aside';
+
+    @media (min-width: 1200px) {
+      grid-template-columns: 1fr 420px;
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas:
+        'breadcrumb breadcrumb'
+        'main aside';
+    }
 
     &-breadcrumb {
       grid-area: breadcrumb;
@@ -74,23 +82,11 @@
     flex-wrap: wrap;
     font-size: 14px;
 
-    &-link {
+    /* mix */
+    .vc-link {
       margin-bottom: 8px;
       padding: 2px;
-      display: flex;
-      align-items: center;
       margin-right: 12px;
-      border-radius: var(--border-radius);
-      color: var(--blue);
-
-      &:hover,
-      &:focus {
-        background-color: var(--base-hover);
-      }
-    }
-
-    &-icon {
-      margin-right: 8px;
     }
   }
 }

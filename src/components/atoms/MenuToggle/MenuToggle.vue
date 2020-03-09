@@ -3,9 +3,9 @@
     :class="[
       'menu-toggle',
       { 'menu-toggle__active': active },
-      { [`vc-avatar__${shape}`]: shape }
+      { [`menu-toggle__${shape}`]: shape }
     ]"
-    @click="active = !active"
+    @click=";(active = !active), $emit('click')"
   >
     <div class="menu-toggle_box">
       <span class="menu-toggle_line" />

@@ -2,13 +2,13 @@
   <ul class="vc-legend">
     <li v-for="{ id, title, value } in legend" class="vc-legend_item" :key="id">
       <p class="vc-legend_title">
-        <b class="vc-legend_text">
+        <span class="vc-legend_text">
           {{ title }}
-        </b>
+        </span>
       </p>
-      <span class="vc-legend_value">
+      <b class="vc-legend_value">
         {{ value }}
-      </span>
+      </b>
     </li>
   </ul>
 </template>

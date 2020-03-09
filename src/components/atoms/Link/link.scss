@@ -1,0 +1,17 @@
+.vc-link {
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+  border-radius: var(--border-radius);
+
+  &_icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--base-hover);
+  }
+}

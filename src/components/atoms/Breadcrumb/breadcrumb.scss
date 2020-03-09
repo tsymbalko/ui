@@ -1,9 +1,9 @@
 .vc-breadcrumb {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 
   &_item {
-    list-style: none;
     display: flex;
     align-items: center;
   }
@@ -31,7 +31,6 @@
     align-items: center;
     border-radius: var(--border-radius);
     color: var(--blue);
-    line-height: 1;
 
     &:hover {
       background-color: var(--base-hover);
