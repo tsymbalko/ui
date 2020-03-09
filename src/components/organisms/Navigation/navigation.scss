@@ -30,6 +30,7 @@
     flex-direction: column;
     flex: 1 1;
     margin-bottom: 90px;
+    list-style: none;
 
     @media (min-width: 1200px) {
       margin-bottom: 34px;
@@ -38,7 +39,6 @@
 
   &_item {
     margin-bottom: var(--indent);
-    height: var(--item-height);
 
     &__separator {
       margin-top: 0;

@@ -24,4 +24,35 @@
     height: 30px;
     border-radius: 4px;
   }
+
+  &_input {
+    appearance: none;
+    display: inline-block;
+    vertical-align: middle;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: var(--border-radius);
+
+    &::-webkit-color-swatch-wrapper {
+      padding: 0;
+    }
+
+    &::-webkit-color-swatch {
+      border: none;
+      border-radius: var(--border-radius);
+    }
+
+    &::-moz-focus-inner {
+      border: none;
+      padding: 0;
+      border-radius: 4px;
+    }
+
+    &::-moz-color-swatch {
+      border: none;
+      border-radius: var(--border-radius);
+      height: 30px;
+    }
+  }
 }

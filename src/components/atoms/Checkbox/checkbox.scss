@@ -6,6 +6,7 @@
     appearance: none;
     position: relative;
     cursor: pointer;
+    border: none;
     background-color: rgba(0, 0, 0, .25);
     transition: background-color .2s cubic-bezier(.78, .14, .15, .86);
 
@@ -28,7 +29,7 @@
         border-top: 0;
         border-left: 0;
         left: 7px;
-        top: 2px;
+        top: 3px;
         opacity: 0;
         transform: rotate(40deg);
       }
@@ -44,8 +45,7 @@
       border-radius: 11px;
 
       &:after {
-        top: 50%;
-        transform: translateY(-50%);
+        top: 2px;
         left: 2px;
         width: 18px;
         height: 18px;
@@ -56,7 +56,7 @@
       &:checked:after {
         left: 100%;
         margin-left: -2px;
-        transform: translateX(-100%) translateY(-50%);
+        transform: translateX(-100%);
       }
     }
 

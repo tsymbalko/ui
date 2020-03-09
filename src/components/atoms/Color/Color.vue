@@ -1,23 +1,16 @@
 <template>
-  <div class="vc-color-picker">
+  <label class="vc-color-picker">
     <p class="vc-color-picker_value">{{ value }}</p>
-    <label
-      class="vc-color-picker_label"
+    <input
+      ref="inputColor"
+      class="vc-color-picker_input"
+      type="color"
+      :value="value"
+      id="color"
+      @change="changeColor"
       :style="{ 'background-color': value }"
-      tabindex="0"
-      @keypress.enter="inputHandler"
-      @keypress.space="inputHandler"
-    >
-      <input
-        ref="inputColor"
-        class="vc-color-picker_input"
-        type="color"
-        :value="value"
-        @change="changeColor"
-        hidden
-      />
-    </label>
-  </div>
+    />
+  </label>
 </template>
 
 <script>
@@ -40,9 +33,6 @@ export default {
   methods: {
     changeColor(event) {
       this.$emit('change', event.target.value)
-    },
-    inputHandler() {
-      this.$refs.inputColor.click()
     }
   }
 }
