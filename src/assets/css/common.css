@@ -25,6 +25,7 @@
   --border-radius: 4px;
   --invers: #292929;
   --invers-light: #fff;
+  --skeleton: rgba(0, 0, 0, .1);
 }
 
 table {
@@ -60,6 +61,7 @@ tbody tr:hover {
     --base-border: #384253;
     --invers: #fff;
     --invers-light: #292929;
+    --skeleton: rgba(255, 255, 255, .1);
   }
 }
 
@@ -70,6 +72,7 @@ tbody tr:hover {
   --light-blue: #485465;
   --base-border: #384253;
   --invers: #fff;
+  --skeleton: rgba(255, 255, 255, .1);
 }
 
 html {
@@ -188,4 +191,15 @@ button::-moz-focus-inner {
 ::-webkit-scrollbar-thumb {
   background: var(--base-scroll);
   border-radius: 4px;
+}
+
+@keyframes skeleton-loading {
+
+  0% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
 }

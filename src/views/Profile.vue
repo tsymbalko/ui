@@ -1,6 +1,42 @@
 <template>
-  <article>
-    <Card class="profile">
+  <div>
+    <SFrame v-if="loading">
+      <SLine :size="['auto', '260px']" />
+      <div
+        style="padding-left: 40px;
+    margin-top: -60px;"
+      >
+        <SRow align="flex-end">
+          <SFigure size="160px" />
+          <div style="flex: 1 1 auto;">
+            <SLine :size="['20%', '54px']" />
+            <SLine :size="['40%', '16px']" />
+            <SBlock :size="8" :amount="1" />
+          </div>
+        </SRow>
+        <br />
+        <SLine :size="['70%', '30px']" />
+        <br />
+        <SRow>
+          <div style="flex: 1 1 auto;">
+            <SLine :size="['90%', '20px']" />
+            <br />
+            <SBlock :size="8" :amount="40" />
+          </div>
+          <div
+            style="flex: 0 1 420px;
+        width: 420px;"
+          >
+            <SLine :size="['90%', '20px']" />
+            <br />
+            <SBlock :size="20" :amount="12" />
+            <br />
+            <SBlock :size="12" :amount="5" />
+          </div>
+        </SRow>
+      </div>
+    </SFrame>
+    <Card v-else class="profile">
       <header class="profile_header">
         <div
           class="profile_header-background"
@@ -84,7 +120,7 @@
         </section>
       </div>
     </Card>
-  </article>
+  </div>
 </template>
 
 <script>
@@ -99,6 +135,7 @@ import {
   Breadcrumb,
   VLink
 } from 'atoms'
+import { SBlock, SLine, SFigure, SRow, SFrame } from 'skeletons'
 export default {
   components: {
     Heading,
@@ -109,10 +146,16 @@ export default {
     Icon,
     Legend,
     Breadcrumb,
-    VLink
+    VLink,
+    SBlock,
+    SLine,
+    SFigure,
+    SRow,
+    SFrame
   },
   data() {
     return {
+      loading: true,
       routes: [
         {
           href: '#',
@@ -163,6 +206,11 @@ export default {
         }
       ]
     }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.loading = false
+    }, 5000)
   }
 }
 </script>

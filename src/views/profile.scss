@@ -1,5 +1,18 @@
 .profile {
 
+  &__animation {
+
+    &-enter-active,
+    &-leave-active {
+      transition: transform .3s ease, opacity .3s ease;
+    }
+
+    &-enter,
+    &-leave-to {
+      opacity: 0;
+    }
+  }
+
   &_header {
     margin-bottom: 28px;
     display: grid;
