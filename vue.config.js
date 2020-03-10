@@ -26,18 +26,18 @@ module.exports = {
       }
     },
     plugins: [
-      new StyleLintPlugin({
-        files: ['**/*.{vue,htm,html,css,sss,less,scss,sass}'],
-        context: 'src',
-        fix: true,
-        configFile: '.stylelintrc',
-        lintDirtyModulesOnly: true
-      }),
       new PrettierPlugin({
         encoding: 'utf-8',
         extensions: ['.js', '.vue'],
         fix: true,
         configFile: '.prettierrc'
+      }),
+      new StyleLintPlugin({
+        files: ['**/*.{htm,html,css,sss,less,scss,sass}'],
+        context: 'src',
+        fix: true,
+        configFile: '.stylelintrc',
+        lintDirtyModulesOnly: true
       })
     ]
   }

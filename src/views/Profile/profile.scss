@@ -1,48 +1,5 @@
 .profile {
 
-  &_s-line {
-    display: none;
-
-    @media (min-width: 600px) {
-      display: block;
-    }
-  }
-
-  &_s-box {
-
-    @media (min-width: 600px) {
-      padding-left: 40px;
-      margin-top: -60px;
-    }
-  }
-
-  &_s-row {
-    flex-wrap: wrap;
-
-    & > div {
-      width: 100%;
-      flex-basis: 100%;
-    }
-
-    @media (min-width: 600px) {
-      flex-wrap: nowrap;
-      display: block;
-    }
-  }
-
-  &__animation {
-
-    &-enter-active,
-    &-leave-active {
-      transition: transform .3s ease, opacity .3s ease;
-    }
-
-    &-enter,
-    &-leave-to {
-      opacity: 0;
-    }
-  }
-
   &_header {
     margin-bottom: 28px;
     display: grid;

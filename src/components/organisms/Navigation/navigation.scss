@@ -127,10 +127,6 @@
     margin: 0 auto;
     fill: var(--invers);
 
-    @media (min-width: 1200px) {
-      fill: var(--dark-blue);
-    }
-
     .navigation_link:hover &,
     .navigation_link:focus &,
     .navigation_link__active & {

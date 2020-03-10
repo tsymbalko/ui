@@ -1,38 +1,6 @@
 <template>
-  <div>
-    <SFrame v-if="loading">
-      <SLine :size="['auto', '260px']" class="profile_s-line" />
-      <div class="profile_s-box">
-        <SRow align="flex-end" class="profile_s-row">
-          <SFigure size="160px" />
-          <div style="flex: 1 1 auto;">
-            <SLine :size="['20%', '54px']" />
-            <SLine :size="['40%', '16px']" />
-            <SBlock :size="8" :amount="1" />
-          </div>
-        </SRow>
-        <br />
-        <SLine :size="['70%', '30px']" />
-        <br />
-        <SRow class="profile_s-row">
-          <div style="flex: 1 1 auto;">
-            <SLine :size="['90%', '20px']" />
-            <br />
-            <SBlock :size="8" :amount="40" />
-          </div>
-          <div
-            style="flex: 1 1 auto;
-        max-width: 420px;"
-          >
-            <SLine :size="['90%', '20px']" />
-            <br />
-            <SBlock :size="20" :amount="12" />
-            <br />
-            <SBlock :size="12" :amount="5" />
-          </div>
-        </SRow>
-      </div>
-    </SFrame>
+  <span>
+    <SkeletonProfile v-if="loading" />
     <Card v-else class="profile">
       <header class="profile_header">
         <div
@@ -117,7 +85,7 @@
         </section>
       </div>
     </Card>
-  </div>
+  </span>
 </template>
 
 <script>
@@ -132,7 +100,7 @@ import {
   Breadcrumb,
   VLink
 } from 'atoms'
-import { SBlock, SLine, SFigure, SRow, SFrame } from 'skeletons'
+import SkeletonProfile from './components/SkeletonProfile'
 export default {
   components: {
     Heading,
@@ -144,11 +112,7 @@ export default {
     Legend,
     Breadcrumb,
     VLink,
-    SBlock,
-    SLine,
-    SFigure,
-    SRow,
-    SFrame
+    SkeletonProfile
   },
   data() {
     return {
