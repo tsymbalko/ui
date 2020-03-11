@@ -1,0 +1,55 @@
+.dashboard {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 32px;
+  grid-template-areas:
+    'header'
+    'overview'
+    'progress'
+    'information'
+    'activity';
+
+  @media (min-width: 1200px) {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      'header header header header header header'
+      'overview overview overview progress progress progress'
+      'information information activity activity activity activity';
+  }
+
+  &_header {
+    grid-area: header;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &_overview {
+    grid-area: overview;
+  }
+
+  &_progress {
+    grid-area: progress;
+
+    &-group {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+  }
+
+  &_information {
+    grid-area: information;
+  }
+
+  &_activity {
+    grid-area: activity;
+
+    &-group {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
+  }
+}
