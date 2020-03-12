@@ -9,7 +9,6 @@
         cy="50"
         r="48"
         :style="{
-          strokeDasharray: `${pathLength}`,
           strokeDashoffset: `${progress}`
         }"
       />
@@ -37,8 +36,6 @@ export default {
     }
   },
   mounted() {
-    //eslint-disable-next-line
-    console.log(this.$refs.circle.getTotalLength())
     this.pathLength = this.$refs.circle.getTotalLength()
     this.getValue()
     setTimeout(() => {
