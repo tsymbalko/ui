@@ -1,0 +1,42 @@
+.vc-anchor {
+
+  &_list {
+    padding: 12px 12px 12px 20px;
+    border-left: 1px solid var(--base-border);
+  }
+
+  &_link {
+    display: block;
+    font-size: 14px;
+    position: relative;
+    color: var(--base-text);
+    padding: 2px 4px;
+    border-radius: var(--border-radius);
+    transition: .15s ease-in-out;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 1px;
+      top: 0;
+      bottom: 0;
+      background-color: var(--blue);
+      left: -21px;
+      opacity: 0;
+      transition: .15s ease-in-out;
+    }
+
+    &:hover {
+      background-color: var(--base-hover);
+    }
+
+    &__active {
+      color: var(--blue);
+
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+}

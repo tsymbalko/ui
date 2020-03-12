@@ -6,7 +6,7 @@
   --accent-color: var(--blue);
   --base-light-accent: #379dff;
   --base-background: #ffffff;
-  --base-border: #aaa;
+  --base-border: #e8e8e8;
   --base-scroll: #aaa;
   --disabled: #ccc;
   --focus: #7ab7ff;
@@ -118,6 +118,7 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   line-height: 1.7;
   overscroll-behavior-y: none;
+  overflow-anchor: auto;
 }
 
 :focus {

@@ -23,6 +23,7 @@ import Heading from './Heading/Heading'
 import TextLabel from './TextLabel/TextLabel'
 import Legend from './Legend/Legend'
 import VLink from './Link/Link'
+import Anchors from './Anchors/Anchors'
 
 export {
   Icon,
@@ -49,5 +50,6 @@ export {
   Heading,
   TextLabel,
   Legend,
-  VLink
+  VLink,
+  Anchors
 }

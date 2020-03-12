@@ -1,0 +1,16 @@
+.about {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr auto;
+
+  & .content > section {
+    margin-bottom: 60px;
+  }
+
+  /* mix */
+  &_anchor {
+    position: sticky;
+    top: 60px;
+    align-self: start;
+  }
+}
