@@ -29,22 +29,25 @@ export default {
   },
   mounted() {
     this.nodeList = document.querySelectorAll(this.selector)
-    this.checkActiveLink()
+    this.observerAnchors()
   },
   methods: {
-    checkActiveLink() {
+    toggleActive(link) {
+      const id = link.target.getAttribute('id')
+      if (link.intersectionRatio > 0) {
+        document
+          .querySelector(`.vc-anchor_list a[href="#${id}"]`)
+          .classList.add('vc-anchor_link__active')
+      } else {
+        document
+          .querySelector(`.vc-anchor_list a[href="#${id}"]`)
+          .classList.remove('vc-anchor_link__active')
+      }
+    },
+    observerAnchors() {
       this.observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-          const id = entry.target.getAttribute('id')
-          if (entry.intersectionRatio > 0) {
-            document
-              .querySelector(`.vc-anchor_list a[href="#${id}"]`)
-              .classList.add('vc-anchor_link__active')
-          } else {
-            document
-              .querySelector(`.vc-anchor_list a[href="#${id}"]`)
-              .classList.remove('vc-anchor_link__active')
-          }
+          this.toggleActive(entry)
         })
       })
 

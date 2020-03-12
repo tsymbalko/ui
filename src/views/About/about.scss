@@ -1,16 +1,24 @@
 .about {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 1fr auto;
 
-  & .content > section {
-    margin-bottom: 60px;
+  @media (min-width: 600px) {
+    grid-gap: 20px;
+    grid-template-columns: 1fr auto;
   }
 
   /* mix */
   &_anchor {
-    position: sticky;
-    top: 60px;
-    align-self: start;
+    display: none;
+
+    @media (min-width: 600px) {
+      display: block;
+      position: sticky;
+      top: 18px;
+      align-self: start;
+    }
+
+    @media (min-width: 1200px) {
+      top: 37px;
+    }
   }
 }
