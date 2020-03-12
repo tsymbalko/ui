@@ -77,11 +77,7 @@
       >
         <Heading>Request &amp; Response</Heading>
         <p>
-          В этой статье я хотел бы поделиться одним из способов уменьшить
-          начальный вес веб-сайта. Я покажу как загрузить пользователю только
-          видимый контент когда он/она видит первый экран и лениво загрузить
-          остальные “тяжелые” элементы (такие как изображения) когда они
-          понадобятся.
+          <ProgressCircle />
         </p>
         <p>
           Сегодня изображения (их размер и количество на отдельно взятой
@@ -303,11 +299,12 @@
 </template>
 
 <script>
-import { Heading, Anchors } from 'atoms'
+import { Heading, Anchors, ProgressCircle } from 'atoms'
 export default {
   components: {
     Heading,
-    Anchors
+    Anchors,
+    ProgressCircle
   }
 }
 </script>

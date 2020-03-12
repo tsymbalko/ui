@@ -5,7 +5,8 @@ import Button from './Button/Button'
 import Spinner from './Spinner/Spinner'
 import Radio from './Radio/Radio'
 import Tag from './Tag/Tag'
-import ProgressLine from './PropgressLine/ProgressLine'
+import ProgressLine from './ProgressLine/ProgressLine'
+import ProgressCircle from './ProgressCircle/ProgressCircle'
 import Fieldset from './Fieldset/Fieldset'
 import Range from './Range/Range'
 import Badge from './Badge/Badge'
@@ -51,5 +52,6 @@ export {
   TextLabel,
   Legend,
   VLink,
-  Anchors
+  Anchors,
+  ProgressCircle
 }

@@ -1,0 +1,26 @@
+.vc-progress-circle {
+
+  &_box {
+    //TODO remove width height
+    width: 200px;
+    height: 200px;
+  }
+
+  &_underlay {
+    stroke: rgba(0, 0, 0, .1);
+    stroke-width: 4;
+    fill: transparent;
+    z-index: 1;
+  }
+
+  &_overlay {
+    stroke: currentColor;
+    fill: transparent;
+    stroke-width: 4;
+    z-index: 2;
+    transition: all .6s ease-in-out;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 100px;
+    stroke-linecap: round;
+  }
+}
