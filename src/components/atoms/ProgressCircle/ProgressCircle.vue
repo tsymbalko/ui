@@ -78,7 +78,7 @@ export default {
     }
   },
   mounted() {
-    this.pathLength = this.progress = this.$refs.circle.getTotalLength()
+    this.pathLength = this.progress = 2 * Math.PI * this.radius
     if (this.animation) {
       this.observerCircle()
       return
