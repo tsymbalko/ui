@@ -4,7 +4,7 @@
     <svg
       class="vc-progress-circle_box"
       :viewBox="`0 0 ${size} ${size}`"
-      :style="{ width: size, height: size }"
+      :style="{ width: `${size}px`, height: `${size}px` }"
     >
       <circle
         class="vc-progress-circle_underlay"
@@ -27,7 +27,7 @@
         :cy="circleCoord"
         :r="radius"
         :style="{
-          strokeDasharray: `${pathLength}`,
+          strokeDasharray: `${pathLength}, ${pathLength}`,
           strokeDashoffset: `${progress}`,
           strokeWidth: strokeWidth
         }"
@@ -51,11 +51,22 @@ export default {
       type: Number,
       default: 4
     },
+    animation: {
+      type: Boolean,
+      default: false
+    },
     type: {
       type: String,
       validator: value =>
         ['warning', 'error', 'success', 'primary'].includes(value),
       default: 'primary'
+    }
+  },
+  data() {
+    return {
+      progress: 0,
+      pathLength: 0,
+      observer: {}
     }
   },
   computed: {
@@ -66,12 +77,13 @@ export default {
       return this.size / 2 - this.strokeWidth / 2
     }
   },
-  data() {
-    return {
-      progress: 0,
-      pathLength: 0,
-      observer: {}
+  mounted() {
+    this.pathLength = this.progress = this.$refs.circle.getTotalLength()
+    if (this.animation) {
+      this.observerCircle()
+      return
     }
+    this.calculateProgress()
   },
   watch: {
     value() {
@@ -82,11 +94,15 @@ export default {
     toggleActive(circle) {
       if (circle.intersectionRatio >= 0.5) {
         this.calculateProgress()
-      } else {
-        this.progress = this.pathLength
+        return
       }
+      this.progress = 0
     },
     calculateProgress() {
+      if (this.value >= 100) {
+        this.progress = 0
+        return
+      }
       this.progress = this.pathLength - (this.value * this.pathLength) / 100
     },
     observerCircle() {
@@ -101,12 +117,8 @@ export default {
       this.observer.observe(this.$refs.progressCircle)
     }
   },
-  mounted() {
-    this.pathLength = this.progress = this.$refs.circle.getTotalLength()
-    this.observerCircle()
-  },
   beforeDestroy() {
-    this.observer.disconnect(this.$refs.progressCircle)
+    this.observer.disconnect()
   }
 }
 </script>

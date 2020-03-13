@@ -13,6 +13,8 @@
   }
 
   &_box {
+    width: 100%;
+    height: 100%;
   }
 
   &_underlay {
@@ -22,7 +24,7 @@
 
   &_overlay {
     fill: transparent;
-    transition: stroke-dashoffset 1s ease-in-out, fill 1s ease-in-out;
+    transition: stroke-dashoffset 1s ease-in-out;
     stroke-linecap: round;
     transform: rotate(-90deg);
     transform-origin: center;

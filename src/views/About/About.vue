@@ -59,11 +59,17 @@
           чудовищно…
         </p>
         <p>
-          <ProgressCircle :value="10" />
-          <ProgressCircle :value="20" type="warning" :stroke-width="6" />
-          <ProgressCircle :value="30" type="success" :stroke-width="8" />
+          <ProgressCircle :value="value" />
+          <ProgressCircle :value="value" type="warning" :stroke-width="6" />
           <ProgressCircle
-            :value="50"
+            animation
+            :value="value"
+            type="success"
+            :stroke-width="8"
+          />
+          <ProgressCircle
+            animation
+            :value="value"
             :size="200"
             type="error"
             :stroke-width="6"
@@ -313,7 +319,17 @@ export default {
     Heading,
     Anchors,
     ProgressCircle
+  },
+  data() {
+    return {
+      value: 10
+    }
   }
+  // mounted() {
+  //   setInterval(() => {
+  //     this.value += 30
+  //   }, 3000)
+  // }
 }
 </script>
 
