@@ -1,39 +1,37 @@
 <template>
-  <div class="vc-progress-circle">
+  <div class="vc-progress-circle" ref="progressCircle">
     <div class="vc-progress-circle_value">{{ value }}%</div>
     <svg
       class="vc-progress-circle_box"
       :viewBox="`0 0 ${size} ${size}`"
       :style="{ width: size, height: size }"
     >
-      <g>
-        <circle
-          class="vc-progress-circle_underlay"
-          :cx="circleCoord"
-          :cy="circleCoord"
-          :r="radius"
-          :style="{
-            strokeWidth: strokeWidth
-          }"
-        />
-        <circle
-          ref="circle"
-          :class="[
-            'vc-progress-circle_overlay',
-            {
-              [`vc-progress-circle_overlay__${type}`]: type
-            }
-          ]"
-          :cx="circleCoord"
-          :cy="circleCoord"
-          :r="radius"
-          :style="{
-            strokeDasharray: `${pathLength} ${pathLength}`,
-            strokeDashoffset: `${progress}`,
-            strokeWidth: strokeWidth
-          }"
-        />
-      </g>
+      <circle
+        class="vc-progress-circle_underlay"
+        :cx="circleCoord"
+        :cy="circleCoord"
+        :r="radius"
+        :style="{
+          strokeWidth: strokeWidth
+        }"
+      />
+      <circle
+        ref="circle"
+        :class="[
+          'vc-progress-circle_overlay',
+          {
+            [`vc-progress-circle_overlay__${type}`]: type
+          }
+        ]"
+        :cx="circleCoord"
+        :cy="circleCoord"
+        :r="radius"
+        :style="{
+          strokeDasharray: `${pathLength}`,
+          strokeDashoffset: `${progress}`,
+          strokeWidth: strokeWidth
+        }"
+      />
     </svg>
   </div>
 </template>
@@ -43,7 +41,7 @@ export default {
   props: {
     value: {
       type: Number,
-      default: 10
+      default: 0
     },
     size: {
       type: Number,
@@ -52,10 +50,6 @@ export default {
     strokeWidth: {
       type: Number,
       default: 4
-    },
-    text: {
-      type: String,
-      default: ''
     },
     type: {
       type: String,
@@ -75,22 +69,44 @@ export default {
   data() {
     return {
       progress: 0,
-      pathLength: 0
+      pathLength: 0,
+      observer: {}
     }
   },
   watch: {
     value() {
-      this.getValue()
+      this.calculateProgress()
     }
   },
   methods: {
-    getValue() {
+    toggleActive(circle) {
+      if (circle.intersectionRatio >= 0.5) {
+        this.calculateProgress()
+      } else {
+        this.progress = this.pathLength
+      }
+    },
+    calculateProgress() {
       this.progress = this.pathLength - (this.value * this.pathLength) / 100
+    },
+    observerCircle() {
+      this.observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            this.toggleActive(entry)
+          })
+        },
+        { threshold: 0.5 }
+      )
+      this.observer.observe(this.$refs.progressCircle)
     }
   },
   mounted() {
-    this.pathLength = this.$refs.circle.getTotalLength()
-    this.getValue()
+    this.pathLength = this.progress = this.$refs.circle.getTotalLength()
+    this.observerCircle()
+  },
+  beforeDestroy() {
+    this.observer.disconnect(this.$refs.progressCircle)
   }
 }
 </script>

@@ -1,6 +1,5 @@
 .vc-progress-circle {
   display: inline-block;
-  padding: 2px;
   position: relative;
 
   &_value {
@@ -23,10 +22,14 @@
 
   &_overlay {
     fill: transparent;
-    transition: stroke-dashoffset 1s ease-in-out;
-    stroke-dasharray: 300;
-    stroke-dashoffset: 100px;
+    transition: stroke-dashoffset 1s ease-in-out, fill 1s ease-in-out;
     stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: center;
+
+    &__active {
+      fill: var(--red);
+    }
 
     &__primary {
       stroke: var(--accent-color);
