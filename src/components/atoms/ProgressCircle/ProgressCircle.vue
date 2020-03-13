@@ -1,28 +1,81 @@
 <template>
   <div class="vc-progress-circle">
-    <svg class="vc-progress-circle_box" viewBox="0 0 100 100">
-      <circle class="vc-progress-circle_underlay" cx="50" cy="50" r="48" />
-      <circle
-        ref="circle"
-        class="vc-progress-circle_overlay"
-        cx="50"
-        cy="50"
-        r="48"
-        :style="{
-          strokeDashoffset: `${progress}`
-        }"
-      />
+    <div class="vc-progress-circle_value">{{ value }}%</div>
+    <svg
+      class="vc-progress-circle_box"
+      :viewBox="`0 0 ${size} ${size}`"
+      :style="{ width: size, height: size }"
+    >
+      <g>
+        <circle
+          class="vc-progress-circle_underlay"
+          :cx="circleCoord"
+          :cy="circleCoord"
+          :r="radius"
+          :style="{
+            strokeWidth: strokeWidth
+          }"
+        />
+        <circle
+          ref="circle"
+          :class="[
+            'vc-progress-circle_overlay',
+            {
+              [`vc-progress-circle_overlay__${type}`]: type
+            }
+          ]"
+          :cx="circleCoord"
+          :cy="circleCoord"
+          :r="radius"
+          :style="{
+            strokeDasharray: `${pathLength} ${pathLength}`,
+            strokeDashoffset: `${progress}`,
+            strokeWidth: strokeWidth
+          }"
+        />
+      </g>
     </svg>
   </div>
 </template>
 
 <script>
 export default {
+  props: {
+    value: {
+      type: Number,
+      default: 10
+    },
+    size: {
+      type: Number,
+      default: 140
+    },
+    strokeWidth: {
+      type: Number,
+      default: 4
+    },
+    text: {
+      type: String,
+      default: ''
+    },
+    type: {
+      type: String,
+      validator: value =>
+        ['warning', 'error', 'success', 'primary'].includes(value),
+      default: 'primary'
+    }
+  },
+  computed: {
+    circleCoord() {
+      return this.size / 2
+    },
+    radius() {
+      return this.size / 2 - this.strokeWidth / 2
+    }
+  },
   data() {
     return {
       progress: 0,
-      pathLength: 0,
-      value: 10
+      pathLength: 0
     }
   },
   watch: {
@@ -38,38 +91,6 @@ export default {
   mounted() {
     this.pathLength = this.$refs.circle.getTotalLength()
     this.getValue()
-    setTimeout(() => {
-      this.value = 30
-    }, 10000)
-    // normalizedValue (): number {
-    //   if (this.value < 0) {
-    //     return 0
-    //   }
-    //
-    //   if (this.value > 100) {
-    //     return 100
-    //   }
-    //
-    //   return parseFloat(this.value)
-    // },
-    // calculatedSize(): number {
-    //   return Number(this.size) + (this.button ? 8 : 0)
-    // },
-    //
-    // circumference(): number {
-    //   return 2 * Math.PI * this.radius
-    // },
-    // strokeDashArray (): number {
-    //   return Math.round(this.circumference * 1000) / 1000
-    // },
-    //
-    // strokeDashOffset (): string {
-    //   return ((100 - this.normalizedValue) / 100) * this.circumference + 'px'
-    // },
-    //
-    // strokeWidth (): number {
-    //   return Number(this.width) / +this.size * this.viewBoxSize * 2
-    // }
   }
 }
 </script>

@@ -4,6 +4,17 @@
       <section data-title="Introduction" class="test-section" id="introduction">
         <Heading>Introduction</Heading>
         <p>
+          <ProgressCircle :value="10" />
+          <ProgressCircle :value="20" type="warning" :stroke-width="6" />
+          <ProgressCircle :value="30" type="success" :stroke-width="8" />
+          <ProgressCircle
+            :value="50"
+            :size="200"
+            type="error"
+            :stroke-width="6"
+          />
+        </p>
+        <p>
           Сегодня изображения (их размер и количество на отдельно взятой
           странице) могут быть главной проблемой, когда дело касается
           производительности. Учитывая что от загрузки страницы напрямую зависит
@@ -76,9 +87,6 @@
         id="request-response"
       >
         <Heading>Request &amp; Response</Heading>
-        <p>
-          <ProgressCircle />
-        </p>
         <p>
           Сегодня изображения (их размер и количество на отдельно взятой
           странице) могут быть главной проблемой, когда дело касается

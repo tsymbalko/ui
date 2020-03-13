@@ -1,26 +1,47 @@
 .vc-progress-circle {
+  display: inline-block;
+  padding: 2px;
+  position: relative;
+
+  &_value {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    transform: translateY(-50%);
+    color: var(--base-title);
+  }
 
   &_box {
-    //TODO remove width height
-    width: 200px;
-    height: 200px;
   }
 
   &_underlay {
     stroke: rgba(0, 0, 0, .1);
-    stroke-width: 4;
     fill: transparent;
-    z-index: 1;
   }
 
   &_overlay {
-    stroke: var(--blue);
     fill: transparent;
-    stroke-width: 4;
-    z-index: 2;
-    transition: all 1s ease-in-out;
+    transition: stroke-dashoffset 1s ease-in-out;
     stroke-dasharray: 300;
     stroke-dashoffset: 100px;
     stroke-linecap: round;
+
+    &__primary {
+      stroke: var(--accent-color);
+    }
+
+    &__error {
+      stroke: var(--red);
+    }
+
+    &__success {
+      stroke: var(--green);
+    }
+
+    &__warning {
+      stroke: var(--orange);
+    }
   }
 }
