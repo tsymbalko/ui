@@ -1,6 +1,6 @@
 <template>
   <div class="vc-progress-circle" ref="progressCircle">
-    <div class="vc-progress-circle_value">{{ value }}%</div>
+    <div v-if="showValue" class="vc-progress-circle_value">{{ value }}%</div>
     <svg
       class="vc-progress-circle_box"
       :viewBox="`0 0 ${size} ${size}`"
@@ -54,6 +54,10 @@ export default {
     animation: {
       type: Boolean,
       default: false
+    },
+    showValue: {
+      type: Boolean,
+      default: true
     },
     type: {
       type: String,

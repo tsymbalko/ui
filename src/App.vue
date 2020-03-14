@@ -27,7 +27,7 @@
 import { BackTop, PageTransition } from 'components'
 import { Navigation, Footer, MenuToggle } from 'organisms'
 import { BaseTemplate } from 'templates'
-import { LayoutLock } from 'mixins'
+import { layoutLock, focusVisible } from 'mixins'
 export default {
   components: {
     BackTop,
@@ -37,7 +37,7 @@ export default {
     MenuToggle,
     PageTransition
   },
-  mixins: [LayoutLock],
+  mixins: [layoutLock, focusVisible],
   data() {
     return {
       navigationVisible: false
@@ -51,6 +51,9 @@ export default {
         this.unlockLayout()
       }
     }
+  },
+  mounted() {
+    this.focusVisible()
   },
   methods: {
     toggleNavigation() {

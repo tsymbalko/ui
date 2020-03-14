@@ -1,8 +1,8 @@
 .vc-color-picker {
   min-width: 120px;
   padding: 6px;
-  border-radius: 4px;
-  background-color: var(--base-background);
+  border-radius: var(--border-radius);
+  background-color: var(--base-border);
   display: inline-flex;
   align-items: center;
   justify-content: space-between;

@@ -1,3 +1,4 @@
-import LayoutLock from './LayoutLock'
+import layoutLock from 'mixins/layoutLock'
+import focusVisible from 'mixins/focusVisible'
 
-export { LayoutLock }
+export { layoutLock, focusVisible }

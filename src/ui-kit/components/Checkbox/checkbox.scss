@@ -7,7 +7,7 @@
     position: relative;
     cursor: pointer;
     border: none;
-    background-color: rgba(0, 0, 0, .25);
+    background-color: var(--base-border);
     transition: background-color .2s cubic-bezier(.78, .14, .15, .86);
 
     &:after {

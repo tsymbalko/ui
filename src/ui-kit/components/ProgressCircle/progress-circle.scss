@@ -18,7 +18,7 @@
   }
 
   &_underlay {
-    stroke: rgba(0, 0, 0, .1);
+    stroke: var(--base-border);
     fill: transparent;
   }
 

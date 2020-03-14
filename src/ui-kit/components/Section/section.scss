@@ -1,0 +1,31 @@
+.vc-section {
+  margin-bottom: 40px;
+
+  &_title {
+    color: var(--base-title);
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &_link {
+    text-decoration: none;
+    color: inherit;
+    border-radius: var(--border-radius);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &_icon {
+    margin-left: 14px;
+    opacity: 0;
+    transition: .2s ease-in-out;
+
+    .vc-section_link:hover + & {
+      opacity: 1;
+    }
+  }
+}

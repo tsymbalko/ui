@@ -94,12 +94,8 @@ export default {
     setWidthValues(event) {
       if (!this.disabled) {
         const width = Number(
-          (
-            (event.clientX - event.target.offsetLeft) /
-            (event.target.offsetWidth / 100)
-          ).toFixed(2)
-        )
-
+          event.offsetX / (event.target.offsetWidth / 100)
+        ).toFixed(2)
         if (width < this.widthValue) {
           this.widthAfterValue = this.widthValue
           this.widthBeforeValue = width

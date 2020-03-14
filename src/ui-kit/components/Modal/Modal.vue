@@ -49,7 +49,7 @@
 import FocusLock from 'vue-focus-lock'
 import vClickOutside from 'v-click-outside'
 import { Button } from 'components'
-import { LayoutLock } from 'mixins'
+import { layoutLock } from 'mixins'
 
 export default {
   name: 'modal',
@@ -60,7 +60,7 @@ export default {
   directives: {
     clickOutside: vClickOutside.directive
   },
-  mixins: [LayoutLock],
+  mixins: [layoutLock],
   props: {
     visible: {
       type: Boolean,

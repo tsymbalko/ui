@@ -1,16 +1,32 @@
 .about {
   display: grid;
+  scroll-padding-top: 60px;
 
-  @media (min-width: 600px) {
+  @media (min-width: 900px) {
     grid-gap: 40px;
     grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      'header .'
+      'article anchors';
+  }
+
+  &_header {
+    grid-area: header;
+  }
+
+  &_article {
+    grid-area: article;
+    display: grid;
+    grid-row-gap: 20px;
   }
 
   /* mix */
   &_anchor {
     display: none;
+    grid-area: anchors;
 
-    @media (min-width: 600px) {
+    @media (min-width: 900px) {
       display: block;
       position: sticky;
       top: 18px;

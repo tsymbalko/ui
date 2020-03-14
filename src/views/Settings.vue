@@ -4,7 +4,7 @@
     <TextLabel>Настройка цветовой схемы приложения и тд и тп</TextLabel>
     <br />
     <br />
-    <ul class="example-list">
+    <Card class="example-list">
       <li>
         <Checkbox
           type="switch"
@@ -60,12 +60,20 @@
         <br />
         <Range v-model="test4" label="Label:" :min="20" :step="10" legend />
       </li>
-    </ul>
+    </Card>
   </div>
 </template>
 
 <script>
-import { Color, Checkbox, Radio, Range, Heading, TextLabel } from 'components'
+import {
+  Color,
+  Checkbox,
+  Radio,
+  Range,
+  Heading,
+  TextLabel,
+  Card
+} from 'components'
 export default {
   name: 'settings',
   components: {
@@ -74,7 +82,8 @@ export default {
     Radio,
     Range,
     Heading,
-    TextLabel
+    TextLabel,
+    Card
   },
   data() {
     return {
