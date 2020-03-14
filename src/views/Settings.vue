@@ -65,7 +65,7 @@
 </template>
 
 <script>
-import { Color, Checkbox, Radio, Range, Heading, TextLabel } from 'atoms'
+import { Color, Checkbox, Radio, Range, Heading, TextLabel } from 'components'
 export default {
   name: 'settings',
   components: {

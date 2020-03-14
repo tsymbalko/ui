@@ -99,7 +99,7 @@ import {
   Legend,
   Breadcrumb,
   VLink
-} from 'atoms'
+} from 'components'
 import SkeletonProfile from './components/SkeletonProfile'
 export default {
   components: {

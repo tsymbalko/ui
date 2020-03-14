@@ -8,18 +8,21 @@
   z-index: 1000;
   overflow-y: auto;
   padding: var(--indent);
-  display: none;
   flex-direction: column;
   width: var(--navigation-width);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, .07);
   backdrop-filter: blur(15px);
+  transition: transform .3s ease-in-out;
+  transform: translateX(-100%);
 
   &__active {
     display: flex;
+    transform: translateX(0);
   }
 
   @media (min-width: 1200px) {
     display: flex;
+    transform: translateX(0);
     padding-bottom: var(--grid-gap);
     background-color: var(--base-background);
     backdrop-filter: none;

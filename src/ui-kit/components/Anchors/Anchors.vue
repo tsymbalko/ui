@@ -57,8 +57,8 @@ export default {
     }
   },
   beforeDestroy() {
-    this.nodeList.forEach(section => {
-      this.observer.disconnect(section)
+    this.nodeList.forEach(() => {
+      this.observer.disconnect()
     })
   }
 }

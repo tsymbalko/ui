@@ -63,7 +63,7 @@
 
     @media (min-width: 1200px) {
       padding-left: 40px;
-      grid-template-columns: minmax(296px, 1fr) 320px;
+      grid-template-columns: minmax(296px, 1fr) 340px;
       grid-template-rows: repeat(2, auto);
       grid-template-areas:
         'breadcrumb breadcrumb'

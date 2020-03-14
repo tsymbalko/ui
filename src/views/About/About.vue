@@ -59,28 +59,37 @@
           чудовищно…
         </p>
         <p>
-          <ProgressCircle :value="value" />
-          <ProgressCircle :value="value" type="warning" :stroke-width="6" />
-          <ProgressCircle
-            animation
-            :value="value"
-            type="success"
-            :stroke-width="8"
-          />
-          <ProgressCircle
-            animation
-            :value="value"
-            :size="200"
-            type="error"
-            :stroke-width="6"
-          />
-        </p>
-        <p>
           Сегодня изображения (их размер и количество на отдельно взятой
           странице) могут быть главной проблемой, когда дело касается
           производительности. Учитывая что от загрузки страницы напрямую зависит
           конверсия веб-сайта, эту проблему нельзя оставлять без внимания.
         </p>
+        <br />
+        <p>
+          <ProgressCircle class="progress" animation :value="value1" />
+          <ProgressCircle
+            class="progress"
+            animation
+            :value="value2"
+            type="warning"
+            :stroke-width="6"
+          />
+          <ProgressCircle
+            class="progress"
+            animation
+            :value="value3"
+            type="success"
+            :stroke-width="6"
+          />
+          <ProgressCircle
+            class="progress"
+            animation
+            :value="value4"
+            type="error"
+            :stroke-width="6"
+          />
+        </p>
+        <br />
         <p>
           Если вы когда-нибудь встречались с такой задачей, вы, вероятно,
           использовали магию JavaScript’а, которая, в конце-концов выглядела
@@ -313,7 +322,7 @@
 </template>
 
 <script>
-import { Heading, Anchors, ProgressCircle } from 'atoms'
+import { Heading, Anchors, ProgressCircle } from 'components'
 export default {
   components: {
     Heading,
@@ -322,17 +331,19 @@ export default {
   },
   data() {
     return {
-      value: 10
+      value1: 33,
+      value2: 20.2,
+      value3: 49,
+      value4: 78
     }
   }
-  // mounted() {
-  //   setInterval(() => {
-  //     this.value += 30
-  //   }, 3000)
-  // }
 }
 </script>
 
 <style lang="scss">
 @import 'about';
+
+.progress {
+  margin-right: 12px;
+}
 </style>

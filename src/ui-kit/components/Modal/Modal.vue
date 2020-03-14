@@ -48,7 +48,7 @@
 <script>
 import FocusLock from 'vue-focus-lock'
 import vClickOutside from 'v-click-outside'
-import { Button } from 'atoms'
+import { Button } from 'components'
 import { LayoutLock } from 'mixins'
 
 export default {

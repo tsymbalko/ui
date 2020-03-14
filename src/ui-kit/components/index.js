@@ -25,6 +25,7 @@ import TextLabel from './TextLabel/TextLabel'
 import Legend from './Legend/Legend'
 import VLink from './Link/Link'
 import Anchors from './Anchors/Anchors'
+import PageTransition from './PageTransition/PageTransition'
 
 export {
   Icon,
@@ -53,5 +54,6 @@ export {
   Legend,
   VLink,
   Anchors,
-  ProgressCircle
+  ProgressCircle,
+  PageTransition
 }

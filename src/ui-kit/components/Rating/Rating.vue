@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { Icon } from 'atoms'
+import { Icon } from 'components'
 export default {
   name: 'Rating',
   model: {

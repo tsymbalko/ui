@@ -17,12 +17,12 @@ module.exports = {
     resolve: {
       alias: {
         assets: path.resolve('./src/assets'),
-        mixins: path.resolve('./src/components/mixins'),
-        atoms: path.resolve('./src/components/atoms'),
-        pages: path.resolve('./src/components/pages'),
-        organisms: path.resolve('./src/components/organisms'),
-        skeletons: path.resolve('./src/components/skeletons'),
-        templates: path.resolve('./src/components/templates')
+        mixins: path.resolve('./src/ui-kit/mixins'),
+        components: path.resolve('./src/ui-kit/components'),
+        pages: path.resolve('./src/ui-kit/pages'),
+        organisms: path.resolve('./src/ui-kit/organisms'),
+        skeletons: path.resolve('./src/ui-kit/skeletons'),
+        templates: path.resolve('./src/ui-kit/templates')
       }
     },
     plugins: [

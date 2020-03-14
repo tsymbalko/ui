@@ -1063,7 +1063,7 @@ import {
   Rating,
   Fieldset,
   Empty
-} from 'atoms'
+} from 'components'
 import { SRow, SBlock, SLine, SFrame, SFigure } from 'skeletons'
 export default {
   components: {

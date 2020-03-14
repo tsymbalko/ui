@@ -118,7 +118,9 @@ export default {
     }
   },
   beforeDestroy() {
-    this.observer.disconnect()
+    if (this.animation) {
+      this.observer.disconnect()
+    }
   }
 }
 </script>

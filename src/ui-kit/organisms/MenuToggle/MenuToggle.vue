@@ -5,7 +5,7 @@
       { 'menu-toggle__active': active },
       { [`menu-toggle__${shape}`]: shape }
     ]"
-    @click=";(active = !active), $emit('click')"
+    @click="$emit('click')"
   >
     <div class="menu-toggle_box">
       <span class="menu-toggle_line" />
@@ -16,16 +16,19 @@
 <script>
 export default {
   name: 'MenuToggle',
+  model: {
+    prop: 'active',
+    event: 'click'
+  },
   props: {
+    active: {
+      type: Boolean,
+      required: true
+    },
     shape: {
       type: String,
       validator: value => ['circle', 'square'].includes(value),
       default: 'square'
-    }
-  },
-  data() {
-    return {
-      active: false
     }
   }
 }

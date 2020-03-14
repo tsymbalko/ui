@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import { Card, Heading, TextLabel, Button } from 'atoms'
+import { Card, Heading, TextLabel, Button } from 'components'
 export default {
   name: 'home',
   components: {
