@@ -1,6 +1,6 @@
 <template>
   <div :class="['collapse-card', { [`collapse-card__${type}`]: type }]">
-    <div class="collapse-card_header">
+    <div class="collapse-card_header" ёё>
       <Button
         :class="[
           'collapse-card_toggle',
@@ -15,7 +15,9 @@
       />
       <Checkbox class="collapse-card_switch" type="switch" />
       <div class="collapse-card_name">
-        <VLink href="#">Lorem ipsue skjdfnksdj</VLink>
+        <VLink class="elipsis" href="#"
+          >Lorem ipsue skjdfnksdj kjnfksjd skdjnfksjdnfj sdkjfnksdjn</VLink
+        >
         <TextLabel class="collapse-card_date">
           id: 523934482
         </TextLabel>
@@ -50,13 +52,13 @@
         icon="ellipsis-v"
       />
     </div>
-    <div v-if="visible" class="collapse-card_content">
+    <div v-if="visible" class="collapse-card_body">
       <div>
         <TextLabel class="collapse-card_date">
           Tags:
         </TextLabel>
         <div class="collapse-card_tags">
-          <Tag type="warning" closable v-for="(item, index) in 10" :key="index">
+          <Tag type="warning" v-for="(item, index) in 14" :key="index">
             #{{ `tag`.repeat(random(1, 3)) }}
           </Tag>
         </div>

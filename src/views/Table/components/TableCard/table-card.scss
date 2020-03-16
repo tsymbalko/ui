@@ -53,7 +53,7 @@
     justify-items: start;
 
     @media (min-width: 900px) {
-      grid-template-columns: auto auto 200px 1fr 126px auto;
+      grid-template-columns: auto auto 240px 1fr 126px auto;
       grid-template-rows: auto;
       grid-template-areas: 'toggle switch name info date menu';
     }
@@ -84,13 +84,21 @@
   }
 
   &_name {
-    display: flex;
-    flex-direction: column;
     grid-area: name;
     line-height: 1.2;
+    overflow: hidden;
+    max-width: 100%;
+    // TODO вынести в миксин
+
+    .elipsis {
+      display: block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
 
     @media (min-width: 900px) {
-      margin-left: 28px;
+      padding-left: 20px;
     }
   }
 
@@ -121,19 +129,19 @@
     }
   }
 
-  &_content {
+  &_body {
     margin-top: 16px;
     padding: 20px;
     border-top: 1px solid var(--base-border);
     display: grid;
-    grid-row-gap: 16px;
-    grid-template-rows: repeat(3, auto);
+    grid-gap: 16px;
+
+    @media (min-width: 600px) {
+      grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    }
 
     @media (min-width: 900px) {
-      display: grid;
-      grid-column-gap: 16px;
-      grid-template-rows: auto;
-      grid-template-columns: 1fr 2fr 140px;
+      grid-template-columns: repeat(auto-fit, minmax(140px, auto));
     }
   }
 
