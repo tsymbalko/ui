@@ -11,7 +11,7 @@
   --disabled: #ccc;
   --focus: #7ab7ff;
   --base-focus: 0 0 0 2px var(--focus);
-  --base-hover: rgba(55, 150, 246, .2);
+  --base-hover: #d9eafe;
   --orange: #ff790e;
   --red: #ec547a;
   --blue: #3796f6;

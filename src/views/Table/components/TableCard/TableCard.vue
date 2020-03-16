@@ -1,11 +1,11 @@
 <template>
   <div :class="['collapse-card', { [`collapse-card__${type}`]: type }]">
-    <div class="collapse-card_header" ёё>
+    <div class="collapse-card_header">
       <Button
         :class="[
-          'collapse-card_toggle',
+          'collapse-card_header-toggle',
           {
-            'collapse-card_toggle__active': visible
+            'collapse-card_header-toggle__active': visible
           }
         ]"
         type="ghost"
@@ -13,8 +13,8 @@
         icon="angle-down"
         @click="toggleVisible"
       />
-      <Checkbox class="collapse-card_switch" type="switch" />
-      <div class="collapse-card_name">
+      <Checkbox class="collapse-card_header-switch" type="switch" />
+      <div class="collapse-card_header-title">
         <VLink class="elipsis" href="#"
           >Lorem ipsue skjdfnksdj kjnfksjd skdjnfksjdnfj sdkjfnksdjn</VLink
         >
@@ -22,31 +22,31 @@
           id: 523934482
         </TextLabel>
       </div>
-      <ul class="collapse-card_info">
-        <li class="collapse-card_info-item">
-          <TextLabel class="collapse-card_date">
+      <ul class="collapse-card_header-info">
+        <li class="collapse-card_header-info-item">
+          <TextLabel>
             Prototype:
           </TextLabel>
-          <span>DNPT</span>
+          <Tag type="ghost">DNDP</Tag>
         </li>
-        <li class="collapse-card_info-item">
-          <TextLabel class="collapse-card_date">
+        <li class="collapse-card_header-info-item">
+          <TextLabel>
             Version:
           </TextLabel>
-          <Badge count="6.8-6.9" type="primary" />
+          <Tag type="primary">6.8-6.9</Tag>
         </li>
-        <li class="collapse-card_info-item">
-          <TextLabel class="collapse-card_date">
+        <li class="collapse-card_header-info-item">
+          <TextLabel>
             Chests:
           </TextLabel>
-          <Badge :count="120" :overflowCount="100" type="success" />
+          <Tag type="success">120</Tag>
         </li>
       </ul>
-      <TextLabel class="collapse-card_date">
+      <TextLabel class="collapse-card_header-date">
         12:53 09-03-2020
       </TextLabel>
       <Button
-        class="collapse-card_menu"
+        class="collapse-card_header-menu"
         type="ghost"
         shape="square"
         icon="ellipsis-v"
@@ -54,49 +54,32 @@
     </div>
     <div v-if="visible" class="collapse-card_body">
       <div>
-        <TextLabel class="collapse-card_date">
+        <TextLabel>
           Tags:
         </TextLabel>
-        <div class="collapse-card_tags">
+        <div class="collapse-card_body-tags">
           <Tag type="warning" v-for="(item, index) in 14" :key="index">
             #{{ `tag`.repeat(random(1, 3)) }}
           </Tag>
         </div>
       </div>
       <div>
-        <TextLabel class="collapse-card_date">
+        <TextLabel>
           3 last comment:
         </TextLabel>
-        <ul class="collapse-card_comments">
-          <li class="collapse-card_comments-item">
+        <ul class="collapse-card_body-comments">
+          <li
+            class="collapse-card_body-comments-item"
+            v-for="(item, index) in 3"
+            :key="index"
+          >
             <Avatar
               :size="32"
-              class="collapse-card_comments-avatar"
+              class="collapse-card_body-comments-avatar"
               text="User Tr"
             />
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </p>
-          </li>
-          <li class="collapse-card_comments-item">
-            <Avatar
-              :size="32"
-              class="collapse-card_comments-avatar"
-              text="E u"
-            />
-            <p>
-              Lorem ipsum dolor sit amet
-            </p>
-          </li>
-          <li class="collapse-card_comments-item">
-            <Avatar
-              :size="32"
-              class="collapse-card_comments-avatar"
-              text="m a"
-            />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-              asperiores cumque expedita
             </p>
           </li>
         </ul>
@@ -124,7 +107,6 @@ import {
   Checkbox,
   VLink,
   TextLabel,
-  Badge,
   Avatar,
   Tag,
   ProgressCircle
@@ -135,7 +117,6 @@ export default {
     Checkbox,
     VLink,
     TextLabel,
-    Badge,
     Avatar,
     Tag,
     ProgressCircle
