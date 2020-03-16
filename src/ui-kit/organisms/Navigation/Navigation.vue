@@ -50,6 +50,17 @@
         </li>
         <li class="navigation_item">
           <router-link
+            to="/table"
+            class="navigation_link"
+            active-class="navigation_link__active"
+            title="About"
+            @click.native="closeNavigation"
+          >
+            <Icon class="navigation_icon" width="24" height="24" name="table" />
+          </router-link>
+        </li>
+        <li class="navigation_item">
+          <router-link
             to="/test"
             class="navigation_link"
             active-class="navigation_link__active"

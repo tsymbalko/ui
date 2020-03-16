@@ -1,7 +1,7 @@
 <template>
-  <span class="vc-text-label">
+  <p class="vc-text-label">
     <slot />
-  </span>
+  </p>
 </template>
 
 <script>
