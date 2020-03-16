@@ -1,14 +1,10 @@
 <template>
   <div class="dashboard">
     <header class="dashboard_header">
-      <span>
-        <Heading level="1">
-          Beko
-        </Heading>
-        <TextLabel>Organisation overview</TextLabel>
-      </span>
-
-      <Button icon="user-plus" type="warning">Add members</Button>
+      <Heading divider="right">
+        Beko
+      </Heading>
+      <TextLabel>Organisation overview</TextLabel>
     </header>
     <section class="dashboard_overview">
       <TextLabel level="3">Quick overview</TextLabel>
@@ -29,6 +25,7 @@
         <Card>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
           alias aliquid corporis culpa cumque delectus doloremque ipsa iste iure
+          <Button icon="user-plus" type="warning">Add members</Button>
         </Card>
       </div>
     </section>

@@ -1,8 +1,8 @@
 <template>
   <div class="about">
     <div class="about_header">
-      <Heading>Settings you application</Heading>
-      <TextLabel>Настройка цветовой схемы приложения и тд и тп</TextLabel>
+      <Heading divider="right">About</Heading>
+      <TextLabel>Lorem ipsum dolor sit amet, consectetur</TextLabel>
     </div>
     <div class="about_article">
       <Card>
