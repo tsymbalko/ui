@@ -13,10 +13,17 @@
         icon="angle-down"
         @click="toggleVisible"
       />
-      <Checkbox class="collapse-card_header-switch" type="switch" />
+      <Checkbox
+        v-model="checked"
+        class="collapse-card_header-switch"
+        type="switch"
+      />
       <div class="collapse-card_header-title">
         <VLink class="elipsis" href="#"
-          >Lorem ipsue skjdfnksdj kjnfksjd skdjnfksjdnfj sdkjfnksdjn</VLink
+          >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+          consequuntur cum dolore doloribus iste iusto neque obcaecati, quae
+          quam quia? Animi distinctio, eaque eos impedit magni porro sequi! A,
+          harum?</VLink
         >
         <TextLabel class="collapse-card_date">
           id: 523934482
@@ -48,7 +55,7 @@
       <Button
         class="collapse-card_header-menu"
         type="ghost"
-        shape="square"
+        shape="circle"
         icon="ellipsis-v"
       />
     </div>
@@ -79,7 +86,7 @@
               text="User Tr"
             />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              {{ getRandomString() }}
             </p>
           </li>
         </ul>
@@ -132,17 +139,26 @@ export default {
   data() {
     return {
       visible: false,
+      checked: this.randomBoolean(),
       random
     }
   },
   methods: {
     toggleVisible() {
       this.visible = !this.visible
+    },
+
+    randomBoolean() {
+      return Math.random() >= 0.5
+    },
+
+    getRandomString() {
+      return 'Lorem ipsum dolor sit amet'.repeat(random(1, 5))
     }
   }
 }
 </script>
 
 <style lang="scss">
-@import 'table-card';
+@import 'collapse-card';
 </style>

@@ -1,25 +1,36 @@
 <template>
   <div class="table">
     <div class="table_list">
-      <TableCard />
-      <TableCard />
-      <TableCard />
-      <TableCard />
-      <TableCard />
-      <TableCard />
-      <TableCard />
-      <TableCard />
-      <TableCard />
-      <TableCard />
+      <CollapseCard
+        v-for="{ id, type } in collapseCards"
+        :key="id"
+        :type="type"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import TableCard from './components/TableCard/TableCard'
+import CollapseCard from './components/CollapseCard/CollapseCard'
 export default {
   components: {
-    TableCard
+    CollapseCard
+  },
+  data() {
+    return {
+      collapseCards: [
+        { id: 1, type: 'warning' },
+        { id: 2, type: 'success' },
+        { id: 3, type: 'warning' },
+        { id: 4, type: 'primary' },
+        { id: 5, type: 'success' },
+        { id: 6, type: 'error' },
+        { id: 7, type: 'error' },
+        { id: 8, type: 'primary' },
+        { id: 9, type: 'warning' },
+        { id: 10, type: 'success' }
+      ]
+    }
   }
 }
 </script>
