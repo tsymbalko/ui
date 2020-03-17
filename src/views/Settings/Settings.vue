@@ -1,75 +1,72 @@
 <template>
-  <div class="settings">
-    <header class="settings_header">
-      <Heading divider="right">Settings you application</Heading>
-      <TextLabel>Настройка цветовой схемы приложения и тд и тп</TextLabel>
-    </header>
-    <Card class="settings_body">
-      <div>
-        <Heading class="settings_title" level="2">Основные настройки</Heading>
-        <div class="settings_item">
-          <p>Включить {{ `${isLightTheme ? 'dark' : 'light'}` }} тему</p>
-          <Checkbox type="switch" v-model="checked" @change="toggleTheme" />
-        </div>
-        <div class="settings_item">
-          <p>Выключить border-radius</p>
-          <Checkbox type="switch" v-model="radius" @change="disabledRadius" />
-        </div>
-        <div class="settings_item">
-          <p>Включить что-нибудь</p>
-          <Checkbox v-model="test" value="checkbox1" @change="log" />
-        </div>
-        <div class="settings_item">
-          <p>Включить что-нибудь</p>
-          <Checkbox v-model="test" value="checkbox2" />
+  <span>
+    <SkeletonSettings v-if="loading" />
+    <div v-else class="settings">
+      <header class="settings_header">
+        <Heading divider="right">Settings</Heading>
+        <TextLabel>Настройка цветовой схемы приложения и тд и тп</TextLabel>
+      </header>
+      <Card class="settings_body">
+        <div>
+          <Heading class="settings_title" level="2">Основные настройки</Heading>
+          <div class="settings_item">
+            <p>Включить {{ `${isLightTheme ? 'dark' : 'light'}` }} тему</p>
+            <Checkbox type="switch" v-model="checked" @change="toggleTheme" />
+          </div>
+          <div class="settings_item">
+            <p>Выключить border-radius</p>
+            <Checkbox type="switch" v-model="radius" @change="disabledRadius" />
+          </div>
+          <div class="settings_item">
+            <p>Включить что-нибудь</p>
+            <Checkbox v-model="test" value="checkbox1" @change="log" />
+          </div>
+          <div class="settings_item">
+            <p>Включить что-нибудь</p>
+            <Checkbox v-model="test" value="checkbox2" />
+          </div>
+          <div>
+            <Range
+              v-model="test3"
+              label="Установить border-radius:"
+              legend
+              :min="2"
+              :max="12"
+            />
+          </div>
         </div>
         <div>
-          <Range
-            v-model="test3"
-            label="Установить border-radius:"
-            legend
-            :min="2"
-            :max="12"
-          />
+          <Heading class="settings_title" level="2">Натсройка темы</Heading>
+          <div class="settings_item">
+            <p>Установить цвет приложения</p>
+            <Color v-model="accentColor" @change="setAccentColor" />
+          </div>
+          <div class="settings_item">
+            <p>Установить цвет приложения</p>
+            <Color v-model="accentColor" @change="setAccentColor" />
+          </div>
+          <div class="settings_item">
+            <p>Установить цвет приложения</p>
+            <Color v-model="accentColor" @change="setAccentColor" />
+          </div>
+          <div class="settings_item">
+            <p>Установить цвет приложения</p>
+            <Color v-model="accentColor" @change="setAccentColor" />
+          </div>
+          <div class="settings_item">
+            <p>Установить цвет приложения</p>
+            <Color v-model="accentColor" @change="setAccentColor" />
+          </div>
+          <div>Выбранные элементы {{ test }}</div>
         </div>
-      </div>
-      <div>
-        <Heading class="settings_title" level="2">Натсройка темы</Heading>
-        <div class="settings_item">
-          <p>Установить цвет приложения</p>
-          <Color v-model="accentColor" @change="setAccentColor" />
-        </div>
-        <div class="settings_item">
-          <p>Установить цвет приложения</p>
-          <Color v-model="accentColor" @change="setAccentColor" />
-        </div>
-        <div class="settings_item">
-          <p>Установить цвет приложения</p>
-          <Color v-model="accentColor" @change="setAccentColor" />
-        </div>
-        <div class="settings_item">
-          <p>Установить цвет приложения</p>
-          <Color v-model="accentColor" @change="setAccentColor" />
-        </div>
-        <div class="settings_item">
-          <p>Установить цвет приложения</p>
-          <Color v-model="accentColor" @change="setAccentColor" />
-        </div>
-        <div>Выбранные элементы {{ test }}</div>
-      </div>
-    </Card>
-  </div>
+      </Card>
+    </div>
+  </span>
 </template>
 
 <script>
-import {
-  Color,
-  Checkbox,
-  Range,
-  Heading,
-  TextLabel,
-  Card
-} from '@/ui-kit/components'
+import { Color, Checkbox, Range, Heading, TextLabel, Card } from 'components'
+import SkeletonSettings from './components/SkeletonSettings'
 export default {
   name: 'settings',
   components: {
@@ -78,7 +75,8 @@ export default {
     Range,
     Heading,
     TextLabel,
-    Card
+    Card,
+    SkeletonSettings
   },
   data() {
     return {
@@ -92,12 +90,16 @@ export default {
       test2: '1',
       test3: 4,
       test4: 10,
-      test5: 0.02
+      test5: 0.02,
+      loading: true
     }
   },
   mounted() {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: light)')
     mediaQuery.addListener(this.setTheme)
+    setTimeout(() => {
+      this.loading = false
+    }, 5000)
   },
   methods: {
     toggleTheme(value) {
@@ -122,10 +124,6 @@ export default {
       this.isLightTheme = event.matches
       this.checked = false
       delete document.documentElement.dataset.theme
-    },
-    log() {
-      //eslint-disable-next-line
-      console.log(123)
     }
   },
   beforeDestroy() {

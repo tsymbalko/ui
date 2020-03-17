@@ -2,7 +2,8 @@
   <div
     :style="{
       display: 'flex',
-      alignItems: align
+      alignItems: align,
+      justifyContent: justify
     }"
   >
     <slot />
@@ -19,6 +20,21 @@ export default {
         ['flex-start', 'flex-end', 'center', 'baseline', 'stretch'].includes(
           value
         ),
+      default: 'flex-start '
+    },
+    justify: {
+      type: String,
+      validate: value =>
+        [
+          'flex-start',
+          'flex-end',
+          'center',
+          'baseline',
+          'stretch',
+          'space-between',
+          'space-around',
+          'space-evenly'
+        ].includes(value),
       default: 'flex-start '
     }
   }
