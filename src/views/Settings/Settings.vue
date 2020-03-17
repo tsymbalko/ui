@@ -19,7 +19,7 @@
           </div>
           <div class="settings_item">
             <p>Включить что-нибудь</p>
-            <Checkbox v-model="test" value="checkbox1" @change="log" />
+            <Checkbox v-model="test" value="checkbox1" />
           </div>
           <div class="settings_item">
             <p>Включить что-нибудь</p>
