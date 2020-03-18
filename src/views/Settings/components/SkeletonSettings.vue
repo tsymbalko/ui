@@ -9,22 +9,22 @@
           <SLine :size="['40%', '28px']" />
           <br />
           <SRow align="center" justify="space-between">
-            <SLine :size="['20%', '20px']" />
+            <SLine :size="['20%', '12px']" />
             <SLine :size="['14%', '26px']" />
           </SRow>
           <br />
           <SRow align="center" justify="space-between">
-            <SLine :size="['40%', '20px']" />
+            <SLine :size="['40%', '12px']" />
             <SLine :size="['14%', '26px']" />
           </SRow>
           <br />
           <SRow align="center" justify="space-between">
-            <SLine :size="['31%', '20px']" />
+            <SLine :size="['31%', '12px']" />
             <SLine :size="['8%', '26px']" />
           </SRow>
           <br />
           <SRow align="center" justify="space-between">
-            <SLine :size="['56%', '20px']" />
+            <SLine :size="['56%', '12px']" />
             <SLine :size="['8%', '26px']" />
           </SRow>
           <br />
@@ -34,27 +34,27 @@
           <SLine :size="['40%', '28px']" />
           <br />
           <SRow align="center" justify="space-between">
-            <SLine :size="['20%', '20px']" />
+            <SLine :size="['20%', '12px']" />
             <SLine :size="['18%', '26px']" />
           </SRow>
           <br />
           <SRow align="center" justify="space-between">
-            <SLine :size="['40%', '20px']" />
+            <SLine :size="['40%', '12px']" />
             <SLine :size="['18%', '26px']" />
           </SRow>
           <br />
           <SRow align="center" justify="space-between">
-            <SLine :size="['31%', '20px']" />
+            <SLine :size="['31%', '12px']" />
             <SLine :size="['18%', '26px']" />
           </SRow>
           <br />
           <SRow align="center" justify="space-between">
-            <SLine :size="['56%', '20px']" />
+            <SLine :size="['56%', '12px']" />
             <SLine :size="['18%', '26px']" />
           </SRow>
           <br />
           <SRow align="center" justify="space-between">
-            <SLine :size="['56%', '20px']" />
+            <SLine :size="['56%', '12px']" />
             <SLine :size="['18%', '26px']" />
           </SRow>
         </div>
@@ -77,12 +77,12 @@ export default {
 <style lang="scss">
 .settings_s-row {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 12px;
 
   @media (min-width: 900px) {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 60px;
-    padding: 20px;
+    padding: 12px;
   }
 }
 </style>
