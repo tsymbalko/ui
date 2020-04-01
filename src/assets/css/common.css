@@ -1,8 +1,8 @@
 :root,
 :root[data-theme='light'] {
-  --base-black: #292929;
+  --base-black: #333;
   --base-text: var(--base-black);
-  --base-title: var(--base-text);
+  --base-title: #000;
   --accent-color: var(--blue);
   --base-light-accent: #379dff;
   --base-background: #ffffff;

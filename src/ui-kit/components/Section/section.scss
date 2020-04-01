@@ -1,6 +1,10 @@
 .vc-section {
   margin-bottom: 40px;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &_title {
     color: var(--base-title);
     font-weight: 500;
