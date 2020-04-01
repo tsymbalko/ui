@@ -1,34 +1,41 @@
 export default {
   methods: {
+    // TODO: Rename from 'focusVisible' into 'dropFocusFromMouseForInteractiveElements'
     focusVisible() {
-      let e, t
-      //TODO перевести эту ебанину
-      //eslint-disable-next-line
-      function n(e) {
-        return !(
-          0 !== e.button ||
-          e.metaKey ||
-          e.ctrlKey ||
-          e.shiftKey ||
-          e.altKey
-        )
+      let clickedElement
+      let startedFocusTime
+      const maxDelayBeforeFocus = 999
+
+      function getClickedElement(target) {
+        if (
+          'A' === target.tagName ||
+          'BUTTON' === target.tagName ||
+          'INPUT' === target.tagName ||
+          'submit' === target.type
+        ) {
+          return target
+        } else if (target.parentElement) {
+          return getClickedElement(target.parentElement)
+        } else {
+          return null
+        }
       }
-      document.addEventListener('mousedown', n => {
-        ;(e = (function e(t) {
-          return 'A' === t.tagName ||
-            'BUTTON' === t.tagName ||
-            'INPUT' === t.tagName ||
-            'submit' === t.type
-            ? t
-            : t.parentElement
-            ? e(t.parentElement)
-            : null
-        })(n.target)),
-          (t = Date.now())
-      }),
-        document.addEventListener('focusin', n => {
-          n.target === e && Date.now() - t < 999 && n.target.blur()
-        })
+
+      function dropFocus(event) {
+        const isAcceptableToDropFocus =
+          Date.now() - startedFocusTime < maxDelayBeforeFocus
+
+        if (event.target === clickedElement && isAcceptableToDropFocus) {
+          event.target.blur()
+        }
+      }
+
+      document.addEventListener('mousedown', event => {
+        clickedElement = getClickedElement(event.target)
+        startedFocusTime = Date.now()
+      })
+
+      document.addEventListener('focusin', dropFocus)
     }
   }
 }
