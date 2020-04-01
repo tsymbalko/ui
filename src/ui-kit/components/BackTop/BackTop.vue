@@ -38,7 +38,6 @@ export default {
   },
   mounted() {
     this.pathLength = this.$refs.backTopCircle.getTotalLength()
-    this.updateProgress()
     window.addEventListener('scroll', this.updateProgress)
     window.addEventListener('scroll', this.setActive)
   },
@@ -52,6 +51,11 @@ export default {
   methods: {
     updateProgress() {
       const height = document.body.clientHeight - window.innerHeight
+      // for safari (don't disabled overscroll-behavior)
+      if (window.scrollY > height) {
+        this.progress = 0
+        return
+      }
       this.progress =
         this.pathLength - (window.scrollY * this.pathLength) / height
     },
