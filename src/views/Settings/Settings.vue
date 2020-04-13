@@ -87,29 +87,16 @@ export default {
         .trim(),
       radius: false,
       test: ['checkbox1', 'checkbox2'],
-      test2: '1',
       test3: 4,
-      test4: 10,
-      test5: 0.02,
       loading: true
     }
   },
   mounted() {
-    // const mediaQuery = window.matchMedia('(prefers-color-scheme: light)')
-    // mediaQuery.addEventListener('change', this.setTheme)
     setTimeout(() => {
       this.loading = false
     }, 1000)
   },
   methods: {
-    // toggleTheme(value) {
-    //   this.checked = value
-    //   const theme = this.isLightTheme ? 'dark' : 'light'
-    //   value
-    //     ? (document.documentElement.dataset.theme = theme)
-    //     : delete document.documentElement.dataset.theme
-    // },
-
     disabledRadius(value) {
       this.radius = value
       const radius = value ? '0px' : '4px'
@@ -120,16 +107,7 @@ export default {
       this.accentColor = value
       document.documentElement.style.setProperty('--accent-color', value)
     }
-    // setTheme(event) {
-    //   this.isLightTheme = event.matches
-    //   this.checked = false
-    //   delete document.documentElement.dataset.theme
-    // }
   }
-  // beforeDestroy() {
-  //   const mediaQuery = window.matchMedia('(prefers-color-scheme: light)')
-  //   mediaQuery.removeEventListener('change', this.setTheme)
-  // }
 }
 </script>
 

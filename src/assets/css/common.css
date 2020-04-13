@@ -26,6 +26,7 @@
   --invers: #292929;
   --invers-light: #fff;
   --skeleton: rgba(0, 0, 0, .1);
+  --navigation-bg: rgba(255, 255, 255, .5);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,6 +41,7 @@
     --invers-light: #292929;
     --skeleton: rgba(255, 255, 255, .1);
     --base-hover: #1e3955;
+    --navigation-bg: rgba(0, 0, 0, .5);
   }
 }
 
@@ -52,6 +54,7 @@
   --invers: #fff;
   --skeleton: rgba(255, 255, 255, .1);
   --base-hover: #1e3955;
+  --navigation-bg: rgba(0, 0, 0, .5);
 }
 
 /* styles for doc start */
