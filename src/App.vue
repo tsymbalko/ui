@@ -24,6 +24,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 import { BackTop, PageTransition } from 'components'
 import { Navigation, Footer, MenuToggle } from 'organisms'
 import { BaseTemplate } from 'templates'
@@ -54,8 +56,15 @@ export default {
   },
   mounted() {
     this.focusVisible()
+    // set theme while loading
+    const theme = localStorage.getItem('theme')
+    if (theme) {
+      document.documentElement.dataset.theme = theme
+      this.setTheme(theme)
+    }
   },
   methods: {
+    ...mapMutations(['setTheme']),
     toggleNavigation() {
       if (window.innerWidth < 1200) {
         this.navigationVisible = !this.navigationVisible

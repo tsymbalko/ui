@@ -28,29 +28,6 @@
   --skeleton: rgba(0, 0, 0, .1);
 }
 
-table {
-  border-radius: 4px !important;
-  border: 20px solid transparent !important;
-  background-color: var(--base-background) !important;
-}
-
-.rsg--preview-61 {
-  background-color: var(--base-background) !important;
-}
-
-tbody td {
-  padding: 16px 10px 10px 0 !important;
-}
-
-tbody tr:hover {
-  background-color: var(--base-hover) !important;
-}
-
-.example-row {
-  background-color: var(--base-hover) !important;
-  margin: -16px !important;
-}
-
 @media (prefers-color-scheme: dark) {
 
   :root {
@@ -76,6 +53,32 @@ tbody tr:hover {
   --skeleton: rgba(255, 255, 255, .1);
   --base-hover: #1e3955;
 }
+
+/* styles for doc start */
+table {
+  border-radius: 4px !important;
+  border: 20px solid transparent !important;
+  background-color: var(--base-background) !important;
+}
+
+.rsg--preview-61 {
+  background-color: var(--base-background) !important;
+}
+
+tbody td {
+  padding: 16px 10px 10px 0 !important;
+}
+
+tbody tr:hover {
+  background-color: var(--base-hover) !important;
+}
+
+.example-row {
+  background-color: var(--base-hover) !important;
+  margin: -16px !important;
+}
+
+/* styles for doc end */
 
 html {
   box-sizing: border-box;

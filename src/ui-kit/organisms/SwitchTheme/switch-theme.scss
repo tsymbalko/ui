@@ -1,0 +1,47 @@
+.switch-theme {
+  display: flex;
+  align-items: center;
+
+  &_input {
+    appearance: none;
+    display: block;
+    width: 68px;
+    height: 44px;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+
+    &__light {
+      background-color: #dcf1ff;
+    }
+
+    &__dark {
+      background-color: #485465;
+    }
+
+    &__no-preference {
+      background-image: linear-gradient(to left, #485465 50%, #dcf1ff 50%);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+
+    &:checked {
+      border-color: var(--blue);
+    }
+
+    &:focus {
+      box-shadow: var(--base-focus);
+    }
+  }
+
+  &_label {
+    margin-right: 16px;
+    font-size: 14px;
+    text-align: center;
+    color: var(--base-text);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

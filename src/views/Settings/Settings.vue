@@ -10,8 +10,8 @@
         <div>
           <Heading class="settings_title" level="2">Основные настройки</Heading>
           <div class="settings_item">
-            <p>Включить {{ `${isLightTheme ? 'dark' : 'light'}` }} тему</p>
-            <Checkbox type="switch" v-model="checked" @change="toggleTheme" />
+            <p>Оформление</p>
+            <SwitchTheme />
           </div>
           <div class="settings_item">
             <p>Выключить border-radius</p>
@@ -67,6 +67,7 @@
 <script>
 import { Color, Checkbox, Range, Heading, TextLabel, Card } from 'components'
 import SkeletonSettings from './components/SkeletonSettings'
+import { SwitchTheme } from 'organisms'
 export default {
   name: 'settings',
   components: {
@@ -76,15 +77,14 @@ export default {
     Heading,
     TextLabel,
     Card,
-    SkeletonSettings
+    SkeletonSettings,
+    SwitchTheme
   },
   data() {
     return {
-      isLightTheme: window.matchMedia('(prefers-color-scheme: light)').matches,
       accentColor: getComputedStyle(document.documentElement)
         .getPropertyValue('--accent-color')
         .trim(),
-      checked: false,
       radius: false,
       test: ['checkbox1', 'checkbox2'],
       test2: '1',
@@ -95,20 +95,20 @@ export default {
     }
   },
   mounted() {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: light)')
-    mediaQuery.addListener(this.setTheme)
+    // const mediaQuery = window.matchMedia('(prefers-color-scheme: light)')
+    // mediaQuery.addEventListener('change', this.setTheme)
     setTimeout(() => {
       this.loading = false
-    }, 5000)
+    }, 1000)
   },
   methods: {
-    toggleTheme(value) {
-      this.checked = value
-      const theme = this.isLightTheme ? 'dark' : 'light'
-      value
-        ? (document.documentElement.dataset.theme = theme)
-        : delete document.documentElement.dataset.theme
-    },
+    // toggleTheme(value) {
+    //   this.checked = value
+    //   const theme = this.isLightTheme ? 'dark' : 'light'
+    //   value
+    //     ? (document.documentElement.dataset.theme = theme)
+    //     : delete document.documentElement.dataset.theme
+    // },
 
     disabledRadius(value) {
       this.radius = value
@@ -119,17 +119,17 @@ export default {
     setAccentColor(value) {
       this.accentColor = value
       document.documentElement.style.setProperty('--accent-color', value)
-    },
-    setTheme(event) {
-      this.isLightTheme = event.matches
-      this.checked = false
-      delete document.documentElement.dataset.theme
     }
-  },
-  beforeDestroy() {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: light)')
-    mediaQuery.removeListener(this.setTheme)
+    // setTheme(event) {
+    //   this.isLightTheme = event.matches
+    //   this.checked = false
+    //   delete document.documentElement.dataset.theme
+    // }
   }
+  // beforeDestroy() {
+  //   const mediaQuery = window.matchMedia('(prefers-color-scheme: light)')
+  //   mediaQuery.removeEventListener('change', this.setTheme)
+  // }
 }
 </script>
 
