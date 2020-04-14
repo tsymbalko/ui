@@ -27,6 +27,8 @@
 <script>
 import { mapState } from 'vuex'
 
+import { setCssProperties } from 'helpers/cssProperties'
+
 import { BackTop, PageTransition } from 'components'
 import { Navigation, Footer, MenuToggle, Settings } from 'organisms'
 import { BaseTemplate } from 'templates'
@@ -44,7 +46,8 @@ export default {
   mixins: [layoutLock, focusVisible],
   data() {
     return {
-      navigationVisible: false
+      navigationVisible: false,
+      setCssProperties
     }
   },
   watch: {
@@ -61,18 +64,16 @@ export default {
   },
   mounted() {
     this.focusVisible()
-    // set theme while loading
+    // get setting in localStorage
     const userSettings = JSON.parse(localStorage.getItem('userSettings'))
     if (userSettings) {
-      document.documentElement.dataset.theme = userSettings.theme
-      document.documentElement.style.setProperty(
-        `--accent`,
-        userSettings.accent
-      )
-      document.documentElement.style.setProperty(
-        `--selection`,
-        userSettings.selection
-      )
+      const { theme, colors } = userSettings
+      // set theme
+      document.documentElement.dataset.theme = theme
+      //set colors
+      for (let key in colors) {
+        this.setCssProperties(key, colors[key])
+      }
     }
   },
   methods: {

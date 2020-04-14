@@ -16,14 +16,14 @@
       <div class="settings_item">
         <p>Цветовой акцент:</p>
         <Color
-          v-model="userSettings.accent"
+          v-model="userSettings.colors.accent"
           @change="value => setColor('accent', value)"
         />
       </div>
       <div class="settings_item">
         <p>Цвет выделения:</p>
         <Color
-          v-model="userSettings.selection"
+          v-model="userSettings.colors.selection"
           @change="value => setColor('selection', value)"
         />
       </div>
@@ -34,8 +34,11 @@
 <script>
 import { mapMutations } from 'vuex'
 
+import { setCssProperties, getCssProperties } from '@/helpers/cssProperties'
+
 import { Drawer, Color } from 'components'
 import { SwitchTheme } from 'organisms'
+
 export default {
   components: {
     SwitchTheme,
@@ -52,36 +55,37 @@ export default {
     return {
       userSettings: {
         theme: null,
-        accent: null,
-        selection: null
-      }
+        colors: {
+          accent: null,
+          selection: null
+        }
+      },
+      setCssProperties,
+      getCssProperties
     }
   },
   watch: {
     // TODO как нормально чекать изменения
     visible() {
       if (this.visible) {
-        this.userSettings.accent = getComputedStyle(document.documentElement)
-          .getPropertyValue('--accent')
-          .trim()
-        this.userSettings.selection = getComputedStyle(document.documentElement)
-          .getPropertyValue('--selection')
-          .trim()
+        for (let key in this.userSettings.colors) {
+          this.userSettings.colors[key] = this.getCssProperties(key)
+        }
       }
     }
   },
   methods: {
     ...mapMutations(['setActiveDrawer']),
 
-    setColor(name, value) {
-      this.userSettings[name] = value
-      document.documentElement.style.setProperty(`--${name}`, value)
-    },
     closeSettings() {
       this.setActiveDrawer(null)
     },
     saveSettings() {
       localStorage.setItem('userSettings', JSON.stringify(this.userSettings))
+    },
+    setColor(name, value) {
+      this.userSettings.colors[name] = value
+      this.setCssProperties(name, value)
     }
   }
 }

@@ -49,7 +49,10 @@ export default {
   },
   mounted() {
     const userSettings = JSON.parse(localStorage.getItem('userSettings'))
-    this.theme = userSettings.theme || 'no-preference'
+    // TODO  почему не работает userSettings.theme
+    userSettings
+      ? (this.theme = userSettings.theme)
+      : (this.theme = 'no-preference')
     this.$emit('change', this.theme)
   },
   methods: {

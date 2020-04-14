@@ -17,6 +17,7 @@ module.exports = {
     resolve: {
       alias: {
         assets: path.resolve('./src/assets'),
+        helpers: path.resolve('./src/helpers'),
         mixins: path.resolve('./src/ui-kit/mixins'),
         components: path.resolve('./src/ui-kit/components'),
         pages: path.resolve('./src/ui-kit/pages'),
