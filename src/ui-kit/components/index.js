@@ -26,6 +26,7 @@ import Legend from './Legend/Legend'
 import VLink from './Link/Link'
 import Anchors from './Anchors/Anchors'
 import Section from './Section/Section'
+import Drawer from './Drawer/Drawer'
 import Blockquote from './Blockquote/Blockquote'
 import PageTransition from './PageTransition/PageTransition'
 
@@ -59,5 +60,6 @@ export {
   ProgressCircle,
   PageTransition,
   Section,
-  Blockquote
+  Blockquote,
+  Drawer
 }

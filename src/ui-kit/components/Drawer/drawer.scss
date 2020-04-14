@@ -1,10 +1,9 @@
-.vc-modal {
+.vc-drawer {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 28px;
   z-index: 5000;
   display: flex;
   flex-direction: column;
@@ -12,50 +11,41 @@
   overflow-y: auto;
   scroll-behavior: smooth;
 
-  &__fullscreen {
-    padding: 0;
-  }
-
   &__mask {
     backdrop-filter: blur(2px);
     background-color: rgba(0, 0, 0, .5);
   }
 
-  &_animation__scale {
+  &_animation {
 
     &-enter-active,
     &-leave-active {
-      transition: transform .2s ease, opacity .2s ease;
+      transition: opacity .2s ease;
+
+      .vc-drawer_content {
+        transition: transform .4s ease;
+      }
     }
 
     &-enter,
     &-leave-to {
       opacity: 0;
-      transform: scale(1.1);
-    }
-  }
 
-  &_animation__fade-left {
-
-    &-enter-active,
-    &-leave-active {
-      transition: transform .4s ease, opacity .2s ease;
-    }
-
-    &-enter,
-    &-leave-to {
-      opacity: 0;
-      transform: translateX(40px);
+      .vc-drawer_content {
+        transform: translateX(40px);
+      }
     }
   }
 
   &_content {
-    border-radius: var(--border-radius);
     background: var(--base-background);
     box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
     margin: 0 auto;
-    width: 100%;
+    width: 320px;
     max-width: var(--max-width);
 
     .vc-modal__center & {
@@ -68,15 +58,19 @@
       max-width: none;
       margin: 0;
     }
+
+    @media (min-width: 1200px) {
+      width: 420px;
+    }
   }
 
   &_body {
-    padding: 16px;
+    padding: 24px;
     color: var(--base-text);
   }
 
   &_header {
-    padding: 16px;
+    padding: 24px;
     display: flex;
     align-items: center;
   }
@@ -87,11 +81,16 @@
   }
 
   &_footer {
-    padding: 16px;
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
 
     .vc-button + .vc-button {
       margin-left: 10px;
+    }
+
+    @media (min-width: 1200px) {
+      justify-content: flex-end;
     }
   }
 

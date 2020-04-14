@@ -14,7 +14,6 @@
   backdrop-filter: blur(4px);
   background-color: var(--navigation-bg);
   transform: translateX(-100%);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .07);
 
   &__active {
     display: flex;
@@ -27,12 +26,13 @@
     padding-bottom: var(--grid-gap);
     background-color: var(--base-background);
     backdrop-filter: none;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .07);
   }
 
   &_list {
     display: flex;
     flex-direction: column;
-    flex: 1 1;
+    flex: 1 0 auto;
     margin-bottom: 90px;
     list-style: none;
 
@@ -63,6 +63,7 @@
     position: relative;
     border-radius: var(--border-radius);
     line-height: 1;
+    flex: 0 0 auto;
 
     &:hover {
       background-color: var(--base-hover);
@@ -87,6 +88,10 @@
       &:before {
         transform: scale(1);
       }
+    }
+
+    &__settings {
+      width: 100%;
     }
 
     &__home {

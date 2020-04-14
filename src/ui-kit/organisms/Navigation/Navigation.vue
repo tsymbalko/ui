@@ -76,15 +76,13 @@
           </router-link>
         </li>
         <li class="navigation_item navigation_item__separator">
-          <router-link
-            to="/setting"
-            class="navigation_link"
-            active-class="navigation_link__active"
+          <button
+            class="navigation_link navigation_link__settings"
             title="settings"
-            @click.native="closeNavigation"
+            @click="setActiveDrawer('settings')"
           >
             <Icon class="navigation_icon" width="24" height="24" name="cog" />
-          </router-link>
+          </button>
         </li>
       </ul>
     </nav>
@@ -92,6 +90,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 import { Icon, Badge, Avatar } from 'components'
 export default {
   name: 'Navigation',
@@ -101,6 +101,7 @@ export default {
     Avatar
   },
   methods: {
+    ...mapMutations(['setActiveDrawer']),
     closeNavigation() {
       this.$emit('close')
     }

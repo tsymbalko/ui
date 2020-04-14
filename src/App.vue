@@ -9,6 +9,7 @@
     <PageTransition>
       <router-view />
     </PageTransition>
+    <Settings :visible="activeDrawer === 'settings'" />
     <template #footer>
       <Footer />
       <BackTop />
@@ -24,8 +25,10 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 import { BackTop, PageTransition } from 'components'
-import { Navigation, Footer, MenuToggle } from 'organisms'
+import { Navigation, Footer, MenuToggle, Settings } from 'organisms'
 import { BaseTemplate } from 'templates'
 import { layoutLock, focusVisible } from 'mixins'
 export default {
@@ -35,7 +38,8 @@ export default {
     Navigation,
     Footer,
     MenuToggle,
-    PageTransition
+    PageTransition,
+    Settings
   },
   mixins: [layoutLock, focusVisible],
   data() {
@@ -52,6 +56,9 @@ export default {
       }
     }
   },
+  computed: {
+    ...mapState(['activeDrawer'])
+  },
   mounted() {
     this.focusVisible()
     // set theme while loading
@@ -62,7 +69,9 @@ export default {
   },
   methods: {
     toggleNavigation() {
-      this.navigationVisible = !this.navigationVisible
+      if (window.innerWidth < 1200) {
+        this.navigationVisible = !this.navigationVisible
+      }
     }
   }
 }
