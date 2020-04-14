@@ -1,20 +1,31 @@
 <template>
-  <Drawer :visible="visible" class="settings" @close="closeSettings">
+  <Drawer
+    class="settings"
+    :visible="visible"
+    @action="saveSettings"
+    @close="closeSettings"
+  >
     <template #title>
       Настройки
     </template>
     <div class="settings_list">
       <div class="settings_item">
-        <p>Оформление</p>
-        <SwitchTheme />
+        <p>Оформление:</p>
+        <SwitchTheme v-model="userSettings.theme" />
       </div>
       <div class="settings_item">
-        <p>Цветовой акцент</p>
-        <Color v-model="accentColor" @change="setAccentColor" />
+        <p>Цветовой акцент:</p>
+        <Color
+          v-model="userSettings.accent"
+          @change="value => setColor('accent', value)"
+        />
       </div>
       <div class="settings_item">
-        <p>Цвет выделения</p>
-        <Color v-model="selectionColor" @change="setSelectionColor" />
+        <p>Цвет выделения:</p>
+        <Color
+          v-model="userSettings.selection"
+          @change="value => setColor('selection', value)"
+        />
       </div>
     </div>
   </Drawer>
@@ -39,28 +50,34 @@ export default {
   },
   data() {
     return {
-      accentColor: getComputedStyle(document.documentElement)
-        .getPropertyValue('--accent-color')
-        .trim(),
-      selectionColor: getComputedStyle(document.documentElement)
-        .getPropertyValue('--selection')
-        .trim()
+      userSettings: {
+        theme: null,
+        accent: null,
+        selection: null
+      }
     }
+  },
+  updated() {
+    this.userSettings.accent = getComputedStyle(document.documentElement)
+      .getPropertyValue('--accent')
+      .trim()
+    this.userSettings.selection = getComputedStyle(document.documentElement)
+      .getPropertyValue('--selection')
+      .trim()
   },
   methods: {
     ...mapMutations(['setActiveDrawer']),
-    setAccentColor(value) {
-      this.accentColor = value
-      document.documentElement.style.setProperty('--accent-color', value)
-      localStorage.setItem('accent-color', value)
-    },
-    setSelectionColor(value) {
-      this.selectionColor = value
-      document.documentElement.style.setProperty('--selection', value)
-      localStorage.setItem('selection', value)
+
+    setColor(name, value) {
+      this.userSettings[name] = value
+      document.documentElement.style.setProperty(`--${name}`, value)
     },
     closeSettings() {
-      this.setActiveDrawer(' ')
+      this.setActiveDrawer(null)
+    },
+    saveSettings() {
+      //eslint-disable-next-line
+      localStorage.setItem('userSettings', JSON.stringify(this.userSettings))
     }
   }
 }

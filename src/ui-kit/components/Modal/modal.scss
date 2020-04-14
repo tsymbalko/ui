@@ -71,12 +71,12 @@
   }
 
   &_body {
-    padding: 16px;
+    padding: 24px;
     color: var(--base-text);
   }
 
   &_header {
-    padding: 16px;
+    padding: 24px;
     display: flex;
     align-items: center;
   }
@@ -87,7 +87,7 @@
   }
 
   &_footer {
-    padding: 16px;
+    padding: 24px;
     text-align: right;
 
     .vc-button + .vc-button {

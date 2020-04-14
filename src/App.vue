@@ -62,9 +62,17 @@ export default {
   mounted() {
     this.focusVisible()
     // set theme while loading
-    const theme = localStorage.getItem('theme')
-    if (theme) {
-      document.documentElement.dataset.theme = theme
+    const userSettings = JSON.parse(localStorage.getItem('userSettings'))
+    if (userSettings) {
+      document.documentElement.dataset.theme = userSettings.theme
+      document.documentElement.style.setProperty(
+        `--accent`,
+        userSettings.accent
+      )
+      document.documentElement.style.setProperty(
+        `--selection`,
+        userSettings.selection
+      )
     }
   },
   methods: {

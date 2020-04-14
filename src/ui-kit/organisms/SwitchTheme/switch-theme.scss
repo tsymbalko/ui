@@ -1,6 +1,7 @@
 .switch-theme {
   display: flex;
   align-items: center;
+  justify-content: center;
 
   &_input {
     appearance: none;
@@ -26,7 +27,7 @@
     }
 
     &:checked {
-      border-color: var(--accent-color);
+      border-color: var(--accent);
     }
 
     &:focus {

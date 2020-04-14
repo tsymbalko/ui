@@ -77,7 +77,7 @@
       left: 0;
       border-radius: 0 var(--border-radius) var(--border-radius) 0;
       width: 3px;
-      background-color: var(--accent-color);
+      background-color: var(--accent);
       transform: scale(0);
       transition: transform .2s;
     }
@@ -112,7 +112,7 @@
       }
 
       &:focus {
-        color: var(--accent-color);
+        color: var(--accent);
         background: var(--base-background);
       }
     }
@@ -139,7 +139,7 @@
     .navigation_link:hover &,
     .navigation_link:focus &,
     .navigation_link__active & {
-      fill: var(--accent-color);
+      fill: var(--accent);
     }
   }
 }

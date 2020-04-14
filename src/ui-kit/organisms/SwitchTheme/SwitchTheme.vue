@@ -38,18 +38,24 @@
 
 <script>
 export default {
+  model: {
+    prop: 'theme',
+    event: 'change'
+  },
   data() {
     return {
       theme: null
     }
   },
   mounted() {
-    this.theme = localStorage.getItem('theme') || 'no-preference'
+    const userSettings = JSON.parse(localStorage.getItem('userSettings'))
+    this.theme = userSettings.theme || 'no-preference'
+    this.$emit('change', this.theme)
   },
   methods: {
     toggleTheme(value) {
       document.documentElement.dataset.theme = value
-      localStorage.setItem('theme', value)
+      this.$emit('change', value)
     }
   }
 }

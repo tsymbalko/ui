@@ -35,7 +35,7 @@
             <Button type="bordered" @click="closeDrawer">
               Отменить
             </Button>
-            <Button type="primary">
+            <Button type="primary" @click="$emit('action')">
               Сохранить
             </Button>
           </div>
