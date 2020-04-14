@@ -37,18 +37,18 @@
 </template>
 
 <script>
-import { mapMutations, mapState } from 'vuex'
-
 export default {
-  computed: {
-    ...mapState(['theme'])
+  data() {
+    return {
+      theme: 'no-preference'
+    }
+  },
+  mounted() {
+    this.theme = localStorage.getItem('theme')
   },
   methods: {
-    ...mapMutations(['setTheme']),
-
     toggleTheme(value) {
       document.documentElement.dataset.theme = value
-      this.setTheme(value)
       localStorage.setItem('theme', value)
     }
   }

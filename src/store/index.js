@@ -4,14 +4,8 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-    theme: 'no-preference'
-  },
-  mutations: {
-    setTheme(state, theme) {
-      state.theme = theme
-    }
-  },
+  state: {},
+  mutations: {},
   actions: {},
   modules: {}
 })
