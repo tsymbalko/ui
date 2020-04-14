@@ -27,6 +27,7 @@
   --invers-light: #fff;
   --skeleton: rgba(0, 0, 0, .1);
   --navigation-bg: rgba(255, 255, 255, .5);
+  --selection: #aaaaaa;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -128,6 +129,10 @@ body {
   line-height: 1.7;
   overscroll-behavior-y: none;
   overflow-anchor: auto;
+}
+
+::selection {
+  background-color: var(--selection);
 }
 
 :focus {

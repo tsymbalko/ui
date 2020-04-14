@@ -40,11 +40,11 @@
 export default {
   data() {
     return {
-      theme: 'no-preference'
+      theme: null
     }
   },
   mounted() {
-    this.theme = localStorage.getItem('theme')
+    this.theme = localStorage.getItem('theme') || 'no-preference'
   },
   methods: {
     toggleTheme(value) {
