@@ -66,9 +66,7 @@ export default {
   methods: {
     ...mapMutations(['setTheme']),
     toggleNavigation() {
-      if (window.innerWidth < 1200) {
-        this.navigationVisible = !this.navigationVisible
-      }
+      this.navigationVisible = !this.navigationVisible
     }
   }
 }
