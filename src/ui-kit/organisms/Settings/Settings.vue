@@ -57,13 +57,18 @@ export default {
       }
     }
   },
-  updated() {
-    this.userSettings.accent = getComputedStyle(document.documentElement)
-      .getPropertyValue('--accent')
-      .trim()
-    this.userSettings.selection = getComputedStyle(document.documentElement)
-      .getPropertyValue('--selection')
-      .trim()
+  watch: {
+    // TODO как нормально чекать изменения
+    visible() {
+      if (this.visible) {
+        this.userSettings.accent = getComputedStyle(document.documentElement)
+          .getPropertyValue('--accent')
+          .trim()
+        this.userSettings.selection = getComputedStyle(document.documentElement)
+          .getPropertyValue('--selection')
+          .trim()
+      }
+    }
   },
   methods: {
     ...mapMutations(['setActiveDrawer']),
@@ -76,7 +81,6 @@ export default {
       this.setActiveDrawer(null)
     },
     saveSettings() {
-      //eslint-disable-next-line
       localStorage.setItem('userSettings', JSON.stringify(this.userSettings))
     }
   }

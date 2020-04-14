@@ -21,7 +21,7 @@
       width: 1px;
       top: 0;
       bottom: 0;
-      background-color: var(--blue);
+      background-color: var(--accent);
       left: -21px;
       opacity: 0;
       transition: .15s ease-in-out;
@@ -32,7 +32,7 @@
     }
 
     &__active {
-      color: var(--blue);
+      color: var(--accent);
 
       &:before {
         opacity: 1;
