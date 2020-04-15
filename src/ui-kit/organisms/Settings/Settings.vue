@@ -28,6 +28,27 @@
         />
       </div>
     </div>
+    <template slot="footer">
+      <Button
+        type="error"
+        shape="rectangle"
+        icon="trash-alt"
+        @click="resetSettings"
+      >
+        Сбросить
+      </Button>
+      <Button
+        type="primary"
+        @click="
+          () => {
+            saveSettings()
+            closeSettings()
+          }
+        "
+      >
+        Сохранить
+      </Button>
+    </template>
   </Drawer>
 </template>
 
@@ -36,14 +57,15 @@ import { mapMutations } from 'vuex'
 
 import { setCssProperties, getCssProperties } from '@/helpers/cssProperties'
 
-import { Drawer, Color } from 'components'
+import { Drawer, Color, Button } from 'components'
 import { SwitchTheme } from 'organisms'
 
 export default {
   components: {
     SwitchTheme,
     Drawer,
-    Color
+    Color,
+    Button
   },
   props: {
     visible: {
@@ -86,6 +108,10 @@ export default {
     setColor(name, value) {
       this.userSettings.colors[name] = value
       this.setCssProperties(name, value)
+    },
+    resetSettings() {
+      localStorage.removeItem('userSettings')
+      document.location.reload()
     }
   }
 }

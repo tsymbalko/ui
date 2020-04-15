@@ -32,12 +32,7 @@
             <slot />
           </div>
           <div class="vc-drawer_footer">
-            <Button type="bordered" @click="closeDrawer">
-              Отменить
-            </Button>
-            <Button type="primary" @click="$emit('action')">
-              Сохранить
-            </Button>
+            <slot name="footer" />
           </div>
         </FocusLock>
       </div>
