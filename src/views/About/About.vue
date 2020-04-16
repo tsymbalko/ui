@@ -517,7 +517,8 @@ export default {
       value1: 33,
       value2: 20.2,
       value3: 49,
-      value4: 78
+      value4: 78,
+      test2: 12
     }
   }
 }

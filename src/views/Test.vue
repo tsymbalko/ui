@@ -1040,6 +1040,9 @@
         <SBlock :size="8" :amount="16" />
       </SFrame>
     </div>
+    <Card>
+      <Range v-model="testValue" :max="100" legend />
+    </Card>
   </div>
 </template>
 
@@ -1062,7 +1065,8 @@ import {
   Modal,
   Rating,
   Fieldset,
-  Empty
+  Empty,
+  Range
 } from 'components'
 import { SRow, SBlock, SLine, SFrame, SFigure } from 'skeletons'
 export default {
@@ -1089,11 +1093,13 @@ export default {
     SFigure,
     Rating,
     Fieldset,
-    Empty
+    Empty,
+    Range
   },
   data() {
     return {
       value: 2,
+      testValue: 10,
       openCollapse: false,
       openCollapse2: false,
       openCollapse3: false,

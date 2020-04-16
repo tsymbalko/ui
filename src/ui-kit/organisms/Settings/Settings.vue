@@ -5,9 +5,7 @@
     @action="saveSettings"
     @close="closeSettings"
   >
-    <template #title>
-      Настройки
-    </template>
+    <template #title> Настройки </template>
     <div class="settings_list">
       <div class="settings_item">
         <p>Оформление:</p>
@@ -37,15 +35,7 @@
       >
         Сбросить
       </Button>
-      <Button
-        type="primary"
-        @click="
-          () => {
-            saveSettings()
-            closeSettings()
-          }
-        "
-      >
+      <Button type="primary" @click="saveSettings">
         Сохранить
       </Button>
     </template>
@@ -104,6 +94,11 @@ export default {
     },
     saveSettings() {
       localStorage.setItem('userSettings', JSON.stringify(this.userSettings))
+      this.$eventBus.$emit('message', {
+        type: 'success',
+        message: 'Настройки сохранены'
+      })
+      this.closeSettings()
     },
     setColor(name, value) {
       this.userSettings.colors[name] = value
@@ -111,7 +106,14 @@ export default {
     },
     resetSettings() {
       localStorage.removeItem('userSettings')
-      document.location.reload()
+      this.$eventBus.$emit('message', {
+        type: 'warning',
+        message: 'Страница будет перезагружена'
+      })
+      setTimeout(() => {
+        document.location.reload()
+      }, 4000)
+      this.closeSettings()
     }
   }
 }

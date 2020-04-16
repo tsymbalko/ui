@@ -1,0 +1,58 @@
+.vc-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  z-index: 10000;
+  pointer-events: none;
+
+  &__animation {
+
+    &-enter-active,
+    &-leave-active {
+      transition:
+        opacity .35s ease-in-out,
+        transform .35s ease-in-out;
+    }
+
+    &-enter,
+    &-leave-to {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+
+  &_close {
+    position: absolute;
+    top: 4px;
+    right: 0;
+  }
+
+  &_content {
+    position: relative;
+    pointer-events: auto;
+    margin: 0 auto;
+    max-width: 520px;
+    min-height: 52px;
+    border-radius: var(--border-radius);
+    padding: 12px 48px 12px 24px;
+    color: var(--invers);
+
+    &__success {
+      background-color: var(--green);
+    }
+
+    &__error {
+      background-color: var(--red);
+    }
+
+    &__warning {
+      background-color: var(--orange);
+    }
+
+    &__primary {
+      background-color: var(--accent);
+    }
+  }
+}

@@ -6,6 +6,7 @@
         @close="toggleNavigation"
       />
     </template>
+    <Message />
     <PageTransition>
       <router-view />
     </PageTransition>
@@ -29,7 +30,7 @@ import { mapState } from 'vuex'
 
 import { setCssProperties } from 'helpers/cssProperties'
 
-import { BackTop, PageTransition } from 'components'
+import { BackTop, PageTransition, Message } from 'components'
 import { Navigation, Footer, MenuToggle, Settings } from 'organisms'
 import { BaseTemplate } from 'templates'
 import { layoutLock, focusVisible } from 'mixins'
@@ -41,7 +42,8 @@ export default {
     Footer,
     MenuToggle,
     PageTransition,
-    Settings
+    Settings,
+    Message
   },
   mixins: [layoutLock, focusVisible],
   data() {
