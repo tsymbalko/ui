@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div class="about_header">
-      <Heading divider="right">About</Heading>
+      <Heading divider="right">Article</Heading>
       <TextLabel>Lorem ipsum dolor sit amet, consectetur</TextLabel>
     </div>
     <div class="about_article">
@@ -24,6 +24,12 @@
             использовали магию JavaScript’а, которая, в конце-концов выглядела
             чудовищно…
           </p>
+          <img
+            loading="lazy"
+            height="1401"
+            src="https://images.unsplash.com/photo-1587903667455-930f632433d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+            alt=""
+          />
           <Blockquote>
             Сегодня изображения (их размер и количество на отдельно взятой
             странице) могут быть главной проблемой, когда дело касается
@@ -112,6 +118,12 @@
             зависит конверсия веб-сайта, эту проблему нельзя оставлять без
             внимания.
           </p>
+          <img
+            loading="lazy"
+            height="1175"
+            src="https://images.unsplash.com/photo-1587917998402-c8ddc8d84b5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
+            alt=""
+          />
           <p>
             Если вы когда-нибудь встречались с такой задачей, вы, вероятно,
             использовали магию JavaScript’а, которая, в конце-концов выглядела
@@ -231,6 +243,12 @@
             зависит конверсия веб-сайта, эту проблему нельзя оставлять без
             внимания.
           </p>
+          <img
+            loading="lazy"
+            height="1175"
+            src="https://images.unsplash.com/photo-1587614222350-286dd1a0e619?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
+            alt=""
+          />
           <p>
             Если вы когда-нибудь встречались с такой задачей, вы, вероятно,
             использовали магию JavaScript’а, которая, в конце-концов выглядела
@@ -243,6 +261,12 @@
             зависит конверсия веб-сайта, эту проблему нельзя оставлять без
             внимания.
           </p>
+          <img
+            loading="lazy"
+            height="1300"
+            src="https://images.unsplash.com/photo-1587901307373-8caf8b1dee5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80"
+            alt=""
+          />
           <p>
             Если вы когда-нибудь встречались с такой задачей, вы, вероятно,
             использовали магию JavaScript’а, которая, в конце-концов выглядела
@@ -292,6 +316,12 @@
             зависит конверсия веб-сайта, эту проблему нельзя оставлять без
             внимания.
           </p>
+          <img
+            loading="lazy"
+            height="1365"
+            src="https://images.unsplash.com/photo-1587613991119-fbbe8e90531d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=947&q=80"
+            alt=""
+          />
           <p>
             Если вы когда-нибудь встречались с такой задачей, вы, вероятно,
             использовали магию JavaScript’а, которая, в конце-концов выглядела
@@ -390,6 +420,12 @@
             зависит конверсия веб-сайта, эту проблему нельзя оставлять без
             внимания.
           </p>
+          <img
+            loading="lazy"
+            height="1401"
+            src="https://images.unsplash.com/photo-1587695627142-19c8c51be969?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+            alt=""
+          />
           <p>
             Если вы когда-нибудь встречались с такой задачей, вы, вероятно,
             использовали магию JavaScript’а, которая, в конце-концов выглядела
@@ -480,6 +516,12 @@
             использовали магию JavaScript’а, которая, в конце-концов выглядела
             чудовищно…
           </p>
+          <img
+            loading="lazy"
+            height="1175"
+            src="https://images.unsplash.com/photo-1587836584895-df171114dbea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
+            alt=""
+          />
           <p>
             Если вы когда-нибудь встречались с такой задачей, вы, вероятно,
             использовали магию JavaScript’а, которая, в конце-концов выглядела

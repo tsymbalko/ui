@@ -34,7 +34,12 @@
             title="Dashboard"
             @click.native="closeNavigation"
           >
-            <Icon class="navigation_icon" width="24" height="24" name="apps" />
+            <Icon
+              class="navigation_icon"
+              width="24"
+              height="24"
+              name="analytics"
+            />
           </router-link>
         </li>
         <li class="navigation_item">
@@ -45,7 +50,12 @@
             title="About"
             @click.native="closeNavigation"
           >
-            <Icon class="navigation_icon" width="24" height="24" name="code" />
+            <Icon
+              class="navigation_icon"
+              width="24"
+              height="24"
+              name="align-justify"
+            />
           </router-link>
         </li>
         <li class="navigation_item">
@@ -72,6 +82,22 @@
               width="24"
               height="24"
               name="archive-alt"
+            />
+          </router-link>
+        </li>
+        <li class="navigation_item">
+          <router-link
+            to="/image"
+            class="navigation_link"
+            active-class="navigation_link__active"
+            title="Test"
+            @click.native="closeNavigation"
+          >
+            <Icon
+              class="navigation_icon"
+              width="24"
+              height="24"
+              name="scenery"
             />
           </router-link>
         </li>
