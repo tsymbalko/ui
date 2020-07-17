@@ -85,22 +85,6 @@
             />
           </router-link>
         </li>
-        <li class="navigation_item">
-          <router-link
-            to="/image"
-            class="navigation_link"
-            active-class="navigation_link__active"
-            title="Test"
-            @click.native="closeNavigation"
-          >
-            <Icon
-              class="navigation_icon"
-              width="24"
-              height="24"
-              name="scenery"
-            />
-          </router-link>
-        </li>
         <li class="navigation_item navigation_item__separator">
           <button
             class="navigation_link navigation_link__settings"
