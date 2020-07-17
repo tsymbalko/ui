@@ -60,7 +60,7 @@ export default {
         this.pathLength - (window.scrollY * this.pathLength) / height
     },
     setActive() {
-      this.active = window.pageYOffset > this.offset ? true : false
+      this.active = window.pageYOffset > this.offset
     },
     backToTop(event) {
       event.preventDefault()
