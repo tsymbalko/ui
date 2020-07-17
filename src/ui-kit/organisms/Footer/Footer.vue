@@ -1,11 +1,15 @@
 <template>
   <footer class="footer">
-    UIKit <a href="https://vuejs.org/" target="_blank">Vue.js</a>
+    <team-logo />
   </footer>
 </template>
 
 <script>
+import { TeamLogo } from 'components'
 export default {
+  components: {
+    TeamLogo
+  },
   name: 'Footer'
 }
 </script>

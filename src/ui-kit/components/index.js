@@ -5,6 +5,7 @@ import Button from './Button/Button'
 import Spinner from './Spinner/Spinner'
 import Radio from './Radio/Radio'
 import Tag from './Tag/Tag'
+import TeamLogo from 'components/TeamLogo/TeamLogo'
 import ProgressLine from './ProgressLine/ProgressLine'
 import ProgressCircle from './ProgressCircle/ProgressCircle'
 import Fieldset from './Fieldset/Fieldset'
@@ -33,6 +34,7 @@ import PageTransition from './PageTransition/PageTransition'
 
 export {
   Icon,
+  TeamLogo,
   Checkbox,
   Color,
   Button,
