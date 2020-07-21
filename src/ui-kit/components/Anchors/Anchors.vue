@@ -14,8 +14,14 @@
 </template>
 
 <script>
+/**
+ * The only true button.
+ */
 export default {
   props: {
+    /**
+     * A test for default function Object
+     */
     selector: {
       type: String,
       default: ''

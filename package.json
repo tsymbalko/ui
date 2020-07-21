@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "stylelint": "stylelint \"./**/*.scss\" --fix",
-    "styleguide": "vue-styleguidist server",
+    "styleguide": "vue-styleguidist server --open",
     "styleguide:build": "vue-styleguidist build"
   },
   "dependencies": {
@@ -36,6 +36,7 @@
     "stylelint": "^10.1.0",
     "stylelint-scss": "^3.12.0",
     "stylelint-webpack-plugin": "^1.2.1",
+    "vue-styleguidist": "^4.27.0",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {

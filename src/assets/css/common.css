@@ -1,5 +1,6 @@
 :root,
-:root[data-theme='light'] {
+:root[data-theme='light'],
+div[data-theme='light'] {
   --base-black: #333;
   --base-text: var(--base-black);
   --base-title: #000;
@@ -13,10 +14,14 @@
   --base-focus: 0 0 0 2px var(--focus);
   --base-hover: #d9eafe;
   --orange: #ff790e;
+  --orange-hover: rgba(255, 121, 14, .2);
   --red: #ec547a;
+  --red-hover: rgba(236, 84, 122, .2);
   --blue: #3796f6;
+  --blue-hover: rgba(55, 150, 246, .2);
   --grey: #90a8be;
   --green: #5bceae;
+  --green-hover: rgba(91, 206, 174, .2);
   --dark-blue: #364e65;
   --light-blue: #f7fafc;
   --navigation-width: 96px;
@@ -24,37 +29,38 @@
   --border-radius: 4px;
   --invers: #292929;
   --invers-light: #fff;
+  --invers-hover: rgba(0, 0, 0, .2);
   --skeleton: rgba(0, 0, 0, .1);
   --navigation-bg: rgba(255, 255, 255, .5);
   --selection: #aaaaaa;
 }
 
+div[data-theme] {
+  background-color: var(--base-background);
+  padding: 10px;
+}
+
+div[data-grid='row'] {
+  margin-bottom: 10px;
+}
+
 @media (prefers-color-scheme: dark) {
 
-  :root {
+  :root,
+  :root[data-theme='dark'],
+  div[data-theme='dark'] {
     --base-text: #bbb;
     --base-title: #fff;
     --base-background: #181d23;
     --light-blue: #485465;
     --base-border: #384253;
     --invers: #fff;
+    --invers-hover: rgba(255, 255, 255, .2);
     --invers-light: #292929;
     --skeleton: rgba(255, 255, 255, .1);
     --base-hover: #1e3955;
     --navigation-bg: rgba(0, 0, 0, .5);
   }
-}
-
-:root[data-theme='dark'] {
-  --base-text: #bbb;
-  --base-title: #fff;
-  --base-background: #181d23;
-  --light-blue: #485465;
-  --base-border: #384253;
-  --invers: #fff;
-  --skeleton: rgba(255, 255, 255, .1);
-  --base-hover: #1e3955;
-  --navigation-bg: rgba(0, 0, 0, .5);
 }
 
 html {

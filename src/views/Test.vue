@@ -47,16 +47,19 @@
           <div class="section-example">
             <Spinner type="bounce" />
             <Spinner type="plane" />
+            <Spinner type="ring" />
             <Spinner type="pulse" />
           </div>
           <div class="section-example">
             <Spinner :size="30" type="plane" color="#ff790e" />
             <Spinner :size="30" type="bounce" color="#ff790e" />
+            <Spinner :size="30" type="ring" color="#ff790e" />
             <Spinner :size="30" type="pulse" color="#ff790e" />
           </div>
           <div class="section-example">
             <Spinner :size="20" type="plane" color="#ec547a" />
             <Spinner :size="20" type="bounce" color="#ec547a" />
+            <Spinner :size="20" type="ring" color="#ec547a" />
             <Spinner :size="20" type="pulse" color="#ec547a" />
           </div>
         </div>
@@ -64,16 +67,19 @@
           <div class="section-example">
             <Spinner type="bounce" />
             <Spinner type="plane" />
+            <Spinner type="ring" />
             <Spinner type="pulse" />
           </div>
           <div class="section-example">
             <Spinner :size="30" type="plane" color="#ff790e" />
             <Spinner :size="30" type="bounce" color="#ff790e" />
+            <Spinner :size="30" type="ring" color="#ff790e" />
             <Spinner :size="30" type="pulse" color="#ff790e" />
           </div>
           <div class="section-example">
             <Spinner :size="20" type="plane" color="#ec547a" />
             <Spinner :size="20" type="bounce" color="#ec547a" />
+            <Spinner :size="20" type="ring" color="#ec547a" />
             <Spinner :size="20" type="pulse" color="#ec547a" />
           </div>
         </div>

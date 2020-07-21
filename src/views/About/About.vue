@@ -6,7 +6,7 @@
     </div>
     <div class="about_article">
       <Card>
-        <Section title="Introduction" class="test-Section" id="introduction">
+        <Section title="Introduction" class="test-section" id="introduction">
           <p>
             Если вы когда-нибудь встречались с такой задачей, вы, вероятно,
             использовали магию JavaScript’а, которая, в конце-концов выглядела
@@ -108,7 +108,7 @@
       <Card>
         <Section
           title="Request &amp; Response"
-          class="test-Section"
+          class="test-section"
           id="request-response"
         >
           <p>
@@ -182,7 +182,7 @@
       <Card>
         <Section
           title="Authentication"
-          class="test-Section"
+          class="test-section"
           id="authentication"
         >
           <p>Чтобы это сделать, нам необходимо решить:</p>
@@ -234,7 +234,7 @@
         </Section>
       </Card>
       <Card>
-        <Section title="Links" class="test-Section" id="links">
+        <Section title="Links" class="test-section" id="links">
           <p>Как хранить ссылки изображений не загружая их сразу.</p>
           <p>
             Сегодня изображения (их размер и количество на отдельно взятой
@@ -330,7 +330,7 @@
         </Section>
       </Card>
       <Card>
-        <Section title="Expanders" class="test-Section" id="expanders">
+        <Section title="Expanders" class="test-section" id="expanders">
           <p>
             Как определить когда изображение становится видимым (необходимым)
             пользователю и отправить за ним запрос.
@@ -412,7 +412,7 @@
         </Section>
       </Card>
       <Card>
-        <Section title="Filters" class="test-Section" id="filters">
+        <Section title="Filters" class="test-section" id="filters">
           <p>
             Сегодня изображения (их размер и количество на отдельно взятой
             странице) могут быть главной проблемой, когда дело касается
@@ -530,7 +530,7 @@
         </Section>
       </Card>
     </div>
-    <Anchors class="about_anchors" :selector="'.test-Section[id]'" />
+    <Anchors class="about_anchors" :selector="'.test-section[id]'" />
   </div>
 </template>
 

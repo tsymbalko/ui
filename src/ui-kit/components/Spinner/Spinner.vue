@@ -2,6 +2,7 @@
   <div
     :style="{ color: color, '--size': `${size}px` }"
     :class="['vc-spinner', { [`vc-spinner__${type}`]: type }]"
+    aria-label="loading"
   >
     <template v-if="type === 'bounce'">
       <div class="vc-spinner_dot" />
@@ -24,7 +25,7 @@ export default {
     },
     type: {
       type: String,
-      validator: value => ['plane', 'bounce', 'pulse'].includes(value),
+      validator: value => ['plane', 'bounce', 'pulse', 'ring'].includes(value),
       default: 'plane'
     }
   }

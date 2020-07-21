@@ -3,6 +3,7 @@
   min-width: 120px;
   line-height: 24px;
   display: inline-flex;
+  vertical-align: middle;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
@@ -10,38 +11,62 @@
   transition: color .2s;
   position: relative;
   height: var(--size);
-  color: #fff;
-  background: var(--background);
-
-  &__ghost {
-    color: var(--invers);
-  }
 
   &__primary {
     background-color: var(--accent);
+    color: var(--accent);
   }
 
   &__error {
     background-color: var(--red);
+    color: var(--red);
   }
 
   &__success {
     background-color: var(--green);
+    color: var(--green);
   }
 
   &__warning {
     background-color: var(--orange);
+    color: var(--orange);
+  }
+
+  &__normal {
+    color: #fff;
+
+    &.vc-button__secondary {
+      background-color: var(--invers);
+      color: var(--invers-light);
+    }
   }
 
   &__bordered {
+    background-color: transparent;
     border: 2px solid currentColor;
-    color: var(--invers);
     padding: 8px 12px;
+
+    &.vc-button__secondary {
+      color: var(--invers);
+      border-color: currentColor;
+    }
+  }
+
+  &__ghost {
+    background-color: transparent;
+
+    &.vc-button__secondary {
+      color: var(--invers);
+    }
   }
 
   &__loading {
     cursor: progress;
-    color: transparent;
+
+    .vc-button_icon,
+    .vc-button_text {
+      opacity: 0;
+    }
   }
 
   &__circle,
@@ -60,13 +85,60 @@
     border-radius: var(--border-radius);
   }
 
-  &:not([disabled]):hover {
-    opacity: .7;
+  @media (hover: hover) {
+
+    &:not([disabled]):hover {
+
+      &.vc-button__warning.vc-button__bordered,
+      &.vc-button__warning.vc-button__ghost {
+        background-color: var(--orange-hover);
+      }
+
+      &.vc-button__error.vc-button__bordered,
+      &.vc-button__error.vc-button__ghost {
+        background-color: var(--red-hover);
+      }
+
+      &.vc-button__success.vc-button__bordered,
+      &.vc-button__success.vc-button__ghost {
+        background-color: var(--green-hover);
+      }
+
+      &.vc-button__primary.vc-button__bordered,
+      &.vc-button__primary.vc-button__ghost {
+        background-color: var(--blue-hover);
+      }
+
+      &.vc-button__secondary.vc-button__bordered,
+      &.vc-button__secondary.vc-button__ghost {
+        background-color: var(--invers-hover);
+      }
+
+      &.vc-button__normal {
+        opacity: .7;
+      }
+    }
+  }
+
+  &__disabled {
+
+    &.vc-button__normal {
+      background-color: var(--disabled);
+      color: #fff;
+    }
+
+    &.vc-button__bordered {
+      color: var(--disabled);
+      border-color: currentColor;
+    }
+
+    &.vc-button__ghost {
+      color: var(--disabled);
+    }
   }
 
   &:disabled {
     cursor: not-allowed;
-    background-color: var(--disabled);
   }
 
   &_text {
@@ -108,7 +180,7 @@
     margin-top: -14px;
     margin-left: -14px;
     animation: dashSpinner 1.5s ease-in-out infinite;
-    stroke: #fff;
+    stroke: currentColor;
     stroke-linecap: round;
   }
 }

@@ -4,9 +4,30 @@
   height: var(--size);
   position: relative;
 
+  &__ring {
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 3px solid currentColor;
+      border-color: currentColor transparent currentColor transparent;
+      animation: rotate 1.2s linear infinite;
+    }
+  }
+
   &__plane {
-    background-color: currentColor;
-    animation: plane 1.2s infinite ease-in-out;
+    border-radius: 50%;
+    font-size: 10px;
+    position: relative;
+    border-top: 3px solid rgba(255, 255, 255, .2);
+    border-right: 3px solid rgba(255, 255, 255, .2);
+    border-bottom: 3px solid rgba(255, 255, 255, .2);
+    border-left: 3px solid currentColor;
+    transform: translateZ(0);
+    animation: rotate 1.1s infinite linear;
   }
 
   &__pulse {
@@ -32,18 +53,14 @@
   }
 }
 
-@keyframes plane {
+@keyframes rotate {
 
   0% {
-    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-  }
-
-  50% {
-    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    transform: rotate(0deg);
   }
 
   100% {
-    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    transform: rotate(360deg);
   }
 }
 
