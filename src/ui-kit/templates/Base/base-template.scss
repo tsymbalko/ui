@@ -5,7 +5,7 @@
   background-color: var(--light-blue);
   padding-left: 0;
 
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 75em) {
     padding-left: var(--navigation-width);
   }
 
@@ -17,16 +17,16 @@
 
   &_main {
     flex: 1 1;
-    max-width: 1200px;
+    max-width: 75rem;
     width: 100%;
     margin: 0 auto;
     padding: 14px;
 
-    @media (min-width: 600px) {
+    @media screen and (min-width: 37.5em) {
       padding: 18px 24px;
     }
 
-    @media (min-width: 1200px) {
+    @media screen and (min-width: 75em) {
       padding: 37px 48px;
     }
   }
@@ -37,7 +37,7 @@
     bottom: 32px;
     z-index: 1004;
 
-    @media (min-width: 1200px) {
+    @media screen and (min-width: 75em) {
       display: none;
     }
   }

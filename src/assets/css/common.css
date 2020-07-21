@@ -11,7 +11,7 @@ div[data-theme='light'] {
   --base-scroll: #aaa;
   --disabled: #ccc;
   --focus: #7ab7ff;
-  --base-focus: 0 0 0 2px var(--focus);
+  --base-focus: 0 0 0 .125rem var(--focus);
   --base-hover: #d9eafe;
   --orange: #ff790e;
   --orange-hover: rgba(255, 121, 14, .2);
@@ -26,22 +26,13 @@ div[data-theme='light'] {
   --light-blue: #f7fafc;
   --navigation-width: 96px;
   --header-height: 86px;
-  --border-radius: 4px;
+  --border-radius: .25rem;
   --invers: #292929;
   --invers-light: #fff;
   --invers-hover: rgba(0, 0, 0, .2);
   --skeleton: rgba(0, 0, 0, .1);
   --navigation-bg: rgba(255, 255, 255, .5);
   --selection: #aaaaaa;
-}
-
-div[data-theme] {
-  background-color: var(--base-background);
-  padding: 10px;
-}
-
-div[data-grid='row'] {
-  margin-bottom: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -79,7 +70,6 @@ html {
     'Apple Color Emoji',
     'Segoe UI Emoji',
     'Segoe UI Symbol';
-  font-size: 16px;
   color: var(--base-text);
   background: var(--base-background);
   font-weight: 400;
@@ -117,7 +107,7 @@ body {
   transition: box-shadow .2s;
 }
 
-@media (min-width: 900px) {
+@media screen and (min-width: 56.25em) {
 
   a[href]:active,
   button:not([disabled]):active {
@@ -129,12 +119,12 @@ body {
 a:not([class]) {
   color: var(--blue);
   text-decoration: none;
-  border-radius: 2px;
+  border-radius: .125rem;
 }
 
 a:not([class]):hover {
   background-color: var(--base-hover);
-  box-shadow: 0 0 0 2px var(--base-hover);
+  box-shadow: 0 0 0 .125rem var(--base-hover);
 }
 
 a:not([class]):focus {
@@ -170,8 +160,8 @@ button::-moz-focus-inner {
 
 /*custom scroll only web-kit browsers*/
 ::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
+  width: .25rem;
+  height: .25rem;
 }
 
 /* Track */
@@ -182,7 +172,7 @@ button::-moz-focus-inner {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--base-scroll);
-  border-radius: 4px;
+  border-radius: .25rem;
 }
 
 @keyframes skeleton-loading {

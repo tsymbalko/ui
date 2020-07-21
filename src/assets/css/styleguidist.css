@@ -1,0 +1,8 @@
+div[data-theme] {
+  background-color: var(--base-background);
+  padding: 12px;
+}
+
+div[data-grid='row'] {
+  margin-bottom: 12px;
+}

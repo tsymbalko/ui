@@ -4,14 +4,14 @@
     :class="[
       'vc-button',
       {
-        [`vc-button__${shape}`]: shape,
-        [`vc-button__${color}`]: color,
-        [`vc-button__${variant}`]: variant,
+        [`vc-button__shape-${shape}`]: shape,
+        [`vc-button__color-${color}`]: color,
+        [`vc-button__variant-${variant}`]: variant,
         'vc-button__loading': loading,
         'vc-button__disabled': disabled
       }
     ]"
-    :style="{ '--size': `${size}px` }"
+    :style="{ '--size': size }"
     :disabled="disabled || loading"
     @click="$emit('click')"
   >
@@ -32,9 +32,6 @@
 
 <script>
 import Icon from '../Icon/Icon'
-/**
- * The only true button.
- */
 export default {
   name: 'Button',
   components: {
@@ -50,7 +47,7 @@ export default {
       default: 'button'
     },
     /**
-     * Геометрическая форма кнопки
+     * Геометрическая форма кнопки. Кнопкам с `shape` равным `circle`, `square` указывается текст который скрыт с помощью `visibility-hidden`, для обеспечения доступности контента.
      */
     shape: {
       type: String,
@@ -62,8 +59,8 @@ export default {
      * Установить размер кнопки через CSS custom properties `--size`, см. [MDN](https://developer.mozilla.org/ru/docs/Web/CSS/Using_CSS_custom_properties)
      */
     size: {
-      type: Number,
-      default: 44
+      type: String,
+      default: ''
     },
     /**
      * Установить цвет кнопки
@@ -98,14 +95,14 @@ export default {
       default: 'left'
     },
     /**
-     * Установить состояние загрузки кнопки
+     * Добавляет элементу аттрибут `disabled` без добавления классов и изменение стилей кроме `cursor`
      */
     loading: {
       type: Boolean,
       default: false
     },
     /**
-     * Блокирует доступ и изменение кнопки, см.: [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#disabled)
+     * Добавляет элементу одноименный аттрибут и class `vc-button__disabled` отвечающий за визуальное отображение состояния (изменение `bg, color, cursor`)
      */
     disabled: {
       type: Boolean,

@@ -24,7 +24,8 @@ module.exports = {
     favicon: './public/favicon.svg'
   },
   require: [
-    path.resolve('./src/assets/css/common.css')
+    path.resolve('./src/assets/css/common.css'),
+    path.resolve('./src/assets/css/styleguidist.css')
   ],
   usageMode: 'expand',
   exampleMode: 'expand',

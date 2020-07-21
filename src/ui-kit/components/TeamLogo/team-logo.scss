@@ -5,12 +5,13 @@
   align-items: center;
 
   &_image {
-    margin-bottom: 6px;
+    width: 3.75rem;
+    height: 3.75rem;
+    margin-bottom: .375rem;
   }
 
   &_text {
     color: #7a869a;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: .75rem;
   }
 }
