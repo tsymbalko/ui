@@ -9,11 +9,17 @@
     padding-left: var(--navigation-width);
   }
 
+  @supports (-webkit-touch-callout: none) {
+    min-height: -webkit-fill-available;
+  }
+
   &__locked {
     position: fixed;
     left: 0;
     right: 0;
   }
+
+
 
   &_main {
     flex: 1 1;
