@@ -7,8 +7,8 @@
       <a class="vc-navigation_link vc-navigation_link__home" href="/">
         <Icon
           class="vc-navigation_logotype"
-          width="40"
-          height="40"
+          width="2.5rem"
+          height="2.5rem"
           name="vue-alternate"
         />
       </a>
@@ -36,12 +36,7 @@
             title="Dashboard"
             @click.native="closeNavigation"
           >
-            <Icon
-              class="vc-navigation_icon"
-              width="24"
-              height="24"
-              name="analytics"
-            />
+            <Icon class="vc-navigation_icon" name="analytics" />
           </router-link>
         </li>
         <li class="vc-navigation_item">
@@ -52,12 +47,7 @@
             title="About"
             @click.native="closeNavigation"
           >
-            <Icon
-              class="vc-navigation_icon"
-              width="24"
-              height="24"
-              name="align-justify"
-            />
+            <Icon class="vc-navigation_icon" name="align-justify" />
           </router-link>
         </li>
         <li class="vc-navigation_item">
@@ -68,12 +58,7 @@
             title="About"
             @click.native="closeNavigation"
           >
-            <Icon
-              class="vc-navigation_icon"
-              width="24"
-              height="24"
-              name="table"
-            />
+            <Icon class="vc-navigation_icon" name="table" />
           </router-link>
         </li>
         <li class="vc-navigation_item">
@@ -84,12 +69,7 @@
             title="Test"
             @click.native="closeNavigation"
           >
-            <Icon
-              class="vc-navigation_icon"
-              width="24"
-              height="24"
-              name="archive-alt"
-            />
+            <Icon class="vc-navigation_icon" name="archive-alt" />
           </router-link>
         </li>
         <li class="vc-navigation_item vc-navigation_item__separator">
@@ -98,12 +78,7 @@
             title="settings"
             @click="setActiveDrawer('settings')"
           >
-            <Icon
-              class="vc-navigation_icon"
-              width="24"
-              height="24"
-              name="cog"
-            />
+            <Icon class="vc-navigation_icon" name="cog" />
           </button>
         </li>
       </ul>

@@ -13,13 +13,7 @@
         exact-active-class="vc-breadcrumb_link__active-exact"
         class="vc-breadcrumb_link"
       >
-        <Icon
-          v-if="icon"
-          width="16"
-          height="16"
-          class="vc-breadcrumb_icon"
-          :name="icon"
-        />
+        <Icon v-if="icon" class="vc-breadcrumb_icon" :name="icon" />
         {{ label }}
       </component>
       <span v-if="index < routes.length - 1" class="vc-breadcrumb_separator">

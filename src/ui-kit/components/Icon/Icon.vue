@@ -21,11 +21,11 @@ export default {
     },
     width: {
       type: [String, Number],
-      default: 24
+      default: '1.5rem'
     },
     height: {
       type: [String, Number],
-      default: 24
+      default: '1.5rem'
     },
     fill: {
       type: String,

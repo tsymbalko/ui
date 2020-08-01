@@ -11,7 +11,7 @@ div[data-theme='light'] {
   --base-scroll: #aaa;
   --disabled: #ccc;
   --focus: #7ab7ff;
-  --base-focus: 0 0 0 .125rem var(--focus);
+  --base-focus: 0 0 0 2px var(--focus);
   --base-hover: #d9eafe;
   --orange: #ff790e;
   --orange-hover: rgba(255, 121, 14, .2);
@@ -24,8 +24,8 @@ div[data-theme='light'] {
   --green-hover: rgba(91, 206, 174, .2);
   --dark-blue: #364e65;
   --light-blue: #f7fafc;
-  --navigation-width: 96px;
-  --header-height: 86px;
+  --navigation-width: 6rem;
+  --header-height: 6rem;
   --border-radius: .25rem;
   --invers: #292929;
   --invers-light: #fff;

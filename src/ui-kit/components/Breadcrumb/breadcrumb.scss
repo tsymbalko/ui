@@ -12,22 +12,24 @@
   }
 
   &_icon {
-    margin-right: 4px;
+    width: 1rem;
+    height: 1rem;
+    margin-right: .25rem;
   }
 
   &_separator {
     display: inline-block;
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1;
-    margin: 0 10px;
+    margin: 0 .625rem;
     color: var(--disabled);
   }
 
   &_link {
     white-space: nowrap;
     position: relative;
-    font-size: 14px;
-    padding: 2px 4px;
+    font-size: .75rem;
+    padding: .125rem .25rem;
     display: inline-flex;
     align-items: center;
     border-radius: var(--border-radius);
@@ -35,7 +37,7 @@
 
     &:hover {
       background-color: var(--base-hover);
-      box-shadow: 0 0 0 2px var(--base-hover);
+      box-shadow: 0 0 0 .125rem var(--base-hover);
     }
 
     &:focus {

@@ -2,7 +2,7 @@
   <BaseTemplate id="app">
     <template #navigation>
       <Navigation
-        :class="{ navigation__active: navigationVisible }"
+        :class="{ 'vc-navigation__active': navigationVisible }"
         @close="toggleNavigation"
       />
     </template>
@@ -73,16 +73,14 @@ export default {
       // set theme
       document.documentElement.dataset.theme = theme
       //set colors
-      for (let key in colors) {
-        this.setCssProperties(key, colors[key])
+      for (let color in colors) {
+        this.setCssProperties(color, colors[color])
       }
     }
   },
   methods: {
     toggleNavigation() {
-      if (window.innerWidth < 1200) {
-        this.navigationVisible = !this.navigationVisible
-      }
+      this.navigationVisible = !this.navigationVisible
     }
   }
 }
