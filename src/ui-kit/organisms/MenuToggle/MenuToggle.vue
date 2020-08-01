@@ -1,14 +1,14 @@
 <template>
   <button
     :class="[
-      'menu-toggle',
-      { 'menu-toggle__active': active },
-      { [`menu-toggle__${shape}`]: shape }
+      'vc-menu-toggle',
+      { 'vc-menu-toggle__active': active },
+      { [`vc-menu-toggle__${shape}`]: shape }
     ]"
     @click="$emit('click')"
   >
-    <div class="menu-toggle_box">
-      <span class="menu-toggle_line" />
+    <div class="vc-menu-toggle_box">
+      <span class="vc-menu-toggle_line" />
     </div>
   </button>
 </template>

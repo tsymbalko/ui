@@ -6,12 +6,7 @@
       class="vc-back-top"
       @click="backToTop"
     >
-      <svg
-        class="progress-circle svg-content"
-        width="100%"
-        height="100%"
-        viewBox="-1 -1 102 102"
-      >
+      <svg width="100%" height="100%" viewBox="-1 -1 102 102">
         <path
           ref="backTopCircle"
           class="vc-back-top_circle"

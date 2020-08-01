@@ -1,11 +1,11 @@
 <template functional>
-  <div class="layout">
+  <div class="vc-layout">
     <slot name="navigation" />
-    <div class="layout_float">
+    <div class="vc-layout_float">
       <slot name="float" />
     </div>
     <slot name="header" />
-    <main class="layout_main" id="main">
+    <main class="vc-layout_main" id="main">
       <slot />
     </main>
     <slot name="footer" />

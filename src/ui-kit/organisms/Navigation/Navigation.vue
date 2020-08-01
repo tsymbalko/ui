@@ -1,10 +1,12 @@
 <template>
-  <transition name="navigation__animation">
-    <nav class="navigation">
-      <a class="navigation_link navigation_link__skip" href="#main">Skip</a>
-      <a class="navigation_link navigation_link__home" href="/">
+  <transition name="vc-navigation__animation">
+    <nav class="vc-navigation">
+      <a class="vc-navigation_link vc-navigation_link__skip" href="#main"
+        >Skip</a
+      >
+      <a class="vc-navigation_link vc-navigation_link__home" href="/">
         <Icon
-          class="navigation_logotype"
+          class="vc-navigation_logotype"
           width="40"
           height="40"
           name="vue-alternate"
@@ -12,8 +14,8 @@
       </a>
       <router-link
         to="/profile"
-        class="navigation_link navigation_link__avatar"
-        active-class="navigation_link__active"
+        class="vc-navigation_link vc-navigation_link__avatar"
+        active-class="vc-navigation_link__active"
         title="Profile"
         @click.native="closeNavigation"
       >
@@ -25,73 +27,83 @@
           />
         </Badge>
       </router-link>
-      <ul class="navigation_list">
-        <li class="navigation_item">
+      <ul class="vc-navigation_list">
+        <li class="vc-navigation_item">
           <router-link
             to="/dashboard"
-            class="navigation_link"
-            active-class="navigation_link__active"
+            class="vc-navigation_link"
+            active-class="vc-navigation_link__active"
             title="Dashboard"
             @click.native="closeNavigation"
           >
             <Icon
-              class="navigation_icon"
+              class="vc-navigation_icon"
               width="24"
               height="24"
               name="analytics"
             />
           </router-link>
         </li>
-        <li class="navigation_item">
+        <li class="vc-navigation_item">
           <router-link
             to="/about"
-            class="navigation_link"
-            active-class="navigation_link__active"
+            class="vc-navigation_link"
+            active-class="vc-navigation_link__active"
             title="About"
             @click.native="closeNavigation"
           >
             <Icon
-              class="navigation_icon"
+              class="vc-navigation_icon"
               width="24"
               height="24"
               name="align-justify"
             />
           </router-link>
         </li>
-        <li class="navigation_item">
+        <li class="vc-navigation_item">
           <router-link
             to="/table"
-            class="navigation_link"
-            active-class="navigation_link__active"
+            class="vc-navigation_link"
+            active-class="vc-navigation_link__active"
             title="About"
             @click.native="closeNavigation"
           >
-            <Icon class="navigation_icon" width="24" height="24" name="table" />
+            <Icon
+              class="vc-navigation_icon"
+              width="24"
+              height="24"
+              name="table"
+            />
           </router-link>
         </li>
-        <li class="navigation_item">
+        <li class="vc-navigation_item">
           <router-link
             to="/test"
-            class="navigation_link"
-            active-class="navigation_link__active"
+            class="vc-navigation_link"
+            active-class="vc-navigation_link__active"
             title="Test"
             @click.native="closeNavigation"
           >
             <Icon
-              class="navigation_icon"
+              class="vc-navigation_icon"
               width="24"
               height="24"
               name="archive-alt"
             />
           </router-link>
         </li>
-        <li class="navigation_item navigation_item__separator">
+        <li class="vc-navigation_item vc-navigation_item__separator">
           <button
-            class="navigation_link navigation_link__settings"
+            class="vc-navigation_link vc-navigation_link__settings"
             title="settings"
             @click="setActiveDrawer('settings')"
           >
-            <Icon class="navigation_icon" width="24" height="24" name="cog" />
+            <Icon
+              class="vc-navigation_icon"
+              width="24"
+              height="24"
+              name="cog"
+            />
           </button>
         </li>
       </ul>

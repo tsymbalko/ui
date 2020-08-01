@@ -1,6 +1,6 @@
 <template>
-  <header class="header">
-    header
+  <header class="vc-header">
+    <slot />
   </header>
 </template>
 

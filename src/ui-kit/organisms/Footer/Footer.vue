@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="vc-footer">
     <team-logo />
   </footer>
 </template>

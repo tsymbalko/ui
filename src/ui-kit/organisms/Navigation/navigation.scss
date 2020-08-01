@@ -1,4 +1,4 @@
-.navigation {
+.vc-navigation {
   --indent: 2px;
   --item-height: 70px;
   position: fixed;
@@ -30,10 +30,11 @@
   }
 
   &_list {
+    padding: 0;
+    margin: 0 0 90px 0;
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
-    margin-bottom: 90px;
     list-style: none;
 
     @media screen and (min-width: 75em) {
@@ -136,9 +137,9 @@
     margin: 0 auto;
     fill: var(--invers);
 
-    .navigation_link:hover &,
-    .navigation_link:focus &,
-    .navigation_link__active & {
+    .vc-navigation_link:hover &,
+    .vc-navigation_link:focus &,
+    .vc-navigation_link__active & {
       fill: var(--accent);
     }
   }

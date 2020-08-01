@@ -1,9 +1,9 @@
 <template>
-  <div class="switch-theme">
-    <label class="switch-theme_label">
+  <div class="vc-switch-theme">
+    <label class="vc-switch-theme_label">
       <input
         type="radio"
-        class="switch-theme_input switch-theme_input__light"
+        class="vc-switch-theme_input vc-switch-theme_input__light"
         name="switch-theme"
         value="light"
         :checked="theme === 'light'"
@@ -11,10 +11,10 @@
       />
       Светлое
     </label>
-    <label class="switch-theme_label">
+    <label class="vc-switch-theme_label">
       <input
         type="radio"
-        class="switch-theme_input switch-theme_input__dark"
+        class="vc-switch-theme_input vc-switch-theme_input__dark"
         name="switch-theme"
         value="dark"
         :checked="theme === 'dark'"
@@ -22,10 +22,10 @@
       />
       Темное
     </label>
-    <label class="switch-theme_label">
+    <label class="vc-switch-theme_label">
       <input
         type="radio"
-        class="switch-theme_input switch-theme_input__no-preference"
+        class="vc-switch-theme_input vc-switch-theme_input__no-preference"
         name="switch-theme"
         value="no-preference"
         :checked="theme === 'no-preference'"
