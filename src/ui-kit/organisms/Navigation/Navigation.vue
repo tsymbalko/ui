@@ -17,7 +17,6 @@
         class="vc-navigation_link vc-navigation_link__avatar"
         active-class="vc-navigation_link__active"
         title="Profile"
-        @click.native="closeNavigation"
       >
         <Badge :count="101" :overflow-count="99" type="error">
           <Avatar
@@ -34,7 +33,6 @@
             class="vc-navigation_link"
             active-class="vc-navigation_link__active"
             title="Dashboard"
-            @click.native="closeNavigation"
           >
             <Icon class="vc-navigation_icon" name="analytics" />
           </router-link>
@@ -45,7 +43,6 @@
             class="vc-navigation_link"
             active-class="vc-navigation_link__active"
             title="About"
-            @click.native="closeNavigation"
           >
             <Icon class="vc-navigation_icon" name="align-justify" />
           </router-link>
@@ -56,7 +53,6 @@
             class="vc-navigation_link"
             active-class="vc-navigation_link__active"
             title="About"
-            @click.native="closeNavigation"
           >
             <Icon class="vc-navigation_icon" name="table" />
           </router-link>
@@ -67,7 +63,6 @@
             class="vc-navigation_link"
             active-class="vc-navigation_link__active"
             title="Test"
-            @click.native="closeNavigation"
           >
             <Icon class="vc-navigation_icon" name="archive-alt" />
           </router-link>
