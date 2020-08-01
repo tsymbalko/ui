@@ -97,11 +97,15 @@
     flex-wrap: wrap;
     font-size: 14px;
 
-    /* mix */
     .vc-link {
       margin-bottom: 8px;
       padding: 2px;
       margin-right: 12px;
     }
+  }
+
+  /* mix */
+  &_heading {
+    margin-bottom: 0;
   }
 }

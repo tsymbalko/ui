@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard">
     <header class="dashboard_header">
-      <Heading divider="right">
+      <Heading class="dashboard_heading" divider="right">
         Beko
       </Heading>
       <TextLabel>Organisation overview</TextLabel>

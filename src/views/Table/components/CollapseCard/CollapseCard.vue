@@ -1,5 +1,5 @@
 <template>
-  <div :class="['collapse-card', { [`collapse-card__${type}`]: type }]">
+  <Card :type="type" class="collapse-card">
     <div class="collapse-card_header">
       <Button
         :class="[
@@ -23,8 +23,8 @@
           >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
           consequuntur cum dolore doloribus iste iusto neque obcaecati, quae
           quam quia? Animi distinctio, eaque eos impedit magni porro sequi! A,
-          harum?</VLink
-        >
+          harum?
+        </VLink>
         <TextLabel class="collapse-card_date">
           id: 523934482
         </TextLabel>
@@ -104,7 +104,7 @@
         />
       </div>
     </div>
-  </div>
+  </Card>
 </template>
 
 <script>
@@ -116,7 +116,8 @@ import {
   TextLabel,
   Avatar,
   Tag,
-  ProgressCircle
+  ProgressCircle,
+  Card
 } from 'components'
 export default {
   components: {
@@ -126,7 +127,8 @@ export default {
     TextLabel,
     Avatar,
     Tag,
-    ProgressCircle
+    ProgressCircle,
+    Card
   },
   props: {
     type: {

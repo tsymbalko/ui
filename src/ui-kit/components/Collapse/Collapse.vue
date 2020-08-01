@@ -15,7 +15,7 @@
       <p class="vc-collapse_title">
         <slot name="title" />
       </p>
-      <i class="vc-collapse_arrow" />
+      <i aria-hidden="true" class="vc-collapse_arrow" />
     </button>
     <div v-show="opened" class="vc-collapse_content">
       <slot />
@@ -31,25 +31,9 @@ export default {
     event: 'change'
   },
   props: {
-    icon: {
-      type: String,
-      default: undefined
-    },
-    showIndicator: {
-      type: Boolean,
-      default: false
-    },
     opened: {
       type: Boolean,
       default: false
-    },
-    info: {
-      type: Array,
-      default: null
-    },
-    iconId: {
-      type: String,
-      default: null
     }
   }
 }

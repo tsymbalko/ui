@@ -17,12 +17,12 @@
           check
         />
         <div class="profile_header-details">
-          <Heading divider="right">
+          <Heading class="profile_heading" divider="right">
             <Indicator type="error">
               Mr. Bean
             </Indicator>
           </Heading>
-          <p>
+          <div>
             <span class="profile_header-text">WebDeveloper</span>
             <span class="profile_header-text">
               <Icon
@@ -34,7 +34,7 @@
               />
               Minsk P178, 720
             </span>
-          </p>
+          </div>
           <TextLabel>
             Administrator
           </TextLabel>
@@ -54,7 +54,6 @@
             rerum sapiente temporibus unde vel voluptatem voluptatibus. Lorem
             ipsum dolor sit amet, consectetur
           </p>
-          <br />
           <p>
             adipisicing elit. Ab aliquam architecto consequuntur debitis
             doloremque, ducimus eligendi enim error est excepturi itaque magni
