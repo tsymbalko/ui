@@ -1,7 +1,7 @@
 .settings {
 
-  &_list {
-    margin-bottom: 40px;
+  &_label {
+    margin: 0;
   }
 
   &_item {
@@ -12,21 +12,13 @@
     margin-bottom: 20px;
     min-height: 42px;
 
-    p {
-      margin-bottom: 4px;
-    }
-
     &:last-child {
       margin-bottom: 0;
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: 75em) {
       flex-direction: row;
       align-items: center;
-
-      p {
-        margin-bottom: 0;
-      }
     }
   }
 }

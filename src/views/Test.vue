@@ -623,33 +623,33 @@
           </div>
         </div>
       </Card>
-      <Avatar :size="24" />
-      <Avatar :size="32" />
-      <Avatar :size="48" icon="user" />
-      <Avatar shape="square" :size="56" icon="user" />
+      <Avatar size="1.5rem" />
+      <Avatar size="2rem" />
+      <Avatar size="3rem" icon="user" />
+      <Avatar shape="square" size="3.5rem" icon="user" />
       <Badge :count="99" type="success">
-        <Avatar :size="48" icon="user" />
+        <Avatar size="2rem" icon="user" />
       </Badge>
       <Indicator type="success" text="Text" placement="bottom">
-        <Avatar :size="48" icon="user" />
+        <Avatar size="3rem" icon="user" />
       </Indicator>
       <Badge :count="99" type="success">
-        <Avatar shape="square" :size="48" icon="user" />
+        <Avatar shape="square" size="3rem" icon="user" />
       </Badge>
       <Indicator type="success" text="Text">
-        <Avatar shape="square" :size="48" icon="user" />
+        <Avatar shape="square" size="3rem" icon="user" />
       </Indicator>
       <Badge :count="99" type="success">
-        <Avatar src="https://i.pravatar.cc/50" :size="48" icon="user" />
+        <Avatar src="https://i.pravatar.cc/50" size="3rem" icon="user" />
       </Badge>
       <Indicator type="success" text="Text">
-        <Avatar src="https://i.pravatar.cc/50" :size="48" icon="user" />
+        <Avatar src="https://i.pravatar.cc/50" size="3rem" icon="user" />
       </Indicator>
       <Badge :count="99" type="success">
         <Avatar
           src="https://i.pravatar.cc/50"
           shape="square"
-          :size="48"
+          size="3rem"
           icon="user"
         />
       </Badge>
@@ -657,7 +657,7 @@
         <Avatar
           src="https://i.pravatar.cc/50"
           shape="square"
-          :size="48"
+          size="3rem"
           icon="user"
         />
       </Indicator>

@@ -2,7 +2,7 @@
   <div
     :class="['vc-avatar', { [`vc-avatar__${shape}`]: shape }]"
     :style="{
-      '--size': `${size}px`,
+      '--size': size,
       'background-image': src && `url('${src}')`
     }"
   >
@@ -49,8 +49,8 @@ export default {
       default: false
     },
     size: {
-      type: Number,
-      default: 48
+      type: String,
+      default: '3rem'
     },
     shape: {
       type: String,

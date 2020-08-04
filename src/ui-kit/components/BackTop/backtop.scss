@@ -1,9 +1,9 @@
 .vc-back-top {
   position: fixed;
-  right: 14px;
-  bottom: 32px;
-  height: 48px;
-  width: 48px;
+  right: .875rem;
+  bottom: 2rem;
+  height: 3rem;
+  width: 3rem;
   padding: 0;
   cursor: pointer;
   display: block;
@@ -42,9 +42,9 @@
   }
 
   &_arrow {
-    width: 2px;
-    border-radius: 2px;
-    height: 14px;
+    width: .125rem;
+    border-radius: .125rem;
+    height: .875rem;
     background-color: #fff;
     position: absolute;
     top: 50%;
@@ -58,8 +58,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 2px;
-      height: 10px;
+      width: .125rem;
+      height: .625rem;
       background-color: inherit;
       border-radius: inherit;
       transform-origin: 1px 1px;

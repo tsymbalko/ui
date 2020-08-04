@@ -71,7 +71,7 @@ export default {
     },
     maxWidth: {
       type: String,
-      default: '650px'
+      default: '40.625rem'
     }
   },
   watch: {

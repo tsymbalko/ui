@@ -12,7 +12,7 @@
         <Avatar
           class="profile_header-avatar"
           :src="`${require('assets/images/avatar.png')}`"
-          :size="160"
+          size="10rem"
           shape="square"
           check
         />

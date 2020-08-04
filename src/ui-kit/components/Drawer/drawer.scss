@@ -12,7 +12,6 @@
   scroll-behavior: smooth;
 
   &__mask {
-    backdrop-filter: blur(2px);
     background-color: rgba(0, 0, 0, .5);
   }
 
@@ -45,7 +44,7 @@
     right: 0;
     bottom: 0;
     margin: 0 auto;
-    width: 320px;
+    width: 20rem;
     max-width: var(--max-width);
 
     .vc-modal__center & {
@@ -59,23 +58,24 @@
       margin: 0;
     }
 
-    @media (min-width: 1200px) {
-      width: 420px;
+    @media (min-width: 75em) {
+      width: 28rem;
     }
   }
 
   &_body {
-    padding: 24px;
+    padding: 1.5rem;
     color: var(--base-text);
   }
 
   &_header {
-    padding: 24px;
+    padding: 1.5rem;
     display: flex;
     align-items: center;
   }
 
   &_title {
+    margin: 0;
     font-weight: 600;
     color: var(--base-title);
   }
@@ -83,13 +83,13 @@
   &_footer {
     display: flex;
     justify-content: space-between;
-    padding: 24px;
+    padding: 1.5rem;
 
     .vc-button + .vc-button {
-      margin-left: 10px;
+      margin-left: .625rem;
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: 75em) {
       justify-content: flex-end;
     }
   }

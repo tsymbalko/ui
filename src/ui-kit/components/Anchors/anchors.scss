@@ -1,16 +1,16 @@
 .vc-anchor {
 
   &_list {
-    padding: 12px 12px 12px 20px;
-    border-left: 1px solid var(--base-border);
+    padding: .75rem .75rem .75rem 1.25rem;
+    border-left: 2px solid var(--base-border);
   }
 
   &_link {
     display: block;
-    font-size: 14px;
+    font-size: .875rem;
     position: relative;
     color: var(--base-text);
-    padding: 2px 4px;
+    padding: .125rem .25rem;
     border-radius: var(--border-radius);
     transition: .15s ease-in-out;
 
@@ -18,11 +18,11 @@
       content: '';
       display: inline-block;
       position: absolute;
-      width: 1px;
+      width: 2px;
       top: 0;
       bottom: 0;
       background-color: var(--accent);
-      left: -21px;
+      left: calc(-1.25rem - 2px);
       opacity: 0;
       transition: .15s ease-in-out;
     }

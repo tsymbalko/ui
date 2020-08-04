@@ -22,23 +22,24 @@
   &_main {
     flex: 1 1;
     max-width: 75rem;
-    width: 100%;
     margin: 0 auto;
-    padding: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: .875rem;
 
     @media screen and (min-width: 37.5em) {
-      padding: 18px 24px;
+      padding: 1.5rem;
     }
 
     @media screen and (min-width: 75em) {
-      padding: 37px 48px;
+      padding: 3rem;
     }
   }
 
   &_float {
     position: fixed;
-    left: 14px;
-    bottom: 32px;
+    left: 1.5rem;
+    bottom: 2rem;
     z-index: 1004;
 
     @media screen and (min-width: 75em) {

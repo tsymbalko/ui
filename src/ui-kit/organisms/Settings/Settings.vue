@@ -8,18 +8,18 @@
     <template #title> Настройки </template>
     <div class="settings_list">
       <div class="settings_item">
-        <p>Оформление:</p>
+        <p class="settings_label">Оформление:</p>
         <SwitchTheme v-model="userSettings.theme" />
       </div>
       <div class="settings_item">
-        <p>Цветовой акцент:</p>
+        <p class="settings_label">Цветовой акцент:</p>
         <Color
           v-model="userSettings.colors.accent"
           @change="value => setColor('accent', value)"
         />
       </div>
       <div class="settings_item">
-        <p>Цвет выделения:</p>
+        <p class="settings_label">Цвет выделения:</p>
         <Color
           v-model="userSettings.colors.selection"
           @change="value => setColor('selection', value)"

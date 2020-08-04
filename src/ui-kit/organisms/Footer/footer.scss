@@ -1,8 +1,12 @@
 .vc-footer {
-  padding: 0 0 14px;
+  padding: 0 0 	.875rem;
   text-align: center;
 
-  @media (min-width: 900px) {
-    padding: 0 0 32px;
+  @media screen and (min-width: 37.5em) {
+    padding: 0 0 1.5rem;
+  }
+
+  @media screen and (min-width: 75em) {
+    padding: 0 0 3rem;
   }
 }

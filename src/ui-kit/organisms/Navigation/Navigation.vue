@@ -21,7 +21,7 @@
         <Badge :count="101" :overflow-count="99" type="error">
           <Avatar
             :src="`${require('assets/images/avatar.png')}`"
-            :size="48"
+            size="3rem"
             icon="user"
           />
         </Badge>
