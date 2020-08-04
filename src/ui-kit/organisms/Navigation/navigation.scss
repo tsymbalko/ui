@@ -78,7 +78,7 @@
       border-radius: 0 var(--border-radius) var(--border-radius) 0;
       transform: scale(0);
       transition: transform .2s;
-      content: "";
+      content: '';
     }
 
     &__active {

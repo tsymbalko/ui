@@ -9,17 +9,17 @@
     display: grid;
     grid-row-gap: 14px;
     grid-column-gap: 8px;
-    grid-template-areas: "toggle switch . menu"
-      ". name name name"
-      ". info info info"
-      ". date date date";
+    grid-template-areas: 'toggle switch . menu'
+      '. name name name'
+      '. info info info'
+      '. date date date';
     grid-template-rows: auto auto auto auto;
     grid-template-columns: auto auto 1fr auto;
     align-items: center;
     justify-items: start;
 
     @media (min-width: 900px) {
-      grid-template-areas: "toggle switch name info date menu";
+      grid-template-areas: 'toggle switch name info date menu';
       grid-template-rows: auto;
       grid-template-columns: auto auto 240px 1fr 126px auto;
     }

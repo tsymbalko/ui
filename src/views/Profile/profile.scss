@@ -53,14 +53,14 @@
     display: grid;
     grid-row-gap: 14px;
     grid-column-gap: 28px;
-    grid-template-areas: "breadcrumb"
-      "main"
-      "aside";
+    grid-template-areas: 'breadcrumb'
+      'main'
+      'aside';
     grid-template-rows: repeat(3, auto);
 
     @media (min-width: 1200px) {
-      grid-template-areas: "breadcrumb breadcrumb"
-        "main aside";
+      grid-template-areas: 'breadcrumb breadcrumb'
+        'main aside';
       grid-template-rows: repeat(2, auto);
       grid-template-columns: minmax(296px, 1fr) 340px;
       padding-left: 40px;

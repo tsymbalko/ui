@@ -4,8 +4,8 @@
 
   @media (min-width: 900px) {
     grid-gap: 40px;
-    grid-template-areas: "header header"
-      "article anchors";
+    grid-template-areas: 'header header'
+      'article anchors';
     grid-template-rows: repeat(2, auto);
     grid-template-columns: 1fr auto;
   }
