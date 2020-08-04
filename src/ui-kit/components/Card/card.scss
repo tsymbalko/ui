@@ -26,6 +26,10 @@
     content: '';
   }
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &__primary:before {
     background-color: var(--accent);
   }
@@ -40,9 +44,5 @@
 
   &__warning:before {
     background-color: var(--orange);
-  }
-
-  &:last-child {
-    margin-bottom: 0;
   }
 }

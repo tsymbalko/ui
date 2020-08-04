@@ -2,10 +2,6 @@
   border: 2px solid var(--base-border);
   border-radius: 4px;
 
-  & + & {
-    margin-top: 8px;
-  }
-
   &_header {
     display: flex;
     align-items: center;
@@ -60,5 +56,9 @@
 
   &_content {
     padding: 16px;
+  }
+
+  & + & {
+    margin-top: 8px;
   }
 }

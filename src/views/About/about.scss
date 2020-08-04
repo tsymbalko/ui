@@ -10,13 +10,6 @@
     grid-template-columns: 1fr auto;
   }
 
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-
   &_header {
     grid-area: header;
   }
@@ -42,5 +35,12 @@
     @media (min-width: 1200px) {
       top: 37px;
     }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
   }
 }

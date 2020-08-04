@@ -24,26 +24,6 @@
       grid-template-columns: auto auto 240px 1fr 126px auto;
     }
 
-    &-toggle {
-      grid-area: toggle;
-
-      &:hover {
-        background-color: var(--base-background);
-      }
-
-      .vc-button_icon {
-        transform: rotate(-90deg);
-        transition: transform .2s;
-      }
-
-      &__active {
-
-        .vc-button_icon {
-          transform: rotate(0);
-        }
-      }
-    }
-
     &-switch {
       grid-area: switch;
     }
@@ -93,7 +73,7 @@
       }
     }
   }
-
+  
   &_body {
     display: grid;
     grid-gap: 16px;
@@ -113,21 +93,21 @@
     &-comments {
       display: flex;
       flex-direction: column;
-
-      &-avatar {
-        flex: 0 0 auto;
-        margin-right: 10px;
-      }
-
-      &-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-        font-size: 14px;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
+    }
+    
+    &-comments-avatar {
+      flex: 0 0 auto;
+      margin-right: 10px;
+    }
+  
+    &-comments-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 14px;
+    
+      &:last-child {
+        margin-bottom: 0;
       }
     }
 
@@ -137,6 +117,25 @@
         margin-right: 5px;
         margin-bottom: 5px;
       }
+    }
+  }
+  
+  &_header-toggle {
+    grid-area: toggle;
+    
+    &:hover {
+      background-color: var(--base-background);
+    }
+    
+    &__active {
+      
+      .vc-button_icon {
+        transform: rotate(-90deg);
+      }
+    }
+    
+    .vc-button_icon {
+      transition: transform .2s;
     }
   }
 }

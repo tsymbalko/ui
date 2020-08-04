@@ -5,7 +5,7 @@
   "rules": {
     "max-nesting-depth": [3, {
       "message": "Nesting > 3 level",
-      "ignore": ["at-rules-without-declaration-blocks"],
+      "ignore": ["blockless-at-rules"],
       "severity": "warning"
     }],
     "string-quotes": ["single", {
