@@ -1,21 +1,19 @@
 .dashboard {
   display: grid;
-  grid-column-gap: 20px;
   grid-row-gap: 32px;
-  grid-template-areas:
-    'header'
-    'overview'
-    'progress'
-    'information'
-    'activity';
+  grid-column-gap: 20px;
+  grid-template-areas: "header"
+    "overview"
+    "progress"
+    "information"
+    "activity";
 
   @media (min-width: 1200px) {
+    grid-template-areas: "header header header header header header"
+      "overview overview overview progress progress progress"
+      "information information activity activity activity activity";
     grid-template-rows: repeat(3, auto);
     grid-template-columns: repeat(6, 1fr);
-    grid-template-areas:
-      'header header header header header header'
-      'overview overview overview progress progress progress'
-      'information information activity activity activity activity';
   }
 
   &_header {

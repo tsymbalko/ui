@@ -1,7 +1,7 @@
 .vc-header {
   position: sticky;
   top: 0;
+  min-height: var(--header-height);
   background-color: var(--base-background);
   border-bottom: 1px solid var(--base-border);
-  min-height: var(--header-height);
 }

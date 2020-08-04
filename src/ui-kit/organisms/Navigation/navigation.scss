@@ -1,40 +1,38 @@
 .vc-navigation {
-  --indent: .125rem;
-  --item-height: 4.375rem;
   position: fixed;
   top: 0;
-  left: 0;
   bottom: 0;
+  left: 0;
   z-index: 1000;
-  overflow-y: auto;
-  padding: var(--indent);
   flex-direction: column;
   width: calc(var(--navigation-width) - var(--indent) * 2);
-  transition: transform .3s ease-in-out;
-  backdrop-filter: blur(4px);
+  padding: var(--indent);
+  overflow-y: auto;
   background-color: var(--navigation-bg);
   transform: translateX(-100%);
+  backdrop-filter: blur(4px);
+  transition: transform .3s ease-in-out;
+
+  @media screen and (min-width: 75em) {
+    display: flex;
+    padding-bottom: var(--grid-gap);
+    background-color: var(--base-background);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .07);
+    transform: translateX(0);
+    backdrop-filter: none;
+  }
 
   &__active {
     display: flex;
     transform: translateX(0);
   }
 
-  @media screen and (min-width: 75em) {
-    display: flex;
-    transform: translateX(0);
-    padding-bottom: var(--grid-gap);
-    background-color: var(--base-background);
-    backdrop-filter: none;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .07);
-  }
-
   &_list {
-    padding: 0;
-    margin: 0 0 6rem 0;
     display: flex;
-    flex-direction: column;
     flex: 1 0 auto;
+    flex-direction: column;
+    margin: 0 0 6rem 0;
+    padding: 0;
     list-style: none;
 
     @media screen and (min-width: 75em) {
@@ -55,32 +53,32 @@
   }
 
   &_link {
+    position: relative;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
     height: calc(var(--item-height) - 1rem);
     padding: .5rem;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border-radius: var(--border-radius);
     line-height: 1;
-    flex: 0 0 auto;
+    text-decoration: none;
+    border-radius: var(--border-radius);
 
     &:hover {
       background-color: var(--base-hover);
     }
 
     &:before {
-      content: '';
       position: absolute;
       top: 1rem;
       bottom: 1rem;
       left: 0;
-      border-radius: 0 var(--border-radius) var(--border-radius) 0;
       width: 4px;
       background-color: var(--accent);
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
       transform: scale(0);
       transition: transform .2s;
+      content: "";
     }
 
     &__active {
@@ -102,10 +100,10 @@
 
     &__skip {
       position: absolute;
-      z-index: 2;
       top: var(--indent);
       right: var(--indent);
       left: var(--indent);
+      z-index: 2;
 
       &:not(:focus) {
         right: 100%;
@@ -143,4 +141,6 @@
       fill: var(--accent);
     }
   }
+  --indent: .125rem;
+  --item-height: 4.375rem;
 }

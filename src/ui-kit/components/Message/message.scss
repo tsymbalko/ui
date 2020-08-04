@@ -1,25 +1,24 @@
 .vc-message {
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
-  padding: 20px;
+  left: 0;
   z-index: 10000;
+  padding: 20px;
   pointer-events: none;
 
   &__animation {
 
     &-enter-active,
     &-leave-active {
-      transition:
-        opacity .35s ease-in-out,
+      transition: opacity .35s ease-in-out,
         transform .35s ease-in-out;
     }
 
     &-enter,
     &-leave-to {
-      opacity: 0;
       transform: translateY(-10px);
+      opacity: 0;
     }
   }
 
@@ -31,13 +30,13 @@
 
   &_content {
     position: relative;
-    pointer-events: auto;
-    margin: 0 auto;
     max-width: 520px;
     min-height: 52px;
-    border-radius: var(--border-radius);
+    margin: 0 auto;
     padding: 12px 48px 12px 24px;
     color: var(--invers);
+    border-radius: var(--border-radius);
+    pointer-events: auto;
 
     &__success {
       background-color: var(--green);

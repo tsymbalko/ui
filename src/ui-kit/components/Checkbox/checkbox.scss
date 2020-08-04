@@ -3,18 +3,18 @@
   align-items: center;
 
   &_input {
-    appearance: none;
     position: relative;
-    cursor: pointer;
-    border: none;
     background-color: var(--base-border);
+    border: 0;
+    cursor: pointer;
     transition: background-color .2s cubic-bezier(.78, .14, .15, .86);
+    appearance: none;
 
     &:after {
-      content: '';
       position: absolute;
-      pointer-events: none;
       transition: all .2s cubic-bezier(.78, .14, .15, .86);
+      content: "";
+      pointer-events: none;
     }
 
     &__checkbox {
@@ -23,15 +23,15 @@
       border-radius: var(--border-radius);
 
       &:after {
+        top: 3px;
+        left: 7px;
         width: 8px;
         height: 12px;
         border: 2px solid #fff;
         border-top: 0;
         border-left: 0;
-        left: 7px;
-        top: 3px;
-        opacity: 0;
         transform: rotate(40deg);
+        opacity: 0;
       }
 
       &:checked:after {

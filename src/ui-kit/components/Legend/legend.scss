@@ -1,14 +1,14 @@
 .vc-legend {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 
   &_item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    overflow: hidden;
+    justify-content: space-between;
     margin-bottom: 8px;
+    overflow: hidden;
 
     &:last-child {
       margin-bottom: 8px;
@@ -17,30 +17,30 @@
 
   &_title {
     display: flex;
-    align-items: center;
     flex: 1;
-    margin: 0;
+    align-items: center;
     min-width: 28px;
+    margin: 0;
 
     &:after {
-      content: '';
       display: inline-block;
       flex-grow: 1;
       flex-shrink: 1;
+      height: 10px;
       margin: 0 4px;
       padding: 0 4px;
       background-image: linear-gradient(to right, #d8dae0 3px, transparent 1px);
-      opacity: .4;
-      background-size: 4px 1px;
       background-repeat: repeat-x;
       background-position: left bottom;
-      height: 10px;
+      background-size: 4px 1px;
+      opacity: .4;
+      content: "";
     }
   }
 
   &_text {
-    white-space: nowrap;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
   }
 

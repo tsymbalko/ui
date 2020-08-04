@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: var(--light-blue);
   padding-left: 0;
+  background-color: var(--light-blue);
 
   @media screen and (min-width: 75em) {
     padding-left: var(--navigation-width);
@@ -15,16 +15,16 @@
 
   &__locked {
     position: fixed;
-    left: 0;
     right: 0;
+    left: 0;
   }
 
   &_main {
     flex: 1 1;
+    box-sizing: border-box;
+    width: 100%;
     max-width: 75rem;
     margin: 0 auto;
-    width: 100%;
-    box-sizing: border-box;
     padding: .875rem;
 
     @media screen and (min-width: 37.5em) {
@@ -38,8 +38,8 @@
 
   &_float {
     position: fixed;
-    left: 1.5rem;
     bottom: 2rem;
+    left: 1.5rem;
     z-index: 1004;
 
     @media screen and (min-width: 75em) {

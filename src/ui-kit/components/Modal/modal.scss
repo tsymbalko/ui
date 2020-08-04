@@ -1,13 +1,13 @@
 .vc-modal {
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
-  padding: 28px;
+  left: 0;
   z-index: 5000;
   display: flex;
   flex-direction: column;
+  padding: 28px;
   overflow-x: hidden;
   overflow-y: auto;
   scroll-behavior: smooth;
@@ -29,8 +29,8 @@
 
     &-enter,
     &-leave-to {
-      opacity: 0;
       transform: scale(1.1);
+      opacity: 0;
     }
   }
 
@@ -43,27 +43,27 @@
 
     &-enter,
     &-leave-to {
-      opacity: 0;
       transform: translateX(40px);
+      opacity: 0;
     }
   }
 
   &_content {
-    border-radius: var(--border-radius);
-    background: var(--base-background);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
     position: relative;
-    margin: 0 auto;
     width: 100%;
     max-width: var(--max-width);
+    margin: 0 auto;
+    background: var(--base-background);
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
 
     .vc-modal__center & {
       margin: auto;
     }
 
     .vc-modal__fullscreen & {
-      width: 100%;
       flex: 1 1 auto;
+      width: 100%;
       max-width: none;
       margin: 0;
     }
@@ -75,14 +75,14 @@
   }
 
   &_header {
-    padding: 24px;
     display: flex;
     align-items: center;
+    padding: 24px;
   }
 
   &_title {
-    font-weight: 600;
     color: var(--base-title);
+    font-weight: 600;
   }
 
   &_footer {

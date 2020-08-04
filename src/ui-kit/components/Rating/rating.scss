@@ -1,7 +1,7 @@
 .vc-rating {
-  border: none;
   margin: 0;
   padding: 0 0 .375rem 0;
+  border: 0;
 
   &_legend {
     padding: 0 .25rem;
@@ -9,14 +9,14 @@
   }
 
   &_item {
-    display: inline-block;
-    font-size: 0;
-    padding: .125rem;
-    vertical-align: middle;
-    line-height: 1;
-    cursor: pointer;
     position: relative;
+    display: inline-block;
+    padding: .125rem;
     color: var(--disabled);
+    font-size: 0;
+    line-height: 1;
+    vertical-align: middle;
+    cursor: pointer;
 
     &:focus-within {
       filter: drop-shadow(0 0 3px var(--focus));
@@ -33,17 +33,17 @@
   }
 
   &_checkbox {
-    appearance: none;
-    width: .125rem;
-    height: .125rem;
-    opacity: 0;
-    margin: 0;
-    border-radius: 100%;
     position: absolute;
     bottom: -.125rem;
     left: 50%;
-    transform: translateX(-50%);
+    width: .125rem;
+    height: .125rem;
+    margin: 0;
     background-color: var(--focus);
+    border-radius: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    appearance: none;
 
     &:focus {
       opacity: 1;

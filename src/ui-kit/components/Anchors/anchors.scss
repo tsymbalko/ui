@@ -6,25 +6,25 @@
   }
 
   &_link {
-    display: block;
-    font-size: .875rem;
     position: relative;
-    color: var(--base-text);
+    display: block;
     padding: .125rem .25rem;
+    color: var(--base-text);
+    font-size: .875rem;
     border-radius: var(--border-radius);
     transition: .15s ease-in-out;
 
     &:before {
-      content: '';
-      display: inline-block;
       position: absolute;
-      width: 2px;
       top: 0;
       bottom: 0;
-      background-color: var(--accent);
       left: calc(-1.25rem - 2px);
+      display: inline-block;
+      width: 2px;
+      background-color: var(--accent);
       opacity: 0;
       transition: .15s ease-in-out;
+      content: "";
     }
 
     &:hover {

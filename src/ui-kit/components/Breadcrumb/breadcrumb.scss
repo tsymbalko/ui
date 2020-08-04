@@ -1,10 +1,10 @@
 .vc-breadcrumb {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  list-style: none;
+  align-items: center;
   margin: 0;
   padding: 0;
+  list-style: none;
 
   &_item {
     display: flex;
@@ -19,21 +19,21 @@
 
   &_separator {
     display: inline-block;
-    font-size: .75rem;
-    line-height: 1;
     margin: 0 .625rem;
     color: var(--disabled);
+    font-size: .75rem;
+    line-height: 1;
   }
 
   &_link {
-    white-space: nowrap;
     position: relative;
-    font-size: .75rem;
-    padding: .125rem .25rem;
     display: inline-flex;
     align-items: center;
-    border-radius: var(--border-radius);
+    padding: .125rem .25rem;
     color: var(--blue);
+    font-size: .75rem;
+    white-space: nowrap;
+    border-radius: var(--border-radius);
 
     &:hover {
       background-color: var(--base-hover);

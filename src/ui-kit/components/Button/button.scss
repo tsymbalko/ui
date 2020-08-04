@@ -1,51 +1,85 @@
 .vc-button {
-  --size: 2.75rem;
-  padding: .625rem .75rem;
-  min-width: 7.5rem;
-  line-height: 1.5;
+  position: relative;
   display: inline-flex;
-  vertical-align: middle;
   align-items: center;
   justify-content: center;
-  white-space: nowrap;
-  font-family: inherit;
-  transition: color .2s;
-  position: relative;
+  min-width: 7.5rem;
   height: var(--size);
+  padding: .625rem .75rem;
+  font-family: inherit;
+  line-height: 1.5;
+  white-space: nowrap;
+  vertical-align: middle;
+  transition: color .2s;
+
+  @media (hover: hover) {
+
+    &:not([disabled]):hover {
+
+      &.vc-button__color-warning.vc-button__variant-bordered,
+      &.vc-button__color-warning.vc-button__variant-ghost {
+        background-color: var(--orange-hover);
+      }
+
+      &.vc-button__color-error.vc-button__variant-bordered,
+      &.vc-button__color-error.vc-button__variant-ghost {
+        background-color: var(--red-hover);
+      }
+
+      &.vc-button__color-success.vc-button__variant-bordered,
+      &.vc-button__color-success.vc-button__variant-ghost {
+        background-color: var(--green-hover);
+      }
+
+      &.vc-button__color-primary.vc-button__variant-bordered,
+      &.vc-button__color-primary.vc-button__variant-ghost {
+        background-color: var(--blue-hover);
+      }
+
+      &.vc-button__color-secondary.vc-button__variant-bordered,
+      &.vc-button__color-secondary.vc-button__variant-ghost {
+        background-color: var(--invers-hover);
+      }
+
+      &.vc-button__variant-normal {
+        opacity: .7;
+      }
+    }
+  }
 
   &__color-primary {
-    background-color: var(--accent);
     color: var(--accent);
+    background-color: var(--accent);
   }
 
   &__color-error {
-    background-color: var(--red);
     color: var(--red);
+    background-color: var(--red);
   }
 
   &__color-success {
-    background-color: var(--green);
     color: var(--green);
+    background-color: var(--green);
   }
 
   &__color-warning {
-    background-color: var(--orange);
     color: var(--orange);
+    background-color: var(--orange);
   }
 
   &__variant-normal {
     color: #fff;
 
     &.vc-button__color-secondary {
-      background-color: var(--invers);
       color: var(--invers-light);
+      background-color: var(--invers);
     }
   }
 
   &__variant-bordered {
+    padding: .5rem .75rem;
     background-color: transparent;
     border: .125rem solid currentColor;
-    padding: .5rem .75rem;
 
     &.vc-button__color-secondary {
       color: var(--invers);
@@ -86,46 +120,11 @@
     border-radius: var(--border-radius);
   }
 
-  @media (hover: hover) {
-
-    &:not([disabled]):hover {
-
-      &.vc-button__color-warning.vc-button__variant-bordered,
-      &.vc-button__color-warning.vc-button__variant-ghost {
-        background-color: var(--orange-hover);
-      }
-
-      &.vc-button__color-error.vc-button__variant-bordered,
-      &.vc-button__color-error.vc-button__variant-ghost {
-        background-color: var(--red-hover);
-      }
-
-      &.vc-button__color-success.vc-button__variant-bordered,
-      &.vc-button__color-success.vc-button__variant-ghost {
-        background-color: var(--green-hover);
-      }
-
-      &.vc-button__color-primary.vc-button__variant-bordered,
-      &.vc-button__color-primary.vc-button__variant-ghost {
-        background-color: var(--blue-hover);
-      }
-
-      &.vc-button__color-secondary.vc-button__variant-bordered,
-      &.vc-button__color-secondary.vc-button__variant-ghost {
-        background-color: var(--invers-hover);
-      }
-
-      &.vc-button__variant-normal {
-        opacity: .7;
-      }
-    }
-  }
-
   &__disabled {
 
     &.vc-button__variant-normal {
-      background-color: var(--disabled);
       color: #fff;
+      background-color: var(--disabled);
     }
 
     &.vc-button__variant-bordered {
@@ -143,28 +142,28 @@
   }
 
   &_text {
+    position: relative;
+    padding: 0 .375rem;
     font-weight: 500;
     font-size: 1rem;
     line-height: 1;
-    padding: 0 .375rem;
-    position: relative;
 
     .vc-button__shape-square &,
     .vc-button__shape-circle & {
       position: absolute;
-      height: 1px;
       width: 1px;
+      height: 1px;
       overflow: hidden;
-      clip: rect(1px, 1px, 1px, 1px);
       white-space: nowrap;
+      clip: rect(1px, 1px, 1px, 1px);
     }
   }
 
   &_icon {
-    width: 1.5rem;
-    height: 1.5rem;
     flex: 0 0 auto;
     box-sizing: initial;
+    width: 1.5rem;
+    height: 1.5rem;
     fill: currentColor;
 
     &__left {
@@ -184,6 +183,7 @@
     stroke: currentColor;
     stroke-linecap: round;
   }
+  --size: 2.75rem;
 }
 
 @keyframes dashSpinner {

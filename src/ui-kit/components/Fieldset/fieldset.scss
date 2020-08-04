@@ -1,16 +1,16 @@
 .vc-fieldset {
+  position: relative;
+  min-height: 80px;
+  padding: 0 16px 16px;
   border: 2px solid var(--base-border);
   border-radius: var(--border-radius);
-  position: relative;
-  padding: 0 16px 16px;
-  min-height: 80px;
 
   &_legend {
-    padding: 0 12px;
-    line-height: 2;
-    color: var(--base-title);
     margin-left: 12px;
+    padding: 0 12px;
+    color: var(--base-title);
     font-size: 16px;
+    line-height: 2;
   }
 
   &_button {
@@ -21,7 +21,7 @@
   }
 
   &_description {
-    font-weight: 600;
     color: var(--base-text);
+    font-weight: 600;
   }
 }

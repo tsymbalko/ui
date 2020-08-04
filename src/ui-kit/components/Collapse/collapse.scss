@@ -7,13 +7,13 @@
   }
 
   &_header {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    text-align: left;
+    width: 100%;
     padding: 16px;
     line-height: 1;
+    text-align: left;
     border-radius: 2px;
 
     &:hover {
@@ -28,20 +28,19 @@
   &_title {
     position: relative;
     display: inline-block;
-    font-size: 18px;
     margin: 0;
     color: var(--base-title);
+    font-size: 18px;
   }
 
   &_arrow {
+    position: relative;
     width: 24px;
     height: 24px;
     transform: rotate(45deg);
-    position: relative;
     transition: transform .2s;
 
     &:before {
-      content: '';
       position: absolute;
       top: 50%;
       left: 50%;
@@ -51,6 +50,7 @@
       border-width: 0 2px 2px 0;
       transform: translate(-50%, -50%);
       transition: border .2s;
+      content: "";
     }
 
     .vc-collapse__open & {

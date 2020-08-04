@@ -1,11 +1,11 @@
 .vc-menu-toggle {
-  padding: .75rem;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, .3);
-  border: none;
   box-sizing: border-box;
-  cursor: pointer;
+  padding: .75rem;
   color: #fff;
   background-color: var(--blue);
+  border: 0;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .3);
+  cursor: pointer;
 
   &:focus {
     box-shadow: 0 8px 15px rgba(0, 0, 0, .3), var(--base-focus);
@@ -20,24 +20,24 @@
   }
 
   &_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
     width: 1.5rem;
     height: 1.5rem;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: space-between;
 
     &:before,
     &:after {
-      content: '';
       display: block;
       width: 2rem;
       height: .25rem;
-      border-radius: .25rem;
       background: currentColor;
+      border-radius: .25rem;
+      transform: translateX(-.25rem);
       transform-origin: .125rem .125rem;
       transition: .25s;
-      transform: translateX(-.25rem);
+      content: "";
     }
 
     .vc-menu-toggle__active & {
@@ -55,13 +55,13 @@
   &_line {
     width: 100%;
     height: .25rem;
-    border-radius: .25rem;
     background: currentColor;
+    border-radius: .25rem;
     transition: .35s;
 
     .vc-menu-toggle__active & {
-      opacity: 0;
       transform: translateX(-.625rem);
+      opacity: 0;
     }
   }
 }

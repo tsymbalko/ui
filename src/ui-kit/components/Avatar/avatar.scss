@@ -1,16 +1,16 @@
 .vc-avatar {
-  width: var(--size);
-  height: var(--size);
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: var(--size);
+  height: var(--size);
+  color: #fff;
   font-size: calc(var(--size) / 2);
   text-align: center;
   background-color: var(--dark-blue);
-  color: #fff;
-  position: relative;
-  background-size: cover;
   background-position: center center;
+  background-size: cover;
   border: 2px solid var(--base-background);
 
   &__circle {
@@ -47,17 +47,17 @@
   }
 
   &_check {
-    border-radius: 50%;
-    width: calc(var(--size) / 3);
-    height: calc(var(--size) / 3);
-    max-width: 1.25rem;
-    max-height: 1.25rem;
-    fill: var(--green);
     position: absolute;
-    background-color: var(--base-background);
-    z-index: 10;
     right: -.25rem;
     bottom: -.25rem;
+    z-index: 10;
+    width: calc(var(--size) / 3);
+    max-width: 1.25rem;
+    height: calc(var(--size) / 3);
+    max-height: 1.25rem;
+    background-color: var(--base-background);
+    border-radius: 50%;
     transform-origin: 100% 0;
+    fill: var(--green);
   }
 }

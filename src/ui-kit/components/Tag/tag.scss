@@ -28,15 +28,15 @@
   }
 
   &_text {
+    position: relative;
     display: inline-block;
     padding: 5px 12px;
-    background-color: var(--color);
     color: #fff;
+    font-weight: 600;
     font-size: 14px;
     line-height: 1;
-    font-weight: 600;
     white-space: nowrap;
-    position: relative;
+    background-color: var(--color);
 
     &:focus-within {
       box-shadow: var(--base-focus);
@@ -60,14 +60,14 @@
   }
 
   &_close {
+    position: absolute;
+    top: 50%;
+    right: 4px;
     width: 20px;
     height: 20px;
+    margin-top: -10px;
     padding: 0;
     border-radius: 50%;
-    position: absolute;
-    right: 4px;
-    top: 50%;
-    margin-top: -10px;
 
     &:hover {
       color: var(--grey);

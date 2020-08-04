@@ -1,15 +1,15 @@
 .vc-progress-circle {
-  display: inline-block;
   position: relative;
+  display: inline-block;
 
   &_value {
     position: absolute;
     top: 50%;
     left: 0;
-    text-align: center;
     width: 100%;
-    transform: translateY(-50%);
     color: var(--base-title);
+    text-align: center;
+    transform: translateY(-50%);
   }
 
   &_box {
@@ -18,16 +18,16 @@
   }
 
   &_underlay {
-    stroke: var(--base-border);
     fill: transparent;
+    stroke: var(--base-border);
   }
 
   &_overlay {
-    fill: transparent;
-    transition: stroke-dashoffset 1s ease-in-out;
-    stroke-linecap: round;
     transform: rotate(-90deg);
     transform-origin: center;
+    transition: stroke-dashoffset 1s ease-in-out;
+    fill: transparent;
+    stroke-linecap: round;
 
     &__active {
       fill: var(--red);

@@ -1,9 +1,9 @@
 .vc-indicator {
-  display: inline-block;
   position: relative;
-  line-height: 1;
+  display: inline-block;
   margin: 0;
   padding: 0;
+  line-height: 1;
 
   &__warning {
     --color: var(--orange);
@@ -23,22 +23,22 @@
 
   &_text {
     display: inline-block;
-    color: var(--color);
     padding: 0 10px;
+    color: var(--color);
   }
 
   &_dot {
-    display: inline-block;
-    vertical-align: baseline;
     position: absolute;
-    z-index: 10;
     right: 0;
-    transform-origin: 100% 0%;
+    z-index: 10;
+    display: inline-block;
     width: 12px;
     height: 12px;
+    vertical-align: baseline;
+    background-color: var(--color);
     border-radius: 50%;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
-    background-color: var(--color);
+    transform-origin: 100% 0%;
 
     &__top {
       top: 0;
@@ -53,16 +53,16 @@
     &__pulse {
 
       &:after {
-        content: '';
-        width: 2px;
-        height: 2px;
-        background-color: transparent;
         position: absolute;
         top: 5px;
         left: 5px;
+        width: 2px;
+        height: 2px;
+        background-color: transparent;
         border-radius: 100%;
-        animation: pulse 1.6s infinite ease-in-out;
         box-shadow: 0 0 0 20px var(--color);
+        animation: pulse 1.6s infinite ease-in-out;
+        content: "";
       }
     }
 
@@ -72,8 +72,8 @@
 
     .vc-indicator__inline & {
       position: relative;
-      transform: none;
       box-shadow: none;
+      transform: none;
     }
   }
 }

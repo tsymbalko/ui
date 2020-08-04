@@ -1,28 +1,28 @@
 .vc-badge {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   margin: 0;
   padding: 0;
   line-height: 1;
 
   &_value {
-    display: inline-block;
-    vertical-align: baseline;
     position: absolute;
-    z-index: 10;
-    white-space: nowrap;
     top: 0;
     right: 0;
+    z-index: 10;
+    display: inline-block;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: baseline;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
     transform: translate(50%, -50%);
     transform-origin: 100% 0%;
-    height: 20px;
-    line-height: 20px;
-    text-align: center;
-    font-size: 14px;
-    padding: 0 6px;
-    min-width: 20px;
-    color: #fff;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
 
     &__warning {
       background-color: var(--orange);
@@ -50,8 +50,8 @@
 
     .vc-badge__inline & {
       position: relative;
-      transform: none;
       box-shadow: none;
+      transform: none;
     }
   }
 }
