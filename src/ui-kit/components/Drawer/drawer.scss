@@ -15,6 +15,10 @@
     background-color: rgba(0, 0, 0, .5);
   }
 
+  &__close-btn {
+    margin-left: auto;
+  }
+
   &_animation {
 
     &-enter-active,
@@ -92,9 +96,5 @@
     .vc-button + .vc-button {
       margin-left: .625rem;
     }
-  }
-
-  &__close-btn {
-    margin-left: auto;
   }
 }

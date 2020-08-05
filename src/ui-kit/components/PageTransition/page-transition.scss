@@ -2,7 +2,7 @@
 
   &-enter-active,
   &-leave-active {
-    transition: transform .2s ease, opacity .2s ease;
+    transition: opacity .4s cubic-bezier(.61, 1, .88, 1);
   }
 
   &-enter,

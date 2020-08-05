@@ -1,5 +1,5 @@
 <template>
-  <transition :name="`vc-modal_animation__${animation}`">
+  <transition :name="`vc-modal__animation-${animation}`">
     <div
       v-if="visible"
       :class="[
@@ -20,11 +20,11 @@
             <h2 class="vc-modal_title">Simple title</h2>
             <Button
               ref="modalClose"
-              class="vc-modal__close-btn"
+              class="vc-modal_close"
               icon="multiply"
               shape="square"
               type="ghost"
-              aria-label="close modal"
+              aria-label="close"
               @click="closeModal"
             />
           </div>

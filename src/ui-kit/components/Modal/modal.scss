@@ -20,7 +20,7 @@
     background-color: rgba(0, 0, 0, .5);
   }
 
-  &_animation__scale {
+  &__animation-scale {
 
     &-enter-active,
     &-leave-active {
@@ -34,7 +34,7 @@
     }
   }
 
-  &_animation__fade-left {
+  &__animation-fade-left {
 
     &-enter-active,
     &-leave-active {
@@ -46,6 +46,10 @@
       transform: translateX(40px);
       opacity: 0;
     }
+  }
+
+  &_close {
+    margin-left: auto;
   }
 
   &_content {
@@ -92,9 +96,5 @@
     .vc-button + .vc-button {
       margin-left: 10px;
     }
-  }
-
-  &__close-btn {
-    margin-left: auto;
   }
 }

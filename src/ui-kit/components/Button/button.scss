@@ -1,5 +1,4 @@
 .vc-button {
-  --size: 2.75rem;
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -47,7 +46,7 @@
       }
     }
   }
-
+  
   &:disabled {
     cursor: not-allowed;
   }
@@ -184,6 +183,7 @@
     stroke: currentColor;
     stroke-linecap: round;
   }
+  --size: 2.75rem;
 }
 
 @keyframes dashSpinner {

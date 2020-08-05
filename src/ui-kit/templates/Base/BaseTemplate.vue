@@ -5,7 +5,7 @@
       <slot name="float" />
     </div>
     <slot name="header" />
-    <main class="vc-layout_main" id="main">
+    <main class="vc-layout_main">
       <slot />
     </main>
     <slot name="footer" />
