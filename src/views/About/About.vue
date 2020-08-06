@@ -530,7 +530,7 @@
         </Section>
       </Card>
     </div>
-    <Anchors class="about_anchors" :selector="'.test-section[id]'" />
+    <Anchors class="about_anchors" selector="test-section" />
   </div>
 </template>
 

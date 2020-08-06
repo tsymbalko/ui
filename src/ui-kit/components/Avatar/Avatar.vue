@@ -1,41 +1,28 @@
 <template>
   <div
-    :class="['vc-avatar', { [`vc-avatar__${shape}`]: shape }]"
-    :style="{
-      '--size': size,
-      'background-image': src && `url('${src}')`
-    }"
+    :class="['vc-avatar', { [`vc-avatar__shape-${shape}`]: shape }]"
+    :style="{ '--size': `${size}rem` }"
   >
     <template>
-      <span v-if="text && !src">
-        {{ text | getName }}
-      </span>
-      <Icon v-else-if="icon && !src" :name="icon" class="vc-avatar_icon" />
+      <slot>
+        <img v-if="src" class="vc-avatar_image" :src="src" alt="avatar" />
+        <Icon v-else-if="icon" :name="icon" class="vc-avatar_icon" />
+      </slot>
     </template>
-    <Icon v-if="check" name="check-circle" class="vc-avatar_check" />
   </div>
 </template>
 
 <script>
 import Icon from '../Icon/Icon'
+/**
+ * Компонент для создания списка якорных ссылок
+ */
 export default {
   name: 'Avatar',
   components: {
     Icon
   },
-  filters: {
-    getName(value) {
-      return value
-        .split(' ')
-        .map(item => item.charAt(0).toUpperCase())
-        .join('')
-    }
-  },
   props: {
-    text: {
-      type: String,
-      default: ''
-    },
     src: {
       type: String,
       default: ''
@@ -44,13 +31,9 @@ export default {
       type: String,
       default: 'user'
     },
-    check: {
-      type: Boolean,
-      default: false
-    },
     size: {
-      type: String,
-      default: '3rem'
+      type: Number,
+      default: 3
     },
     shape: {
       type: String,

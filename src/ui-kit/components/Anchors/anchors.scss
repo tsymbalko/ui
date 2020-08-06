@@ -2,7 +2,7 @@
 
   &_list {
     padding: .75rem .75rem .75rem 1.25rem;
-    border-left: 2px solid var(--base-border);
+    border-left: 1px solid var(--base-border);
   }
 
   &_link {
@@ -18,9 +18,9 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      left: calc(-1.25rem - 2px);
+      left: calc(-1.25rem - 1px);
       display: inline-block;
-      width: 2px;
+      width: 1px;
       background-color: var(--accent);
       opacity: 0;
       transition: .15s ease-in-out;

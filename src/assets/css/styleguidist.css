@@ -1,6 +1,6 @@
 div[data-theme] {
-  background-color: var(--base-background);
   padding: 12px;
+  background-color: var(--base-background);
 }
 
 div[data-grid='row'] {

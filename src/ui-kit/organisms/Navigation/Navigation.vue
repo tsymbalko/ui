@@ -19,11 +19,7 @@
         title="Profile"
       >
         <Badge :count="101" :overflow-count="99" type="error">
-          <Avatar
-            :src="`${require('assets/images/avatar.png')}`"
-            size="3rem"
-            icon="user"
-          />
+          <Avatar :src="`${require('assets/images/avatar.png')}`" icon="user" />
         </Badge>
       </router-link>
       <ul class="vc-navigation_list">

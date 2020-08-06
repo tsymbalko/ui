@@ -57,28 +57,28 @@
 ```vue
 <div data-theme="light">
     <div data-grid="row">
-        <Button shape="circle"   icon="cog">Button</Button>
-        <Button shape="round"   icon="cog">Button</Button>
-        <Button shape="round"   icon="cog" icon-position="right">Button</Button>
-        <Button shape="square"   icon="cog">Button</Button>
-        <Button shape="rectangle"   icon="cog">Button</Button>
-        <Button shape="rectangle"   icon="cog" icon-position="right">Button</Button>
+        <Button shape="circle" icon="cog">Button</Button>
+        <Button shape="round" icon="cog">Button</Button>
+        <Button shape="round" icon="cog" icon-position="right">Button</Button>
+        <Button shape="square" icon="cog">Button</Button>
+        <Button shape="rectangle" icon="cog">Button</Button>
+        <Button shape="rectangle" icon="cog" icon-position="right">Button</Button>
     </div>
     <div data-grid="row">
-        <Button variant="bordered" shape="circle"   icon="cog">Button</Button>
-        <Button variant="bordered" shape="round"   icon="cog">Button</Button>
-        <Button variant="bordered" shape="round"   icon="cog" icon-position="right">Button</Button>
-        <Button variant="bordered" shape="square"   icon="cog">Button</Button>
-        <Button variant="bordered" shape="rectangle"   icon="cog">Button</Button>
-        <Button variant="bordered" shape="rectangle"   icon="cog" icon-position="right">Button</Button>
+        <Button variant="bordered" shape="circle" icon="cog">Button</Button>
+        <Button variant="bordered" shape="round" icon="cog">Button</Button>
+        <Button variant="bordered" shape="round" icon="cog" icon-position="right">Button</Button>
+        <Button variant="bordered" shape="square" icon="cog">Button</Button>
+        <Button variant="bordered" shape="rectangle" icon="cog">Button</Button>
+        <Button variant="bordered" shape="rectangle" icon="cog" icon-position="right">Button</Button>
     </div>
     <div data-grid="row">
-        <Button variant="ghost" shape="circle"   icon="cog">Button</Button>
-        <Button variant="ghost" shape="round"   icon="cog">Button</Button>
-        <Button variant="ghost" shape="round"   icon="cog" icon-position="right">Button</Button>
-        <Button variant="ghost" shape="square"   icon="cog">Button</Button>
-        <Button variant="ghost" shape="rectangle"   icon="cog">Button</Button>
-        <Button variant="ghost" shape="rectangle"   icon="cog" icon-position="right">Button</Button>
+        <Button variant="ghost" shape="circle" icon="cog">Button</Button>
+        <Button variant="ghost" shape="round" icon="cog">Button</Button>
+        <Button variant="ghost" shape="round" icon="cog" icon-position="right">Button</Button>
+        <Button variant="ghost" shape="square" icon="cog">Button</Button>
+        <Button variant="ghost" shape="rectangle" icon="cog">Button</Button>
+        <Button variant="ghost" shape="rectangle" icon="cog" icon-position="right">Button</Button>
     </div>
 </div>
 <div data-theme="dark">
@@ -171,5 +171,26 @@
         <Button loading variant="bordered" shape="rectangle" icon="cog">Button</Button>
         <Button loading variant="bordered" shape="rectangle" icon="cog" icon-position="right">Button</Button>
     </div>
+</div>
+```
+
+```vue
+<div data-theme="light">
+  <div data-grid="row">
+    <Button :size="3" shape="circle" icon="cog">Button</Button>
+    <Button :size="3.5" shape="circle" icon="cog">Button</Button>
+    <Button :size="4" shape="circle" icon="cog">Button</Button>
+    <Button :size="3" shape="square" icon="cog">Button</Button>
+    <Button :size="3.5" shape="square" icon="cog">Button</Button>
+    <Button :size="4" shape="square" icon="cog">Button</Button>
+  </div>
+  <div data-grid="row">
+    <Button :size="3.5" shape="circle" icon="cog">Button</Button>
+    <Button :size="3.5" shape="round" icon="cog">Button</Button>
+    <Button :size="3.5" shape="round" icon="cog" icon-position="right">Button</Button>
+    <Button :size="3.5" shape="square" icon="cog">Button</Button>
+    <Button :size="3.5" shape="rectangle" icon="cog">Button</Button>
+    <Button :size="3.5" shape="rectangle" icon="cog" icon-position="right">Button</Button>
+  </div>
 </div>
 ```

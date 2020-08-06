@@ -11,7 +11,7 @@
         'vc-button__disabled': disabled
       }
     ]"
-    :style="{ '--size': size }"
+    :style="{ '--size': `${size}rem` }"
     :disabled="disabled || loading"
     @click="$emit('click')"
   >
@@ -59,8 +59,8 @@ export default {
      * Установить размер кнопки через CSS custom properties `--size`, см. [MDN](https://developer.mozilla.org/ru/docs/Web/CSS/Using_CSS_custom_properties)
      */
     size: {
-      type: String,
-      default: ''
+      type: Number,
+      default: 2.75
     },
     /**
      * Установить цвет кнопки

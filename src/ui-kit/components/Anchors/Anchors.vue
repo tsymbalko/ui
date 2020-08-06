@@ -2,7 +2,7 @@
   <nav class="about_anchor vc-anchor">
     <div class="vc-anchor_list">
       <a
-        v-for="{ id, dataset: { title } } in nodeList"
+        v-for="{ id, dataset: { title } } in anchorsList"
         :key="id"
         :href="`#${id}`"
         class="vc-anchor_link"
@@ -15,12 +15,12 @@
 
 <script>
 /**
- * The only true button.
+ * Компонент для создания списка якорных ссылок
  */
 export default {
   props: {
     /**
-     * A test for default function Object
+     * `class` секций для которых необходимы якорные ссылки ( секция должна иметь обязательные аттрибуты `data-title` `id`)
      */
     selector: {
       type: String,
@@ -29,12 +29,12 @@ export default {
   },
   data() {
     return {
-      nodeList: {},
+      anchorsList: {},
       observer: {}
     }
   },
   mounted() {
-    this.nodeList = document.querySelectorAll(this.selector)
+    this.anchorsList = document.querySelectorAll(`.${this.selector}`)
     this.observerAnchors()
   },
   methods: {
@@ -57,13 +57,13 @@ export default {
         })
       })
 
-      this.nodeList.forEach(section => {
+      this.anchorsList.forEach(section => {
         this.observer.observe(section)
       })
     }
   },
   beforeDestroy() {
-    this.nodeList.forEach(() => {
+    this.anchorsList.forEach(() => {
       this.observer.disconnect()
     })
   }

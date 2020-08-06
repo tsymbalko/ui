@@ -47,7 +47,7 @@ import { Button } from 'components'
 import { layoutLock } from 'mixins'
 
 export default {
-  name: 'modal',
+  name: 'Drawer',
   components: {
     Button,
     FocusLock
