@@ -8,7 +8,8 @@
             'collapse-card_header-toggle__active': visible
           }
         ]"
-        type="ghost"
+        variant="ghost"
+        color="secondary"
         shape="square"
         icon="angle-down"
         @click="toggleVisible"
@@ -54,7 +55,8 @@
       </TextLabel>
       <Button
         class="collapse-card_header-menu"
-        type="ghost"
+        variant="ghost"
+        color="secondary"
         shape="circle"
         icon="ellipsis-v"
       />
@@ -81,7 +83,7 @@
             :key="index"
           >
             <Avatar
-              :size="32"
+              :size="3"
               class="collapse-card_body-comments-avatar"
               text="User Tr"
             />

@@ -23,7 +23,8 @@
               class="vc-drawer__close-btn"
               icon="multiply"
               shape="square"
-              type="ghost"
+              color="secondary"
+              variant="ghost"
               aria-label="close modal"
               @click="closeDrawer"
             />

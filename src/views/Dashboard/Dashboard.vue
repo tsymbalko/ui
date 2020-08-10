@@ -31,11 +31,8 @@
     </section>
     <section class="dashboard_information">
       <TextLabel level="3">Information</TextLabel>
-      <Card>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae culpa
-        delectus deleniti dolor, esse excepturi illum, in iusto laudantium
-        mollitia possimus quae ratione reiciendis vitae voluptates? Doloremque
-        eum laboriosam suscipit?
+      <Card type="success">
+        <Legend :legend="legend" />
       </Card>
     </section>
     <section class="dashboard_activity">
@@ -60,14 +57,53 @@
 </template>
 
 <script>
-import { Card, Heading, TextLabel, Button } from 'components'
+import { Card, Heading, TextLabel, Button, Legend } from 'components'
 export default {
   name: 'home',
   components: {
     Card,
     Heading,
     TextLabel,
-    Button
+    Button,
+    Legend
+  },
+  data() {
+    return {
+      legend: [
+        {
+          title: 'Inform',
+          value: 95
+        },
+        {
+          title: 'City',
+          value: 239
+        },
+        {
+          title: 'Address',
+          value: 123
+        },
+        {
+          title: 'Names',
+          value: 86
+        },
+        {
+          title: 'Family',
+          value: 390
+        },
+        {
+          title: 'Sport',
+          value: 692
+        },
+        {
+          title: 'Project',
+          value: 23
+        },
+        {
+          title: 'Inform',
+          value: 42
+        }
+      ]
+    }
   }
 }
 </script>

@@ -8,7 +8,6 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 8px;
-    overflow: hidden;
 
     &:last-child {
       margin-bottom: 8px;
@@ -29,7 +28,7 @@
       height: 10px;
       margin: 0 4px;
       padding: 0 4px;
-      background-image: linear-gradient(to right, #d8dae0 3px, transparent 1px);
+      background-image: linear-gradient(to right, #a7a8ab 3px, transparent 1px);
       background-repeat: repeat-x;
       background-position: left bottom;
       background-size: 4px 1px;

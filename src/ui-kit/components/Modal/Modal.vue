@@ -23,7 +23,8 @@
               class="vc-modal_close"
               icon="multiply"
               shape="square"
-              type="ghost"
+              variant="ghost"
+              color="secondary"
               aria-label="close"
               @click="closeModal"
             />
