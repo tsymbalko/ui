@@ -55,9 +55,9 @@ div[data-theme='light'] {
 }
 
 html {
-  color-scheme: light dark;
-  font-family:
-    -apple-system,
+  color: var(--base-text);
+  font-weight: 400;
+  font-family: -apple-system,
     BlinkMacSystemFont,
     'Segoe UI',
     'Roboto',
@@ -69,9 +69,10 @@ html {
     'Apple Color Emoji',
     'Segoe UI Emoji',
     'Segoe UI Symbol';
-  color: var(--base-text);
   background: var(--base-background);
-  font-weight: 400;
+
+  /* stylelint-disable-next-line property-no-unknown */
+  color-scheme: light dark;
   scroll-behavior: smooth;
 }
 
@@ -101,8 +102,8 @@ body {
 
   a[href]:active,
   button:not([disabled]):active {
-    transition: none;
     transform: translateY(1px);
+    transition: none;
   }
 }
 
@@ -127,11 +128,11 @@ a[class] {
 
 button {
   display: inline-block;
-  font: inherit;
   color: inherit;
-  cursor: pointer;
+  font: inherit;
   background: none;
-  border: none;
+  border: 0;
+  cursor: pointer;
 }
 
 a[href]::-moz-focus-inner,
@@ -141,11 +142,11 @@ button::-moz-focus-inner {
 
 .visually_hidden {
   position: absolute;
-  height: 1px;
   width: 1px;
+  height: 1px;
   overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 /*custom scroll only web-kit browsers*/

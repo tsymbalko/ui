@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="vc-tabs">
+  <div class="vc-tabs">
+    <div class="vc-tabs_nav">
       <span
         class="vc-tabs_line"
         :style="{
@@ -21,6 +21,9 @@
       >
         {{ title }}
       </button>
+    </div>
+    <div class="vc-tabs_content">
+      <slot />
     </div>
   </div>
 </template>
@@ -46,12 +49,16 @@ export default {
     return {
       activeTabWidth: 0,
       currentTabOffset: 0,
-      active: this.activeTab
+      active: this.activeTab,
+      children: []
     }
   },
   mounted() {
     this.currentTabOffset = this.$refs[`tab${this.activeTab}`][0].offsetLeft
     this.activeTabWidth = this.$refs[`tab${this.activeTab}`][0].clientWidth
+
+    //eslint-disable-next-line
+    console.log(this.$children)
   },
   methods: {
     setIndicator(selector) {

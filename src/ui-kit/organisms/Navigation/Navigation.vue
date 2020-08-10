@@ -35,6 +35,16 @@
         </li>
         <li class="vc-navigation_item">
           <router-link
+            to="/input"
+            class="vc-navigation_link"
+            active-class="vc-navigation_link__active"
+            title="Input"
+          >
+            <Icon class="vc-navigation_icon" name="hdd" />
+          </router-link>
+        </li>
+        <li class="vc-navigation_item">
+          <router-link
             to="/about"
             class="vc-navigation_link"
             active-class="vc-navigation_link__active"

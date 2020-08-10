@@ -13,7 +13,7 @@
     ]"
     :style="{ '--size': `${size}rem` }"
     :disabled="disabled || loading"
-    @click="$emit('click')"
+    v-on="$listeners"
   >
     <span class="vc-button_text">
       <slot />

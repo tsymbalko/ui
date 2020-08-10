@@ -379,8 +379,9 @@
         <Modal center :visible="visibleModal" @close="closeModal" />
       </div>
       <div style="padding: 20px 0;">
-        <Button type="success" @click="visible2Modal = true">
-          Open modal
+        <Button type="success" @click="visible2Modal = true" icon="user">
+          Messages
+          <Badge :count="99" type="success" />
         </Button>
         <Modal :visible="visible2Modal" @close="visible2Modal = false">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor,
@@ -612,16 +613,16 @@
             <Icon width="12" height="12" name="user" />
           </template>
         </Breadcrumb>
-        <Tabs :tabs="tabs" v-model="activeTab" />
-        <div class="vc-tabs_content" style="padding: 14px;">
+        <Tabs :tabs="tabs" v-model="activeTab">
           <div
             v-for="{ id, content } in tabs"
             v-show="activeTab === id"
             :key="id"
+            role="tabpanel"
           >
             {{ content }}
           </div>
-        </div>
+        </Tabs>
       </Card>
       <Avatar size="1.5rem" />
       <Avatar size="2rem" />

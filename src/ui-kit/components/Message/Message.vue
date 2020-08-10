@@ -5,7 +5,9 @@
         <Button
           class="vc-message_close"
           icon="multiply"
+          color="secondary"
           shape="square"
+          variant="ghost"
           @click="close"
         >
           Закрыть
