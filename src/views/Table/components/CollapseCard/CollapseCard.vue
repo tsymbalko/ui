@@ -57,7 +57,7 @@
         class="collapse-card_header-menu"
         variant="ghost"
         color="secondary"
-        shape="circle"
+        shape="square"
         icon="ellipsis-v"
       />
     </div>

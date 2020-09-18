@@ -45,7 +45,7 @@
 <script>
 import { mapMutations } from 'vuex'
 
-import { setCssProperties, getCssProperties } from '@/helpers/cssProperties'
+import DomHandler from 'helpers/DomHandler'
 
 import { Drawer, Color, Button } from 'components'
 import { SwitchTheme } from 'organisms'
@@ -71,9 +71,7 @@ export default {
           accent: null,
           selection: null
         }
-      },
-      setCssProperties,
-      getCssProperties
+      }
     }
   },
   watch: {
@@ -81,7 +79,7 @@ export default {
     visible() {
       if (this.visible) {
         for (let key in this.userSettings.colors) {
-          this.userSettings.colors[key] = this.getCssProperties(key)
+          this.userSettings.colors[key] = DomHandler.getCssProperties(key)
         }
       }
     }
@@ -102,12 +100,12 @@ export default {
     },
     setColor(name, value) {
       this.userSettings.colors[name] = value
-      this.setCssProperties(name, value)
+      DomHandler.setCssProperties(name, value)
     },
     resetSettings() {
       localStorage.removeItem('userSettings')
       this.$eventBus.$emit('message', {
-        type: 'warning',
+        type: 'error',
         message: 'Страница будет перезагружена'
       })
       setTimeout(() => {

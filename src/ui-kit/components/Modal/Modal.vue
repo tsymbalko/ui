@@ -1,49 +1,47 @@
 <template>
-  <transition :name="`vc-modal__animation-${animation}`">
+  <div
+    v-if="visible"
+    :class="[
+      'vc-modal',
+      { 'vc-modal__mask': mask },
+      { 'vc-modal__center': center },
+      { 'vc-modal__visible': visible }
+    ]"
+  >
     <div
-      v-if="visible"
-      :class="[
-        'vc-modal',
-        { 'vc-modal__mask': mask && !fullscreen },
-        { 'vc-modal__center': center },
-        { 'vc-modal__fullscreen': fullscreen }
-      ]"
+      class="vc-modal_content"
+      role="dialog"
+      v-click-outside="closeModal"
+      :style="{ '--max-width': maxWidth }"
     >
-      <div
-        class="vc-modal_content"
-        role="dialog"
-        v-click-outside="closeModal"
-        :style="{ '--max-width': maxWidth }"
-      >
-        <FocusLock :no-focus-guards="true">
-          <div class="vc-modal_header">
-            <h2 class="vc-modal_title">Simple title</h2>
-            <Button
-              ref="modalClose"
-              class="vc-modal_close"
-              icon="multiply"
-              shape="square"
-              variant="ghost"
-              color="secondary"
-              aria-label="close"
-              @click="closeModal"
-            />
-          </div>
-          <div class="vc-modal_body">
-            <slot />
-          </div>
-          <div class="vc-modal_footer">
-            <Button type="bordered" @click="closeModal">
-              Cancel
-            </Button>
-            <Button icon="archive-alt" type="primary">
-              Submit
-            </Button>
-          </div>
-        </FocusLock>
-      </div>
+      <FocusLock :no-focus-guards="true">
+        <div class="vc-modal_header">
+          <h2 class="vc-modal_title">Simple title</h2>
+          <Button
+            ref="modalClose"
+            class="vc-modal_close"
+            icon="multiply"
+            shape="square"
+            variant="ghost"
+            color="secondary"
+            aria-label="close"
+            @click="closeModal"
+          />
+        </div>
+        <div class="vc-modal_body">
+          <slot />
+        </div>
+        <div class="vc-modal_footer">
+          <Button type="bordered" @click="closeModal">
+            Cancel
+          </Button>
+          <Button icon="archive-alt" type="primary">
+            Submit
+          </Button>
+        </div>
+      </FocusLock>
     </div>
-  </transition>
+  </div>
 </template>
 
 <script>
@@ -71,11 +69,6 @@ export default {
       type: Boolean,
       default: true
     },
-    animation: {
-      type: String,
-      validate: value => ['fade-left', 'scale'].includes(value),
-      default: 'scale'
-    },
     center: {
       type: Boolean,
       default: false
@@ -83,10 +76,6 @@ export default {
     maxWidth: {
       type: String,
       default: '650px'
-    },
-    fullscreen: {
-      type: Boolean,
-      default: false
     }
   },
   watch: {

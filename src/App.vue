@@ -28,7 +28,7 @@
 <script>
 import { mapState } from 'vuex'
 
-import { setCssProperties } from 'helpers/cssProperties'
+import DomHandler from 'helpers/DomHandler'
 
 import { BackTop, PageTransition, Message } from 'components'
 import { Navigation, Footer, MenuToggle, Settings } from 'organisms'
@@ -48,8 +48,7 @@ export default {
   mixins: [layoutLock, focusVisible],
   data() {
     return {
-      navigationVisible: false,
-      setCssProperties
+      navigationVisible: false
     }
   },
   watch: {
@@ -74,7 +73,7 @@ export default {
       document.documentElement.dataset.theme = theme
       //set colors
       for (let color in colors) {
-        this.setCssProperties(color, colors[color])
+        DomHandler.setCssProperties(color, colors[color])
       }
     }
   },

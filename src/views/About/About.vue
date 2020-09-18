@@ -1,7 +1,9 @@
 <template>
   <div class="about">
     <div class="about_header">
-      <Heading divider="right">Article</Heading>
+      <Heading class="about_heading" :indent="0" divider="right"
+        >Article</Heading
+      >
       <TextLabel>Lorem ipsum dolor sit amet, consectetur</TextLabel>
     </div>
     <div class="about_article">

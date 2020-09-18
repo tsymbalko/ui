@@ -13,6 +13,10 @@
   &_header {
     grid-area: header;
   }
+  
+  &_heading {
+    margin: 0;
+  }
 
   &_article {
     display: grid;

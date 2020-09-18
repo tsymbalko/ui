@@ -56,9 +56,6 @@ export default {
   mounted() {
     this.currentTabOffset = this.$refs[`tab${this.activeTab}`][0].offsetLeft
     this.activeTabWidth = this.$refs[`tab${this.activeTab}`][0].clientWidth
-
-    //eslint-disable-next-line
-    console.log(this.$children)
   },
   methods: {
     setIndicator(selector) {

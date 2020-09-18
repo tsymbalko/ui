@@ -1,5 +1,5 @@
 <template>
-  <a class="vc-link">
+  <a class="vc-link" v-bind="$attrs">
     <Icon v-if="icon" :name="icon" class="vc-link_icon" />
     <slot />
   </a>
