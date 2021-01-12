@@ -2,6 +2,7 @@ const path = require('path')
 module.exports = {
   // set your styleguidist configuration here
   title: 'UIKit',
+  assetsDir: 'src/assets',
   components: 'src/ui-kit/**/[A-Z]*.vue',
   styles: {
     Editor: {

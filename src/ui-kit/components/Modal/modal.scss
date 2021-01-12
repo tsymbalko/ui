@@ -11,6 +11,19 @@
   overflow-x: hidden;
   overflow-y: auto;
   scroll-behavior: smooth;
+  
+  &__animation {
+    
+    &-enter-active,
+    &-leave-active {
+      transition: opacity .14s linear;
+    }
+    
+    &-enter,
+    &-leave-to {
+      opacity: 0;
+    }
+  }
 
   &__mask {
     background-color: rgba(0, 0, 0, .5);

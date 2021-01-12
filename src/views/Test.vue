@@ -1,47 +1,7 @@
 <template>
   <div>
     <div class="grid-presentation">
-      <Card type="primary">
-        <div class="section-example">
-          <Tag>183%</Tag>
-          <Tag>Text value</Tag>
-          <Tag closable>183%</Tag>
-          <Tag icon="archive-alt" closable>183%</Tag>
-        </div>
-        <div class="section-example">
-          <Tag type="primary">183%</Tag>
-          <Tag type="primary">Text value</Tag>
-          <Tag type="primary" closable>183%</Tag>
-          <Tag type="primary" icon="archive-alt" closable>183%</Tag>
-        </div>
-        <div class="section-example">
-          <Tag type="warning">183%</Tag>
-          <Tag type="warning">Text value</Tag>
-          <Tag type="warning" closable>183%</Tag>
-          <Tag type="warning" icon="archive-alt" closable>183%</Tag>
-        </div>
-        <div class="section-example">
-          <Tag type="error">183%</Tag>
-          <Tag type="error">Text value</Tag>
-          <Tag type="error" closable>183%</Tag>
-          <Tag type="error" icon="archive-alt" closable>183%</Tag>
-        </div>
-        <div class="section-example">
-          <Tag type="success">183%</Tag>
-          <Tag type="success">Text value</Tag>
-          <Tag type="success" closable>183%</Tag>
-          <Tag type="success" icon="archive-alt" closable>183%</Tag>
-        </div>
-        <div class="section-example">
-          <Tag color="#0070D2" shape="rectangle" closable icon="cog">183%</Tag>
-          <Tag color="#C23934" shape="rectangle" closable icon="cog">Text</Tag>
-          <Tag color="#FFB75D" shape="rectangle" closable icon="cog"
-            >Text Value</Tag
-          >
-          <Tag color="#50CC7A" shape="rectangle" closable icon="cog">183%</Tag>
-          <Tag color="#597BAE" shape="rectangle" closable icon="cog">183%</Tag>
-        </div>
-      </Card>
+      <Card type="primary"> </Card>
       <Card type="error">
         <div class="section-example">
           <div class="section-example">
@@ -1067,7 +1027,6 @@ import {
   Heading,
   TextLabel,
   Spinner,
-  Tag,
   ProgressLine,
   Modal,
   Rating,
@@ -1090,7 +1049,6 @@ export default {
     Heading,
     TextLabel,
     Spinner,
-    Tag,
     ProgressLine,
     Modal,
     SRow,
