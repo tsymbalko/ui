@@ -140,198 +140,6 @@
         </div>
       </Card>
       <Card type="warning" shape="rectangle"> </Card>
-      <Card type="success">
-        <div class="section-example">
-          <Button icon="archive-alt">Add members</Button>
-          <Button icon="archive-alt" icon-position="left">Add members</Button>
-          <Button icon="cog" shape="square">Add members</Button>
-          <Button icon="ellipsis-v" shape="square">Add members</Button>
-          <Button icon="archive-alt" shape="round">Add members</Button>
-          <Button icon="archive-alt" shape="circle">Add members</Button>
-        </div>
-        <div class="section-example">
-          <Button type="primary">Members</Button>
-          <Button type="primary" icon="archive-alt" icon-position="left"
-            >Members</Button
-          >
-          <Button type="primary" icon="archive-alt">Members</Button>
-          <Button type="primary" icon="cog" shape="square">Members</Button>
-          <Button type="primary" icon="archive-alt" shape="round"
-            >Members</Button
-          >
-          <Button type="primary" icon="archive-alt" shape="circle"
-            >Add members</Button
-          >
-        </div>
-        <div class="section-example">
-          <Button type="warning">Add members</Button>
-          <Button icon="archive-alt" type="warning" icon-position="left"
-            >Add members</Button
-          >
-          <Button icon="archive-alt" type="warning">Add members</Button>
-          <Button icon="cog" type="warning" shape="square">Add members</Button>
-          <Button icon="archive-alt" type="warning" shape="round"
-            >Add members</Button
-          >
-          <Button icon="archive-alt" type="warning" shape="circle"
-            >Add members</Button
-          >
-        </div>
-        <div class="section-example">
-          <Button type="error">Add members</Button>
-          <Button icon="archive-alt" type="error" icon-position="left"
-            >Add members</Button
-          >
-          <Button icon="archive-alt" type="error">Add members</Button>
-          <Button icon="cog" type="error" shape="square">Add members</Button>
-          <Button icon="archive-alt" type="error" shape="round"
-            >Add members</Button
-          >
-          <Button icon="archive-alt" type="error" shape="circle"
-            >Add members</Button
-          >
-        </div>
-        <div class="section-example">
-          <Button type="success">Add members</Button>
-          <Button icon="archive-alt" type="success" icon-position="left"
-            >Add members</Button
-          >
-          <Button icon="archive-alt" type="success">Add members</Button>
-          <Button icon="cog" type="success" shape="square">Add members</Button>
-          <Button icon="archive-alt" type="success" shape="round"
-            >Add members</Button
-          >
-          <Button icon="archive-alt" type="success" shape="circle"
-            >Add members</Button
-          >
-        </div>
-        <div class="section-example">
-          <Button :size="50" type="success" disabled>Add members</Button>
-          <Button
-            :size="50"
-            icon="archive-alt"
-            type="success"
-            icon-position="left"
-            disabled
-            >Add members</Button
-          >
-          <Button :size="50" icon="archive-alt" type="success" disabled
-            >Add members</Button
-          >
-          <Button :size="50" icon="cog" type="success" disabled shape="square"
-            >Add members</Button
-          >
-          <Button
-            :size="50"
-            icon="archive-alt"
-            type="success"
-            disabled
-            shape="round"
-            >Add members</Button
-          >
-          <Button
-            :size="50"
-            icon="archive-alt"
-            type="success"
-            disabled
-            shape="circle"
-            >Add members</Button
-          >
-        </div>
-        <div class="section-example">
-          <Button background="linear-gradient(#e66465, #9198e5)"
-            >Add members</Button
-          >
-          <Button
-            background="linear-gradient(#e66465, #9198e5)"
-            icon="archive-alt"
-            >Add members</Button
-          >
-          <Button background="#597BAE" icon="archive-alt" icon-position="left"
-            >Add members</Button
-          >
-          <Button background="#597BAE" icon="cog" shape="square"
-            >Add members</Button
-          >
-          <Button
-            background="linear-gradient(#e66465, #9198e5)"
-            icon="ellipsis-v"
-            shape="square"
-            >Add members</Button
-          >
-          <Button
-            background="linear-gradient(#e66465, #9198e5)"
-            icon="archive-alt"
-            shape="round"
-            >Add members</Button
-          >
-          <Button
-            background="linear-gradient(#e66465, #9198e5)"
-            icon="archive-alt"
-            shape="circle"
-            >Add members</Button
-          >
-        </div>
-        <div class="section-example">
-          <Button
-            background="linear-gradient(#e66465, #9198e5)"
-            :loading="loading"
-            type="primary"
-            >Add members</Button
-          >
-          <Button :loading="loading" type="primary" icon="archive-alt"
-            >Add members</Button
-          >
-          <Button
-            :loading="loading"
-            type="primary"
-            icon="archive-alt"
-            shape="square"
-            >Add members</Button
-          >
-          <Button
-            :loading="loading"
-            type="primary"
-            icon="archive-alt"
-            shape="round"
-            >Add members</Button
-          >
-          <Button
-            :loading="loading"
-            type="primary"
-            icon="archive-alt"
-            shape="circle"
-            >Add members</Button
-          >
-        </div>
-        <div class="section-example">
-          <Button :loading="loading" type="warning">Add members</Button>
-          <Button :loading="loading" icon="archive-alt" type="warning"
-            >Add members</Button
-          >
-          <Button
-            :loading="loading"
-            icon="archive-alt"
-            type="warning"
-            shape="square"
-            >Add members</Button
-          >
-          <Button
-            :loading="loading"
-            icon="archive-alt"
-            type="warning"
-            shape="round"
-            >Add members</Button
-          >
-          <Button
-            :loading="loading"
-            icon="archive-alt"
-            type="warning"
-            shape="circle"
-            >Add members</Button
-          >
-        </div>
-      </Card>
       <div style="padding: 20px 0;">
         <Button type="success" @click="toggleModal">
           Open modal
@@ -584,33 +392,33 @@
           </div>
         </Tabs>
       </Card>
-      <Avatar size="1.5rem" />
-      <Avatar size="2rem" />
-      <Avatar size="3rem" icon="user" />
-      <Avatar shape="square" size="3.5rem" icon="user" />
+      <Avatar size="1.5" />
+      <Avatar size="2" />
+      <Avatar size="3" icon="user" />
+      <Avatar shape="square" size="3.5" icon="user" />
       <Badge :count="99" type="success">
-        <Avatar size="2rem" icon="user" />
+        <Avatar size="2" icon="user" />
       </Badge>
       <Indicator type="success" text="Text" placement="bottom">
-        <Avatar size="3rem" icon="user" />
+        <Avatar size="3" icon="user" />
       </Indicator>
       <Badge :count="99" type="success">
-        <Avatar shape="square" size="3rem" icon="user" />
+        <Avatar shape="square" size="3" icon="user" />
       </Badge>
       <Indicator type="success" text="Text">
-        <Avatar shape="square" size="3rem" icon="user" />
+        <Avatar shape="square" size="3" icon="user" />
       </Indicator>
       <Badge :count="99" type="success">
-        <Avatar src="https://i.pravatar.cc/50" size="3rem" icon="user" />
+        <Avatar src="https://i.pravatar.cc/50" size="3" icon="user" />
       </Badge>
       <Indicator type="success" text="Text">
-        <Avatar src="https://i.pravatar.cc/50" size="3rem" icon="user" />
+        <Avatar src="https://i.pravatar.cc/50" size="3" icon="user" />
       </Indicator>
       <Badge :count="99" type="success">
         <Avatar
           src="https://i.pravatar.cc/50"
           shape="square"
-          size="3rem"
+          size="3"
           icon="user"
         />
       </Badge>
@@ -618,7 +426,7 @@
         <Avatar
           src="https://i.pravatar.cc/50"
           shape="square"
-          size="3rem"
+          size="3"
           icon="user"
         />
       </Indicator>
@@ -736,33 +544,33 @@
       </div>
     </div>
     <Card>
-      <Avatar :size="24" />
-      <Avatar :size="32" />
-      <Avatar :size="48" icon="user" />
-      <Avatar shape="square" :size="56" icon="user" />
+      <Avatar :size="2" />
+      <Avatar :size="3" />
+      <Avatar :size="4" icon="user" />
+      <Avatar shape="square" :size="5" icon="user" />
       <Badge :count="99" type="success">
-        <Avatar :size="48" icon="user" />
+        <Avatar :size="4" icon="user" />
       </Badge>
       <Indicator type="success" text="Text">
-        <Avatar :size="48" icon="user" />
+        <Avatar :size="4" icon="user" />
       </Indicator>
       <Badge :count="99" type="success">
-        <Avatar shape="square" :size="48" icon="user" />
+        <Avatar shape="square" :size="4" icon="user" />
       </Badge>
       <Indicator type="success" text="Text">
-        <Avatar shape="square" :size="48" icon="user" />
+        <Avatar shape="square" :size="4" icon="user" />
       </Indicator>
       <Badge :count="99" type="success">
-        <Avatar src="https://i.pravatar.cc/50" :size="48" icon="user" />
+        <Avatar src="https://i.pravatar.cc/50" :size="4" icon="user" />
       </Badge>
       <Indicator type="success" text="Text">
-        <Avatar src="https://i.pravatar.cc/50" :size="48" icon="user" />
+        <Avatar src="https://i.pravatar.cc/50" :size="4" icon="user" />
       </Indicator>
       <Badge :count="99" type="success">
         <Avatar
           src="https://i.pravatar.cc/50"
           shape="square"
-          :size="48"
+          :size="4"
           icon="user"
         />
       </Badge>
@@ -770,7 +578,7 @@
         <Avatar
           src="https://i.pravatar.cc/50"
           shape="square"
-          :size="48"
+          :size="4"
           icon="user"
         />
       </Indicator>
