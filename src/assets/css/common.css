@@ -87,7 +87,6 @@ body {
   margin: 0;
   overflow-y: scroll;
   line-height: 1.7;
-  overscroll-behavior-y: none;
 }
 
 ::selection {
