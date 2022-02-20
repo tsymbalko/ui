@@ -70,7 +70,7 @@ html {
     'Segoe UI Emoji',
     'Segoe UI Symbol';
   background: var(--base-background);
-  scroll-padding-top: 48px;
+  scroll-padding-top: 50px;
 
   /* stylelint-disable-next-line property-no-unknown */
   color-scheme: light dark;
